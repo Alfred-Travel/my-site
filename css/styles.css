@@ -109,7 +109,7 @@ body {
 .page-header {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 4rem 5% 2rem;
+    padding: 2rem 5%;
     text-align: center;
 }
 
@@ -120,7 +120,7 @@ body {
 
 /* Team Section */
 .team-section {
-    padding: 0 5% 4rem;
+    padding: 2rem 5%;
     margin-top: 0;
     background-color: #000000;
 }
@@ -280,7 +280,7 @@ body {
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 3rem 5% 1rem;
+    padding: 2rem 5%;
 }
 
 .footer-content {
@@ -316,7 +316,7 @@ footer {
 
 /* Hero Section */
 #hero {
-    padding: 3rem 5% 0.5rem;
+    padding: 2rem 5%;
     background-color: var(--primary-color);
     text-align: center;
 }
@@ -362,6 +362,51 @@ footer {
     background-color: #2bb8a4;
 }
 
+#app-downloads {
+    background-color: var(--primary-color);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+#app-downloads h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(53, 208, 186, 0.2);
+}
+
+.store-badge {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+}
+
 .video-container {
     width: 100%;
     max-width: 360px;
@@ -386,7 +431,7 @@ footer {
 
 /* Features Section */
 #features {
-    padding: 5rem 5%;
+    padding: 2rem 5% 5rem 5%;
     background-color: #000000;
 }
 
@@ -444,7 +489,7 @@ footer {
 
 /* How It Works Section */
 #how-it-works {
-    padding: 0 5%;
+    padding: 2rem 5%;
     background-color: #000000;
 }
 
@@ -496,7 +541,7 @@ footer {
 
 /* Contact Form */
 #contact {
-    padding: 5rem 5%;
+    padding: 2rem 5%;
     background-color: #000000;
 }
 
@@ -577,6 +622,25 @@ footer {
 
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    #app-downloads h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .qr-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .qr-code {
+        width: 120px;
+        height: 120px;
+    }
+
+    .store-badge {
+        height: 50px;
     }
 
 
