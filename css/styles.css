@@ -22,6 +22,12 @@ body {
     background-color: #000000;
 }
 
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed navbar when scrolling to anchors */
+}
+
 /* Navigation */
 .navbar {
     display: flex;
