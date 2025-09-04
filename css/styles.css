@@ -727,4 +727,140 @@ nav ul li a:hover {
 
 nav ul li a.active {
     color: var(--secondary-color);
+}
+
+/* Cookies Banner Styles */
+.cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid var(--secondary-color);
+    z-index: 9999;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    /* For testing - make banner visible by default */
+    /* transform: translateY(0); */
+}
+
+.cookies-banner.show {
+    transform: translateY(0);
+}
+
+.cookies-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cookies-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookies-text h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.cookies-text p {
+    color: var(--white);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.cookies-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cookies-link:hover {
+    color: #2bb8a3;
+}
+
+.cookies-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2bb8a3;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: var(--white);
+    border: 1px solid #555;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+
+
+/* Responsive Design for Cookies Banner */
+@media (max-width: 768px) {
+    .cookies-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookies-text {
+        min-width: auto;
+    }
+    
+    .cookies-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .btn {
+        flex: 1;
+        min-width: 120px;
+    }
 } 
