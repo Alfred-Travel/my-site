@@ -170,6 +170,8 @@ html {
     background-color: transparent;
     color: var(--primary-color);
     padding: 2rem 5%;
+    padding-top: 7rem;
+    margin-top: 90px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -1350,6 +1352,11 @@ i[class^="fa"] {
         display: flex;
     }
 
+    .page-header {
+        padding-top: 6rem;
+        margin-top: 80px;
+    }
+    
     .page-header h1 {
         font-size: 2rem;
     }
