@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Account - Alfred Travel Tech</title>
+    <link rel="icon" type="image/png" href="images/Color logo with background.png.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -34,34 +38,18 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/Black logo - no background.png" alt="Alfred Travel Tech Logo" class="logo-image" />
+                    <img src="images/Color logo with background.png.png" alt="Alfred Travel Logo" class="logo-image" />
                 </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="products.html">Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="products.html">Our Products</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-content">
-                        <li><a href="about.html">Our Team</a></li>
-                        <li><a href="delete-account.html">Support</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="terms.html">Terms & Conditions</a>
-                    <ul class="dropdown-content">
-                        <li><a href="terms.html">General Terms</a></li>
-                        <li><a href="prize-tc.html">$500 Trip.com Prize T&C</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#app-downloads">Download App</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="faq.html#tutorials">Tutorials</a></li>
+                <li><a href="delete-account.html">Support</a></li>
             </ul>
+            <a href="index.html#app-downloads" class="download-cta">Download App</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -70,33 +58,61 @@
         </nav>
     </header>
 
-    <main>
+    <main class="support-page-main">
         <section class="delete-account-content">
             <div class="delete-info">
-                <h1 style="color: #35D0BA; margin-bottom: 0.15rem;">Support</h1>
-                <p style="margin-bottom: 0.15rem;">For any support inquiries, please follow these steps:</p>
-                <ol style="margin: 0.15rem 0; padding-left: 1.2rem;">
+                <h1 style="font-family: 'Space Grotesk', sans-serif; color: var(--secondary-color); margin-bottom: 0.15rem; font-weight: 700; letter-spacing: 0.02em;">Support</h1>
+                <p style="font-family: 'Inter', sans-serif; margin-bottom: 0.15rem; font-weight: 400;">For any support inquiries, please follow these steps:</p>
+                <ol style="font-family: 'Inter', sans-serif; margin: 0.15rem 0; padding-left: 1.2rem; font-weight: 400;">
                     <li style="margin-bottom: 0.15rem; padding-left: 0.3rem;">Check our FAQ section for common questions</li>
                     <li style="margin-bottom: 0.15rem; padding-left: 0.3rem;">Review our documentation and guides</li>
                     <li style="margin-bottom: 0.15rem; padding-left: 0.3rem;">If you still need help, contact our support team</li>
                     <li style="margin-bottom: 0.15rem; padding-left: 0.3rem;">We aim to respond within 24 hours</li>
                 </ol>
-                <p style="margin-top: 0.15rem;">Contact our support team at <a href="mailto:support@alfredtravel.io">support@alfredtravel.io</a></p>
+                <p style="font-family: 'Inter', sans-serif; margin-top: 0.15rem; font-weight: 400;">Contact our support team at <a href="mailto:support@alfredtravel.io">support@alfredtravel.io</a></p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact</h3>
+            <div class="footer-column">
+                <h3>Company</h3>
                 <ul class="footer-links">
-                    <li><a href="mailto:support@alfredtravel.io">support@alfredtravel.io</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#mission">Our Mission</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Products</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="delete-account.html">Support Center</a></li>
+                    <li><a href="mailto:support@alfredtravel.io">Contact Us</a></li>
+                    <li><a href="faq.html">Help & FAQ</a></li>
+                    <li><a href="index.html#app-downloads">Download App</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="terms.html#privacy">Privacy Policy</a></li>
+                    <li><a href="prize-tc.html">Prize Terms</a></li>
+                    <li><a href="delete-account.html">Account Deletion</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Alfred AI. All rights reserved.</p>
+            <p>&copy; 2025 Alfred Travel Tech Pty Ltd. All rights reserved.</p>
         </div>
     </footer>
 

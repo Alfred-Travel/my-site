@@ -1,35 +1,144 @@
+// Hero Search Tabs Functionality
+const searchTabs = document.querySelectorAll('.search-tab');
+if (searchTabs.length > 0) {
+    searchTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            searchTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Update placeholder based on selected tab
+            const searchInput = document.getElementById('search-destination');
+            if (searchInput) {
+                const tabType = this.getAttribute('data-tab');
+                const placeholders = {
+                    'flights': 'Where would you like to fly?',
+                    'hotels': 'Where are you staying?',
+                    'activities': 'What would you like to do?'
+                };
+                searchInput.placeholder = placeholders[tabType] || 'Where do you want to go?';
+            }
+        });
+    });
+    
+    // Search button functionality
+    const searchButton = document.querySelector('.search-button');
+    if (searchButton) {
+        searchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const searchInput = document.getElementById('search-destination');
+            const activeTab = document.querySelector('.search-tab.active');
+            const searchType = activeTab ? activeTab.getAttribute('data-tab') : 'flights';
+            const destination = searchInput ? searchInput.value.trim() : '';
+            
+            if (destination) {
+                // Here you would integrate with your booking/search API
+                console.log(`Searching for ${searchType}: ${destination}`);
+                // For now, just scroll to features section
+                const featuresSection = document.querySelector('#features');
+                if (featuresSection) {
+                    featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            } else {
+                // Focus on input if empty
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }
+        });
+    }
+}
+
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-});
-
-// Smooth Scrolling for Navigation Links
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-if (anchorLinks.length > 0) {
-    anchorLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const navbarHeight = 80; // Height of the fixed navbar
-                const targetPosition = target.offsetTop - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (window.innerWidth <= 768 && navLinks) {
-                    navLinks.style.display = 'none';
-                }
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
             }
         });
     });
 }
+
+// Smooth Scrolling for Navigation Links (same-page anchors only)
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+if (anchorLinks.length > 0) {
+    anchorLinks.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            // Only prevent default for same-page anchors (starting with #)
+            // Allow cross-page links like faq.html#tutorials to navigate normally
+            if (href.indexOf('#') === 0 && href.length > 1) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const target = document.querySelector(`#${targetId}`);
+                
+                if (target) {
+                    const navbarHeight = 90; // Height of the fixed navbar
+                    const targetPosition = target.offsetTop - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without jumping
+                    if (history.pushState) {
+                        history.pushState(null, null, `#${targetId}`);
+                    }
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768 && navLinks) {
+                        navLinks.classList.remove('active');
+                    }
+                }
+            }
+            // For cross-page links (like faq.html#tutorials), allow normal navigation
+            // The hash will be handled by the page load event below
+        });
+    });
+}
+
+// Handle anchor links when page loads (for cross-page links like faq.html#tutorials)
+function scrollToAnchor() {
+    const hash = window.location.hash;
+    if (hash) {
+        // Use a longer delay to ensure all content is loaded and rendered
+        setTimeout(() => {
+            const target = document.querySelector(hash);
+            if (target) {
+                const navbarHeight = 90; // Height of the fixed navbar
+                const targetPosition = target.offsetTop - navbarHeight;
+                
+                window.scrollTo({
+                    top: Math.max(0, targetPosition), // Ensure non-negative
+                    behavior: 'smooth'
+                });
+            }
+        }, 300); // Delay to ensure page is fully rendered, especially for dynamically loaded content
+    }
+}
+
+// Handle both DOM ready and page load events
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scrollToAnchor);
+} else {
+    // DOM already loaded
+    scrollToAnchor();
+}
+
+window.addEventListener('load', scrollToAnchor);
+window.addEventListener('hashchange', scrollToAnchor);
 
 // Form Submission
 const contactForm = document.getElementById('contact-form');
@@ -56,16 +165,14 @@ if (contactForm) {
     });
 }
 
-// Navbar scroll effect
+// Navbar shrink effect on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
-        if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        if (window.scrollY > 100) {
+            navbar.classList.add('shrink');
         } else {
-            navbar.style.backgroundColor = 'var(--white)';
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('shrink');
         }
     }
 });
@@ -423,6 +530,7 @@ function testCookies() {
         console.error('WARNING: Cookies may not be working in this environment!');
     }
 }
+
 
 // Initialize cookie consent when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
