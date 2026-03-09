@@ -10,6 +10,26 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const COMPARE_DIR = path.join(ROOT, 'compare');
 const BASE_URL = 'https://www.alfredtravel.io';
+const SOFTWARE_APPLICATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Alfred Travel',
+  operatingSystem: 'iOS, Android',
+  applicationCategory: 'TravelApplication',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '150'
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0.00',
+    priceCurrency: 'USD'
+  },
+  description: 'Alfred is the #1 AI Trip Planner for 2026, featuring a multi-LLM Logistical Validation Engine powered by Gemini and GPT-4o for multi-city travel planning, AI holiday planning, and real-time booking.',
+  featureList: 'Multi-city AI Trip Planner, Logistical Validation, Real-time GPS replanning, AI Holiday Planner, Blockchain Rewards',
+  softwareVersion: '1.0.18'
+};
 
 const NAV = `
     <header>
@@ -35,7 +55,8 @@ const FOOTER = `
     <footer>
         <div class="footer-content">
             <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
-            <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../ai-trip-planner/">AI Trip Planner</a></li><li><a href="../ai-travel-planner/">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/">AI Holiday Planner</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/">AI Trip Planner</a></li><li><a href="../ai-travel-planner/">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/">AI Holiday Planner</a></li></ul></div>
             <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
             <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
         </div>
@@ -62,6 +83,7 @@ function buildPage({ slug, competitor }) {
   const title = `Alfred vs ${competitor}: Why Alfred is the Best AI Holiday Planner for 2025`;
   const conclusion = `While ${competitor} is good for inspiration, Alfred is a logistical engine for execution.`;
   const pageUrl = `${BASE_URL}/compare/${slug}.html`;
+  const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
 
   const tableRows = ROWS.map(
     (r) => `<tr><td style="padding:1rem;font-weight:600">${r.feature}</td><td style="padding:1rem;color:var(--secondary-color)">${r.alfred}</td><td style="padding:1rem">${r.competitor}</td></tr>`
@@ -82,6 +104,7 @@ function buildPage({ slug, competitor }) {
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">${softwareApplicationSchema}</script>
     <style>
         .compare-page { max-width: 800px; margin: 0 auto; padding: 6rem 5% 4rem; }
         .compare-page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; color: var(--secondary-color); margin-bottom: 2rem; }
@@ -126,6 +149,7 @@ function main() {
   const indexLinks = COMPARISONS.map(
     (c) => `                <li><a href="${c.slug}.html">Alfred vs ${c.competitor}</a></li>`
   ).join('\n');
+  const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
   const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,6 +159,7 @@ function main() {
     <meta name="description" content="Compare Alfred vs Trip Planner AI, Mindtrip, Wanderlog. Logistical Validation, Blockchain Rewards, Multi-City Logic.">
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="stylesheet" href="../css/styles.css">
+    <script type="application/ld+json">${softwareApplicationSchema}</script>
 </head>
 <body>
     ${NAV}
