@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.alfredtravel.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.alfredtravel.io/ai-trip-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.alfredtravel.io/ai-travel-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.alfredtravel.io/ai-holiday-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/products.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/road-trip.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -9,6 +12,7 @@
   <url><loc>https://www.alfredtravel.io/terms.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/delete-account.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/prize-tc.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/melbourne-to-adelaide-road-trip.html</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/fragmented-travel-products-challenge.html</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/best-travel-planning-apps-2026.html</loc><lastmod>2026-02-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/future-of-group-planning.html</loc><lastmod>2026-02-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>

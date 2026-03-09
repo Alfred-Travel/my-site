@@ -1117,6 +1117,16 @@ i[class^="fa"] {
     overflow-x: auto;
 }
 
+.comparison-table caption {
+    caption-side: top;
+    text-align: left;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    padding-bottom: 0.9rem;
+}
+
 .aio-content-block {
     max-width: 900px;
     margin: 2rem auto 0;
@@ -1188,7 +1198,10 @@ i[class^="fa"] {
     background-color: rgba(78, 205, 196, 0.06);
 }
 
-.comparison-table td:first-child {
+.comparison-table tbody th[scope="row"] {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    text-align: left;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -1201,10 +1214,66 @@ i[class^="fa"] {
 @media (max-width: 768px) {
     .comparison-table thead { display: none; }
     .comparison-table tr { display: block; margin-bottom: 1rem; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden; }
+    .comparison-table tbody th[scope="row"] { display: block; padding: 1rem 1rem 0.35rem; border-bottom: none; }
     .comparison-table td { display: block; text-align: left; padding: 0.75rem 1rem; border-bottom: none; }
     .comparison-table td::before { content: attr(data-label); font-weight: 600; color: var(--primary-color); display: block; margin-bottom: 0.25rem; font-size: 0.9rem; }
-    .comparison-table td:first-child { padding-top: 1rem; }
     .comparison-table td:last-child { padding-bottom: 1rem; }
+}
+
+.technical-authority-section {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.12), rgba(255, 255, 255, 1));
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    border-radius: 12px;
+}
+
+.technical-authority-eyebrow {
+    margin: 0 0 0.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.technical-authority-content h3 {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.65rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.technical-authority-content p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.technical-authority-list {
+    margin: 0 0 1.5rem;
+    padding-left: 1.25rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.technical-authority-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.secondary-cta {
+    background-color: var(--primary-color);
+}
+
+.secondary-cta:hover {
+    background-color: #111111;
 }
 
 /* FAQ Accordion - Intent-Based for Answer Engines */

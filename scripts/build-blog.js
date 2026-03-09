@@ -268,6 +268,9 @@ console.log('Wrote blog/index.html');
 // Build sitemap.xml
 const staticUrls = [
   { loc: BASE_URL + '/', changefreq: 'weekly', priority: '1.0' },
+  { loc: BASE_URL + '/ai-trip-planner/', changefreq: 'weekly', priority: '0.9' },
+  { loc: BASE_URL + '/ai-travel-planner/', changefreq: 'weekly', priority: '0.9' },
+  { loc: BASE_URL + '/ai-holiday-planner/', changefreq: 'weekly', priority: '0.9' },
   { loc: BASE_URL + '/about.html', changefreq: 'monthly', priority: '0.9' },
   { loc: BASE_URL + '/products.html', changefreq: 'monthly', priority: '0.9' },
   { loc: BASE_URL + '/road-trip.html', changefreq: 'monthly', priority: '0.9' },
