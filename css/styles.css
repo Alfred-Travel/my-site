@@ -409,8 +409,9 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2.5rem;
+    align-items: start;
     margin-bottom: 2rem;
     max-width: 1400px;
     margin-left: auto;
@@ -495,7 +496,7 @@ footer {
     margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -879,13 +880,13 @@ footer {
 }
 
 #hero-subtitle {
-    padding: 2rem 5%;
+    padding: 0.75rem 5% 5rem;
     background-color: var(--section-bg);
     text-align: center;
 }
 
 .hero-subtitle-section .content-accordion {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
     text-align: left;
 }
@@ -941,11 +942,58 @@ footer {
     line-height: 1.7;
 }
 
-.qr-container,
-.qr-section,
-.qr-code,
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 240px;
+}
+
+.store-label {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.qr-code {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.3);
+}
+
 .store-badge {
-    display: none;
+    display: block;
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+}
+
+.qr-section a {
+    display: inline-block;
+    text-decoration: none;
 }
 
 .video-container {
@@ -1139,17 +1187,20 @@ i[class^="fa"] {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     overflow: hidden;
+    margin: 0;
 }
 
 .content-accordion summary {
     list-style: none;
     cursor: pointer;
+    display: block;
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-color);
     padding: 1.2rem 1.5rem;
     background: rgba(78, 205, 196, 0.08);
+    text-align: left;
 }
 
 .content-accordion summary::-webkit-details-marker {
@@ -1290,7 +1341,7 @@ i[class^="fa"] {
 
 /* FAQ Accordion - Intent-Based for Answer Engines */
 .faq-ai-section {
-    padding: 5rem 5%;
+    padding: 5rem 5% 0;
     background-color: var(--section-bg);
     scroll-margin-top: 110px;
 }
@@ -1312,6 +1363,14 @@ i[class^="fa"] {
 
 .faq-details {
     margin-bottom: 0.75rem;
+}
+
+.faq-details:last-child {
+    margin-bottom: 0;
+}
+
+.hero-subtitle-content .cta-button {
+    margin-top: 0.5rem;
 }
 
 /* How It Works Section */
