@@ -1,0 +1,486 @@
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #4ecdc4;
+  --accent-color: #edf4f4;
+  --light-bg: #fbfbfb;
+  --section-bg: #f2f2f2;
+  --white: #ffffff;
+  --creamy-text: #f5e6d3;
+  --dark-bg: #1a1a1a;
+  --muted-text: #5f6368;
+  --border-color: rgba(26, 26, 26, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--primary-color);
+  background: var(--light-bg);
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 5%;
+  background: rgba(26, 26, 26, 0.96);
+  color: var(--creamy-text);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
+}
+
+.brand-mark {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--creamy-text);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--creamy-text);
+}
+
+.download-cta,
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.download-cta,
+.primary-button {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: 0 8px 24px rgba(78, 205, 196, 0.24);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: rgba(26, 26, 26, 0.16);
+}
+
+.download-cta:hover,
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+.site-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero-section,
+.page-section,
+.planner-hero {
+  width: min(1200px, calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.hero-section {
+  padding-top: 4rem;
+}
+
+.hero-shell,
+.planner-hero-shell,
+.content-card,
+.city-itinerary-card,
+.comparison-panel {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.06);
+}
+
+.hero-shell,
+.planner-hero-shell {
+  padding: 3rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin: 0 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-title,
+.planner-hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  max-width: 14ch;
+}
+
+.hero-copy,
+.planner-hero-copy,
+.section-copy,
+.answer-block-copy {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--muted-text);
+}
+
+.hero-actions,
+.planner-hero-actions,
+.inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.content-grid,
+.pillar-grid,
+.city-snippet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.feature-card,
+.city-snippet-card,
+.trust-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.feature-card p,
+.city-snippet-card p,
+.trust-card p,
+.comparison-panel p {
+  margin: 0.75rem 0 0;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+.aio-answer-block {
+  background: #eef1f2;
+  border: 1px solid rgba(26, 26, 26, 0.06);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.aio-answer-block h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.aio-answer-block p {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+.faq-section {
+  width: min(900px, calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.25rem 1.35rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-answer {
+  padding: 0 1.35rem 1.35rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+.social-proof-section {
+  width: min(1200px, calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.social-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.social-proof-logo {
+  background: #e7e7e7;
+  color: #5f5f5f;
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  filter: grayscale(1);
+  font-weight: 600;
+}
+
+.powered-badge {
+  display: inline-flex;
+  margin-top: 1rem;
+  background: var(--dark-bg);
+  color: var(--creamy-text);
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.planner-page,
+.city-page,
+.vs-page {
+  width: min(1200px, calc(100% - 2.5rem));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.planner-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.planner-content-grid .feature-card {
+  min-height: 100%;
+}
+
+.city-itinerary-card,
+.comparison-panel {
+  padding: 2rem;
+}
+
+.city-itinerary-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.city-itinerary-card pre {
+  white-space: pre-wrap;
+  font-family: "Inter", sans-serif;
+  line-height: 1.75;
+  color: var(--muted-text);
+  margin: 0;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table thead th {
+  background: var(--dark-bg);
+  color: var(--creamy-text);
+}
+
+.highlight-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  background: rgba(78, 205, 196, 0.16);
+  color: var(--primary-color);
+  padding: 0.5rem 0.8rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: var(--dark-bg);
+  color: var(--creamy-text);
+  padding: 3rem 5% 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  width: min(1400px, 100%);
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li + li {
+  margin-top: 0.75rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--creamy-text);
+}
+
+.footer-technical-authority,
+.footer-bottom {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  border-top: 1px solid rgba(245, 230, 211, 0.18);
+}
+
+.footer-technical-authority {
+  padding-top: 1.5rem;
+}
+
+.footer-technical-authority h4 {
+  color: var(--secondary-color);
+  margin: 0 0 0.75rem;
+}
+
+.footer-technical-authority p,
+.footer-bottom p {
+  margin: 0;
+  color: rgba(245, 230, 211, 0.92);
+  line-height: 1.7;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .content-grid,
+  .planner-content-grid,
+  .city-snippet-grid,
+  .social-proof-strip,
+  .footer-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-shell,
+  .planner-hero-shell,
+  .city-itinerary-card,
+  .comparison-panel {
+    padding: 1.5rem;
+  }
+
+  .content-grid,
+  .planner-content-grid,
+  .city-snippet-grid,
+  .social-proof-strip,
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title,
+  .planner-hero-title {
+    max-width: none;
+  }
+
+  .download-cta {
+    display: none;
+  }
+}

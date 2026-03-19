@@ -1,0 +1,139 @@
+import destinations from "../../destinations.json";
+import itineraryContent from "../../itinerary-content.json";
+
+export type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+type ItineraryEntry = {
+  day1: string;
+  day2: string;
+  day3: string;
+};
+
+const itineraryMap = itineraryContent as Record<string, ItineraryEntry>;
+
+export const siteUrl = "https://www.alfredtravel.io";
+
+export const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Alfred AI Travel Planner",
+  operatingSystem: "iOS, Android, Web",
+  applicationCategory: "TravelApplication",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    ratingCount: "1250",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0.00",
+    priceCurrency: "USD",
+  },
+  description:
+    "Alfred is an AI-powered trip planner that generates personalized itineraries and manages bookings.",
+  featureList: [
+    "AI Itinerary Generator",
+    "Real-time Booking",
+    "Loyalty Rewards",
+    "Google Maps Integration",
+  ],
+};
+
+export const homepageFaqs: FAQItem[] = [
+  {
+    question: "What is the best AI trip planner?",
+    answer:
+      "Alfred is built to be the best AI trip planner for travelers who want fast itineraries, booking support, and real-time travel utility in one place.",
+  },
+  {
+    question: "How does Alfred use AI for travel?",
+    answer:
+      "Alfred uses AI to turn destination intent into personalized itineraries, hotel and flight planning, and practical travel recommendations shaped around timing, logistics, and family needs.",
+  },
+  {
+    question: "Can Alfred help with flights and hotels?",
+    answer:
+      "Yes. Alfred is designed as a complete AI travel planner that connects itinerary creation with flight and hotel discovery for a smoother booking experience.",
+  },
+];
+
+export const cornerstoneFaqs: Record<string, FAQItem[]> = {
+  trip: [
+    {
+      question: "Why is Alfred the fastest AI trip planner?",
+      answer:
+        "Alfred compresses destination research, itinerary creation, and booking intent into one guided flow so travelers get a high-quality plan in seconds.",
+    },
+    {
+      question: "Who should use an AI trip planner?",
+      answer:
+        "Frequent travelers, couples, and solo planners use Alfred when they want to save time without sacrificing itinerary quality or flexibility.",
+    },
+  ],
+  travel: [
+    {
+      question: "What makes Alfred a complete AI travel planner?",
+      answer:
+        "Alfred combines itinerary building, flights, hotels, local recommendations, and real-time planning support in one travel workflow.",
+    },
+    {
+      question: "How does Alfred help with travel logistics?",
+      answer:
+        "Alfred keeps flights, hotel choices, and itinerary sequencing connected so planning feels less fragmented and easier to execute.",
+    },
+  ],
+  holiday: [
+    {
+      question: "Can Alfred plan family vacations with AI?",
+      answer:
+        "Yes. Alfred helps families turn broad holiday ideas into practical itineraries that balance inspiration, logistics, and convenience.",
+    },
+    {
+      question: "What makes Alfred good for holiday planning?",
+      answer:
+        "Alfred blends destination inspiration, itinerary generation, and reward-driven travel planning so vacations feel easier to organize.",
+    },
+  ],
+};
+
+export const socialProofLogos = [
+  "Forbes",
+  "TechCrunch",
+  "Trip.com",
+  "Expedia",
+  "Google Maps",
+];
+
+export const majorCities = destinations as string[];
+
+export function slugifyCity(city: string): string {
+  return city.toLowerCase().replace(/\s+/g, "-");
+}
+
+export function unslugifyCity(citySlug: string): string {
+  const exact = majorCities.find((city) => slugifyCity(city) === citySlug);
+  if (exact) return exact;
+
+  return citySlug
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+export function getCityItinerary(city: string): ItineraryEntry {
+  return (
+    itineraryMap[city] || {
+      day1: `Day 1 — Arrival & Orientation\n• Arrive in ${city} and settle into a centrally located hotel\n• Explore the neighborhood, grab lunch, and map the next two days\n• Spend the evening with a relaxed landmark walk and dinner`,
+      day2: `Day 2 — Signature Experiences\n• Start with a headline attraction or local cultural district\n• Build the afternoon around a second anchor activity and nearby food spots\n• Keep the evening open for nightlife, shopping, or a scenic viewpoint`,
+      day3: `Day 3 — Flexible Discovery\n• Use your final day for a half-day excursion or a slower local neighborhood circuit\n• Add one museum, market, or park before departure prep\n• Finish with a farewell meal and logistics check for the journey home`,
+    }
+  );
+}
+
+export function getCitySnippet(city: string): string[] {
+  const itinerary = getCityItinerary(city);
+  return [itinerary.day1, itinerary.day2, itinerary.day3];
+}

@@ -47,56 +47,73 @@
     </script>
     <style>
         .products-section {
-            padding: 7rem 5% 5rem 5%;
-            background-color: var(--light-bg);
-            margin-top: 90px; /* Account for fixed navbar */
-            background-image: url('images/Gemini_Generated_Image_xj9bp7xj9bp7xj9b.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
-        }
-        
-        .products-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(251, 251, 251, 0.85);
-            z-index: 0;
-        }
-        
-        .products-section > * {
-            position: relative;
-            z-index: 1;
+            width: min(1400px, calc(100% - 2.5rem));
+            margin: 7.5rem auto 3.5rem;
+            padding: 2.5rem;
+            background-color: rgba(251, 251, 251, 0.98);
+            border-radius: 28px;
+            box-shadow: 0 12px 35px rgba(26, 26, 26, 0.08);
+            border: 1px solid rgba(26, 26, 26, 0.05);
         }
 
+        .products-hero {
+            background: #fbfbfb;
+            border-radius: 24px;
+            padding: 1rem 0 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .products-kicker {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
         .products-section h1 {
             font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-            text-align: center;
-            color: var(--secondary-color);
-            font-size: 3rem;
-            margin-bottom: 4rem;
+            text-align: left;
+            color: var(--primary-color);
+            font-size: clamp(3rem, 6vw, 4.8rem);
+            margin-bottom: 1.5rem;
             font-weight: 700;
-            letter-spacing: 0.02em;
+            letter-spacing: -0.04em;
+            line-height: 1.02;
+            max-width: 8ch;
+        }
+
+        .products-intro {
+            max-width: 1040px;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(26, 26, 26, 0.72);
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 1.5rem;
         }
 
         .section-title + .section-title {
             margin-top: 4rem;
         }
+
         .feature-logic-block {
-            max-width: 800px;
+            max-width: 920px;
             margin: 0 auto 3rem;
             text-align: left;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 2rem;
+            border: 1px solid rgba(26, 26, 26, 0.05);
+            box-shadow: 0 10px 28px rgba(26, 26, 26, 0.06);
         }
+
         .feature-logic-block p {
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
@@ -109,9 +126,9 @@
             margin: 1.5rem 0;
             font-family: 'Inter', sans-serif;
             background: var(--white);
-            border-radius: 8px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 24px rgba(26, 26, 26, 0.05);
         }
         .feature-table th, .feature-table td {
             padding: 0.75rem 1rem;
@@ -129,13 +146,13 @@
 
         .section-title h2 {
             font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--secondary-color);
+            color: var(--primary-color);
             font-size: 2.25rem;
             font-weight: 600;
             position: relative;
             display: inline-block;
             padding-bottom: 1rem;
-            letter-spacing: 0.02em;
+            letter-spacing: -0.02em;
         }
 
         .section-title h2::after {
@@ -153,7 +170,7 @@
         .product-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            gap: 1.5rem;
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem 0 0;
@@ -162,7 +179,7 @@
         .bottom-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
+            gap: 1.5rem;
             justify-content: center;
             max-width: 1400px;
             margin: 3rem auto 0;
@@ -171,16 +188,16 @@
 
         .product-card {
             background: var(--white);
-            border: 1px solid rgba(78, 205, 196, 0.1);
-            border-radius: 16px;
-            padding: 3rem 2.5rem;
+            border: 1px solid rgba(26, 26, 26, 0.05);
+            border-radius: 22px;
+            padding: 2.5rem 2rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
             height: 100%;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 10px 28px rgba(26, 26, 26, 0.06);
         }
 
         .product-card::before {
@@ -198,7 +215,7 @@
 
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(78, 205, 196, 0.15);
+            box-shadow: 0 14px 36px rgba(78, 205, 196, 0.18);
             border-color: var(--secondary-color);
         }
 
@@ -241,7 +258,7 @@
         .product-card.highlight {
             background: var(--white);
             border: 1px solid var(--secondary-color);
-            box-shadow: 0 4px 16px rgba(78, 205, 196, 0.2);
+            box-shadow: 0 12px 30px rgba(78, 205, 196, 0.18);
         }
 
         .product-card.highlight::before {
@@ -303,14 +320,15 @@
 
         @media (max-width: 768px) {
             .products-section {
-                padding: 6rem 5% 3rem 5%;
-                margin-top: 80px; /* Smaller navbar on mobile */
-                background-attachment: scroll; /* Better performance on mobile */
+                width: min(1400px, calc(100% - 1rem));
+                margin: 6.25rem auto 2rem;
+                padding: 2rem 1rem;
             }
             
             .products-section h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
                 margin-bottom: 3rem;
+                max-width: none;
             }
 
             .section-title h2 {
@@ -332,10 +350,14 @@
             .product-card {
                 padding: 2rem 1.5rem;
             }
+
+            .feature-logic-block {
+                padding: 1.5rem;
+            }
         }
 
         .blockchain-title {
-            margin-top: 10rem;
+            margin-top: 6rem;
         }
     </style>
 </head>
@@ -372,7 +394,11 @@
 
     <main>
         <section class="products-section">
-            <h1>Our Features</h1>
+            <div class="products-hero">
+                <p class="products-kicker">AI Travel</p>
+                <h1>Our Features</h1>
+                <p class="products-intro">Explore the planning, validation, booking, and rewards features that make Alfred feel like the smartest AI Trip Planner and travel assistant.</p>
+            </div>
             <div class="section-title" id="no-country-lock">
                 <h2>No More Country-Locked Planning</h2>
             </div>

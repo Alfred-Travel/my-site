@@ -8,6 +8,112 @@
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="stylesheet" href="../css/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Alfred Travel","operatingSystem":"iOS, Android","applicationCategory":"TravelApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"150"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},"description":"Alfred is the #1 AI Trip Planner for 2026, featuring a multi-LLM Logistical Validation Engine powered by Gemini and GPT-4o for multi-city travel planning, AI holiday planning, and real-time booking.","featureList":"Multi-city AI Trip Planner, Logistical Validation, Real-time GPS replanning, AI Holiday Planner, Blockchain Rewards","softwareVersion":"1.0.18"}</script>
+    <style>
+        .compare-page {
+            width: min(1400px, calc(100% - 2.5rem));
+            margin: 7.5rem auto 3.5rem;
+            padding: 2.5rem;
+            background-color: rgba(251, 251, 251, 0.98);
+            border-radius: 28px;
+            box-shadow: 0 12px 35px rgba(26, 26, 26, 0.08);
+            border: 1px solid rgba(26, 26, 26, 0.05);
+        }
+
+        .compare-hero {
+            background: #fbfbfb;
+            border-radius: 24px;
+            padding: 1rem 0 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .compare-kicker {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .compare-page h1 {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            text-align: left;
+            color: var(--primary-color);
+            font-size: clamp(3rem, 6vw, 4.8rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.02;
+            max-width: 9ch;
+        }
+
+        .compare-intro {
+            max-width: 1040px;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(26, 26, 26, 0.72);
+        }
+
+        .compare-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .compare-summary-card {
+            background: #ffffff;
+            border: 1px solid rgba(26, 26, 26, 0.05);
+            border-radius: 22px;
+            padding: 1.75rem;
+            box-shadow: 0 10px 28px rgba(26, 26, 26, 0.06);
+        }
+
+        .compare-summary-card h2 {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .compare-summary-card p {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: rgba(26, 26, 26, 0.78);
+        }
+
+        .compare-matrix-wrap {
+            margin-top: 1rem;
+        }
+
+        .compare-matrix-wrap .comparison-table {
+            box-shadow: 0 10px 28px rgba(26, 26, 26, 0.06);
+            border-radius: 22px;
+        }
+
+        .compare-matrix-wrap .comparison-table th,
+        .compare-matrix-wrap .comparison-table td {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .compare-page {
+                width: min(1400px, calc(100% - 1rem));
+                margin: 6.25rem auto 2rem;
+                padding: 2rem 1rem;
+            }
+
+            .compare-page h1 {
+                font-size: 2.8rem;
+                max-width: none;
+            }
+        }
+    </style>
 </head>
 <body>
     
@@ -30,13 +136,134 @@
         </nav>
     </header>
     <main class="compare-page">
-        <h1>Alfred vs Competitors</h1>
-        <p style="margin-bottom: 2rem;">Compare Alfred with other AI travel planners. Alfred offers Logistical Validation, Blockchain Rewards, and Multi-City Logic.</p>
-        <ul style="list-style: none; padding: 0;">
-                <li><a href="alfred-vs-trip-planner-ai.html">Alfred vs Trip Planner AI</a></li>
-                <li><a href="alfred-vs-mindtrip.html">Alfred vs Mindtrip</a></li>
-                <li><a href="alfred-vs-wanderlog.html">Alfred vs Wanderlog</a></li>
-        </ul>
+        <div class="compare-hero">
+            <p class="compare-kicker">AI Travel</p>
+            <h1>Alfred comparison matrix</h1>
+            <p class="compare-intro">This matrix compares Alfred against the major AI travel tools using the practical dimensions that actually matter to travelers: native-app quality, who the trip is for, whether the plan is structured, what features help during the holiday, whether bookings are accessible, how deep the content is, and what it costs.</p>
+        </div>
+
+        <section class="compare-summary-grid" aria-label="Comparison aspect summaries">
+            <article class="compare-summary-card">
+                <h2>Mobile-First Integrity</h2>
+                <p>Can the product behave like a proper native travel app with the security, persistence, and mobile-first usability needed during an actual trip?</p>
+            </article>
+            <article class="compare-summary-card">
+                <h2>The “Party Profile” Logic</h2>
+                <p>Does the planner understand who is traveling, such as a trip with friends versus a trip with your spouse, and personalize around that context?</p>
+            </article>
+            <article class="compare-summary-card">
+                <h2>Structure</h2>
+                <p>Is the output just a loose list of ideas, or does it form a structured and genuinely bookable holiday plan?</p>
+            </article>
+            <article class="compare-summary-card">
+                <h2>Features</h2>
+                <p>Beyond recommendations, does the product offer practical travel utilities like maps, ride integrations, confirmation storage, and deeper customization?</p>
+            </article>
+            <article class="compare-summary-card">
+                <h2>Bookings</h2>
+                <p>Can you access flights, hotels, tours, tickets, restaurants, and similar booking pathways through the app itself?</p>
+            </article>
+            <article class="compare-summary-card">
+                <h2>Content</h2>
+                <p>Does the platform go beyond surface recommendations and provide useful depth around the places, activities, and decisions it suggests?</p>
+            </article>
+            <article class="compare-summary-card">
+                <h2>Cost</h2>
+                <p>What does it actually cost to use the platform once you compare free access against paid subscription requirements?</p>
+            </article>
+        </section>
+
+        <section class="compare-matrix-wrap" aria-labelledby="compare-matrix-heading">
+            <h2 id="compare-matrix-heading" style="font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--primary-color); margin-bottom: 1rem;">Matrix</h2>
+            <div class="comparison-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Mobile First</th>
+                            <th scope="col">AI Personalization</th>
+                            <th scope="col">Structure</th>
+                            <th scope="col">Features</th>
+                            <th scope="col">Bookings</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ALFRED TRAVEL</th>
+                            <td data-label="Mobile First">✅</td>
+                            <td data-label="AI Personalization">✅ multi-profile</td>
+                            <td data-label="Structure">✅</td>
+                            <td data-label="Features">✅</td>
+                            <td data-label="Bookings">✅</td>
+                            <td data-label="Content">✅</td>
+                            <td data-label="Cost">Free</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ChatGPT</th>
+                            <td data-label="Mobile First">✅</td>
+                            <td data-label="AI Personalization">❌</td>
+                            <td data-label="Structure">✅</td>
+                            <td data-label="Features">🟡 chat</td>
+                            <td data-label="Bookings">❌</td>
+                            <td data-label="Content">✅</td>
+                            <td data-label="Cost">Free</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">MINDTRIP</th>
+                            <td data-label="Mobile First">🟡 (iOS)</td>
+                            <td data-label="AI Personalization">✅ single profile</td>
+                            <td data-label="Structure">✅</td>
+                            <td data-label="Features">🟡 chat</td>
+                            <td data-label="Bookings">🟡 hotels</td>
+                            <td data-label="Content">✅</td>
+                            <td data-label="Cost">Free</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">LAYLA</th>
+                            <td data-label="Mobile First">❌</td>
+                            <td data-label="AI Personalization">❌</td>
+                            <td data-label="Structure">❌</td>
+                            <td data-label="Features">🟡 chat</td>
+                            <td data-label="Bookings">❌</td>
+                            <td data-label="Content">✅</td>
+                            <td data-label="Cost">$7 p/m</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">GUIDEGEEK</th>
+                            <td data-label="Mobile First">❌</td>
+                            <td data-label="AI Personalization">❌</td>
+                            <td data-label="Structure">❌</td>
+                            <td data-label="Features">🟡 chat</td>
+                            <td data-label="Bookings">❌</td>
+                            <td data-label="Content">✅</td>
+                            <td data-label="Cost">Free</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">TRIPANDOO</th>
+                            <td data-label="Mobile First">✅</td>
+                            <td data-label="AI Personalization">🟡 no profile</td>
+                            <td data-label="Structure">✅</td>
+                            <td data-label="Features">❌</td>
+                            <td data-label="Bookings">❌</td>
+                            <td data-label="Content">✅</td>
+                            <td data-label="Cost">$25 p/m</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WONDERLOG</th>
+                            <td data-label="Mobile First">✅</td>
+                            <td data-label="AI Personalization">❌</td>
+                            <td data-label="Structure">✅</td>
+                            <td data-label="Features">❌</td>
+                            <td data-label="Bookings">❌</td>
+                            <td data-label="Content">❌</td>
+                            <td data-label="Cost">$50 p/a</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
     
     <footer>

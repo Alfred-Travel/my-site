@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Alfred Travel - #1 Logistical AI Travel Planner",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "build:blog": "node scripts/build-blog.js",
     "blog": "node scripts/build-blog.js",
     "build:itineraries": "node scripts/build-itineraries.js",
@@ -16,9 +19,18 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "marked": "^15.0.12",
+    "next": "^16.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
   }
 }
