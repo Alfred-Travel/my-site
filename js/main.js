@@ -201,6 +201,43 @@ if (serviceCards.length > 0) {
     });
 }
 
+// Press carousel
+const pressCarousel = document.querySelector('[data-carousel]');
+if (pressCarousel) {
+    const slides = Array.from(pressCarousel.querySelectorAll('[data-press-slide]'));
+    const previews = Array.from(pressCarousel.querySelectorAll('[data-press-preview]'));
+    const prevButton = pressCarousel.querySelector('[data-carousel-prev]');
+    const nextButton = pressCarousel.querySelector('[data-carousel-next]');
+    let activeIndex = 0;
+
+    const updatePressCarousel = (index) => {
+        if (!slides.length || !previews.length) return;
+        activeIndex = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle('is-active', slideIndex === activeIndex);
+        });
+
+        previews.forEach((preview, previewIndex) => {
+            preview.classList.toggle('is-active', previewIndex === activeIndex);
+        });
+    };
+
+    previews.forEach((preview, index) => {
+        preview.addEventListener('click', () => updatePressCarousel(index));
+    });
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => updatePressCarousel(activeIndex - 1));
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => updatePressCarousel(activeIndex + 1));
+    }
+
+    updatePressCarousel(0);
+}
+
 // Cookies Banner Functionality
 class CookieConsent {
     constructor() {
