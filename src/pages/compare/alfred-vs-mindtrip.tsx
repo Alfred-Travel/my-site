@@ -5,13 +5,36 @@ const COMPETITOR = 'Mindtrip';
 
 const COMPARISON_ROWS = [
   { feature: 'Validation Depth', alfred: 'Yes (multi-LLM, route-aware travel logic)', competitor: 'Strong inspiration and map UX, but no visible validation engine' },
-  { feature: 'Surface Coverage', alfred: 'iOS, Android, and web positioning', competitor: 'Official app currently iPhone-first' },
-  { feature: 'Execution Positioning', alfred: 'Validated itinerary flow and booking-ready planning', competitor: 'Strong collaboration, events, receipts, and discovery tools' },
+  { feature: 'Execution Positioning', alfred: 'Validated itinerary flow and booking-ready planning', competitor: 'Strong collaboration, receipts, collections, and discovery tools' },
+  { feature: 'Group Planning', alfred: 'Structured around itinerary execution and shared trip planning', competitor: 'Strong social planning, group chat, and collaborative ideation' },
+  { feature: 'Surface Coverage', alfred: 'iOS, Android, and web positioning', competitor: 'Strong web and iPhone experience, but narrower execution messaging' },
 ];
 
 export default function AlfredVsMindtrip() {
   const title = `Alfred vs ${COMPETITOR}: Which AI Travel Planner Fits Better in 2026?`;
   const conclusion = `${COMPETITOR} has become a stronger discovery and collaboration product, but Alfred still has the clearer position when a traveler needs validated trip structure and execution-ready planning.`;
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the main difference between Alfred and Mindtrip?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Mindtrip is strongest when a traveler wants collaborative inspiration, collections, and social planning surfaces. Alfred is stronger when the traveler needs itinerary structure, multi-city logic, and booking-ready execution.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which AI travel planner is better for multi-city execution?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Alfred is better positioned for multi-city execution because it emphasizes route-aware trip structure, itinerary validation, and practical planning flow instead of stopping at inspiration.',
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -19,6 +42,10 @@ export default function AlfredVsMindtrip() {
         <title>{title} | Alfred Travel</title>
         <meta name="description" content={`Compare Alfred vs ${COMPETITOR} across itinerary validation, trip execution, and travel planning depth.`} />
         <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI travel planner comparison, ${COMPETITOR} alternative, trip planner comparison`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       </Head>
       <main style={{ maxWidth: 800, margin: '0 auto', padding: '2rem 1.5rem' }}>
         <h1 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>
@@ -45,12 +72,48 @@ export default function AlfredVsMindtrip() {
         </table>
 
         <p style={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
-          Mindtrip&apos;s current product emphasizes collaboration, events, Google Pins, collections, receipts, and iPhone-based mobile planning. Alfred should answer that by owning the execution layer: validated trip structure, multi-city sequencing, and booking-ready travel flow.
+          Mindtrip&apos;s current product emphasizes group chat, events, Google Pins, collections, receipts, and creator-style discovery. Alfred should answer that by owning the execution layer: validated trip structure, multi-city sequencing, and booking-ready travel flow.
         </p>
 
         <p style={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
           {conclusion}
         </p>
+
+        <section style={{ marginTop: '2rem', lineHeight: 1.7 }}>
+          <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '1.5rem' }}>
+            Alfred vs Mindtrip for 2026 travel intent
+          </h2>
+          <p>
+            Mindtrip has broadened its product around collaborative planning and
+            discovery. That makes it relevant for travelers who want to collect
+            ideas, share plans with friends, and keep trip context in one place.
+          </p>
+          <p>
+            Alfred&apos;s stronger lane is different. It should win users who need an
+            AI travel planner that does more than inspire. Alfred is more credible
+            when the query is about validated itineraries, multi-city flow, hotel
+            and flight coordination, and turning a trip idea into something easier
+            to execute.
+          </p>
+        </section>
+
+        <section style={{ marginTop: '2rem', lineHeight: 1.7 }}>
+          <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '1.5rem' }}>
+            FAQ
+          </h2>
+          <p>
+            <strong>What is the main difference between Alfred and Mindtrip?</strong><br />
+            Mindtrip is strongest for collaborative inspiration and trip idea
+            gathering. Alfred is stronger for itinerary structure, route-aware
+            planning, and booking-ready execution.
+          </p>
+          <p>
+            <strong>Which AI travel planner is better for multi-city execution?</strong><br />
+            Alfred is better positioned for multi-city execution because it
+            emphasizes travel logic, sequencing, and usable itinerary flow rather
+            than stopping at discovery.
+          </p>
+        </section>
 
         <a
           href="https://apps.apple.com/au/app/alfred-travel/id6745240301"

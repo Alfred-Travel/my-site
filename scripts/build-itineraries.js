@@ -74,6 +74,80 @@ function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
 }
 
+const CITY_CARD_META = {
+  'London': { image: 'big_ben.jpg', flag: '🇬🇧' },
+  'Paris': { image: 'eiffel_tower.jpg', flag: '🇫🇷' },
+  'Tokyo': { image: 'mount_fuji.jpg', flag: '🇯🇵' },
+  'Kyoto': { image: 'mount_fuji.jpg', flag: '🇯🇵' },
+  'Osaka': { image: 'mount_fuji.jpg', flag: '🇯🇵' },
+  'New York': { image: 'statue_of_liberty.jpg', flag: '🇺🇸' },
+  'Barcelona': { image: 'sagrada_família.jpg', flag: '🇪🇸' },
+  'Rome': { image: 'colosseum.jpg', flag: '🇮🇹' },
+  'Bali': { image: 'waikiki_beach.jpg', flag: '🇮🇩' },
+  'Dubai': { image: 'burj_khalifa.jpg', flag: '🇦🇪' },
+  'Singapore': { image: 'marina_bay_sands.jpg', flag: '🇸🇬' },
+  'Hong Kong': { image: 'the_bund.jpg', flag: '🇭🇰' },
+  'Amsterdam': { image: 'windmills_of_kinderdijk.jpg', flag: '🇳🇱' },
+  'Sydney': { image: 'sydney_opera_house.jpg', flag: '🇦🇺' },
+  'Los Angeles': { image: 'hollywood_sign.jpg', flag: '🇺🇸' },
+  'Berlin': { image: 'brandenburg_gate.jpg', flag: '🇩🇪' },
+  'Madrid': { image: 'the_alhambra.jpg', flag: '🇪🇸' },
+  'Bangkok': { image: 'golden_temple.jpg', flag: '🇹🇭' },
+  'Istanbul': { image: 'hagia_sophia.jpg', flag: '🇹🇷' },
+  'Lisbon': { image: 'santuário_de_fátima.jpg', flag: '🇵🇹' },
+  'Prague': { image: 'old_city_of_dubrovnik.jpg', flag: '🇨🇿' },
+  'Vienna': { image: 'palace_of_versailles.jpg', flag: '🇦🇹' },
+  'Seoul': { image: 'terracotta_army.jpg', flag: '🇰🇷' },
+  'San Francisco': { image: 'golden_gate_bridge.jpg', flag: '🇺🇸' },
+  'Miami': { image: 'waikiki_beach.jpg', flag: '🇺🇸' },
+  'Cape Town': { image: 'table_mountain.jpg', flag: '🇿🇦' },
+  'Marrakech': { image: 'hassan_ii_mosque.jpg', flag: '🇲🇦' },
+  'Athens': { image: 'acropolis_of_athens.jpg', flag: '🇬🇷' },
+  'Florence': { image: 'pantheon.jpg', flag: '🇮🇹' },
+  'Edinburgh': { image: 'buckingham_palace.jpg', flag: '🏴' },
+  'Dublin': { image: 'stonehenge.jpg', flag: '🇮🇪' },
+  'Copenhagen': { image: 'little_mermaid_statue.jpg', flag: '🇩🇰' },
+  'Oslo': { image: 'trolltunga.jpg', flag: '🇳🇴' },
+  'Stockholm': { image: 'the_gherkin.jpg', flag: '🇸🇪' },
+  'Reykjavik': { image: 'trolltunga.jpg', flag: '🇮🇸' },
+  'Phuket': { image: 'waikiki_beach.jpg', flag: '🇹🇭' },
+  'Ho Chi Minh City': { image: 'golden_temple.jpg', flag: '🇻🇳' },
+  'Hanoi': { image: 'golden_temple.jpg', flag: '🇻🇳' },
+  'Kuala Lumpur': { image: 'petronas_twin_towers.jpg', flag: '🇲🇾' },
+  'Melbourne': { image: 'sydney_opera_house.jpg', flag: '🇦🇺' },
+  'Auckland': { image: 'mount_cook.jpg', flag: '🇳🇿' },
+  'Queenstown': { image: 'mount_cook.jpg', flag: '🇳🇿' },
+  'Rio de Janeiro': { image: 'christ_the_redeemer.jpg', flag: '🇧🇷' },
+  'Buenos Aires': { image: 'iguazu_falls.jpg', flag: '🇦🇷' },
+  'Mexico City': { image: 'chichen_itza.jpg', flag: '🇲🇽' },
+  'Cancun': { image: 'tulum_ruins.jpg', flag: '🇲🇽' },
+  'Toronto': { image: 'cn_tower.jpg', flag: '🇨🇦' },
+  'Vancouver': { image: 'banff_national_park.jpg', flag: '🇨🇦' },
+  'Chicago': { image: 'times_square.jpg', flag: '🇺🇸' },
+  'Boston': { image: 'white_house.jpg', flag: '🇺🇸' },
+  'Washington DC': { image: 'white_house.jpg', flag: '🇺🇸' },
+  'Las Vegas': { image: 'grand_canyon.jpg', flag: '🇺🇸' },
+};
+
+const FALLBACK_CARD_IMAGES = [
+  'big_ben.jpg',
+  'eiffel_tower.jpg',
+  'colosseum.jpg',
+  'mount_fuji.jpg',
+  'burj_khalifa.jpg',
+  'sydney_opera_house.jpg',
+];
+
+function getCardMeta(destination, index) {
+  const cityMeta = CITY_CARD_META[destination];
+  const fallbackImage = FALLBACK_CARD_IMAGES[index % FALLBACK_CARD_IMAGES.length];
+
+  return {
+    image: cityMeta?.image || fallbackImage,
+    flag: cityMeta?.flag || '✈️',
+  };
+}
+
 function sampleItinerary(displayName, contentMap) {
   const content = contentMap && contentMap[displayName];
   if (content && content.day1 && content.day2 && content.day3) {
@@ -232,10 +306,20 @@ function main() {
   }
 
   // Index page
-  const indexLinks = destinations
-    .map((name) => {
+  const destinationCards = destinations
+    .map((name, index) => {
       const slug = slugify(name);
-      return `                <li><a href="${slug}.html">AI Travel Planner for ${name}</a></li>`;
+      const { image, flag } = getCardMeta(name, index);
+
+      return `            <a class="destination-card" href="${slug}.html" aria-label="View itinerary for ${name}">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/${image}" alt="${name} itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>${name}</h2>
+                    <span class="destination-card-flag" aria-hidden="true">${flag}</span>
+                </div>
+            </a>`;
     })
     .join('\n');
   const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
@@ -244,21 +328,122 @@ function main() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trip Planner Itineraries | 51 Destinations - Alfred Travel</title>
-    <meta name="description" content="Validated 7-day itineraries for 51 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
+    <title>AI Trip Planner Itineraries | ${destinations.length} Destinations - Alfred Travel</title>
+    <meta name="description" content="Validated 7-day itineraries for ${destinations.length} top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">${softwareApplicationSchema}</script>
+    <style>
+        .itinerary-index-page {
+            max-width: 1380px;
+            margin: 0 auto;
+            padding: 7rem 2.2rem 4rem;
+        }
+        .itinerary-index-hero {
+            max-width: 880px;
+            margin-bottom: 2.25rem;
+        }
+        .itinerary-index-kicker {
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+        .itinerary-index-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 6vw, 4.25rem);
+            line-height: 0.96;
+            letter-spacing: -0.05em;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+        .itinerary-index-copy {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(29, 36, 51, 0.72);
+            max-width: 760px;
+        }
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+        .destination-card {
+            display: block;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            border-radius: 18px;
+            padding: 0.7rem;
+            box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        }
+        .destination-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(17, 24, 39, 0.09);
+            border-color: rgba(78, 205, 196, 0.28);
+        }
+        .destination-card-media {
+            aspect-ratio: 16 / 9;
+            border-radius: 14px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #7ea0c4 0%, #425f82 100%);
+        }
+        .destination-card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .destination-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.85rem 0.1rem 0.15rem;
+        }
+        .destination-card-body h2 {
+            font-size: 1.05rem;
+            line-height: 1.3;
+            color: #1d2433;
+            font-weight: 700;
+        }
+        .destination-card-flag {
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+        @media (max-width: 1080px) {
+            .destination-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 640px) {
+            .itinerary-index-page {
+                padding: 6.25rem 1rem 3rem;
+            }
+            .itinerary-index-title {
+                font-size: 2.65rem;
+            }
+            .destination-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     ${NAV}
-    <main style="max-width: 800px; margin: 0 auto; padding: 6rem 5% 4rem;">
-        <h1 style="font-family: 'Space Grotesk', sans-serif; color: var(--secondary-color); margin-bottom: 1rem;">AI Trip Planner Itineraries</h1>
-        <p style="margin-bottom: 2rem;">7-day validated itineraries for 51 top destinations. Each includes flight gap validation, hotel proximity checks, and multi-LLM confirmation.</p>
-        <ul style="list-style: none; padding: 0;">
-${indexLinks}
-        </ul>
+    <main class="itinerary-index-page">
+        <section class="itinerary-index-hero">
+            <p class="itinerary-index-kicker">Destinations</p>
+            <h1 class="itinerary-index-title">AI Trip Planner Itineraries</h1>
+            <p class="itinerary-index-copy">Browse validated 7-day itineraries across ${destinations.length} top destinations. Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
+        </section>
+        <section class="destination-grid" aria-label="Destination itinerary grid">
+${destinationCards}
+        </section>
     </main>
     ${FOOTER}
 </body>

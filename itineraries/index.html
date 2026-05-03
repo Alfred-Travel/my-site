@@ -3,149 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trip Planner Itineraries | 50 Destinations - Alfred Travel</title>
-    <meta name="description" content="Validated 7-day itineraries for 50 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.alfredtravel.io/itineraries/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.alfredtravel.io/itineraries/">
-    <meta property="og:site_name" content="Alfred Travel">
-    <meta property="og:title" content="AI Trip Planner Itineraries | 50 Destinations - Alfred Travel">
-    <meta property="og:description" content="Validated 7-day itineraries for 50 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
-    <meta property="og:image" content="https://www.alfredtravel.io/images/Color%20logo%20with%20background.png.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.alfredtravel.io/itineraries/">
-    <meta name="twitter:title" content="AI Trip Planner Itineraries | 50 Destinations - Alfred Travel">
-    <meta name="twitter:description" content="Validated 7-day itineraries for 50 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
-    <meta name="twitter:image" content="https://www.alfredtravel.io/images/Color%20logo%20with%20background.png.png">
-<link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <title>AI Trip Planner Itineraries | 52 Destinations - Alfred Travel</title>
+    <meta name="description" content="Validated 7-day itineraries for 52 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
+    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Alfred Travel","operatingSystem":"iOS, Android","applicationCategory":"TravelApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"150"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},"description":"Alfred is the #1 AI Trip Planner for 2026, featuring a multi-LLM Logistical Validation Engine powered by Gemini and GPT-4o for multi-city travel planning, AI holiday planning, and real-time booking.","featureList":"Multi-city AI Trip Planner, Logistical Validation, Real-time GPS replanning, AI Holiday Planner, Blockchain Rewards","softwareVersion":"1.0.18"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Alfred Travel","operatingSystem":"iOS, Android, Web","applicationCategory":"TravelApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"150"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},"description":"Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.","featureList":"AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards","softwareVersion":"1.0.18"}</script>
     <style>
-        .itineraries-index-main {
-            width: min(1400px, calc(100% - 2.5rem));
-            margin: 7.5rem auto 3.5rem;
-            padding: 2.5rem;
-            background-color: rgba(251, 251, 251, 0.98);
-            border-radius: 28px;
-            box-shadow: 0 12px 35px rgba(26, 26, 26, 0.08);
-            border: 1px solid rgba(26, 26, 26, 0.05);
+        .itinerary-index-page {
+            max-width: 1380px;
+            margin: 0 auto;
+            padding: 7rem 2.2rem 4rem;
         }
-
-        .itineraries-index-hero {
-            margin-bottom: 2rem;
+        .itinerary-index-hero {
+            max-width: 880px;
+            margin-bottom: 2.25rem;
         }
-
-        .itineraries-index-kicker {
-            font-family: 'Inter', sans-serif;
+        .itinerary-index-kicker {
+            color: var(--secondary-color);
             font-size: 0.95rem;
             font-weight: 700;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.24em;
             text-transform: uppercase;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
-
-        .itineraries-index-main h1 {
+        .itinerary-index-title {
             font-family: 'Space Grotesk', sans-serif;
-            color: var(--primary-color);
-            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-size: clamp(3rem, 6vw, 4.25rem);
+            line-height: 0.96;
+            letter-spacing: -0.05em;
+            color: #1a1a1a;
             margin-bottom: 1rem;
-            line-height: 1.05;
-            letter-spacing: -0.03em;
         }
-
-        .itineraries-index-intro {
-            max-width: 880px;
-            color: rgba(26, 26, 26, 0.72);
-            font-family: 'Inter', sans-serif;
+        .itinerary-index-copy {
+            font-size: 1rem;
             line-height: 1.7;
+            color: rgba(29, 36, 51, 0.72);
+            max-width: 760px;
         }
-
-        .itineraries-grid {
-            list-style: none;
+        .destination-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 0.85rem;
-            margin: 0;
-            padding: 0;
+            gap: 1rem;
         }
-
-        .itineraries-grid a {
+        .destination-card {
             display: block;
             text-decoration: none;
-            color: var(--primary-color);
-            background: #ffffff;
-            border: 1px solid rgba(26, 26, 26, 0.08);
-            border-radius: 14px;
-            padding: 0.9rem 1rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            transition: all 0.25s ease;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            border-radius: 18px;
+            padding: 0.7rem;
+            box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
         }
-
-        .itineraries-grid a:hover {
-            border-color: var(--secondary-color);
-            box-shadow: 0 8px 18px rgba(78, 205, 196, 0.12);
-            transform: translateY(-1px);
+        .destination-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(17, 24, 39, 0.09);
+            border-color: rgba(78, 205, 196, 0.28);
         }
-
-        .itinerary-city-link {
-            padding: 0.65rem !important;
-            overflow: hidden;
-        }
-
-        .itinerary-city-photo {
-            width: 100%;
+        .destination-card-media {
             aspect-ratio: 16 / 9;
-            border-radius: 10px;
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 0.65rem;
-            position: relative;
-            background-color: #0d1320;
+            border-radius: 14px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #7ea0c4 0%, #425f82 100%);
         }
-
-        .itinerary-city-photo::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.38) 100%);
-            border-radius: 10px;
+        .destination-card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-
-        .itinerary-city-line {
+        .destination-card-body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            padding: 0.85rem 0.1rem 0.15rem;
         }
-
-        .itinerary-city-name {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .itinerary-city-flag {
+        .destination-card-body h2 {
             font-size: 1.05rem;
-            line-height: 1;
+            line-height: 1.3;
+            color: #1d2433;
+            font-weight: 700;
         }
-
-        @media (max-width: 1024px) {
-            .itineraries-grid {
+        .destination-card-flag {
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+        @media (max-width: 1080px) {
+            .destination-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
-
-        @media (max-width: 768px) {
-            .itineraries-index-main {
-                width: min(1400px, calc(100% - 1rem));
-                margin: 6.25rem auto 2rem;
-                padding: 2rem 1rem;
+        @media (max-width: 640px) {
+            .itinerary-index-page {
+                padding: 6.25rem 1rem 3rem;
             }
-
-            .itineraries-grid {
+            .itinerary-index-title {
+                font-size: 2.65rem;
+            }
+            .destination-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -171,64 +128,482 @@
             <div class="hamburger"><span></span><span></span><span></span></div>
         </nav>
     </header>
-    <main class="itineraries-index-main">
-        <div class="itineraries-index-hero">
-            <p class="itineraries-index-kicker">Destinations</p>
-            <h1>AI Trip Planner Itineraries</h1>
-            <p class="itineraries-index-intro">Browse validated 7-day itineraries across 50 top destinations. Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
-        </div>
-        <ul class="itineraries-grid">
-                <li><a href="london.html">AI Travel Planner for London</a></li>
-                <li><a href="paris.html">AI Travel Planner for Paris</a></li>
-                <li><a href="tokyo.html">AI Travel Planner for Tokyo</a></li>
-                <li><a href="new-york.html">AI Travel Planner for New York</a></li>
-                <li><a href="barcelona.html">AI Travel Planner for Barcelona</a></li>
-                <li><a href="rome.html">AI Travel Planner for Rome</a></li>
-                <li><a href="bali.html">AI Travel Planner for Bali</a></li>
-                <li><a href="dubai.html">AI Travel Planner for Dubai</a></li>
-                <li><a href="singapore.html">AI Travel Planner for Singapore</a></li>
-                <li><a href="hong-kong.html">AI Travel Planner for Hong Kong</a></li>
-                <li><a href="amsterdam.html">AI Travel Planner for Amsterdam</a></li>
-                <li><a href="sydney.html">AI Travel Planner for Sydney</a></li>
-                <li><a href="los-angeles.html">AI Travel Planner for Los Angeles</a></li>
-                <li><a href="berlin.html">AI Travel Planner for Berlin</a></li>
-                <li><a href="madrid.html">AI Travel Planner for Madrid</a></li>
-                <li><a href="bangkok.html">AI Travel Planner for Bangkok</a></li>
-                <li><a href="istanbul.html">AI Travel Planner for Istanbul</a></li>
-                <li><a href="lisbon.html">AI Travel Planner for Lisbon</a></li>
-                <li><a href="prague.html">AI Travel Planner for Prague</a></li>
-                <li><a href="vienna.html">AI Travel Planner for Vienna</a></li>
-                <li><a href="seoul.html">AI Travel Planner for Seoul</a></li>
-                <li><a href="san-francisco.html">AI Travel Planner for San Francisco</a></li>
-                <li><a href="miami.html">AI Travel Planner for Miami</a></li>
-                <li><a href="cape-town.html">AI Travel Planner for Cape Town</a></li>
-                <li><a href="marrakech.html">AI Travel Planner for Marrakech</a></li>
-                <li><a href="athens.html">AI Travel Planner for Athens</a></li>
-                <li><a href="florence.html">AI Travel Planner for Florence</a></li>
-                <li><a href="edinburgh.html">AI Travel Planner for Edinburgh</a></li>
-                <li><a href="dublin.html">AI Travel Planner for Dublin</a></li>
-                <li><a href="copenhagen.html">AI Travel Planner for Copenhagen</a></li>
-                <li><a href="oslo.html">AI Travel Planner for Oslo</a></li>
-                <li><a href="stockholm.html">AI Travel Planner for Stockholm</a></li>
-                <li><a href="reykjavik.html">AI Travel Planner for Reykjavik</a></li>
-                <li><a href="phuket.html">AI Travel Planner for Phuket</a></li>
-                <li><a href="ho-chi-minh-city.html">AI Travel Planner for Ho Chi Minh City</a></li>
-                <li><a href="hanoi.html">AI Travel Planner for Hanoi</a></li>
-                <li><a href="kuala-lumpur.html">AI Travel Planner for Kuala Lumpur</a></li>
-                <li><a href="melbourne.html">AI Travel Planner for Melbourne</a></li>
-                <li><a href="auckland.html">AI Travel Planner for Auckland</a></li>
-                <li><a href="queenstown.html">AI Travel Planner for Queenstown</a></li>
-                <li><a href="rio-de-janeiro.html">AI Travel Planner for Rio de Janeiro</a></li>
-                <li><a href="buenos-aires.html">AI Travel Planner for Buenos Aires</a></li>
-                <li><a href="mexico-city.html">AI Travel Planner for Mexico City</a></li>
-                <li><a href="cancun.html">AI Travel Planner for Cancun</a></li>
-                <li><a href="toronto.html">AI Travel Planner for Toronto</a></li>
-                <li><a href="vancouver.html">AI Travel Planner for Vancouver</a></li>
-                <li><a href="chicago.html">AI Travel Planner for Chicago</a></li>
-                <li><a href="boston.html">AI Travel Planner for Boston</a></li>
-                <li><a href="washington-dc.html">AI Travel Planner for Washington DC</a></li>
-                <li><a href="las-vegas.html">AI Travel Planner for Las Vegas</a></li>
-        </ul>
+    <main class="itinerary-index-page">
+        <section class="itinerary-index-hero">
+            <p class="itinerary-index-kicker">Destinations</p>
+            <h1 class="itinerary-index-title">AI Trip Planner Itineraries</h1>
+            <p class="itinerary-index-copy">Browse validated 7-day itineraries across 52 top destinations. Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
+        </section>
+        <section class="destination-grid" aria-label="Destination itinerary grid">
+            <a class="destination-card" href="london.html" aria-label="View itinerary for London">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/big_ben.jpg" alt="London itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>London</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇬🇧</span>
+                </div>
+            </a>
+            <a class="destination-card" href="paris.html" aria-label="View itinerary for Paris">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/eiffel_tower.jpg" alt="Paris itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Paris</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇫🇷</span>
+                </div>
+            </a>
+            <a class="destination-card" href="tokyo.html" aria-label="View itinerary for Tokyo">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/mount_fuji.jpg" alt="Tokyo itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Tokyo</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇯🇵</span>
+                </div>
+            </a>
+            <a class="destination-card" href="kyoto.html" aria-label="View itinerary for Kyoto">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/mount_fuji.jpg" alt="Kyoto itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Kyoto</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇯🇵</span>
+                </div>
+            </a>
+            <a class="destination-card" href="osaka.html" aria-label="View itinerary for Osaka">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/mount_fuji.jpg" alt="Osaka itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Osaka</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇯🇵</span>
+                </div>
+            </a>
+            <a class="destination-card" href="new-york.html" aria-label="View itinerary for New York">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/statue_of_liberty.jpg" alt="New York itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>New York</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="barcelona.html" aria-label="View itinerary for Barcelona">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/sagrada_família.jpg" alt="Barcelona itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Barcelona</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇪🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="rome.html" aria-label="View itinerary for Rome">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/colosseum.jpg" alt="Rome itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Rome</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇮🇹</span>
+                </div>
+            </a>
+            <a class="destination-card" href="bali.html" aria-label="View itinerary for Bali">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/waikiki_beach.jpg" alt="Bali itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Bali</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇮🇩</span>
+                </div>
+            </a>
+            <a class="destination-card" href="dubai.html" aria-label="View itinerary for Dubai">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/burj_khalifa.jpg" alt="Dubai itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Dubai</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇦🇪</span>
+                </div>
+            </a>
+            <a class="destination-card" href="singapore.html" aria-label="View itinerary for Singapore">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/marina_bay_sands.jpg" alt="Singapore itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Singapore</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇸🇬</span>
+                </div>
+            </a>
+            <a class="destination-card" href="hong-kong.html" aria-label="View itinerary for Hong Kong">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/the_bund.jpg" alt="Hong Kong itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Hong Kong</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇭🇰</span>
+                </div>
+            </a>
+            <a class="destination-card" href="amsterdam.html" aria-label="View itinerary for Amsterdam">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/windmills_of_kinderdijk.jpg" alt="Amsterdam itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Amsterdam</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇳🇱</span>
+                </div>
+            </a>
+            <a class="destination-card" href="sydney.html" aria-label="View itinerary for Sydney">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/sydney_opera_house.jpg" alt="Sydney itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Sydney</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇦🇺</span>
+                </div>
+            </a>
+            <a class="destination-card" href="los-angeles.html" aria-label="View itinerary for Los Angeles">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/hollywood_sign.jpg" alt="Los Angeles itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Los Angeles</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="berlin.html" aria-label="View itinerary for Berlin">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/brandenburg_gate.jpg" alt="Berlin itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Berlin</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇩🇪</span>
+                </div>
+            </a>
+            <a class="destination-card" href="madrid.html" aria-label="View itinerary for Madrid">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/the_alhambra.jpg" alt="Madrid itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Madrid</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇪🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="bangkok.html" aria-label="View itinerary for Bangkok">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/golden_temple.jpg" alt="Bangkok itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Bangkok</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇹🇭</span>
+                </div>
+            </a>
+            <a class="destination-card" href="istanbul.html" aria-label="View itinerary for Istanbul">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/hagia_sophia.jpg" alt="Istanbul itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Istanbul</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇹🇷</span>
+                </div>
+            </a>
+            <a class="destination-card" href="lisbon.html" aria-label="View itinerary for Lisbon">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/santuário_de_fátima.jpg" alt="Lisbon itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Lisbon</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇵🇹</span>
+                </div>
+            </a>
+            <a class="destination-card" href="prague.html" aria-label="View itinerary for Prague">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/old_city_of_dubrovnik.jpg" alt="Prague itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Prague</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇨🇿</span>
+                </div>
+            </a>
+            <a class="destination-card" href="vienna.html" aria-label="View itinerary for Vienna">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/palace_of_versailles.jpg" alt="Vienna itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Vienna</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇦🇹</span>
+                </div>
+            </a>
+            <a class="destination-card" href="seoul.html" aria-label="View itinerary for Seoul">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/terracotta_army.jpg" alt="Seoul itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Seoul</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇰🇷</span>
+                </div>
+            </a>
+            <a class="destination-card" href="san-francisco.html" aria-label="View itinerary for San Francisco">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/golden_gate_bridge.jpg" alt="San Francisco itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>San Francisco</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="miami.html" aria-label="View itinerary for Miami">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/waikiki_beach.jpg" alt="Miami itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Miami</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="cape-town.html" aria-label="View itinerary for Cape Town">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/table_mountain.jpg" alt="Cape Town itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Cape Town</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇿🇦</span>
+                </div>
+            </a>
+            <a class="destination-card" href="marrakech.html" aria-label="View itinerary for Marrakech">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/hassan_ii_mosque.jpg" alt="Marrakech itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Marrakech</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇲🇦</span>
+                </div>
+            </a>
+            <a class="destination-card" href="athens.html" aria-label="View itinerary for Athens">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/acropolis_of_athens.jpg" alt="Athens itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Athens</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇬🇷</span>
+                </div>
+            </a>
+            <a class="destination-card" href="florence.html" aria-label="View itinerary for Florence">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/pantheon.jpg" alt="Florence itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Florence</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇮🇹</span>
+                </div>
+            </a>
+            <a class="destination-card" href="edinburgh.html" aria-label="View itinerary for Edinburgh">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/buckingham_palace.jpg" alt="Edinburgh itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Edinburgh</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🏴</span>
+                </div>
+            </a>
+            <a class="destination-card" href="dublin.html" aria-label="View itinerary for Dublin">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/stonehenge.jpg" alt="Dublin itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Dublin</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇮🇪</span>
+                </div>
+            </a>
+            <a class="destination-card" href="copenhagen.html" aria-label="View itinerary for Copenhagen">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/little_mermaid_statue.jpg" alt="Copenhagen itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Copenhagen</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇩🇰</span>
+                </div>
+            </a>
+            <a class="destination-card" href="oslo.html" aria-label="View itinerary for Oslo">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/trolltunga.jpg" alt="Oslo itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Oslo</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇳🇴</span>
+                </div>
+            </a>
+            <a class="destination-card" href="stockholm.html" aria-label="View itinerary for Stockholm">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/the_gherkin.jpg" alt="Stockholm itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Stockholm</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇸🇪</span>
+                </div>
+            </a>
+            <a class="destination-card" href="reykjavik.html" aria-label="View itinerary for Reykjavik">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/trolltunga.jpg" alt="Reykjavik itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Reykjavik</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇮🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="phuket.html" aria-label="View itinerary for Phuket">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/waikiki_beach.jpg" alt="Phuket itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Phuket</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇹🇭</span>
+                </div>
+            </a>
+            <a class="destination-card" href="ho-chi-minh-city.html" aria-label="View itinerary for Ho Chi Minh City">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/golden_temple.jpg" alt="Ho Chi Minh City itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Ho Chi Minh City</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇻🇳</span>
+                </div>
+            </a>
+            <a class="destination-card" href="hanoi.html" aria-label="View itinerary for Hanoi">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/golden_temple.jpg" alt="Hanoi itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Hanoi</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇻🇳</span>
+                </div>
+            </a>
+            <a class="destination-card" href="kuala-lumpur.html" aria-label="View itinerary for Kuala Lumpur">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/petronas_twin_towers.jpg" alt="Kuala Lumpur itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Kuala Lumpur</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇲🇾</span>
+                </div>
+            </a>
+            <a class="destination-card" href="melbourne.html" aria-label="View itinerary for Melbourne">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/sydney_opera_house.jpg" alt="Melbourne itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Melbourne</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇦🇺</span>
+                </div>
+            </a>
+            <a class="destination-card" href="auckland.html" aria-label="View itinerary for Auckland">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/mount_cook.jpg" alt="Auckland itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Auckland</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇳🇿</span>
+                </div>
+            </a>
+            <a class="destination-card" href="queenstown.html" aria-label="View itinerary for Queenstown">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/mount_cook.jpg" alt="Queenstown itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Queenstown</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇳🇿</span>
+                </div>
+            </a>
+            <a class="destination-card" href="rio-de-janeiro.html" aria-label="View itinerary for Rio de Janeiro">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/christ_the_redeemer.jpg" alt="Rio de Janeiro itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Rio de Janeiro</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇧🇷</span>
+                </div>
+            </a>
+            <a class="destination-card" href="buenos-aires.html" aria-label="View itinerary for Buenos Aires">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/iguazu_falls.jpg" alt="Buenos Aires itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Buenos Aires</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇦🇷</span>
+                </div>
+            </a>
+            <a class="destination-card" href="mexico-city.html" aria-label="View itinerary for Mexico City">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/chichen_itza.jpg" alt="Mexico City itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Mexico City</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇲🇽</span>
+                </div>
+            </a>
+            <a class="destination-card" href="cancun.html" aria-label="View itinerary for Cancun">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/tulum_ruins.jpg" alt="Cancun itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Cancun</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇲🇽</span>
+                </div>
+            </a>
+            <a class="destination-card" href="toronto.html" aria-label="View itinerary for Toronto">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/cn_tower.jpg" alt="Toronto itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Toronto</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇨🇦</span>
+                </div>
+            </a>
+            <a class="destination-card" href="vancouver.html" aria-label="View itinerary for Vancouver">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/banff_national_park.jpg" alt="Vancouver itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Vancouver</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇨🇦</span>
+                </div>
+            </a>
+            <a class="destination-card" href="chicago.html" aria-label="View itinerary for Chicago">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/times_square.jpg" alt="Chicago itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Chicago</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="boston.html" aria-label="View itinerary for Boston">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/white_house.jpg" alt="Boston itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Boston</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="washington-dc.html" aria-label="View itinerary for Washington DC">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/white_house.jpg" alt="Washington DC itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Washington DC</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+            <a class="destination-card" href="las-vegas.html" aria-label="View itinerary for Las Vegas">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/grand_canyon.jpg" alt="Las Vegas itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>Las Vegas</h2>
+                    <span class="destination-card-flag" aria-hidden="true">🇺🇸</span>
+                </div>
+            </a>
+        </section>
     </main>
     
     <footer>
@@ -240,98 +615,10 @@
             <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
-        <div class="footer-bottom"><p>&copy; 2025 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
+        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
     <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
     <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
-    <script>
-        (function () {
-            const cityToFlag = {
-                "London": "🇬🇧", "Paris": "🇫🇷", "Tokyo": "🇯🇵", "New York": "🇺🇸", "Barcelona": "🇪🇸",
-                "Rome": "🇮🇹", "Bali": "🇮🇩", "Dubai": "🇦🇪", "Singapore": "🇸🇬", "Hong Kong": "🇭🇰",
-                "Amsterdam": "🇳🇱", "Sydney": "🇦🇺", "Los Angeles": "🇺🇸", "Berlin": "🇩🇪", "Madrid": "🇪🇸",
-                "Bangkok": "🇹🇭", "Istanbul": "🇹🇷", "Lisbon": "🇵🇹", "Prague": "🇨🇿", "Vienna": "🇦🇹",
-                "Seoul": "🇰🇷", "San Francisco": "🇺🇸", "Miami": "🇺🇸", "Cape Town": "🇿🇦", "Marrakech": "🇲🇦",
-                "Athens": "🇬🇷", "Florence": "🇮🇹", "Edinburgh": "🏴", "Dublin": "🇮🇪", "Copenhagen": "🇩🇰",
-                "Oslo": "🇳🇴", "Stockholm": "🇸🇪", "Reykjavik": "🇮🇸", "Phuket": "🇹🇭", "Ho Chi Minh City": "🇻🇳",
-                "Hanoi": "🇻🇳", "Kuala Lumpur": "🇲🇾", "Melbourne": "🇦🇺", "Auckland": "🇳🇿", "Queenstown": "🇳🇿",
-                "Rio de Janeiro": "🇧🇷", "Buenos Aires": "🇦🇷", "Mexico City": "🇲🇽", "Cancun": "🇲🇽",
-                "Toronto": "🇨🇦", "Vancouver": "🇨🇦", "Chicago": "🇺🇸", "Boston": "🇺🇸", "Washington DC": "🇺🇸",
-                "Las Vegas": "🇺🇸"
-            };
-            const cityToImage = {
-                "London": "big_ben.jpg",
-                "Paris": "eiffel_tower.jpg",
-                "Tokyo": "mount_fuji.jpg",
-                "New York": "statue_of_liberty.jpg",
-                "Barcelona": "sagrada_família.jpg",
-                "Rome": "colosseum.jpg",
-                "Bali": "great_barrier_reef.jpg",
-                "Dubai": "burj_khalifa.jpg",
-                "Singapore": "marina_bay_sands.jpg",
-                "Hong Kong": "the_bund.jpg",
-                "Amsterdam": "windmills_of_kinderdijk.jpg",
-                "Sydney": "sydney_opera_house.jpg",
-                "Los Angeles": "hollywood_sign.jpg",
-                "Berlin": "brandenburg_gate.jpg",
-                "Madrid": "great_mosque_of_cordoba.jpg",
-                "Bangkok": "shwedagon_pagoda.jpg",
-                "Istanbul": "hagia_sophia.jpg",
-                "Lisbon": "santuário_de_fátima.jpg",
-                "Prague": "old_city_of_dubrovnik.jpg",
-                "Vienna": "neuschwanstein_castle.jpg",
-                "Seoul": "forbidden_city.jpg",
-                "San Francisco": "golden_gate_bridge.jpg",
-                "Miami": "waikiki_beach.jpg",
-                "Cape Town": "table_mountain.jpg",
-                "Marrakech": "hassan_ii_mosque.jpg",
-                "Athens": "acropolis_of_athens.jpg",
-                "Florence": "leaning_tower_of_pisa.jpg",
-                "Edinburgh": "stonehenge.jpg",
-                "Dublin": "buckingham_palace.jpg",
-                "Copenhagen": "little_mermaid_statue.jpg",
-                "Oslo": "trolltunga.jpg",
-                "Stockholm": "lake_bled.jpg",
-                "Reykjavik": "mount_rainier.jpg",
-                "Phuket": "angkor_wat.jpg",
-                "Ho Chi Minh City": "notre-dame_cathedral.jpg",
-                "Hanoi": "terracotta_army.jpg",
-                "Kuala Lumpur": "petronas_twin_towers.jpg",
-                "Melbourne": "uluru_(ayers_rock).jpg",
-                "Auckland": "mount_cook.jpg",
-                "Queenstown": "matterhorn.jpg",
-                "Rio de Janeiro": "christ_the_redeemer.jpg",
-                "Buenos Aires": "iguazu_falls.jpg",
-                "Mexico City": "chichen_itza.jpg",
-                "Cancun": "tulum_ruins.jpg",
-                "Toronto": "cn_tower.jpg",
-                "Vancouver": "banff_national_park.jpg",
-                "Chicago": "empire_state_building.jpg",
-                "Boston": "times_square.jpg",
-                "Washington DC": "white_house.jpg",
-                "Las Vegas": "grand_canyon.jpg"
-            };
-
-            const links = document.querySelectorAll(".itineraries-grid li a");
-            links.forEach((link) => {
-                const city = link.textContent.replace(/^AI Travel Planner for\s+/i, "").trim();
-                const flag = cityToFlag[city] || "🌍";
-                const imageFile = cityToImage[city];
-                const photoUrl = imageFile
-                    ? `../images/landmark_images/${encodeURIComponent(imageFile)}`
-                    : "../images/Website%20background.png";
-
-                link.classList.add("itinerary-city-link");
-                link.innerHTML = `
-                    <div class="itinerary-city-photo" style="background-image:url('${photoUrl}');"></div>
-                    <div class="itinerary-city-line">
-                        <span class="itinerary-city-name">${city}</span>
-                        <span class="itinerary-city-flag" aria-label="Country flag">${flag}</span>
-                    </div>
-                `;
-            });
-        })();
-    </script>
     <script src="../js/main.js"></script>
 </body>
 </html>

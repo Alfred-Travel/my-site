@@ -20,8 +20,10 @@ export const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Alfred Travel",
+  url: siteUrl,
   operatingSystem: "iOS, Android, Web",
   applicationCategory: "TravelApplication",
+  applicationSubCategory: "AI Trip Planner",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
@@ -40,7 +42,11 @@ export const softwareApplicationSchema = {
     "Integrated Travel Booking Flow",
     "Loyalty Rewards",
     "Google Maps Integration",
+    "Group Travel Collaboration",
+    "Family Travel Planning",
   ],
+  keywords:
+    "AI trip planner, AI travel planner, multi-city itinerary, travel planning app, travel booking workflow",
 };
 
 export const organizationSchema = {
@@ -49,6 +55,8 @@ export const organizationSchema = {
   name: "Alfred Travel Tech Pty Ltd",
   url: siteUrl,
   brand: "Alfred Travel",
+  description:
+    "Alfred Travel builds AI trip planning tools for validated itineraries, multi-city routing, and booking-ready travel execution.",
   sameAs: [
     "https://www.alfredtravel.io",
     "https://apps.apple.com/au/app/alfred-travel/id6745240301",
@@ -63,6 +71,12 @@ export const websiteSchema = {
   url: siteUrl,
   description:
     "AI trip planner with validated itineraries, multi-city travel logic, and booking-ready destination planning.",
+  inLanguage: "en",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteUrl}/ai-trip-planner/{search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export const homepageFaqs: FAQItem[] = [
@@ -72,14 +86,19 @@ export const homepageFaqs: FAQItem[] = [
       "Alfred is built to be the best AI trip planner for travelers who want fast itineraries, booking support, and real-time travel utility in one place.",
   },
   {
-    question: "How does Alfred use AI for travel?",
+    question: "How does Alfred use AI for multi-city travel?",
     answer:
-      "Alfred uses AI to turn destination intent into personalized itineraries, hotel and flight planning, and practical travel recommendations shaped around timing, logistics, and family needs.",
+      "Alfred uses AI to turn destination intent into personalized itineraries, hotel and flight planning, and practical travel recommendations shaped around timing, routing, and city-to-city logistics.",
   },
   {
     question: "Can Alfred help with flights and hotels?",
     answer:
       "Yes. Alfred is designed as a complete AI travel planner that connects itinerary creation with flight and hotel discovery for a smoother booking experience.",
+  },
+  {
+    question: "Is Alfred better than map-first AI travel tools for execution?",
+    answer:
+      "Alfred is designed for travelers who need more than inspiration. It connects itinerary structure, logistics, and booking intent so the trip is easier to execute in the real world.",
   },
 ];
 
@@ -91,9 +110,9 @@ export const cornerstoneFaqs: Record<string, FAQItem[]> = {
         "Alfred compresses destination research, itinerary creation, and booking intent into one guided flow so travelers get a high-quality plan in seconds.",
     },
     {
-      question: "Who should use an AI trip planner?",
+      question: "Who should use an AI trip planner for multi-city travel?",
       answer:
-        "Frequent travelers, couples, and solo planners use Alfred when they want to save time without sacrificing itinerary quality or flexibility.",
+        "Frequent travelers, couples, families, and solo planners use Alfred when they want to save time without sacrificing itinerary quality, route clarity, or flexibility across multiple stops.",
     },
   ],
   travel: [
@@ -107,6 +126,11 @@ export const cornerstoneFaqs: Record<string, FAQItem[]> = {
       answer:
         "Alfred keeps flights, hotel choices, and itinerary sequencing connected so planning feels less fragmented and easier to execute.",
     },
+    {
+      question: "How is Alfred different from inspiration-first AI travel tools?",
+      answer:
+        "Alfred emphasizes validated travel flow, itinerary structure, and booking readiness instead of stopping at map pins, suggestions, or collaborative trip ideas.",
+    },
   ],
   holiday: [
     {
@@ -118,6 +142,11 @@ export const cornerstoneFaqs: Record<string, FAQItem[]> = {
       question: "What makes Alfred good for holiday planning?",
       answer:
         "Alfred blends destination inspiration, itinerary generation, and reward-driven travel planning so vacations feel easier to organize.",
+    },
+    {
+      question: "Can Alfred plan group trips with different travel styles?",
+      answer:
+        "Yes. Alfred works well for group travel because it can structure itineraries around shared logistics while still keeping the plan flexible for different pacing, budgets, and interests.",
     },
   ],
 };

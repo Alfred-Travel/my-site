@@ -1,5 +1,16 @@
 import type { MetadataRoute } from "next";
+import fs from "node:fs";
+import path from "node:path";
 import { majorCities, siteUrl, slugifyCity } from "../lib/site-data";
+
+function readMarkdownSlugs(dirPath: string): string[] {
+  if (!fs.existsSync(dirPath)) return [];
+
+  return fs
+    .readdirSync(dirPath)
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => file.replace(/\.md$/, ""));
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const coreRoutes = [
@@ -8,6 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-travel-planner",
     "/ai-holiday-planner",
     "/vs/alfred-vs-wonderplan-vs-tripadvisor",
+    "/blog/index.html",
+    "/compare/index.html",
+    "/itineraries/index.html",
+  ];
+  const blogSlugs = [
+    ...readMarkdownSlugs(path.join(process.cwd(), "_posts")),
+    ...readMarkdownSlugs(path.join(process.cwd(), "content", "blog")),
   ];
 
   const coreEntries = coreRoutes.map((route) => ({
@@ -20,5 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...coreEntries, ...cityEntries];
+  const itineraryEntries = majorCities.map((city) => ({
+    url: `${siteUrl}/itineraries/${slugifyCity(city)}.html`,
+    lastModified: new Date(),
+  }));
+
+  const blogEntries = [...new Set(blogSlugs)].map((slug) => ({
+    url: `${siteUrl}/blog/${slug}.html`,
+    lastModified: new Date(),
+  }));
+
+  return [...coreEntries, ...cityEntries, ...itineraryEntries, ...blogEntries];
 }

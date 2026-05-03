@@ -317,10 +317,7 @@ const itineraryUrls = destinations.map(name => ({
   priority: '0.8'
 }));
 const compareUrls = [
-  { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
-  { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.7' },
-  { loc: BASE_URL + '/compare/alfred-vs-trip-planner-ai.html', changefreq: 'weekly', priority: '0.7' },
-  { loc: BASE_URL + '/compare/alfred-vs-wanderlog.html', changefreq: 'weekly', priority: '0.7' }
+  { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' }
 ];
 const sitemapLines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
