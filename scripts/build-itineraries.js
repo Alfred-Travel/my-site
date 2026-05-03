@@ -127,6 +127,7 @@ const CITY_CARD_META = {
   'Boston': { image: 'white_house.jpg', flag: '🇺🇸' },
   'Washington DC': { image: 'white_house.jpg', flag: '🇺🇸' },
   'Las Vegas': { image: 'grand_canyon.jpg', flag: '🇺🇸' },
+  'Zurich': { image: 'matterhorn.jpg', flag: '🇨🇭' },
 };
 
 const FALLBACK_CARD_IMAGES = [
@@ -172,6 +173,41 @@ Day 3 — Deeper Exploration
 • Evening: farewell dinner; pack for departure`.trim();
 }
 
+function extractEntitySignals(displayName, itineraryText) {
+  const arrivalMatch = itineraryText.match(/Arrive at ([^;\n]+)/i);
+  const arrivalGateway = arrivalMatch ? arrivalMatch[1].trim() : `${displayName} airport or station`;
+
+  const transportModePatterns = [
+    ['rail', /\brail\b/i],
+    ['train', /\btrain\b/i],
+    ['metro', /\bmetro\b/i],
+    ['tram', /\btram\b/i],
+    ['ferry', /\bferry\b/i],
+    ['bus', /\bbus\b/i],
+    ['taxi', /\btaxi|cab\b/i],
+    ['boat', /\bboat\b/i],
+    ['rideshare', /\brideshare\b/i],
+    ['cable car', /\bcable car\b/i],
+  ];
+  const transportModes = transportModePatterns
+    .filter(([, pattern]) => pattern.test(itineraryText))
+    .map(([mode]) => mode);
+
+  const areaMatches = [];
+  const areaRegex = /(?:Check-in (?:in|near|at)|lunch in|dinner in)\s+([^;\n]+)/gi;
+  let match;
+  while ((match = areaRegex.exec(itineraryText)) !== null) {
+    areaMatches.push(match[1].trim());
+  }
+  const neighborhoodHints = [...new Set(areaMatches)].slice(0, 3);
+
+  return {
+    arrivalGateway,
+    transportModes: transportModes.length ? transportModes : ['train', 'metro'],
+    neighborhoodHints: neighborhoodHints.length ? neighborhoodHints : [`central ${displayName}`],
+  };
+}
+
 function buildPage(displayName, contentMap) {
   const slug = slugify(displayName);
   const pageUrl = `${BASE_URL}/itineraries/${slug}.html`;
@@ -185,6 +221,9 @@ function buildPage(displayName, contentMap) {
     result: { '@type': 'Trip', name: `7-Day ${displayName} Itinerary` },
   };
 
+  const itineraryText = sampleItinerary(displayName, contentMap);
+  const citySignals = extractEntitySignals(displayName, itineraryText);
+
   const datasetSchema = {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
@@ -192,10 +231,19 @@ function buildPage(displayName, contentMap) {
     description: `Structured, AI-validated travel itinerary for ${displayName}. Includes flight gap validation, hotel proximity checks, and multi-LLM confirmation.`,
     url: pageUrl,
     creator: { '@type': 'Organization', name: 'Alfred Travel Tech Pty Ltd', url: BASE_URL },
+    keywords: [
+      `${displayName} itinerary`,
+      `${displayName} neighborhoods`,
+      `${displayName} transport`,
+      `${citySignals.arrivalGateway}`,
+    ],
+    variableMeasured: citySignals.transportModes.map((mode) => ({
+      '@type': 'PropertyValue',
+      name: `${displayName} transport mode`,
+      value: mode,
+    })),
     distribution: { '@type': 'DataDownload', encodingFormat: 'text/html', contentUrl: pageUrl },
   };
-
-  const itineraryText = sampleItinerary(displayName, contentMap);
   const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
   const faqSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -206,15 +254,15 @@ function buildPage(displayName, contentMap) {
         name: `What makes Alfred useful for planning a ${displayName} itinerary?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Alfred helps travelers build a ${displayName} itinerary with route-aware structure, destination context, and booking-ready planning instead of disconnected recommendations.`
+          text: `Alfred helps travelers build a ${displayName} itinerary with route-aware structure from ${citySignals.arrivalGateway}, destination context, and booking-ready planning instead of disconnected recommendations.`
         }
       },
       {
         '@type': 'Question',
-        name: `Can Alfred help with a multi-city trip that includes ${displayName}?`,
+        name: `Can Alfred help with a multi-city trip that includes ${displayName} and local transport decisions?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Yes. Alfred is designed for multi-city and cross-border travel, so ${displayName} can fit into a broader itinerary with clearer sequencing and fewer logistics gaps.`
+          text: `Yes. Alfred is designed for multi-city and cross-border travel, so ${displayName} can fit into a broader itinerary with clearer sequencing, transport mode choices (${citySignals.transportModes.join(', ')}), and fewer logistics gaps.`
         }
       }
     ]
@@ -277,8 +325,9 @@ function buildPage(displayName, contentMap) {
         </section>
         <section class="itinerary-faq">
             <h2>${displayName} Trip Planning FAQ</h2>
-            <p><strong>What makes Alfred useful for planning ${displayName}?</strong><br>Alfred turns ${displayName} inspiration into a usable, validated trip structure with itinerary flow and booking-ready planning.</p>
-            <p><strong>Can Alfred help if ${displayName} is only one stop?</strong><br>Yes. Alfred is designed for single-city, multi-city, and cross-border trips, so ${displayName} can fit cleanly into a larger itinerary.</p>
+            <p><strong>Which arrival gateway and transfer context does this ${displayName} itinerary assume?</strong><br>This plan starts from <strong>${citySignals.arrivalGateway}</strong> and keeps transfer logic practical for the first-day block.</p>
+            <p><strong>Which neighborhoods or districts are emphasized?</strong><br>This itinerary prioritizes <strong>${citySignals.neighborhoodHints.join(' • ')}</strong> to reduce routing friction.</p>
+            <p><strong>What local transport modes are relevant?</strong><br>Typical ${displayName} movement in this plan uses <strong>${citySignals.transportModes.join(', ')}</strong> depending on daily sequencing.</p>
         </section>
         <div class="itinerary-cta">
             <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" target="_blank" rel="noopener noreferrer">Generate the full 7-day version in Alfred App</a>
