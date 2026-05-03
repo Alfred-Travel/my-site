@@ -3,12 +3,39 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
-import { softwareApplicationSchema } from "../lib/site-data";
+import {
+  organizationSchema,
+  siteUrl,
+  softwareApplicationSchema,
+  websiteSchema,
+} from "../lib/site-data";
 
 export const metadata: Metadata = {
   title: "Alfred | The World’s Smartest AI Trip Planner & Travel Assistant",
   description:
     "Plan your next adventure in seconds with Alfred, the #1 AI Travel Planner. Generate smart itineraries, book flights/hotels, and earn rewards. Start your AI holiday planning today.",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Alfred | The World’s Smartest AI Trip Planner & Travel Assistant",
+    description:
+      "Plan your next adventure in seconds with Alfred, the AI trip planner for validated itineraries, multi-city travel, and booking-ready planning.",
+    url: siteUrl,
+    siteName: "Alfred Travel",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alfred | The World’s Smartest AI Trip Planner & Travel Assistant",
+    description:
+      "Validated itineraries, multi-city planning, and booking-ready travel execution in one AI travel planner.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +50,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(softwareApplicationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
         <SiteHeader />

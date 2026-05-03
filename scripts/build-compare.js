@@ -14,20 +14,20 @@ const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Alfred Travel',
-  operatingSystem: 'iOS, Android',
+  operatingSystem: 'iOS, Android, Web',
   applicationCategory: 'TravelApplication',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
-    reviewCount: '150'
+    ratingCount: '150'
   },
   offers: {
     '@type': 'Offer',
     price: '0.00',
     priceCurrency: 'USD'
   },
-  description: 'Alfred is the #1 AI Trip Planner for 2026, featuring a multi-LLM Logistical Validation Engine powered by Gemini and GPT-4o for multi-city travel planning, AI holiday planning, and real-time booking.',
-  featureList: 'Multi-city AI Trip Planner, Logistical Validation, Real-time GPS replanning, AI Holiday Planner, Blockchain Rewards',
+  description: 'Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.',
+  featureList: 'AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards',
   softwareVersion: '1.0.18'
 };
 
@@ -61,7 +61,7 @@ const FOOTER = `
             <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
-        <div class="footer-bottom"><p>&copy; 2025 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
+        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
     <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
     <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
@@ -73,19 +73,29 @@ const COMPARISONS = [
   { slug: 'alfred-vs-wanderlog', competitor: 'Wanderlog' },
 ];
 
-const ROWS = [
-  { feature: 'Logistical Validation', alfred: 'Yes (Multi-LLM, transit gaps checked)', competitor: 'No (static generation)' },
-  { feature: 'Blockchain Rewards', alfred: 'Yes (Alfred Tokens for sharing & feedback)', competitor: 'No' },
-  { feature: 'Multi-City Logic', alfred: 'Yes (unlimited countries per trip)', competitor: 'Limited or single-country' },
-];
+const ROWS = {
+  default: [
+    { feature: 'Logistical Validation', alfred: 'Yes (multi-LLM, transit-aware sequencing)', competitor: 'No clear validation layer' },
+    { feature: 'Booking-Ready Planning', alfred: 'Built around executable travel flow', competitor: 'Often ends at inspiration or list-building' },
+    { feature: 'Multi-City Logic', alfred: 'Yes (unlimited countries per trip)', competitor: 'More limited trip-structure depth' },
+  ],
+  Mindtrip: [
+    { feature: 'Validation Depth', alfred: 'Yes (multi-LLM, route-aware travel logic)', competitor: 'Strong inspiration and map UX, but no visible validation engine' },
+    { feature: 'Surface Coverage', alfred: 'iOS, Android, and web positioning', competitor: 'Official app currently iPhone-first' },
+    { feature: 'Execution Positioning', alfred: 'Validated itinerary flow and booking-ready planning', competitor: 'Strong collaboration, events, receipts, and discovery tools' },
+  ],
+};
 
 function buildPage({ slug, competitor }) {
-  const title = `Alfred vs ${competitor}: Why Alfred is the Best AI Holiday Planner for 2025`;
-  const conclusion = `While ${competitor} is good for inspiration, Alfred is a logistical engine for execution.`;
+  const title = `Alfred vs ${competitor}: Which AI Travel Planner Fits Better in 2026?`;
+  const conclusion = competitor === 'Mindtrip'
+    ? 'Mindtrip has become a stronger discovery and collaboration product, but Alfred still has the clearer position when a traveler needs validated trip structure and execution-ready planning.'
+    : `While ${competitor} can help with planning inspiration, Alfred is positioned more clearly around validated travel execution.`;
   const pageUrl = `${BASE_URL}/compare/${slug}.html`;
   const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
+  const rows = ROWS[competitor] || ROWS.default;
 
-  const tableRows = ROWS.map(
+  const tableRows = rows.map(
     (r) => `<tr><td style="padding:1rem;font-weight:600">${r.feature}</td><td style="padding:1rem;color:var(--secondary-color)">${r.alfred}</td><td style="padding:1rem">${r.competitor}</td></tr>`
   ).join('');
 
@@ -95,8 +105,8 @@ function buildPage({ slug, competitor }) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} | Alfred Travel</title>
-    <meta name="description" content="Compare Alfred vs ${competitor}. Alfred offers Logistical Validation, Blockchain Rewards, and Multi-City Logic. Best AI Holiday Planner 2025.">
-    <meta name="keywords" content="Alfred vs ${competitor}, AI Holiday Planner, AI Trip Planner, ${competitor} alternative">
+    <meta name="description" content="Compare Alfred vs ${competitor} across itinerary validation, trip execution, and travel planning depth.">
+    <meta name="keywords" content="Alfred vs ${competitor}, AI travel planner comparison, ${competitor} alternative, trip planner comparison">
     <meta property="og:title" content="${title} | Alfred Travel">
     <meta property="og:url" content="${pageUrl}">
     <link rel="canonical" href="${pageUrl}">
@@ -129,6 +139,7 @@ function buildPage({ slug, competitor }) {
                 ${tableRows}
             </tbody>
         </table>
+        ${competitor === 'Mindtrip' ? '<p class="conclusion">Mindtrip’s current product emphasizes collaboration, events, Google Pins, collections, receipts, and iPhone-based mobile planning. Alfred should answer that by owning the execution layer: validated trip structure, multi-city sequencing, and booking-ready travel flow.</p>' : ''}
         <p class="conclusion">${conclusion}</p>
         <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" target="_blank" rel="noopener noreferrer" class="compare-cta">Download Alfred</a>
     </main>
@@ -155,8 +166,8 @@ function main() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfred vs Competitors | Best AI Holiday Planner 2025 - Alfred Travel</title>
-    <meta name="description" content="Compare Alfred vs Trip Planner AI, Mindtrip, Wanderlog. Logistical Validation, Blockchain Rewards, Multi-City Logic.">
+    <title>Alfred vs Competitors | AI Travel Planner Comparisons for 2026 - Alfred Travel</title>
+    <meta name="description" content="Compare Alfred vs Trip Planner AI, Mindtrip, and Wanderlog across validation depth, trip execution, and multi-city planning.">
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="stylesheet" href="../css/styles.css">
     <script type="application/ld+json">${softwareApplicationSchema}</script>

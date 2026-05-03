@@ -19,13 +19,13 @@ export const siteUrl = "https://www.alfredtravel.io";
 export const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Alfred AI Travel Planner",
+  name: "Alfred Travel",
   operatingSystem: "iOS, Android, Web",
   applicationCategory: "TravelApplication",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "1250",
+    ratingCount: "150",
   },
   offers: {
     "@type": "Offer",
@@ -33,13 +33,36 @@ export const softwareApplicationSchema = {
     priceCurrency: "USD",
   },
   description:
-    "Alfred is an AI-powered trip planner that generates personalized itineraries and manages bookings.",
+    "Alfred is an AI-powered trip planner for validated itineraries, multi-city travel, and booking-ready travel execution.",
   featureList: [
     "AI Itinerary Generator",
-    "Real-time Booking",
+    "Validated Multi-City Planning",
+    "Integrated Travel Booking Flow",
     "Loyalty Rewards",
     "Google Maps Integration",
   ],
+};
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Alfred Travel Tech Pty Ltd",
+  url: siteUrl,
+  brand: "Alfred Travel",
+  sameAs: [
+    "https://www.alfredtravel.io",
+    "https://apps.apple.com/au/app/alfred-travel/id6745240301",
+    "https://play.google.com/store/apps/details?id=io.alfredtravel.app",
+  ],
+};
+
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Alfred Travel",
+  url: siteUrl,
+  description:
+    "AI trip planner with validated itineraries, multi-city travel logic, and booking-ready destination planning.",
 };
 
 export const homepageFaqs: FAQItem[] = [

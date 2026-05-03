@@ -4,10 +4,6 @@
   <url><loc>https://www.alfredtravel.io/ai-trip-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/ai-travel-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/ai-holiday-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.alfredtravel.io/compare/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-wanderlog.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-trip-planner-ai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/products.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/road-trip.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -16,26 +12,7 @@
   <url><loc>https://www.alfredtravel.io/terms.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/delete-account.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/prize-tc.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/london.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/paris.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/tokyo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/new-york.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/singapore.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/dubai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/rome.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/barcelona.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/berlin.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/amsterdam.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/sydney.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/melbourne.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/los-angeles.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/san-francisco.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/bangkok.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/seoul.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/hong-kong.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/istanbul.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/vienna.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/itineraries/madrid.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-fragmentation-travel-distribution-alfred.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/melbourne-to-beijing.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/melbourne-to-adelaide-road-trip.html</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/fragmented-travel-products-challenge.html</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -73,4 +50,59 @@
   <url><loc>https://www.alfredtravel.io/blog/multi-city-problem-why-ai-fails-at-borders.html</loc><lastmod>2025-06-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/itinerary-validation-engine.html</loc><lastmod>2025-02-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/cross-border-ai-planning.html</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/london.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/paris.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/tokyo.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/kyoto.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/new-york.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/barcelona.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/rome.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/bali.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/dubai.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/singapore.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/hong-kong.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/amsterdam.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/sydney.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/los-angeles.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/berlin.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/madrid.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/bangkok.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/istanbul.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/lisbon.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/prague.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/vienna.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/seoul.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/san-francisco.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/miami.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/cape-town.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/marrakech.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/athens.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/florence.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/edinburgh.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/dublin.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/copenhagen.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/oslo.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/stockholm.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/reykjavik.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/phuket.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/ho-chi-minh-city.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/hanoi.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/kuala-lumpur.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/melbourne.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/auckland.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/queenstown.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/rio-de-janeiro.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/buenos-aires.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/mexico-city.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/cancun.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/toronto.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/vancouver.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/chicago.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/boston.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/washington-dc.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/las-vegas.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/compare/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-trip-planner-ai.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-wanderlog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

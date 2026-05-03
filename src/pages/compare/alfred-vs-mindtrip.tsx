@@ -4,21 +4,21 @@ import Head from 'next/head';
 const COMPETITOR = 'Mindtrip';
 
 const COMPARISON_ROWS = [
-  { feature: 'Logistical Validation', alfred: 'Yes (Multi-LLM, transit gaps checked)', competitor: 'No (static generation)' },
-  { feature: 'Blockchain Rewards', alfred: 'Yes (Alfred Tokens for sharing & feedback)', competitor: 'No' },
-  { feature: 'Multi-City Logic', alfred: 'Yes (unlimited countries per trip)', competitor: 'Limited or single-country' },
+  { feature: 'Validation Depth', alfred: 'Yes (multi-LLM, route-aware travel logic)', competitor: 'Strong inspiration and map UX, but no visible validation engine' },
+  { feature: 'Surface Coverage', alfred: 'iOS, Android, and web positioning', competitor: 'Official app currently iPhone-first' },
+  { feature: 'Execution Positioning', alfred: 'Validated itinerary flow and booking-ready planning', competitor: 'Strong collaboration, events, receipts, and discovery tools' },
 ];
 
 export default function AlfredVsMindtrip() {
-  const title = `Alfred vs ${COMPETITOR}: Why Alfred is the Best AI Holiday Planner for 2025`;
-  const conclusion = `While ${COMPETITOR} is good for inspiration, Alfred is a logistical engine for execution.`;
+  const title = `Alfred vs ${COMPETITOR}: Which AI Travel Planner Fits Better in 2026?`;
+  const conclusion = `${COMPETITOR} has become a stronger discovery and collaboration product, but Alfred still has the clearer position when a traveler needs validated trip structure and execution-ready planning.`;
 
   return (
     <>
       <Head>
         <title>{title} | Alfred Travel</title>
-        <meta name="description" content={`Compare Alfred vs ${COMPETITOR}. Alfred offers Logistical Validation, Blockchain Rewards, and Multi-City Logic. Best AI Holiday Planner 2025.`} />
-        <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI Holiday Planner, AI Trip Planner, ${COMPETITOR} alternative`} />
+        <meta name="description" content={`Compare Alfred vs ${COMPETITOR} across itinerary validation, trip execution, and travel planning depth.`} />
+        <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI travel planner comparison, ${COMPETITOR} alternative, trip planner comparison`} />
       </Head>
       <main style={{ maxWidth: 800, margin: '0 auto', padding: '2rem 1.5rem' }}>
         <h1 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>
@@ -43,6 +43,10 @@ export default function AlfredVsMindtrip() {
             ))}
           </tbody>
         </table>
+
+        <p style={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
+          Mindtrip&apos;s current product emphasizes collaboration, events, Google Pins, collections, receipts, and iPhone-based mobile planning. Alfred should answer that by owning the execution layer: validated trip structure, multi-city sequencing, and booking-ready travel flow.
+        </p>
 
         <p style={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
           {conclusion}

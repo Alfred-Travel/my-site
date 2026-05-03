@@ -4,21 +4,21 @@ import Head from 'next/head';
 const COMPETITOR = 'Trip Planner AI';
 
 const COMPARISON_ROWS = [
-  { feature: 'Logistical Validation', alfred: 'Yes (Multi-LLM, transit gaps checked)', competitor: 'No (static generation)' },
-  { feature: 'Blockchain Rewards', alfred: 'Yes (Alfred Tokens for sharing & feedback)', competitor: 'No' },
-  { feature: 'Multi-City Logic', alfred: 'Yes (unlimited countries per trip)', competitor: 'Limited or single-country' },
+  { feature: 'Logistical Validation', alfred: 'Yes (multi-LLM, transit-aware sequencing)', competitor: 'No clear validation layer' },
+  { feature: 'Booking-Ready Planning', alfred: 'Built around executable travel flow', competitor: 'Often ends at inspiration or list-building' },
+  { feature: 'Multi-City Logic', alfred: 'Yes (unlimited countries per trip)', competitor: 'More limited trip-structure depth' },
 ];
 
 export default function AlfredVsTripPlannerAI() {
-  const title = `Alfred vs ${COMPETITOR}: Why Alfred is the Best AI Holiday Planner for 2025`;
-  const conclusion = `While ${COMPETITOR} is good for inspiration, Alfred is a logistical engine for execution.`;
+  const title = `Alfred vs ${COMPETITOR}: Which AI Travel Planner Fits Better in 2026?`;
+  const conclusion = `While ${COMPETITOR} can help with planning inspiration, Alfred is positioned more clearly around validated travel execution.`;
 
   return (
     <>
       <Head>
         <title>{title} | Alfred Travel</title>
-        <meta name="description" content={`Compare Alfred vs ${COMPETITOR}. Alfred offers Logistical Validation, Blockchain Rewards, and Multi-City Logic. Best AI Holiday Planner 2025.`} />
-        <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI Holiday Planner, AI Trip Planner, ${COMPETITOR} alternative`} />
+        <meta name="description" content={`Compare Alfred vs ${COMPETITOR} across itinerary validation, trip execution, and travel planning depth.`} />
+        <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI travel planner comparison, ${COMPETITOR} alternative, trip planner comparison`} />
       </Head>
       <main style={{ maxWidth: 800, margin: '0 auto', padding: '2rem 1.5rem' }}>
         <h1 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>

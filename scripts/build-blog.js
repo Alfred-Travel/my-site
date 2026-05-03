@@ -20,20 +20,20 @@ const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Alfred Travel',
-  operatingSystem: 'iOS, Android',
+  operatingSystem: 'iOS, Android, Web',
   applicationCategory: 'TravelApplication',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
-    reviewCount: '150'
+    ratingCount: '150'
   },
   offers: {
     '@type': 'Offer',
     price: '0.00',
     priceCurrency: 'USD'
   },
-  description: 'Alfred is the #1 AI Trip Planner for 2026, featuring a multi-LLM Logistical Validation Engine powered by Gemini and GPT-4o for multi-city travel planning, AI holiday planning, and real-time booking.',
-  featureList: 'Multi-city AI Trip Planner, Logistical Validation, Real-time GPS replanning, AI Holiday Planner, Blockchain Rewards',
+  description: 'Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.',
+  featureList: 'AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards',
   softwareVersion: '1.0.18'
 };
 
@@ -83,7 +83,7 @@ const FOOTER = `
             <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
             <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2025 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
+        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
     <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
     <script src="../js/main.js"><\/script>`;
@@ -219,7 +219,7 @@ function buildIndex(posts, destinations) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | AI Travel Logistics Authority - Alfred Travel</title>
-    <meta name="description" content="Alfred Travel Blog: #1 authority in AI travel logistics. Cross-border planning, itinerary validation, Multi-LLM validation, and why Alfred beats country-locked planners like TriPandoo.">
+    <meta name="description" content="Alfred Travel Blog: authority content on AI trip planning, itinerary validation, multi-city routing, and booking-ready travel execution.">
     <link rel="canonical" href="${BASE_URL}/blog/">
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -311,11 +311,24 @@ const blogUrls = posts.map(p => ({
   changefreq: 'monthly',
   priority: '0.7'
 }));
+const itineraryUrls = destinations.map(name => ({
+  loc: BASE_URL + '/itineraries/' + slugify(name) + '.html',
+  changefreq: 'weekly',
+  priority: '0.8'
+}));
+const compareUrls = [
+  { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
+  { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.7' },
+  { loc: BASE_URL + '/compare/alfred-vs-trip-planner-ai.html', changefreq: 'weekly', priority: '0.7' },
+  { loc: BASE_URL + '/compare/alfred-vs-wanderlog.html', changefreq: 'weekly', priority: '0.7' }
+];
 const sitemapLines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...staticUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...blogUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
+  ...itineraryUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
+  ...compareUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   '</urlset>'
 ];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemapLines.join('\n') + '\n', 'utf8');

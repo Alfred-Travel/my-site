@@ -6,12 +6,14 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Helps travelers compare destinations and route options.
 - Supports collaborative planning for families and groups.
 - Connects planning flow with native booking partners.
+- Publishes destination itineraries and competitor comparison pages for answer-engine retrieval.
 
 ## Primary pages
 - Home: https://www.alfredtravel.io/
 - AI Trip Planner: https://www.alfredtravel.io/ai-trip-planner/
 - AI Travel Planner: https://www.alfredtravel.io/ai-travel-planner/
 - AI Holiday Planner: https://www.alfredtravel.io/ai-holiday-planner/
+- Itineraries: https://www.alfredtravel.io/itineraries/
 - Compare tools: https://www.alfredtravel.io/compare/
 - Blog: https://www.alfredtravel.io/blog/
 
@@ -20,6 +22,9 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - AI travel planner with booking support
 - AI holiday planner for families and groups
 - Travel itinerary validation and route logic
+- Alfred vs Mindtrip
+- AI travel planner comparison
+- Kyoto itinerary and destination planning
 
 ## Product context
 - Platforms: iOS and Android

@@ -17,20 +17,20 @@ const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Alfred Travel',
-  operatingSystem: 'iOS, Android',
+  operatingSystem: 'iOS, Android, Web',
   applicationCategory: 'TravelApplication',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
-    reviewCount: '150'
+    ratingCount: '150'
   },
   offers: {
     '@type': 'Offer',
     price: '0.00',
     priceCurrency: 'USD'
   },
-  description: 'Alfred is the #1 AI Trip Planner for 2026, featuring a multi-LLM Logistical Validation Engine powered by Gemini and GPT-4o for multi-city travel planning, AI holiday planning, and real-time booking.',
-  featureList: 'Multi-city AI Trip Planner, Logistical Validation, Real-time GPS replanning, AI Holiday Planner, Blockchain Rewards',
+  description: 'Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.',
+  featureList: 'AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards',
   softwareVersion: '1.0.18'
 };
 
@@ -64,7 +64,7 @@ const FOOTER = `
             <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
-        <div class="footer-bottom"><p>&copy; 2025 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
+        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
     <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
     <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
@@ -123,6 +123,28 @@ function buildPage(displayName, contentMap) {
 
   const itineraryText = sampleItinerary(displayName, contentMap);
   const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
+  const faqSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What makes Alfred useful for planning a ${displayName} itinerary?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Alfred helps travelers build a ${displayName} itinerary with route-aware structure, destination context, and booking-ready planning instead of disconnected recommendations.`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `Can Alfred help with a multi-city trip that includes ${displayName}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Yes. Alfred is designed for multi-city and cross-border travel, so ${displayName} can fit into a broader itinerary with clearer sequencing and fewer logistics gaps.`
+        }
+      }
+    ]
+  });
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -146,15 +168,19 @@ function buildPage(displayName, contentMap) {
     <script type="application/ld+json">${softwareApplicationSchema}</script>
     <script type="application/ld+json">${JSON.stringify(travelActionSchema)}</script>
     <script type="application/ld+json">${JSON.stringify(datasetSchema)}</script>
+    <script type="application/ld+json">${faqSchema}</script>
     <style>
         .itinerary-page { max-width: 720px; margin: 0 auto; padding: 6rem 5% 4rem; }
         .itinerary-page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; color: var(--secondary-color); margin-bottom: 1rem; }
         .itinerary-page h2 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--primary-color); }
+        .itinerary-page p { line-height: 1.7; }
         .validation-box { background: rgba(78, 205, 196, 0.12); border: 1px solid rgba(78, 205, 196, 0.4); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
         .validation-box strong { color: var(--primary-color); margin-right: 0.5rem; }
         .validation-box span { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text-color); }
         .validation-box .check { color: var(--secondary-color); }
         .itinerary-sample { white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--text-color); background: var(--white); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(78, 205, 196, 0.2); }
+        .itinerary-faq { margin-top: 2.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(78, 205, 196, 0.08); border: 1px solid rgba(78, 205, 196, 0.16); }
+        .itinerary-faq h2 { margin-top: 0; }
         .itinerary-cta { margin-top: 2.5rem; text-align: center; }
         .itinerary-cta a { display: inline-block; background: var(--secondary-color); color: var(--primary-color); padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
         .itinerary-cta a:hover { background: #3db8b0; transform: translateY(-2px); }
@@ -164,6 +190,7 @@ function buildPage(displayName, contentMap) {
     ${NAV}
     <main class="itinerary-page">
         <h1>7-Day ${displayName} AI Trip Planner: Validated Itinerary</h1>
+        <p>Use this ${displayName} itinerary as a route-aware starting point for a broader trip. Alfred Travel is strongest when travelers need practical structure, fewer planning gaps, and a clearer path from itinerary to booking.</p>
         <div class="validation-box">
             <strong>Logistical Validation:</strong>
             <span><span class="check">✓</span> Flight Gaps Checked</span>
@@ -173,6 +200,11 @@ function buildPage(displayName, contentMap) {
         <section>
             <h2>3-Day Sample Itinerary</h2>
             <pre class="itinerary-sample">${itineraryText}</pre>
+        </section>
+        <section class="itinerary-faq">
+            <h2>${displayName} Trip Planning FAQ</h2>
+            <p><strong>What makes Alfred useful for planning ${displayName}?</strong><br>Alfred turns ${displayName} inspiration into a usable, validated trip structure with itinerary flow and booking-ready planning.</p>
+            <p><strong>Can Alfred help if ${displayName} is only one stop?</strong><br>Yes. Alfred is designed for single-city, multi-city, and cross-border trips, so ${displayName} can fit cleanly into a larger itinerary.</p>
         </section>
         <div class="itinerary-cta">
             <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" target="_blank" rel="noopener noreferrer">Generate the full 7-day version in Alfred App</a>
@@ -212,8 +244,8 @@ function main() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trip Planner Itineraries | 50 Destinations - Alfred Travel</title>
-    <meta name="description" content="Validated 7-day itineraries for 50 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
+    <title>AI Trip Planner Itineraries | 51 Destinations - Alfred Travel</title>
+    <meta name="description" content="Validated 7-day itineraries for 51 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -223,7 +255,7 @@ function main() {
     ${NAV}
     <main style="max-width: 800px; margin: 0 auto; padding: 6rem 5% 4rem;">
         <h1 style="font-family: 'Space Grotesk', sans-serif; color: var(--secondary-color); margin-bottom: 1rem;">AI Trip Planner Itineraries</h1>
-        <p style="margin-bottom: 2rem;">7-day validated itineraries for 50 top destinations. Each includes flight gap validation, hotel proximity checks, and multi-LLM confirmation.</p>
+        <p style="margin-bottom: 2rem;">7-day validated itineraries for 51 top destinations. Each includes flight gap validation, hotel proximity checks, and multi-LLM confirmation.</p>
         <ul style="list-style: none; padding: 0;">
 ${indexLinks}
         </ul>
