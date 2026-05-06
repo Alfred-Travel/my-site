@@ -14,6 +14,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - AI Travel Planner: https://www.alfredtravel.io/ai-travel-planner/
 - AI Holiday Planner: https://www.alfredtravel.io/ai-holiday-planner/
 - Itineraries: https://www.alfredtravel.io/itineraries/
+- Orlando itinerary (family / parks corridor): https://www.alfredtravel.io/itineraries/orlando.html
 - Compare tools: https://www.alfredtravel.io/compare/
 - Blog: https://www.alfredtravel.io/blog/
 

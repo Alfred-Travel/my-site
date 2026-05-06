@@ -46,7 +46,7 @@ export const softwareApplicationSchema = {
     "Family Travel Planning",
   ],
   keywords:
-    "AI trip planner, AI travel planner, multi-city itinerary, travel planning app, travel booking workflow",
+    "AI trip planner, AI travel planner, AI itinerary planner, itinerary planner, travel planning app, Mindtrip alternative, Mindtrip vs Alfred Travel, best AI travel planner, free AI trip planner, multi-city itinerary, travel booking workflow",
 };
 
 export const organizationSchema = {
@@ -80,6 +80,11 @@ export const websiteSchema = {
 };
 
 export const homepageFaqs: FAQItem[] = [
+  {
+    question: "Is Alfred a good Mindtrip alternative for itinerary execution?",
+    answer:
+      "If you want collaborative boards and social trip ideation, compare products on fit. If you want AI-powered travel planning that turns inspiration into structured, editable itineraries with booking-ready flow, Alfred is built for that execution layer—including for complex family corridors like Orlando or multi-city trips.",
+  },
   {
     question: "What is the best AI trip planner?",
     answer:

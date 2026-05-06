@@ -110,6 +110,22 @@ function blogPostingSchema(post, slug) {
   };
 }
 
+function faqPageSchema(faqs) {
+  if (!faqs || !Array.isArray(faqs) || faqs.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
 function breadcrumbSchema(post, slug) {
   const category = post.data.category || 'AI Travel Logistics';
   return {
@@ -146,6 +162,11 @@ function buildPost(slug, post, contentHtml) {
   const schemaBlog = JSON.stringify(blogPostingSchema(post, slug), null, 2);
   const schemaBreadcrumb = JSON.stringify(breadcrumbSchema(post, slug), null, 2);
   const schemaSoftware = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA, null, 2);
+  const faqSchemaObj = faqPageSchema(post.data.faqs);
+  const schemaFaq = faqSchemaObj ? `\n    <script type="application/ld+json">\n${JSON.stringify(faqSchemaObj)}\n    </script>` : '';
+  const keywordsMeta = post.data.keywords
+    ? `\n    <meta name="keywords" content="${escapeHtml(post.data.keywords)}">`
+    : '';
   const category = post.data.category || 'AI Travel Logistics';
 
   return `<!DOCTYPE html>
@@ -154,7 +175,7 @@ function buildPost(slug, post, contentHtml) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escapeHtml(post.data.title)} | Alfred Travel Blog</title>
-    <meta name="description" content="${escapeHtml(post.data.description || post.data.title)}">
+    <meta name="description" content="${escapeHtml(post.data.description || post.data.title)}">${keywordsMeta}
     <link rel="canonical" href="${BASE_URL}/blog/${slug}.html">
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,7 +185,7 @@ function buildPost(slug, post, contentHtml) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="application/ld+json">\n${schemaSoftware}\n    </script>
     <script type="application/ld+json">\n${schemaBlog}\n    </script>
-    <script type="application/ld+json">\n${schemaBreadcrumb}\n    </script>
+    <script type="application/ld+json">\n${schemaBreadcrumb}\n    </script>${schemaFaq}
 </head>
 <body class="blog-page">
 ${NAV}
@@ -317,7 +338,8 @@ const itineraryUrls = destinations.map(name => ({
   priority: '0.8'
 }));
 const compareUrls = [
-  { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' }
+  { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
+  { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.75' },
 ];
 const sitemapLines = [
   '<?xml version="1.0" encoding="UTF-8"?>',

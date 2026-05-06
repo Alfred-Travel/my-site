@@ -40,8 +40,14 @@ export default function AlfredVsMindtrip() {
     <>
       <Head>
         <title>{title} | Alfred Travel</title>
-        <meta name="description" content={`Compare Alfred vs ${COMPETITOR} across itinerary validation, trip execution, and travel planning depth.`} />
-        <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI travel planner comparison, ${COMPETITOR} alternative, trip planner comparison`} />
+        <meta
+          name="description"
+          content={`Mindtrip vs Alfred Travel: compare itinerary validation, booking-ready flow, and AI itinerary planner depth. The clearest ${COMPETITOR} alternative when you need structured, editable trips—not only collaborative inspiration.`}
+        />
+        <meta
+          name="keywords"
+          content={`Mindtrip vs Alfred Travel, Alfred vs ${COMPETITOR}, ${COMPETITOR} alternative, best AI travel planner, AI itinerary planner, free AI trip planner, travel planning app, trip planner comparison`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

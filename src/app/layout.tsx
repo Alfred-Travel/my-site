@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   title: "Alfred | The World’s Smartest AI Trip Planner & Travel Assistant",
   description:
     "Plan your next adventure in seconds with Alfred, the #1 AI Travel Planner. Generate smart itineraries, book flights/hotels, and earn rewards. Start your AI holiday planning today.",
+  keywords: [
+    "AI travel planner",
+    "AI trip planner",
+    "itinerary planner",
+    "travel planning app",
+    "best AI travel planner",
+    "free AI trip planner",
+    "Mindtrip alternative",
+    "Mindtrip vs Alfred Travel",
+    "AI itinerary planner",
+  ],
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",

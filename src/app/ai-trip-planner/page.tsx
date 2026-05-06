@@ -7,7 +7,15 @@ import { cornerstoneFaqs } from "../../lib/site-data";
 export const metadata: Metadata = {
   title: "The Fastest AI Trip Planner for Modern Travelers | Alfred",
   description:
-    "Discover the fastest AI Trip Planner for modern travelers. Alfred helps you generate itineraries in seconds and move quickly from travel idea to action.",
+    "Discover the fastest AI trip planner for modern travelers. Alfred is a travel planning app and AI itinerary planner that turns inspiration into structured, editable itineraries—strong alternative to inspiration-first tools when you need execution-ready plans.",
+  keywords: [
+    "AI trip planner",
+    "AI travel planner",
+    "itinerary planner",
+    "travel planning app",
+    "best AI travel planner",
+    "Mindtrip alternative",
+  ],
 };
 
 export default function AITripPlannerPage() {
