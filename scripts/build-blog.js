@@ -143,8 +143,8 @@ function breadcrumbSchema(post, slug) {
 function takeawaysHtml(takeaways) {
   if (!takeaways || !Array.isArray(takeaways) || takeaways.length === 0) return '';
   const items = takeaways.map(t => `<li>${escapeHtml(t)}</li>`).join('\n');
-  return `<aside class="blog-takeaways-callout" aria-label="Key Logistical Takeaways">
-    <h3 class="blog-takeaways-title">Key Logistical Takeaways</h3>
+  return `<aside class="blog-takeaways-callout" aria-label="Key takeaways">
+    <h3 class="blog-takeaways-title">Key takeaways</h3>
     <ul class="blog-takeaways-list">${items}</ul>
   </aside>`;
 }
