@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const COMPETITOR = 'Mindtrip';
 
@@ -54,6 +55,11 @@ export default function AlfredVsMindtrip() {
         />
       </Head>
       <main style={{ maxWidth: 800, margin: '0 auto', padding: '2rem 1.5rem' }}>
+        <p style={{ fontSize: '1rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+          Prefer a positioning-first overview before the feature table? Read{' '}
+          <Link href="/mindtrip-alternative">Alfred Travel: a practical Mindtrip alternative</Link>{' '}
+          for itinerary intent and booking readiness—then return here for nuance.
+        </p>
         <h1 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>
           {title}
         </h1>

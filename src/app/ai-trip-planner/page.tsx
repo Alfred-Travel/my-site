@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     "itinerary planner",
     "travel planning app",
     "best AI travel planner",
+    "free AI trip planner",
     "Mindtrip alternative",
+    "Mindtrip vs Alfred Travel",
+    "AI itinerary planner",
   ],
 };
 
@@ -47,6 +50,13 @@ export default function AITripPlannerPage() {
               aria-label="Visit the AI Travel Planner page"
             >
               See Travel Planner
+            </Link>
+            <Link
+              href="/mindtrip-alternative"
+              className="secondary-button"
+              aria-label="Alfred Travel as a Mindtrip alternative"
+            >
+              Mindtrip alternative
             </Link>
           </div>
         </div>

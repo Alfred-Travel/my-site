@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-trip-planner",
     "/ai-travel-planner",
     "/ai-holiday-planner",
+    "/mindtrip-alternative",
     "/vs/alfred-vs-wonderplan-vs-tripadvisor",
     "/compare/alfred-vs-mindtrip",
     "/compare/alfred-vs-wanderlog",
@@ -41,10 +42,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const itineraryEntries = majorCities.map((city) => ({
-    url: `${siteUrl}/itineraries/${slugifyCity(city)}.html`,
-    lastModified: new Date(),
-  }));
+  const itineraryEntries = [
+    ...majorCities.map((city) => ({
+      url: `${siteUrl}/itineraries/${slugifyCity(city)}.html`,
+      lastModified: new Date(),
+    })),
+    {
+      url: `${siteUrl}/itineraries/paris-3-day-itinerary.html`,
+      lastModified: new Date(),
+    },
+  ];
 
   const blogEntries = [...new Set(blogSlugs)].map((slug) => ({
     url: `${siteUrl}/blog/${slug}.html`,

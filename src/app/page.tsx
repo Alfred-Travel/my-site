@@ -33,6 +33,13 @@ export default function HomePage() {
             >
               Compare Alfred
             </Link>
+            <Link
+              href="/mindtrip-alternative"
+              className="secondary-button"
+              aria-label="Read Alfred Travel as a Mindtrip alternative"
+            >
+              Mindtrip alternative
+            </Link>
           </div>
         </div>
       </section>

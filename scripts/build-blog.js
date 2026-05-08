@@ -341,13 +341,21 @@ const compareUrls = [
   { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
   { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.75' },
 ];
+const extraItineraryUrls = [
+  { loc: BASE_URL + '/itineraries/paris-3-day-itinerary.html', changefreq: 'weekly', priority: '0.82' },
+];
+const nextAppUrls = [
+  { loc: BASE_URL + '/mindtrip-alternative', changefreq: 'weekly', priority: '0.84' },
+];
 const sitemapLines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...staticUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...blogUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...itineraryUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
+  ...extraItineraryUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...compareUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
+  ...nextAppUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   '</urlset>'
 ];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemapLines.join('\n') + '\n', 'utf8');

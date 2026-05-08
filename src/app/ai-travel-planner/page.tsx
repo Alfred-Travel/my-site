@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   title: "Complete AI Travel Planner: Itineraries, Flights, & Hotels | Alfred",
   description:
     "Explore Alfred as a complete AI Travel Planner for itineraries, flights, hotels, and integrated travel logistics.",
+  keywords: [
+    "AI travel planner",
+    "AI trip planner",
+    "itinerary planner",
+    "travel planning app",
+    "best AI travel planner",
+    "free AI trip planner",
+    "Mindtrip alternative",
+    "Mindtrip vs Alfred Travel",
+    "AI itinerary planner",
+  ],
 };
 
 export default function AITravelPlannerPage() {
@@ -39,6 +50,13 @@ export default function AITravelPlannerPage() {
               aria-label="Compare Alfred with Wonderplan and Tripadvisor"
             >
               Compare Tools
+            </Link>
+            <Link
+              href="/mindtrip-alternative"
+              className="secondary-button"
+              aria-label="Alfred Travel as a Mindtrip alternative"
+            >
+              Mindtrip alternative
             </Link>
           </div>
         </div>
