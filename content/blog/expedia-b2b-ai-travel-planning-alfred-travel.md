@@ -46,7 +46,7 @@ Without an intent layer, travellers duct-tape plans together—maps here, screen
 
 That is the **travel intent layer**—not replacing OTAs or partners, but making sure **you know what you are trying to do before you choose where to click**.
 
-Start from the product home at [alfredtravel.io](https://www.alfredtravel.io). When you want a concrete destination scaffold to adapt in the app, pair this article with our **[Paris 3-day itinerary](https://www.alfredtravel.io/itineraries/paris-3-day-itinerary.html)** guide—built for real pacing and food clusters, not fantasy mileage.
+Start from the product home at [alfredtravel.io](https://www.alfredtravel.io). When you want a concrete destination scaffold to adapt in the app, pair this article with our **[Paris itinerary](https://www.alfredtravel.io/itineraries/paris.html)**—built for real pacing and food clusters you can extend in Alfred.
 
 ## Why This Matters for AI Travel Planning
 
@@ -66,7 +66,7 @@ Expect more paths to book—and more noise before you buy. The winners on the tr
 
 If today’s distribution story tells us anything, it is that **your itinerary should not depend on a single storefront**. Build the plan in Alfred, refine it as intent sharpens, then move to booking when you are ready.
 
-**Plan at [alfredtravel.io](https://www.alfredtravel.io)**—and use our [Paris 3-day itinerary](https://www.alfredtravel.io/itineraries/paris-3-day-itinerary.html) when you want a worked example you can rebuild for your own dates.
+**Plan at [alfredtravel.io](https://www.alfredtravel.io)**—and use our [Paris itinerary](https://www.alfredtravel.io/itineraries/paris.html) when you want a worked example you can rebuild for your own dates.
 
 ## FAQ
 

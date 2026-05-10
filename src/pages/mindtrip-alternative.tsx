@@ -137,9 +137,7 @@ export default function MindtripAlternativePage() {
             Expedia B2B growth and the intent layer
           </a>
           , and browse a worked destination example on the{" "}
-          <a href="/itineraries/paris-3-day-itinerary.html">
-            Paris 3-day itinerary
-          </a>
+          <a href="/itineraries/paris.html">Paris itinerary</a>
           .
         </p>
 

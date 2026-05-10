@@ -12,6 +12,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DESTINATIONS_PATH = path.join(ROOT, 'destinations.json');
 const ITINERARY_CONTENT_PATH = path.join(ROOT, 'itinerary-content.json');
 const ITINERARIES_DIR = path.join(ROOT, 'itineraries');
+const LANDMARK_IMAGES_DIR = path.join(ROOT, 'images', 'landmark_images');
 const BASE_URL = 'https://www.alfredtravel.io';
 const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -74,60 +75,122 @@ function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
 }
 
-const CITY_CARD_META = {
-  'London': { image: 'big_ben.jpg', flag: '🇬🇧' },
-  'Paris': { image: 'eiffel_tower.jpg', flag: '🇫🇷' },
-  'Tokyo': { image: 'mount_fuji.jpg', flag: '🇯🇵' },
-  'Kyoto': { image: 'mount_fuji.jpg', flag: '🇯🇵' },
-  'Osaka': { image: 'mount_fuji.jpg', flag: '🇯🇵' },
-  'New York': { image: 'statue_of_liberty.jpg', flag: '🇺🇸' },
-  'Barcelona': { image: 'sagrada_família.jpg', flag: '🇪🇸' },
-  'Rome': { image: 'colosseum.jpg', flag: '🇮🇹' },
-  'Bali': { image: 'waikiki_beach.jpg', flag: '🇮🇩' },
-  'Dubai': { image: 'burj_khalifa.jpg', flag: '🇦🇪' },
-  'Singapore': { image: 'marina_bay_sands.jpg', flag: '🇸🇬' },
-  'Hong Kong': { image: 'the_bund.jpg', flag: '🇭🇰' },
-  'Amsterdam': { image: 'windmills_of_kinderdijk.jpg', flag: '🇳🇱' },
-  'Sydney': { image: 'sydney_opera_house.jpg', flag: '🇦🇺' },
-  'Los Angeles': { image: 'hollywood_sign.jpg', flag: '🇺🇸' },
-  'Berlin': { image: 'brandenburg_gate.jpg', flag: '🇩🇪' },
-  'Madrid': { image: 'the_alhambra.jpg', flag: '🇪🇸' },
-  'Bangkok': { image: 'golden_temple.jpg', flag: '🇹🇭' },
-  'Istanbul': { image: 'hagia_sophia.jpg', flag: '🇹🇷' },
-  'Lisbon': { image: 'santuário_de_fátima.jpg', flag: '🇵🇹' },
-  'Prague': { image: 'old_city_of_dubrovnik.jpg', flag: '🇨🇿' },
-  'Vienna': { image: 'palace_of_versailles.jpg', flag: '🇦🇹' },
-  'Seoul': { image: 'terracotta_army.jpg', flag: '🇰🇷' },
-  'San Francisco': { image: 'golden_gate_bridge.jpg', flag: '🇺🇸' },
-  'Miami': { image: 'waikiki_beach.jpg', flag: '🇺🇸' },
-  'Cape Town': { image: 'table_mountain.jpg', flag: '🇿🇦' },
-  'Marrakech': { image: 'hassan_ii_mosque.jpg', flag: '🇲🇦' },
-  'Athens': { image: 'acropolis_of_athens.jpg', flag: '🇬🇷' },
-  'Florence': { image: 'pantheon.jpg', flag: '🇮🇹' },
-  'Edinburgh': { image: 'buckingham_palace.jpg', flag: '🏴' },
-  'Dublin': { image: 'stonehenge.jpg', flag: '🇮🇪' },
-  'Copenhagen': { image: 'little_mermaid_statue.jpg', flag: '🇩🇰' },
-  'Oslo': { image: 'trolltunga.jpg', flag: '🇳🇴' },
-  'Stockholm': { image: 'the_gherkin.jpg', flag: '🇸🇪' },
-  'Reykjavik': { image: 'trolltunga.jpg', flag: '🇮🇸' },
-  'Phuket': { image: 'waikiki_beach.jpg', flag: '🇹🇭' },
-  'Ho Chi Minh City': { image: 'golden_temple.jpg', flag: '🇻🇳' },
-  'Hanoi': { image: 'golden_temple.jpg', flag: '🇻🇳' },
-  'Kuala Lumpur': { image: 'petronas_twin_towers.jpg', flag: '🇲🇾' },
-  'Melbourne': { image: 'sydney_opera_house.jpg', flag: '🇦🇺' },
-  'Auckland': { image: 'mount_cook.jpg', flag: '🇳🇿' },
-  'Queenstown': { image: 'mount_cook.jpg', flag: '🇳🇿' },
-  'Rio de Janeiro': { image: 'christ_the_redeemer.jpg', flag: '🇧🇷' },
-  'Buenos Aires': { image: 'iguazu_falls.jpg', flag: '🇦🇷' },
-  'Mexico City': { image: 'chichen_itza.jpg', flag: '🇲🇽' },
-  'Cancun': { image: 'tulum_ruins.jpg', flag: '🇲🇽' },
-  'Toronto': { image: 'cn_tower.jpg', flag: '🇨🇦' },
-  'Vancouver': { image: 'banff_national_park.jpg', flag: '🇨🇦' },
-  'Chicago': { image: 'times_square.jpg', flag: '🇺🇸' },
-  'Boston': { image: 'white_house.jpg', flag: '🇺🇸' },
-  'Washington DC': { image: 'white_house.jpg', flag: '🇺🇸' },
-  'Las Vegas': { image: 'grand_canyon.jpg', flag: '🇺🇸' },
-  'Zurich': { image: 'matterhorn.jpg', flag: '🇨🇭' },
+/** Flags for itinerary index cards (Commons images live under images/landmark_images/commons/{slug}.jpg when present). */
+const CITY_FLAGS = {
+  London: '🇬🇧',
+  Paris: '🇫🇷',
+  Tokyo: '🇯🇵',
+  Kyoto: '🇯🇵',
+  Osaka: '🇯🇵',
+  'New York': '🇺🇸',
+  Barcelona: '🇪🇸',
+  Rome: '🇮🇹',
+  Bali: '🇮🇩',
+  Dubai: '🇦🇪',
+  Singapore: '🇸🇬',
+  'Hong Kong': '🇭🇰',
+  Amsterdam: '🇳🇱',
+  Sydney: '🇦🇺',
+  'Los Angeles': '🇺🇸',
+  Berlin: '🇩🇪',
+  Madrid: '🇪🇸',
+  Bangkok: '🇹🇭',
+  Istanbul: '🇹🇷',
+  Lisbon: '🇵🇹',
+  Prague: '🇨🇿',
+  Vienna: '🇦🇹',
+  Seoul: '🇰🇷',
+  'San Francisco': '🇺🇸',
+  Miami: '🇺🇸',
+  Montreal: '🇨🇦',
+  Orlando: '🇺🇸',
+  'Cape Town': '🇿🇦',
+  Marrakech: '🇲🇦',
+  Athens: '🇬🇷',
+  Florence: '🇮🇹',
+  Edinburgh: '🏴',
+  Dublin: '🇮🇪',
+  Copenhagen: '🇩🇰',
+  Oslo: '🇳🇴',
+  Stockholm: '🇸🇪',
+  Reykjavik: '🇮🇸',
+  Phuket: '🇹🇭',
+  'Ho Chi Minh City': '🇻🇳',
+  Hanoi: '🇻🇳',
+  'Kuala Lumpur': '🇲🇾',
+  Melbourne: '🇦🇺',
+  Auckland: '🇳🇿',
+  Queenstown: '🇳🇿',
+  'Rio de Janeiro': '🇧🇷',
+  'Buenos Aires': '🇦🇷',
+  'Mexico City': '🇲🇽',
+  Cancun: '🇲🇽',
+  Toronto: '🇨🇦',
+  Vancouver: '🇨🇦',
+  Chicago: '🇺🇸',
+  Boston: '🇺🇸',
+  'Washington DC': '🇺🇸',
+  'Las Vegas': '🇺🇸',
+  Zurich: '🇨🇭',
+};
+
+/** Legacy filenames when no Commons thumbnail has been downloaded yet. */
+const LEGACY_CARD_IMAGE = {
+  London: 'big_ben.jpg',
+  Paris: 'eiffel_tower.jpg',
+  Tokyo: 'mount_fuji.jpg',
+  Kyoto: 'mount_fuji.jpg',
+  Osaka: 'mount_fuji.jpg',
+  'New York': 'statue_of_liberty.jpg',
+  Barcelona: 'sagrada_família.jpg',
+  Rome: 'colosseum.jpg',
+  Bali: 'waikiki_beach.jpg',
+  Dubai: 'burj_khalifa.jpg',
+  Singapore: 'marina_bay_sands.jpg',
+  'Hong Kong': 'the_bund.jpg',
+  Amsterdam: 'windmills_of_kinderdijk.jpg',
+  Sydney: 'sydney_opera_house.jpg',
+  'Los Angeles': 'hollywood_sign.jpg',
+  Berlin: 'brandenburg_gate.jpg',
+  Madrid: 'the_alhambra.jpg',
+  Bangkok: 'golden_temple.jpg',
+  Istanbul: 'hagia_sophia.jpg',
+  Lisbon: 'santuário_de_fátima.jpg',
+  Prague: 'old_city_of_dubrovnik.jpg',
+  Vienna: 'palace_of_versailles.jpg',
+  Seoul: 'terracotta_army.jpg',
+  'San Francisco': 'golden_gate_bridge.jpg',
+  Miami: 'waikiki_beach.jpg',
+  Montreal: 'cn_tower.jpg',
+  Orlando: 'waikiki_beach.jpg',
+  'Cape Town': 'table_mountain.jpg',
+  Marrakech: 'hassan_ii_mosque.jpg',
+  Athens: 'acropolis_of_athens.jpg',
+  Florence: 'pantheon.jpg',
+  Edinburgh: 'buckingham_palace.jpg',
+  Dublin: 'stonehenge.jpg',
+  Copenhagen: 'little_mermaid_statue.jpg',
+  Oslo: 'trolltunga.jpg',
+  Stockholm: 'the_gherkin.jpg',
+  Reykjavik: 'trolltunga.jpg',
+  Phuket: 'waikiki_beach.jpg',
+  'Ho Chi Minh City': 'golden_temple.jpg',
+  Hanoi: 'golden_temple.jpg',
+  'Kuala Lumpur': 'petronas_twin_towers.jpg',
+  Melbourne: 'sydney_opera_house.jpg',
+  Auckland: 'mount_cook.jpg',
+  Queenstown: 'mount_cook.jpg',
+  'Rio de Janeiro': 'christ_the_redeemer.jpg',
+  'Buenos Aires': 'iguazu_falls.jpg',
+  'Mexico City': 'chichen_itza.jpg',
+  Cancun: 'tulum_ruins.jpg',
+  Toronto: 'cn_tower.jpg',
+  Vancouver: 'banff_national_park.jpg',
+  Chicago: 'times_square.jpg',
+  Boston: 'white_house.jpg',
+  'Washington DC': 'white_house.jpg',
+  'Las Vegas': 'grand_canyon.jpg',
+  Zurich: 'matterhorn.jpg',
 };
 
 const FALLBACK_CARD_IMAGES = [
@@ -139,13 +202,28 @@ const FALLBACK_CARD_IMAGES = [
   'sydney_opera_house.jpg',
 ];
 
-function getCardMeta(destination, index) {
-  const cityMeta = CITY_CARD_META[destination];
-  const fallbackImage = FALLBACK_CARD_IMAGES[index % FALLBACK_CARD_IMAGES.length];
+function resolveCommonsThumbnail(slug) {
+  for (const ext of ['.jpg', '.png']) {
+    const rel = `commons/${slug}${ext}`;
+    if (fs.existsSync(path.join(LANDMARK_IMAGES_DIR, rel))) return rel;
+  }
+  return null;
+}
 
+function getCardMeta(destination, index) {
+  const slug = slugify(destination);
+  const commonsRel = resolveCommonsThumbnail(slug);
+  if (commonsRel) {
+    return {
+      image: commonsRel,
+      flag: CITY_FLAGS[destination] || '✈️',
+    };
+  }
+  const legacy = LEGACY_CARD_IMAGE[destination];
+  const fallbackImage = FALLBACK_CARD_IMAGES[index % FALLBACK_CARD_IMAGES.length];
   return {
-    image: cityMeta?.image || fallbackImage,
-    flag: cityMeta?.flag || '✈️',
+    image: legacy || fallbackImage,
+    flag: CITY_FLAGS[destination] || '✈️',
   };
 }
 
@@ -488,7 +566,7 @@ function main() {
         <section class="itinerary-index-hero">
             <p class="itinerary-index-kicker">Destinations</p>
             <h1 class="itinerary-index-title">AI Trip Planner Itineraries</h1>
-            <p class="itinerary-index-copy">Browse validated 7-day itineraries across ${destinations.length} top destinations. Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
+            <p class="itinerary-index-copy">Browse validated 7-day itineraries across ${destinations.length} top destinations. Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (see <a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
         </section>
         <section class="destination-grid" aria-label="Destination itinerary grid">
 ${destinationCards}

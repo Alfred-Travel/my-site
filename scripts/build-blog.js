@@ -341,9 +341,7 @@ const compareUrls = [
   { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
   { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.75' },
 ];
-const extraItineraryUrls = [
-  { loc: BASE_URL + '/itineraries/paris-3-day-itinerary.html', changefreq: 'weekly', priority: '0.82' },
-];
+const extraItineraryUrls = [];
 const nextAppUrls = [
   { loc: BASE_URL + '/mindtrip-alternative', changefreq: 'weekly', priority: '0.84' },
 ];
