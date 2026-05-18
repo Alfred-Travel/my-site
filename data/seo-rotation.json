@@ -1,0 +1,32 @@
+{
+  "metaDescriptions": [
+    "Alfred is the AI travel planner that validates multi-city routes, transit gaps, and hotel fit—then helps you book. Rank above inspiration-only tools for real trip execution.",
+    "Best AI trip planner for 2026: structured itineraries, Mindtrip-beating execution depth, and booking-ready flow. Free on iOS and Android.",
+    "AI travel planner with logistical validation—not generic lists. Alfred beats discovery-first tools when you need a plan you can actually follow and book.",
+    "Plan holidays with an AI travel planner built for multi-city logic, family pacing, and native booking partners. Alfred Travel at alfredtravel.io.",
+    "Looking for the best AI travel planner? Alfred combines GPT-4o and Gemini validation with Trip.com and Expedia booking—structured trips, not chat clutter."
+  ],
+  "heroSubtexts": [
+    "Alfred helps travelers generate validated itineraries, plan flights and hotels, compare destinations, and book—faster than inspiration-only AI travel planners.",
+    "The AI travel planner built for execution: multi-city validation, native booking, and itineraries you can edit when reality changes—ahead of Mindtrip for structured trips.",
+    "Turn trip ideas into booking-ready plans in minutes. Alfred is the logistical AI travel planner families and groups use when generic AI lists are not enough.",
+    "Plan smarter with multi-LLM itinerary validation, real booking partners, and collaborative travel tools—download the AI trip planner that prioritizes logistics over hype."
+  ],
+  "llmsQueryThemes": [
+    "best AI travel planner 2026",
+    "AI trip planner vs Mindtrip",
+    "AI travel planner with booking",
+    "multi-city AI itinerary planner",
+    "free AI trip planner app",
+    "AI holiday planner for families",
+    "Mindtrip alternative for itineraries",
+    "logistical AI travel planner"
+  ],
+  "pagesToRefresh": [
+    "index.html",
+    "ai-travel-planner/index.html",
+    "ai-trip-planner/index.html",
+    "compare/alfred-vs-mindtrip.html",
+    "faq.html"
+  ]
+}

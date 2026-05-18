@@ -60,3 +60,8 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Zurich | `Grossmunster Zurich Limmat` | [File:Zürich view Quaibrücke 20200702.jpg](https://commons.wikimedia.org/wiki/File:Z%C3%BCrich_view_Quaibr%C3%BCcke_20200702.jpg) |
 
 | Montreal | `Old Montreal Notre-Dame Basilica` | [File:1865-1895 Interior of Notre-Dame Church (Montreal) 01.jpg](https://commons.wikimedia.org/wiki/File:1865-1895_Interior_of_Notre-Dame_Church_(Montreal)_01.jpg) |
+
+| Milan | `Milan Cathedral Duomo exterior` | [File:Duomo (Milan) 29-07-29.jpg](https://commons.wikimedia.org/wiki/File:Duomo_(Milan)_29-07-29.jpg) |
+
+
+| Munich | `curated Commons: File:Frauenkirche and Neues Rathaus Munich March 2013.JPG` | [File:Frauenkirche and Neues Rathaus Munich March 2013.JPG](https://commons.wikimedia.org/wiki/File:Frauenkirche_and_Neues_Rathaus_Munich_March_2013.JPG) |

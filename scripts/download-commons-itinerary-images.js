@@ -14,6 +14,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const DESTINATIONS_PATH = path.join(ROOT, 'destinations.json');
+const OVERRIDES_PATH = path.join(ROOT, 'data', 'destination-overrides.json');
 const OUT_DIR = path.join(ROOT, 'images', 'landmark_images', 'commons');
 const ATTRIBUTION_PATH = path.join(OUT_DIR, 'ATTRIBUTION.md');
 
@@ -21,10 +22,41 @@ const API = 'https://commons.wikimedia.org/w/api.php';
 const USER_AGENT =
   'AlfredTravelWebsite/1.0 (itinerary thumbnails; +https://www.alfredtravel.io)';
 
-/** When set, fetch this exact File: page (better than search for ambiguous cities). */
+/**
+ * Curated Wikimedia Commons files — preferred over search when ambiguous results
+ * (plaques, logos, wrong landmarks) are common. Verify licence on each file page.
+ * @see https://commons.wikimedia.org/
+ */
 const PRECISE_FILE_TITLE = {
-  Paris:
-    'File:Eiffel Tower and Pont Alexandre III at night.jpg',
+  Paris: 'File:Eiffel Tower and Pont Alexandre III at night.jpg',
+  Munich:
+    'File:Frauenkirche and Neues Rathaus Munich March 2013.JPG',
+  Milan: 'File:Duomo (Milan) 29-07-29.jpg',
+  Montreal: 'File:Montreal - QC - View on Old Montreal from Belvedere.jpg',
+};
+
+/** Reject Commons titles containing these (plaques, maps, logos — poor itinerary cards). */
+const REJECT_TITLE_SUBSTRINGS = [
+  'olympi',
+  'plaque',
+  'memorial stone',
+  'coat of arms',
+  'logo',
+  'icon',
+  'map of',
+  'floor plan',
+  'diagram',
+  'seal',
+  'emblem',
+  'currency',
+  'banknote',
+];
+
+/** Boost score when the file title clearly references the destination. */
+const CITY_TITLE_ALIASES = {
+  Munich: ['munich', 'münchen', 'munchen', 'frauenkirche', 'marienplatz', 'rathaus'],
+  Milan: ['milan', 'milano', 'duomo'],
+  Montreal: ['montreal', 'montréal', 'old montreal'],
 };
 
 /**
@@ -87,7 +119,20 @@ const GSRSEARCH_BY_CITY = {
   'Washington DC': 'Lincoln Memorial Washington DC',
   'Las Vegas': 'Las Vegas Strip night',
   Zurich: 'Grossmunster Zurich Limmat',
+  Munich: 'Frauenkirche Neues Rathaus Marienplatz Munich',
+  Milan: 'Duomo di Milano Piazza del Duomo exterior',
 };
+
+function loadGsrSearchMap() {
+  const map = { ...GSRSEARCH_BY_CITY };
+  if (fs.existsSync(OVERRIDES_PATH)) {
+    const overrides = JSON.parse(fs.readFileSync(OVERRIDES_PATH, 'utf8'));
+    for (const [city, data] of Object.entries(overrides)) {
+      if (data.commonsSearch) map[city] = data.commonsSearch;
+    }
+  }
+  return map;
+}
 
 function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
@@ -148,7 +193,17 @@ function scoreCandidate(ii) {
   return sizeScore - arPenalty - portraitPenalty + jpegBonus;
 }
 
-function pickBestPage(data) {
+function titleScoreForCity(title, city) {
+  const t = (title || '').toLowerCase();
+  for (const bad of REJECT_TITLE_SUBSTRINGS) {
+    if (t.includes(bad)) return -1000;
+  }
+  const aliases = CITY_TITLE_ALIASES[city];
+  if (!aliases) return 0;
+  return aliases.some((a) => t.includes(a)) ? 50 : -80;
+}
+
+function pickBestPage(data, city) {
   const pages = data.query && data.query.pages;
   if (!pages) return null;
   let best = null;
@@ -156,12 +211,13 @@ function pickBestPage(data) {
   for (const p of Object.values(pages)) {
     if (p.missing) continue;
     const ii = (p.imageinfo && p.imageinfo[0]) || null;
-    const s = scoreCandidate(ii);
+    const s = scoreCandidate(ii) + titleScoreForCity(p.title, city);
     if (s > bestScore) {
       bestScore = s;
       best = { title: p.title, ii, pageid: p.pageid };
     }
   }
+  if (best && bestScore < 0) return null;
   return best;
 }
 
@@ -214,10 +270,12 @@ async function main() {
     ];
   }
 
+  const gsrMap = loadGsrSearchMap();
+
   for (const city of destinations) {
     const slug = slugify(city);
     const gsrsearch =
-      GSRSEARCH_BY_CITY[city] || `${city} landmark skyline`;
+      gsrMap[city] || `${city} landmark skyline`;
     const precise = PRECISE_FILE_TITLE[city];
     const queryLabel = precise || gsrsearch;
     process.stdout.write(`${city} … `);
@@ -225,7 +283,7 @@ async function main() {
       const data = precise
         ? await apiByExactTitle(precise)
         : await apiSearch(gsrsearch);
-      const picked = pickBestPage(data);
+      const picked = pickBestPage(data, city);
       if (!picked || !picked.ii.thumburl) {
         console.log('no suitable raster thumbnail, skipped');
         attributionRows.push(`| ${city} | \`${queryLabel}\` | (no download) |`);
@@ -237,8 +295,11 @@ async function main() {
       const dest = path.join(OUT_DIR, `${slug}${ext}`);
       await downloadUrl(picked.ii.thumburl, dest);
       const filePage = picked.ii.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(picked.title)}`;
+      const sourceLabel = precise
+        ? `curated Commons: ${precise}`
+        : String(queryLabel).replace(/`/g, "'");
       attributionRows.push(
-        `| ${city} | \`${String(queryLabel).replace(/`/g, "'")}\` | [${picked.title}](${filePage}) |`
+        `| ${city} | \`${sourceLabel}\` | [${picked.title}](${filePage}) |`
       );
       console.log(`OK → commons/${slug}${ext}`);
     } catch (e) {

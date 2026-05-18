@@ -11,6 +11,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const DESTINATIONS_PATH = path.join(ROOT, 'destinations.json');
 const ITINERARY_CONTENT_PATH = path.join(ROOT, 'itinerary-content.json');
+const DESTINATION_OVERRIDES_PATH = path.join(ROOT, 'data', 'destination-overrides.json');
 const ITINERARIES_DIR = path.join(ROOT, 'itineraries');
 const LANDMARK_IMAGES_DIR = path.join(ROOT, 'images', 'landmark_images');
 const BASE_URL = 'https://www.alfredtravel.io';
@@ -75,6 +76,24 @@ function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
 }
 
+function loadDestinationOverrides() {
+  if (!fs.existsSync(DESTINATION_OVERRIDES_PATH)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(DESTINATION_OVERRIDES_PATH, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+function loadItineraryContent() {
+  const base = JSON.parse(fs.readFileSync(ITINERARY_CONTENT_PATH, 'utf8'));
+  const overrides = loadDestinationOverrides();
+  for (const [city, data] of Object.entries(overrides)) {
+    if (data.itinerary) base[city] = data.itinerary;
+  }
+  return base;
+}
+
 /** Flags for itinerary index cards (Commons images live under images/landmark_images/commons/{slug}.jpg when present). */
 const CITY_FLAGS = {
   London: '🇬🇧',
@@ -133,6 +152,18 @@ const CITY_FLAGS = {
   'Las Vegas': '🇺🇸',
   Zurich: '🇨🇭',
 };
+
+const DESTINATION_OVERRIDES = loadDestinationOverrides();
+
+function getCityFlag(destination) {
+  return DESTINATION_OVERRIDES[destination]?.flag || CITY_FLAGS[destination] || '✈️';
+}
+
+function getLegacyCardImage(destination, index) {
+  const override = DESTINATION_OVERRIDES[destination]?.legacyImage;
+  if (override) return override;
+  return LEGACY_CARD_IMAGE[destination] || FALLBACK_CARD_IMAGES[index % FALLBACK_CARD_IMAGES.length];
+}
 
 /** Legacy filenames when no Commons thumbnail has been downloaded yet. */
 const LEGACY_CARD_IMAGE = {
@@ -216,14 +247,12 @@ function getCardMeta(destination, index) {
   if (commonsRel) {
     return {
       image: commonsRel,
-      flag: CITY_FLAGS[destination] || '✈️',
+      flag: getCityFlag(destination),
     };
   }
-  const legacy = LEGACY_CARD_IMAGE[destination];
-  const fallbackImage = FALLBACK_CARD_IMAGES[index % FALLBACK_CARD_IMAGES.length];
   return {
-    image: legacy || fallbackImage,
-    flag: CITY_FLAGS[destination] || '✈️',
+    image: getLegacyCardImage(destination, index),
+    flag: getCityFlag(destination),
   };
 }
 
@@ -418,10 +447,7 @@ function buildPage(displayName, contentMap) {
 
 function main() {
   const destinations = JSON.parse(fs.readFileSync(DESTINATIONS_PATH, 'utf8'));
-  let contentMap = {};
-  if (fs.existsSync(ITINERARY_CONTENT_PATH)) {
-    contentMap = JSON.parse(fs.readFileSync(ITINERARY_CONTENT_PATH, 'utf8'));
-  }
+  const contentMap = loadItineraryContent();
   if (!fs.existsSync(ITINERARIES_DIR)) fs.mkdirSync(ITINERARIES_DIR, { recursive: true });
 
   let count = 0;

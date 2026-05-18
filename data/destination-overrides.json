@@ -1,0 +1,51 @@
+{
+  "Milan": {
+    "flag": "🇮🇹",
+    "legacyImage": "pantheon.jpg",
+    "commonsSearch": "Milan Cathedral Duomo exterior",
+    "itinerary": {
+      "day1": "Day 1 — Arrival & Duomo District\n• Arrive at MXP or LIN; Malpensa Express or bus to Centrale (validated 45–55 min)\n• Check-in near Duomo or Brera; lunch at autogrill or Navigli cafe\n• Afternoon: Duomo di Milano (pre-book roof or terraces); Galleria Vittorio Emanuele II\n• Evening: aperitivo in Navigli; dinner along the canals",
+      "day2": "Day 2 — Art, Design & La Scala Corridor\n• Morning: Santa Maria delle Grazie (Last Supper; pre-book timed entry)\n• Lunch: risotto or cotoletta near Brera\n• Afternoon: Pinacoteca di Brera or Castello Sforzesco; Parco Sempione\n• Evening: opera at La Scala district or dinner in Porta Nuova",
+      "day3": "Day 3 — Lakes or Fashion District Finish\n• Morning: half-day to Lake Como (train to Como or Varenna) or Quadrilatero fashion walk\n• Lunch: lakeside trattoria or Eataly Smeraldo\n• Afternoon: return for Last-minute Duomo photos or San Siro stadium tour if pre-booked\n• Evening: farewell dinner in Brera; pack with Malpensa Express timing confirmed"
+    },
+    "meta": {
+      "airportCode": "MXP",
+      "neighborhoods": [
+        "Duomo or Brera",
+        "Navigli",
+        "Brera"
+      ],
+      "transportModes": [
+        "train",
+        "metro",
+        "tram"
+      ],
+      "faqSnippet": "Alfred helps sequence Milan's timed entries (Last Supper, Duomo roof) with Malpensa transfers so ground-transport days stay executable."
+    }
+  },
+  "Munich": {
+    "flag": "🇩🇪",
+    "legacyImage": "brandenburg_gate.jpg",
+    "commonsSearch": "Frauenkirche Neues Rathaus Marienplatz Munich",
+    "itinerary": {
+      "day1": "Day 1 —\n• Arrive at Munich Airport (MUC) and take the S8 train to Marienplatz (45 min)\n• Explore Marienplatz and visit the New Town Hall (1.5 hours)\n• Lunch at Viktualienmarkt (1 hour)\n• Visit the Munich Residenz (2 hours)\n• Dinner at Hofbräuhaus Munich (1.5 hours)\n• Return to hotel via metro (30 min)",
+      "day2": "Day 2 —\n• Breakfast at hotel (1 hour)\n• Take the U2 metro to Nymphenburg Palace (30 min)\n• Explore Nymphenburg Palace and Gardens (2.5 hours)\n• Lunch at a nearby café (1 hour)\n• Visit the BMW Museum (2 hours)\n• Dinner in the Schwabing district (1.5 hours)\n• Return to hotel via tram (30 min)",
+      "day3": "Day 3 —\n• Breakfast at hotel (1 hour)\n• Take the S-Bahn to Dachau Concentration Camp Memorial Site (40 min)\n• Tour the memorial site (2 hours)\n• Lunch in Dachau (1 hour)\n• Return to Munich and visit the English Garden (2 hours)\n• Dinner at a traditional Bavarian restaurant (1.5 hours)\n• Depart from Munich Airport (MUC) (45 min)"
+    },
+    "meta": {
+      "airportCode": "MUC",
+      "neighborhoods": [
+        "Altstadt-Lehel",
+        "Maxvorstadt",
+        "Schwabing"
+      ],
+      "transportModes": [
+        "metro",
+        "train",
+        "bus",
+        "tram"
+      ],
+      "faqSnippet": "Alfred helps you navigate Munich's rich history and vibrant culture effortlessly."
+    }
+  }
+}

@@ -12,7 +12,10 @@
     "itineraries": "node scripts/build-itineraries.js",
     "fetch:commons-itinerary-images": "node scripts/download-commons-itinerary-images.js",
     "build:compare": "node scripts/build-compare.js",
-    "compare": "node scripts/build-compare.js"
+    "compare": "node scripts/build-compare.js",
+    "daily:growth": "node scripts/daily-growth-job.js",
+    "daily:growth:dry": "DAILY_JOB_DRY_RUN=true node scripts/daily-growth-job.js",
+    "daily:growth:local": "DAILY_JOB_SKIP_AI=true node scripts/daily-growth-job.js"
   },
   "keywords": [],
   "author": "Alfred Travel Tech Pty Ltd",

@@ -1,0 +1,27 @@
+Alfred Travel Daily Growth Report — 2026-05-18
+
+SEO & AIO:
+  - index.html meta + hero (rotated)
+  - compare/alfred-vs-mindtrip.html freshness marker
+  - llms.txt theme: AI travel planner with booking
+
+Blog: Rising Costs Shape Summer Travel Trends: A Look Ahead (skift-summer-travel-outlook-2026)
+Destination: {"name":"Munich","slug":"munich","added":true}
+
+Conversion:
+  - Mobile sticky download bar active on scroll (index.html)
+  - index.html daily insight strip → app downloads
+  - Verified #app-downloads + store links present
+
+Build:
+  - OK: commons thumbnail
+  - OK: blog + sitemap
+  - OK: itinerary pages
+
+Ranking:
+{
+  "note": "Set SERPAPI_KEY for automated rank tracking vs Mindtrip"
+}
+
+Errors:
+  - RSS Phocuswire: HTTP 404

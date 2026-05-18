@@ -1,0 +1,66 @@
+# Daily SEO, AIO, blog, itinerary, and conversion updates for www.alfredtravel.io
+# Runs at 05:00 Australia/Sydney (AEST/AEDT handled automatically).
+#
+# Required repository secrets:
+#   OPENAI_API_KEY
+#   RESEND_API_KEY  (or SENDGRID_API_KEY) — sends report to support@alfredtravel.io
+# Optional:
+#   SERPAPI_KEY — track "AI travel planner" vs Mindtrip positions
+#   REPORT_EMAIL_TO (default support@alfredtravel.io)
+#   REPORT_EMAIL_FROM (default Alfred Daily <daily@alfredtravel.io>)
+
+name: Daily growth (SEO / AIO / content)
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+      timezone: Australia/Sydney
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-growth:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run daily growth job
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          REPORT_EMAIL_TO: support@alfredtravel.io
+          REPORT_EMAIL_FROM: Alfred Daily <daily@alfredtravel.io>
+          GIT_AUTHOR_NAME: Alfred Daily Bot
+          GIT_AUTHOR_EMAIL: daily-bot@alfredtravel.io
+          GIT_COMMITTER_NAME: Alfred Daily Bot
+          GIT_COMMITTER_EMAIL: daily-bot@alfredtravel.io
+        run: node scripts/daily-growth-job.js
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "Alfred Daily Bot"
+          git config user.email "daily-bot@alfredtravel.io"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(daily): SEO, blog, itinerary, and AIO updates ($(date +%Y-%m-%d))"
+          git push origin gh-pages

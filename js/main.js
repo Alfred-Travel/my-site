@@ -502,8 +502,34 @@ function initItinerarySwipeView() {
     source.classList.add("itinerary-sample-source");
 }
 
+function initMobileDownloadBar() {
+    const bar = document.getElementById("mobile-download-bar");
+    if (!bar) return;
+
+    const showBar = () => {
+        if (window.innerWidth > 768) {
+            bar.hidden = true;
+            document.body.classList.remove("has-mobile-download-bar");
+            return;
+        }
+        const downloads = document.getElementById("app-downloads");
+        if (!downloads) return;
+        const rect = downloads.getBoundingClientRect();
+        const pastHero = window.scrollY > 280;
+        const downloadsVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        const shouldShow = pastHero && !downloadsVisible;
+        bar.hidden = !shouldShow;
+        document.body.classList.toggle("has-mobile-download-bar", shouldShow);
+    };
+
+    window.addEventListener("scroll", showBar, { passive: true });
+    window.addEventListener("resize", showBar, { passive: true });
+    showBar();
+}
+
 function initSite() {
     const navLinks = initMobileNavigation();
+    initMobileDownloadBar();
     initSearchTabs();
     initAnchorScrolling(navLinks);
     initContactForm();

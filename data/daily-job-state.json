@@ -1,0 +1,31 @@
+{
+  "processedArticleUrls": [
+    "https://skift.com/2026/05/17/expedia-350-million-cartrawler-acquisition-scoop/",
+    "https://skift.com/2026/05/16/summer-travel-outlooks/"
+  ],
+  "seoRotationIndex": 3,
+  "heroCopyIndex": 3,
+  "lastRunDate": "2026-05-18",
+  "lastDestinationAdded": "Munich",
+  "runHistory": [
+    {
+      "date": "2026-05-18",
+      "blog": "skift-summer-travel-outlook-2026",
+      "destination": "Munich",
+      "errors": 1
+    },
+    {
+      "date": "2026-05-18",
+      "blog": "skift-expedia-cartrawler-ground-transport-alfred",
+      "destination": "Milan",
+      "errors": 0
+    },
+    {
+      "date": "2026-05-18",
+      "blog": "skift-expedia-cartrawler-ground-transport-alfred",
+      "destination": "Milan",
+      "errors": 0,
+      "mode": "local-preview"
+    }
+  ]
+}
