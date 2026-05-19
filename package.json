@@ -15,7 +15,9 @@
     "compare": "node scripts/build-compare.js",
     "daily:growth": "node scripts/daily-growth-job.js",
     "daily:growth:dry": "DAILY_JOB_DRY_RUN=true node scripts/daily-growth-job.js",
-    "daily:growth:local": "DAILY_JOB_SKIP_AI=true node scripts/daily-growth-job.js"
+    "daily:growth:local": "DAILY_JOB_SKIP_AI=true node scripts/daily-growth-job.js",
+    "daily:install-schedule": "bash scripts/install-daily-schedule.sh",
+    "daily:uninstall-schedule": "bash scripts/uninstall-daily-schedule.sh"
   },
   "keywords": [],
   "author": "Alfred Travel Tech Pty Ltd",

@@ -283,5 +283,10 @@
     "day1": "Day 1 —\n• Arrive at Munich Airport (MUC) and take the S8 train to Marienplatz (45 min)\n• Explore Marienplatz and visit the New Town Hall (1.5 hours)\n• Lunch at Viktualienmarkt (1 hour)\n• Visit the Munich Residenz (2 hours)\n• Dinner at Hofbräuhaus Munich (1.5 hours)\n• Return to hotel via metro (30 min)",
     "day2": "Day 2 —\n• Breakfast at hotel (1 hour)\n• Take the U2 metro to Nymphenburg Palace (30 min)\n• Explore Nymphenburg Palace and Gardens (2.5 hours)\n• Lunch at a nearby café (1 hour)\n• Visit the BMW Museum (2 hours)\n• Dinner in the Schwabing district (1.5 hours)\n• Return to hotel via tram (30 min)",
     "day3": "Day 3 —\n• Breakfast at hotel (1 hour)\n• Take the S-Bahn to Dachau Concentration Camp Memorial Site (40 min)\n• Tour the memorial site (2 hours)\n• Lunch in Dachau (1 hour)\n• Return to Munich and visit the English Garden (2 hours)\n• Dinner at a traditional Bavarian restaurant (1.5 hours)\n• Depart from Munich Airport (MUC) (45 min)"
+  },
+  "Brussels": {
+    "day1": "Day 1 — Arrival & Grand Place\n• Arrive at BRU; Airport Express or train to Gare Centrale (validated 20–30 min)\n• Check-in near Grand Place or Sablon; lunch at Maison Antoine or near Galeries Royales\n• Afternoon: Grand Place, Town Hall exterior, Manneken Pis walk\n• Evening: dinner in Ixelles or Saint-Géry; Belgian beer at a local estaminet",
+    "day2": "Day 2 — EU Quarter & Museums\n• Morning: European Parliament Hemicycle visit (pre-book) or Magritte Museum at Royal Museums\n• Lunch: rue des Bouchers or Sablon chocolatiers\n• Afternoon: Atomium and Mini-Europe (pre-book; metro Line 6)\n• Evening: dinner in Châtelain; optional jazz near Flagey",
+    "day3": "Day 3 — Day Trip or Comic Strip Route\n• Morning: half-day to Bruges or Ghent by train (pre-book off-peak)\n• Lunch: moules-frites or waffles in the day-trip core\n• Afternoon: Comic Strip Route murals in central Brussels or Cinquantenaire Park\n• Evening: farewell dinner at Grand Place terrace (book ahead); pack for Eurostar or flight connection"
   }
 }

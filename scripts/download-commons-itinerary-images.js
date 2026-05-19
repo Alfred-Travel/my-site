@@ -33,6 +33,7 @@ const PRECISE_FILE_TITLE = {
     'File:Frauenkirche and Neues Rathaus Munich March 2013.JPG',
   Milan: 'File:Duomo (Milan) 29-07-29.jpg',
   Montreal: 'File:Montreal - QC - View on Old Montreal from Belvedere.jpg',
+  Brussels: 'File:Grand Place, Brussels.jpg',
 };
 
 /** Reject Commons titles containing these (plaques, maps, logos — poor itinerary cards). */
@@ -56,6 +57,7 @@ const REJECT_TITLE_SUBSTRINGS = [
 const CITY_TITLE_ALIASES = {
   Munich: ['munich', 'münchen', 'munchen', 'frauenkirche', 'marienplatz', 'rathaus'],
   Milan: ['milan', 'milano', 'duomo'],
+  Brussels: ['brussels', 'bruxelles', 'grand place', 'atomium'],
   Montreal: ['montreal', 'montréal', 'old montreal'],
 };
 
@@ -121,6 +123,7 @@ const GSRSEARCH_BY_CITY = {
   Zurich: 'Grossmunster Zurich Limmat',
   Munich: 'Frauenkirche Neues Rathaus Marienplatz Munich',
   Milan: 'Duomo di Milano Piazza del Duomo exterior',
+  Brussels: 'Grand Place Brussels guild houses',
 };
 
 function loadGsrSearchMap() {

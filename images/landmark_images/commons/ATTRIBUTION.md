@@ -65,3 +65,5 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 
 
 | Munich | `curated Commons: File:Frauenkirche and Neues Rathaus Munich March 2013.JPG` | [File:Frauenkirche and Neues Rathaus Munich March 2013.JPG](https://commons.wikimedia.org/wiki/File:Frauenkirche_and_Neues_Rathaus_Munich_March_2013.JPG) |
+
+| Brussels | `curated Commons: File:Grand Place, Brussels.jpg` | [File:Grand Place, Brussels.jpg](https://commons.wikimedia.org/wiki/File:Grand_Place,_Brussels.jpg) |

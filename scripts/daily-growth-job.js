@@ -566,20 +566,25 @@ async function main() {
   let destName = null;
 
   if (SKIP_AI) {
-    const existingBlog = 'skift-expedia-cartrawler-ground-transport-alfred';
-    if (fs.existsSync(path.join(CONTENT_BLOG_DIR, `${existingBlog}.md`))) {
-      blogSlug = existingBlog;
+    const manualBlogSlug = process.env.DAILY_JOB_BLOG_SLUG;
+    const manualDest = process.env.DAILY_JOB_DESTINATION;
+    if (manualBlogSlug && fs.existsSync(path.join(CONTENT_BLOG_DIR, `${manualBlogSlug}.md`))) {
+      blogSlug = manualBlogSlug;
+      const raw = fs.readFileSync(path.join(CONTENT_BLOG_DIR, `${manualBlogSlug}.md`), 'utf8');
+      const titleMatch = raw.match(/^title:\s*["']?(.+?)["']?\s*$/m);
       report.blog = {
-        title: 'Expedia’s CarTrawler Bet Proves Trips Need a Ground-Transport Brain—Not Another Tab',
-        slug: existingBlog,
-        sourceUrl: 'https://skift.com/2026/05/17/expedia-350-million-cartrawler-acquisition-scoop/',
-        mode: 'prepared locally',
+        title: titleMatch ? titleMatch[1] : manualBlogSlug,
+        slug: manualBlogSlug,
+        sourceUrl: process.env.DAILY_JOB_BLOG_SOURCE || '',
+        mode: 'prepared manually',
       };
     }
-    const destinations = readJson(DESTINATIONS_PATH, []);
-    if (destinations.includes('Milan')) {
-      destName = 'Milan';
-      report.destination = { name: 'Milan', slug: 'milan', added: true, mode: 'prepared locally' };
+    if (manualDest) {
+      const destinations = readJson(DESTINATIONS_PATH, []);
+      if (destinations.includes(manualDest)) {
+        destName = manualDest;
+        report.destination = { name: manualDest, slug: slugify(manualDest), added: true, mode: 'prepared manually' };
+      }
     }
   } else {
     try {

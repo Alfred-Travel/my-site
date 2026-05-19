@@ -1,13 +1,20 @@
 {
   "processedArticleUrls": [
+    "https://skift.com/2026/05/18/cathay-pacific-removed-its-first-class-lounge-cabanas-that-tells-you-where-luxury-travel-is-heading/",
     "https://skift.com/2026/05/17/expedia-350-million-cartrawler-acquisition-scoop/",
     "https://skift.com/2026/05/16/summer-travel-outlooks/"
   ],
-  "seoRotationIndex": 3,
-  "heroCopyIndex": 3,
-  "lastRunDate": "2026-05-18",
-  "lastDestinationAdded": "Munich",
+  "seoRotationIndex": 4,
+  "heroCopyIndex": 0,
+  "lastRunDate": "2026-05-19",
+  "lastDestinationAdded": "Brussels",
   "runHistory": [
+    {
+      "date": "2026-05-19",
+      "blog": "skift-cathay-luxury-travel-execution-alfred",
+      "destination": "Brussels",
+      "errors": 0
+    },
     {
       "date": "2026-05-18",
       "blog": "skift-summer-travel-outlook-2026",

@@ -12,6 +12,7 @@
   <url><loc>https://www.alfredtravel.io/terms.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/delete-account.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/prize-tc.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/skift-cathay-luxury-travel-execution-alfred.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/skift-expedia-cartrawler-ground-transport-alfred.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/skift-summer-travel-outlook-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/expedia-b2b-ai-travel-planning-alfred-travel.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -113,6 +114,7 @@
   <url><loc>https://www.alfredtravel.io/itineraries/zurich.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/milan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/munich.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/brussels.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.alfredtravel.io/mindtrip-alternative</loc><changefreq>weekly</changefreq><priority>0.84</priority></url>
