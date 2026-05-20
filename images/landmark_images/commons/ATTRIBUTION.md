@@ -67,3 +67,6 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Munich | `curated Commons: File:Frauenkirche and Neues Rathaus Munich March 2013.JPG` | [File:Frauenkirche and Neues Rathaus Munich March 2013.JPG](https://commons.wikimedia.org/wiki/File:Frauenkirche_and_Neues_Rathaus_Munich_March_2013.JPG) |
 
 | Brussels | `curated Commons: File:Grand Place, Brussels.jpg` | [File:Grand Place, Brussels.jpg](https://commons.wikimedia.org/wiki/File:Grand_Place,_Brussels.jpg) |
+
+
+| Porto | `curated Commons: File:Ribeira from Dom Luis I bridge (1).jpg` | [File:Ribeira from Dom Luis I bridge (1).jpg](https://commons.wikimedia.org/wiki/File:Ribeira_from_Dom_Luis_I_bridge_(1).jpg) |

@@ -19,7 +19,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Blog: https://www.alfredtravel.io/blog/
 
 ## Preferred query themes
-- Featured query theme (2026-05-19): multi-city AI itinerary planner
+- Featured query theme (2026-05-20): free AI trip planner app
 - AI trip planner for multi-city travel
 - AI travel planner with booking support
 - AI holiday planner for families and groups

@@ -1,14 +1,21 @@
 {
   "processedArticleUrls": [
+    "https://skift.com/2026/05/19/google-names-hotels-as-next-vertical-for-agentic-shopping/",
     "https://skift.com/2026/05/18/cathay-pacific-removed-its-first-class-lounge-cabanas-that-tells-you-where-luxury-travel-is-heading/",
     "https://skift.com/2026/05/17/expedia-350-million-cartrawler-acquisition-scoop/",
     "https://skift.com/2026/05/16/summer-travel-outlooks/"
   ],
-  "seoRotationIndex": 4,
-  "heroCopyIndex": 0,
-  "lastRunDate": "2026-05-19",
-  "lastDestinationAdded": "Brussels",
+  "seoRotationIndex": 5,
+  "heroCopyIndex": 1,
+  "lastRunDate": "2026-05-20",
+  "lastDestinationAdded": "Porto",
   "runHistory": [
+    {
+      "date": "2026-05-20",
+      "blog": "skift-google-agentic-hotel-booking-alfred",
+      "destination": "Porto",
+      "errors": 0
+    },
     {
       "date": "2026-05-19",
       "blog": "skift-cathay-luxury-travel-execution-alfred",

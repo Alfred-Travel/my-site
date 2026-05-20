@@ -34,6 +34,7 @@ const PRECISE_FILE_TITLE = {
   Milan: 'File:Duomo (Milan) 29-07-29.jpg',
   Montreal: 'File:Montreal - QC - View on Old Montreal from Belvedere.jpg',
   Brussels: 'File:Grand Place, Brussels.jpg',
+  Porto: 'File:Ribeira from Dom Luis I bridge (1).jpg',
 };
 
 /** Reject Commons titles containing these (plaques, maps, logos — poor itinerary cards). */
@@ -58,6 +59,7 @@ const CITY_TITLE_ALIASES = {
   Munich: ['munich', 'münchen', 'munchen', 'frauenkirche', 'marienplatz', 'rathaus'],
   Milan: ['milan', 'milano', 'duomo'],
   Brussels: ['brussels', 'bruxelles', 'grand place', 'atomium'],
+  Porto: ['porto', 'ribeira', 'dom luis', 'douro'],
   Montreal: ['montreal', 'montréal', 'old montreal'],
 };
 
@@ -124,6 +126,7 @@ const GSRSEARCH_BY_CITY = {
   Munich: 'Frauenkirche Neues Rathaus Marienplatz Munich',
   Milan: 'Duomo di Milano Piazza del Duomo exterior',
   Brussels: 'Grand Place Brussels guild houses',
+  Porto: 'Porto Ribeira Dom Luis I bridge Douro',
 };
 
 function loadGsrSearchMap() {

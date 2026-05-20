@@ -1,0 +1,26 @@
+Alfred Travel Daily Growth Report — 2026-05-20
+
+SEO & AIO:
+  - index.html meta + hero (rotated)
+  - compare/alfred-vs-mindtrip.html freshness marker
+  - llms.txt theme: free AI trip planner app
+
+Blog: Google’s Agentic Hotel Booking Push: Why Trips Still Need an Execution Layer (skift-google-agentic-hotel-booking-alfred)
+Destination: {"name":"Porto","slug":"porto","added":true,"mode":"prepared manually"}
+
+Conversion:
+  - Mobile sticky download bar active on scroll (index.html)
+  - index.html daily insight strip → app downloads
+  - Verified #app-downloads + store links present
+
+Build:
+  - OK: commons thumbnail
+  - OK: blog + sitemap
+  - OK: itinerary pages
+
+Ranking:
+{
+  "note": "Set SERPAPI_KEY for automated rank tracking vs Mindtrip"
+}
+
+
