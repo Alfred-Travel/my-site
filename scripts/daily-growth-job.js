@@ -45,7 +45,7 @@ const RSS_FEEDS = [
 ];
 
 const report = {
-  date: new Date().toISOString().slice(0, 10),
+  date: process.env.DAILY_JOB_DATE || new Date().toISOString().slice(0, 10),
   timezone: 'Australia/Sydney',
   seo: [],
   blog: null,

@@ -1,0 +1,25 @@
+Alfred Travel Daily Growth Report — 2026-05-21
+
+SEO & AIO:
+  - index.html meta + hero (rotated)
+  - compare/alfred-vs-mindtrip.html freshness marker
+  - llms.txt theme: AI holiday planner for families
+
+Blog: Brian Chesky’s Boutique Push: Why Trips Still Need Structure Beyond Stays (skift-airbnb-chesky-boutique-hotels-alfred)
+Destination: {"name":"Budapest","slug":"budapest","added":true,"mode":"manual catch-up"}
+
+Conversion:
+  - Mobile sticky download bar active on scroll (index.html)
+  - index.html daily insight strip → app downloads
+  - Verified #app-downloads + store links present
+
+Build:
+  - OK: blog + sitemap
+  - OK: itinerary pages
+
+Ranking:
+{
+  "note": "Set SERPAPI_KEY for automated rank tracking vs Mindtrip"
+}
+
+

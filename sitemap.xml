@@ -12,6 +12,8 @@
   <url><loc>https://www.alfredtravel.io/terms.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/delete-account.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/prize-tc.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/skift-expedia-agentic-b2b-alfred.html</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/skift-airbnb-chesky-boutique-hotels-alfred.html</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/skift-google-agentic-hotel-booking-alfred.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/skift-cathay-luxury-travel-execution-alfred.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/skift-expedia-cartrawler-ground-transport-alfred.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -117,6 +119,8 @@
   <url><loc>https://www.alfredtravel.io/itineraries/munich.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/brussels.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/porto.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/budapest.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/krakow.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.alfredtravel.io/mindtrip-alternative</loc><changefreq>weekly</changefreq><priority>0.84</priority></url>

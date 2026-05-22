@@ -1,15 +1,31 @@
 {
   "processedArticleUrls": [
+    "https://skift.com/2026/05/21/expedia-to-launch-agentic-ai-tools-for-b2b-partners/",
+    "https://skift.com/2026/05/21/brian-chesky-on-boutique-hotels-vs-chains-taking-on-expedia-and-booking-and-where-airbnb-has-stumbled/",
     "https://skift.com/2026/05/19/google-names-hotels-as-next-vertical-for-agentic-shopping/",
     "https://skift.com/2026/05/18/cathay-pacific-removed-its-first-class-lounge-cabanas-that-tells-you-where-luxury-travel-is-heading/",
     "https://skift.com/2026/05/17/expedia-350-million-cartrawler-acquisition-scoop/",
     "https://skift.com/2026/05/16/summer-travel-outlooks/"
   ],
-  "seoRotationIndex": 5,
-  "heroCopyIndex": 1,
-  "lastRunDate": "2026-05-20",
-  "lastDestinationAdded": "Porto",
+  "seoRotationIndex": 7,
+  "heroCopyIndex": 3,
+  "lastRunDate": "2026-05-22",
+  "lastDestinationAdded": "Krakow",
   "runHistory": [
+    {
+      "date": "2026-05-22",
+      "blog": "skift-expedia-agentic-b2b-alfred",
+      "destination": "Krakow",
+      "errors": 0,
+      "mode": "manual catch-up"
+    },
+    {
+      "date": "2026-05-21",
+      "blog": "skift-airbnb-chesky-boutique-hotels-alfred",
+      "destination": "Budapest",
+      "errors": 0,
+      "mode": "manual catch-up"
+    },
     {
       "date": "2026-05-20",
       "blog": "skift-google-agentic-hotel-booking-alfred",
@@ -21,25 +37,6 @@
       "blog": "skift-cathay-luxury-travel-execution-alfred",
       "destination": "Brussels",
       "errors": 0
-    },
-    {
-      "date": "2026-05-18",
-      "blog": "skift-summer-travel-outlook-2026",
-      "destination": "Munich",
-      "errors": 1
-    },
-    {
-      "date": "2026-05-18",
-      "blog": "skift-expedia-cartrawler-ground-transport-alfred",
-      "destination": "Milan",
-      "errors": 0
-    },
-    {
-      "date": "2026-05-18",
-      "blog": "skift-expedia-cartrawler-ground-transport-alfred",
-      "destination": "Milan",
-      "errors": 0,
-      "mode": "local-preview"
     }
   ]
 }

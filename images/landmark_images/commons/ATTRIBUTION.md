@@ -70,3 +70,9 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 
 
 | Porto | `curated Commons: File:Ribeira from Dom Luis I bridge (1).jpg` | [File:Ribeira from Dom Luis I bridge (1).jpg](https://commons.wikimedia.org/wiki/File:Ribeira_from_Dom_Luis_I_bridge_(1).jpg) |
+
+
+
+| Budapest | `curated Commons: File:Hungarian Parliament Building, Budapest, Hungary.jpg` | [File:Hungarian Parliament Building, Budapest, Hungary.jpg](https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building,_Budapest,_Hungary.jpg) |
+
+| Krakow | `curated Commons: File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg` | [File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg](https://commons.wikimedia.org/wiki/File:20200826_Wawel_i_Wis%C5%82a_w_Krakowie_1752_1334.jpg) |

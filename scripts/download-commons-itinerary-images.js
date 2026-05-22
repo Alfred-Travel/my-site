@@ -35,6 +35,8 @@ const PRECISE_FILE_TITLE = {
   Montreal: 'File:Montreal - QC - View on Old Montreal from Belvedere.jpg',
   Brussels: 'File:Grand Place, Brussels.jpg',
   Porto: 'File:Ribeira from Dom Luis I bridge (1).jpg',
+  Budapest: 'File:Hungarian Parliament Building, Budapest, Hungary.jpg',
+  Krakow: 'File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg',
 };
 
 /** Reject Commons titles containing these (plaques, maps, logos — poor itinerary cards). */
@@ -60,6 +62,8 @@ const CITY_TITLE_ALIASES = {
   Milan: ['milan', 'milano', 'duomo'],
   Brussels: ['brussels', 'bruxelles', 'grand place', 'atomium'],
   Porto: ['porto', 'ribeira', 'dom luis', 'douro'],
+  Budapest: ['budapest', 'parliament', 'chain bridge', 'danube'],
+  Krakow: ['krakow', 'kraków', 'wawel'],
   Montreal: ['montreal', 'montréal', 'old montreal'],
 };
 
@@ -127,6 +131,8 @@ const GSRSEARCH_BY_CITY = {
   Milan: 'Duomo di Milano Piazza del Duomo exterior',
   Brussels: 'Grand Place Brussels guild houses',
   Porto: 'Porto Ribeira Dom Luis I bridge Douro',
+  Budapest: 'Hungarian Parliament Budapest Danube',
+  Krakow: 'Wawel Castle Krakow Poland',
 };
 
 function loadGsrSearchMap() {

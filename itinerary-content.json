@@ -293,5 +293,15 @@
     "day1": "Day 1 — Ribeira & Riverside\n• Arrive at OPO; Metro Line E or taxi to Baixa (validated 25–35 min)\n• Check-in near Ribeira or Cedofeita; lunch at Time Out Market or Ribeira terrace\n• Afternoon: Ribeira waterfront, Luís I Bridge lower level, Sé do Porto exterior\n• Evening: francesinha or seafood in Ribeira; sunset from Dom Luís I upper deck",
     "day2": "Day 2 — Port Wine & Miradouros\n• Morning: port wine cellar tour in Vila Nova de Gaia (pre-book; cable car optional)\n• Lunch: wine bar on Gaia riverfront\n• Afternoon: Clérigos Tower and Lello Bookshop (timed tickets); Livraria area walk\n• Evening: dinner in Boavista or Foz do Douro coastal tram ride",
     "day3": "Day 3 — Atlantic or Douro Valley\n• Morning: half-day Douro Valley cruise or Matosinhos beach promenade\n• Lunch: grilled fish in Matosinhos or picnic on the valley tour\n• Afternoon: Crystal Palace gardens or Serralves Museum depending energy\n• Evening: farewell port tonic in Ribeira; pack with metro timing to OPO confirmed"
+  },
+  "Budapest": {
+    "day1": "Day 1 — Pest & Danube Icons\n• Arrive at BUD; bus 100E or taxi to central Pest (validated 35–50 min)\n• Check-in near Deák Ferenc or District V; lunch at Great Market Hall\n• Afternoon: Parliament exterior, Shoes on the Danube, Chain Bridge walk\n• Evening: ruin bar district in District VII; dinner in Jewish Quarter",
+    "day2": "Day 2 — Buda Castle & Baths\n• Morning: Buda Castle, Fisherman's Bastion, Matthias Church (pre-book if timed)\n• Lunch: bistro in Castle District or tram to Pest\n• Afternoon: Széchenyi Thermal Bath or Gellért Bath (choose one; 2+ hrs)\n• Evening: Danube night cruise or riverside dinner in Pest",
+    "day3": "Day 3 — Margaret Island or Danube Bend\n• Morning: Margaret Island bikes or half-day Szentendre artist town\n• Lunch: lángos or Hungarian classics near the day-trip core\n• Afternoon: House of Terror or Great Synagogue depending interests\n• Evening: farewell dinner with river views; pack for metro to BUD"
+  },
+  "Krakow": {
+    "day1": "Day 1 — Old Town & Rynek\n• Arrive at KRK; train or bus to Kraków Główny (validated 20–30 min)\n• Check-in near Old Town or Kazimierz; lunch at Plac Nowy or Main Square\n• Afternoon: Rynek Główny, St. Mary's Basilica, Cloth Hall\n• Evening: dinner in Kazimierz; optional klezmer or jazz venue",
+    "day2": "Day 2 — Wawel & Museums\n• Morning: Wawel Castle and Cathedral (pre-book timed slots)\n• Lunch: pierogi or zapiekanka near the castle\n• Afternoon: Oskar Schindler Factory Museum or National Museum branch\n• Evening: Planty Park stroll; dinner in Old Town cellars",
+    "day3": "Day 3 — Salt Mine or Auschwitz Memorial\n• Morning: Wieliczka Salt Mine tour (pre-book) OR respectful Auschwitz-Birkenau day trip\n• Lunch: on-site café or return to Kazimierz\n• Afternoon: lighter block—Jagiellonian University quarter or Nowa Huta if staying central\n• Evening: farewell obwarzanek and coffee; confirm KRK transfer timing"
   }
 }
