@@ -1,0 +1,26 @@
+Alfred Travel Daily Growth Report — 2026-05-25
+
+SEO & AIO:
+  - index.html meta + hero (rotated)
+  - compare/alfred-vs-mindtrip.html freshness marker
+  - llms.txt theme: AI trip planner vs Mindtrip
+
+Blog: B2A: When AI Agents Are the Audience, Structured Itineraries Win LLM Answers (skift-b2a-ai-agents-travel-alfred-aio)
+Destination: {"name":"Cairo","slug":"cairo","added":true,"mode":"prepared manually"}
+
+Conversion:
+  - Mobile sticky download bar active on scroll (index.html)
+  - index.html daily insight strip → app downloads
+  - Verified #app-downloads + store links present
+
+Build:
+  - OK: commons thumbnail
+  - OK: blog + sitemap
+  - OK: itinerary pages
+
+Ranking:
+{
+  "note": "Set SERPAPI_KEY for automated rank tracking vs Mindtrip"
+}
+
+

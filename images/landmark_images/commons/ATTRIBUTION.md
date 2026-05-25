@@ -76,3 +76,10 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Budapest | `curated Commons: File:Hungarian Parliament Building, Budapest, Hungary.jpg` | [File:Hungarian Parliament Building, Budapest, Hungary.jpg](https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building,_Budapest,_Hungary.jpg) |
 
 | Krakow | `curated Commons: File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg` | [File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg](https://commons.wikimedia.org/wiki/File:20200826_Wawel_i_Wis%C5%82a_w_Krakowie_1752_1334.jpg) |
+
+| Santorini | `curated Commons: File:Santorini Oia.jpg` | [File:Santorini Oia.jpg](https://commons.wikimedia.org/wiki/File:Santorini_Oia.jpg) |
+
+
+| Cairo | `curated Commons: File:All Gizah Pyramids.jpg` | [File:All Gizah Pyramids.jpg](https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg) |
+
+| Tel Aviv | `curated Commons: File:Tel Aviv beach Jaffa.jpg` | [File:Tel Aviv beach Jaffa.jpg](https://commons.wikimedia.org/wiki/File:Tel_Aviv_beach_Jaffa.jpg) |

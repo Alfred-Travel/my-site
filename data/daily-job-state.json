@@ -1,5 +1,8 @@
 {
   "processedArticleUrls": [
+    "https://skift.com/2026/05/22/b2a-ai-agents-are-travels-new-audience-and-they-dont-care-about-brands/",
+    "https://skift.com/2026/05/24/india-is-where-the-voice-first-travel-app-gets-built/",
+    "https://skift.com/2026/05/22/spains-top-court-voids-national-short-term-rental-registry/",
     "https://skift.com/2026/05/21/expedia-to-launch-agentic-ai-tools-for-b2b-partners/",
     "https://skift.com/2026/05/21/brian-chesky-on-boutique-hotels-vs-chains-taking-on-expedia-and-booking-and-where-airbnb-has-stumbled/",
     "https://skift.com/2026/05/19/google-names-hotels-as-next-vertical-for-agentic-shopping/",
@@ -7,11 +10,29 @@
     "https://skift.com/2026/05/17/expedia-350-million-cartrawler-acquisition-scoop/",
     "https://skift.com/2026/05/16/summer-travel-outlooks/"
   ],
-  "seoRotationIndex": 7,
-  "heroCopyIndex": 3,
-  "lastRunDate": "2026-05-22",
-  "lastDestinationAdded": "Krakow",
+  "seoRotationIndex": 10,
+  "heroCopyIndex": 2,
+  "lastRunDate": "2026-05-25",
+  "lastDestinationAdded": "Cairo",
   "runHistory": [
+    {
+      "date": "2026-05-25",
+      "blog": "skift-b2a-ai-agents-travel-alfred-aio",
+      "destination": "Cairo",
+      "errors": 0
+    },
+    {
+      "date": "2026-05-24",
+      "blog": "skift-india-voice-first-travel-alfred",
+      "destination": "Tel Aviv",
+      "errors": 0
+    },
+    {
+      "date": "2026-05-23",
+      "blog": "skift-spain-str-registry-alfred-execution",
+      "destination": "Santorini",
+      "errors": 0
+    },
     {
       "date": "2026-05-22",
       "blog": "skift-expedia-agentic-b2b-alfred",

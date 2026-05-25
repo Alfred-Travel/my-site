@@ -47,5 +47,53 @@
       ],
       "faqSnippet": "Alfred helps you navigate Munich's rich history and vibrant culture effortlessly."
     }
+  },
+  "Santorini": {
+    "flag": "🇬🇷",
+    "legacyImage": "acropolis_of_athens.jpg",
+    "commonsSearch": "Santorini caldera Oia",
+    "itinerary": {
+      "day1": "Day 1 — Fira Caldera & Arrival\n• Arrive at JTR; pre-book transfer or bus to Fira (validated 25–40 min)\n• Check-in caldera-view hotel in Fira or Imerovigli; light lunch with cliff views\n• Afternoon: Fira cliff walk, Museum of Prehistoric Thera if open\n• Evening: sunset drinks in Imerovigli; dinner with caldera timing confirmed",
+      "day2": "Day 2 — Oia & Beaches\n• Morning: bus or taxi to Oia before crowds; Amoudi Bay steps\n• Lunch: seafood in Oia or Fira return\n• Afternoon: Red Beach or Perissa black-sand block (choose one; 2+ hrs)\n• Evening: Oia sunset spot (arrive 90 min early in peak season); late dinner in Fira",
+      "day3": "Day 3 — Akrotiri & Wine Route\n• Morning: Akrotiri archaeological site (pre-book timed entry)\n• Lunch: Pyrgos village taverna or winery tasting\n• Afternoon: Santo Wines or Art Space winery; pack for ferry/flight buffer\n• Evening: farewell meze; confirm JTR transfer with island traffic buffer"
+    },
+    "meta": {
+      "airportCode": "JTR",
+      "neighborhoods": ["Fira", "Oia", "Imerovigli"],
+      "transportModes": ["bus", "taxi", "ATV rental"],
+      "faqSnippet": "Alfred sequences Santorini ferry/flight buffers, Oia sunset crowds, and caldera hotel transfers so island days stay executable."
+    }
+  },
+  "Tel Aviv": {
+    "flag": "🇮🇱",
+    "legacyImage": "hassan_ii_mosque.jpg",
+    "commonsSearch": "Tel Aviv beach promenade",
+    "itinerary": {
+      "day1": "Day 1 — Beach & Bauhaus Core\n• Arrive at TLV; train or taxi to central Tel Aviv (validated 25–40 min)\n• Check-in near Rothschild or the beach strip; lunch at Carmel Market\n• Afternoon: Rothschild Boulevard Bauhaus walk, Independence Hall if timed\n• Evening: beach promenade sunset; dinner in Levinsky spice market area",
+      "day2": "Day 2 — Jaffa & Neve Tzedek\n• Morning: Old Jaffa port, flea market, St. Peter's Church views\n• Lunch: hummus in Jaffa or Florentin\n• Afternoon: Neve Tzedek galleries; optional ANU Museum\n• Evening: dinner in Sarona or Port area; note Friday sunset Shabbat timing if relevant",
+      "day3": "Day 3 — North Coast or Culture Finish\n• Morning: Tel Aviv Museum of Art OR Herzliya marina half-day\n• Lunch: shakshuka brunch or fish at the port\n• Afternoon: Sarona Market errands or final beach block\n• Evening: farewell dinner; confirm TLV departure with Friday/Saturday transport checks"
+    },
+    "meta": {
+      "airportCode": "TLV",
+      "neighborhoods": ["Rothschild", "Jaffa", "Florentin"],
+      "transportModes": ["train", "bus", "taxi", "bike share"],
+      "faqSnippet": "Alfred helps pace Tel Aviv beach days, Jaffa walks, and Shabbat-aware timing so city breaks stay realistic."
+    }
+  },
+  "Cairo": {
+    "flag": "🇪🇬",
+    "legacyImage": "pyramids.jpg",
+    "commonsSearch": "Giza pyramids Egypt",
+    "itinerary": {
+      "day1": "Day 1 — Giza Plateau\n• Arrive at CAI; pre-book driver or Uber to Giza area (validated 45–75 min with traffic)\n• Check-in near Giza or Zamalek; lunch with pyramid views if possible\n• Afternoon: Giza pyramids and Great Sphinx (pre-book guide/tickets)\n• Evening: light Sound & Light show OR early night before heavy walking day",
+      "day2": "Day 2 — Egyptian Museum & Khan el-Khalili\n• Morning: Grand Egyptian Museum or Egyptian Museum (check which wing is open)\n• Lunch: falafel near Tahrir or Zamalek café\n• Afternoon: Khan el-Khalili bazaar with fixed meet point for groups\n• Evening: Nile felucca at sunset; dinner in Zamalek",
+      "day3": "Day 3 — Islamic Cairo & Citadel\n• Morning: Saladin Citadel and Mosque of Muhammad Ali\n• Lunch: koshari or grilled chicken in Islamic Cairo\n• Afternoon: Al-Azhar Park views or Coptic Cairo if time\n• Evening: farewell meal; confirm CAI transfer with peak-hour buffer"
+    },
+    "meta": {
+      "airportCode": "CAI",
+      "neighborhoods": ["Zamalek", "Giza", "Islamic Cairo"],
+      "transportModes": ["Uber", "metro", "private driver"],
+      "faqSnippet": "Alfred builds Cairo days around traffic buffers, museum hours, and Giza timing so pyramid visits do not collapse the rest of the trip."
+    }
   }
 }

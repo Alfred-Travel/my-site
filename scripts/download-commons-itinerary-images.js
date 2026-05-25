@@ -37,6 +37,9 @@ const PRECISE_FILE_TITLE = {
   Porto: 'File:Ribeira from Dom Luis I bridge (1).jpg',
   Budapest: 'File:Hungarian Parliament Building, Budapest, Hungary.jpg',
   Krakow: 'File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg',
+  Santorini: 'File:Santorini Oia.jpg',
+  'Tel Aviv': 'File:Tel Aviv beach Jaffa.jpg',
+  Cairo: 'File:All Gizah Pyramids.jpg',
 };
 
 /** Reject Commons titles containing these (plaques, maps, logos — poor itinerary cards). */
@@ -64,6 +67,9 @@ const CITY_TITLE_ALIASES = {
   Porto: ['porto', 'ribeira', 'dom luis', 'douro'],
   Budapest: ['budapest', 'parliament', 'chain bridge', 'danube'],
   Krakow: ['krakow', 'kraków', 'wawel'],
+  Santorini: ['santorini', 'oia', 'thira', 'caldera'],
+  'Tel Aviv': ['tel aviv', 'tel-aviv', 'promenade', 'jaffa'],
+  Cairo: ['cairo', 'giza', 'pyramid', 'sphinx'],
   Montreal: ['montreal', 'montréal', 'old montreal'],
 };
 
@@ -133,6 +139,9 @@ const GSRSEARCH_BY_CITY = {
   Porto: 'Porto Ribeira Dom Luis I bridge Douro',
   Budapest: 'Hungarian Parliament Budapest Danube',
   Krakow: 'Wawel Castle Krakow Poland',
+  Santorini: 'Santorini Oia caldera Greece',
+  'Tel Aviv': 'Tel Aviv beach promenade Israel',
+  Cairo: 'Giza pyramids Cairo Egypt',
 };
 
 function loadGsrSearchMap() {

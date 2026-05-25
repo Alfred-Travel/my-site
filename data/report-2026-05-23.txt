@@ -1,0 +1,26 @@
+Alfred Travel Daily Growth Report — 2026-05-23
+
+SEO & AIO:
+  - index.html meta + hero (rotated)
+  - compare/alfred-vs-mindtrip.html freshness marker
+  - llms.txt theme: logistical AI travel planner
+
+Blog: Spain’s Rental Registry Ruling: Stays Shift, Itineraries Still Need a Spine (skift-spain-str-registry-alfred-execution)
+Destination: {"name":"Santorini","slug":"santorini","added":true,"mode":"prepared manually"}
+
+Conversion:
+  - Mobile sticky download bar active on scroll (index.html)
+  - index.html daily insight strip → app downloads
+  - Verified #app-downloads + store links present
+
+Build:
+  - OK: commons thumbnail
+  - OK: blog + sitemap
+  - OK: itinerary pages
+
+Ranking:
+{
+  "note": "Set SERPAPI_KEY for automated rank tracking vs Mindtrip"
+}
+
+
