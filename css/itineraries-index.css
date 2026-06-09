@@ -1,0 +1,111 @@
+/**
+ * Itineraries index — TravelAI shell (tai-hero + tai-agn grid)
+ */
+
+body.itineraries-index-page .itineraries-index-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.itineraries-index-page .footer-technical-authority {
+    display: none;
+}
+
+body.itineraries-index-page .tai-hero-title {
+    max-width: min(100%, 18rem);
+}
+
+body.itineraries-index-page .tai-hero-lead {
+    max-width: 36rem;
+}
+
+body.itineraries-index-page .tai-itineraries-agn .tai-agn-desc a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+body.itineraries-index-page .tai-itineraries-agn .tai-agn-desc a:hover {
+    color: #000;
+}
+
+body.itineraries-index-page .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+body.itineraries-index-page .destination-card {
+    display: block;
+    text-decoration: none;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 0.65rem;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+body.itineraries-index-page .destination-card:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    border-color: var(--secondary-color);
+}
+
+body.itineraries-index-page .destination-card-media {
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #7ea0c4 0%, #425f82 100%);
+}
+
+body.itineraries-index-page .destination-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+body.itineraries-index-page .destination-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 0.15rem 0.1rem;
+}
+
+body.itineraries-index-page .destination-card-body h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+}
+
+body.itineraries-index-page .destination-card-flag {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1080px) {
+    body.itineraries-index-page .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    body.itineraries-index-page .itineraries-index-main {
+        padding-top: 78px;
+    }
+
+    body.itineraries-index-page .tai-hero-title {
+        max-width: none;
+    }
+
+    body.itineraries-index-page .destination-grid {
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+    }
+}

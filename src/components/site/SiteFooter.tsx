@@ -33,9 +33,8 @@ const footerGroups = [
     title: "Support",
     links: [
       { href: "/delete-account.html", label: "Support Center" },
-      { href: "mailto:support@alfredtravel.io", label: "Contact Us" },
+      { href: "/index.html#contact", label: "Contact Us" },
       { href: "/faq.html", label: "Help & FAQ" },
-      { href: "/", label: "Download App" },
     ],
   },
   {
@@ -44,7 +43,6 @@ const footerGroups = [
       { href: "/terms.html", label: "Terms & Conditions" },
       { href: "/terms.html#privacy", label: "Privacy Policy" },
       { href: "/prize-tc.html", label: "Prize Terms" },
-      { href: "/delete-account.html", label: "Account Deletion" },
     ],
   },
 ];

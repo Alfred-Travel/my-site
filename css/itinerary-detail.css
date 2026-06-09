@@ -1,0 +1,122 @@
+/**
+ * Individual destination itinerary pages — TravelAI shell
+ */
+
+body.itinerary-detail-page .itinerary-detail-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.itinerary-detail-page .footer-technical-authority {
+    display: none;
+}
+
+body.itinerary-detail-page .tai-hero-title {
+    max-width: min(100%, 20rem);
+}
+
+body.itinerary-detail-page .tai-hero-lead {
+    max-width: 36rem;
+}
+
+body.itinerary-detail-page .tai-itinerary-validation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+body.itinerary-detail-page .tai-itinerary-validation-item {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: #1a1a1a;
+}
+
+body.itinerary-detail-page .tai-itinerary-validation-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #000;
+}
+
+body.itinerary-detail-page .tai-itinerary-sample-agn .tai-agn-container {
+    padding-top: 0;
+}
+
+body.itinerary-detail-page .tai-itinerary-sample-wrap {
+    margin-top: 2rem;
+}
+
+body.itinerary-detail-page .tai-itinerary-cover {
+    width: 100%;
+    max-width: 42rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+body.itinerary-detail-page .itinerary-sample {
+    white-space: pre-wrap;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #1a1a1a;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    margin: 0;
+    overflow-x: auto;
+}
+
+body.itinerary-detail-page .tai-itinerary-faq .tai-dark-grid {
+    text-align: left;
+}
+
+body.itinerary-detail-page .tai-itinerary-faq .tai-dark-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.65rem;
+}
+
+body.itinerary-detail-page .tai-itinerary-faq .tai-dark-card p {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+body.itinerary-detail-page .tai-itinerary-cta .tai-join-copy {
+    max-width: 36rem;
+}
+
+body.itinerary-detail-page .tai-itinerary-cta .tai-btn-primary {
+    margin-top: 1.25rem;
+    display: inline-flex;
+}
+
+@media (max-width: 767px) {
+    body.itinerary-detail-page .itinerary-detail-main {
+        padding-top: 78px;
+    }
+
+    body.itinerary-detail-page .tai-hero-title {
+        max-width: none;
+    }
+
+    body.itinerary-detail-page .tai-itinerary-validation-grid {
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+    }
+
+    body.itinerary-detail-page .tai-itinerary-sample-wrap {
+        margin-top: 1.5rem;
+    }
+}

@@ -59,13 +59,19 @@ function initMobileNavigation() {
     if (!hamburger || !navLinks) return null;
 
     hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+        const isOpen = navLinks.classList.toggle("active");
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        document.body.classList.toggle("tai-nav-open", isOpen && document.body.classList.contains("home-page"));
     });
 
     navLinks.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 1023) {
                 navLinks.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+                hamburger.setAttribute("aria-label", "Open menu");
+                document.body.classList.remove("tai-nav-open");
             }
         });
     });
@@ -154,9 +160,11 @@ function initPressCarousel() {
 
     const slides = Array.from(pressCarousel.querySelectorAll("[data-press-slide]"));
     const previews = Array.from(pressCarousel.querySelectorAll("[data-press-preview]"));
+    const dots = Array.from(pressCarousel.querySelectorAll("[data-press-dot]"));
     const prevButton = pressCarousel.querySelector("[data-carousel-prev]");
     const nextButton = pressCarousel.querySelector("[data-carousel-next]");
-    if (!slides.length || !previews.length) return;
+    if (!slides.length) return;
+    if (!previews.length && !dots.length && !prevButton && !nextButton) return;
 
     let activeIndex = 0;
 
@@ -168,10 +176,19 @@ function initPressCarousel() {
         previews.forEach((preview, previewIndex) => {
             preview.classList.toggle("is-active", previewIndex === activeIndex);
         });
+        dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === activeIndex;
+            dot.classList.toggle("is-active", isActive);
+            dot.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
     };
 
     previews.forEach((preview, index) => {
         preview.addEventListener("click", () => updatePressCarousel(index));
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => updatePressCarousel(index));
     });
 
     if (prevButton) {
@@ -219,7 +236,8 @@ class CookieConsent {
 
     showBanner() {
         if (!this.cookiesBanner) return;
-        setTimeout(() => this.cookiesBanner.classList.add("show"), 1000);
+        const delay = document.body.classList.contains("home-page") ? 5000 : 1000;
+        setTimeout(() => this.cookiesBanner.classList.add("show"), delay);
     }
 
     hideBanner() {
@@ -515,7 +533,7 @@ function initMobileDownloadBar() {
         const downloads = document.getElementById("app-downloads");
         if (!downloads) return;
         const rect = downloads.getBoundingClientRect();
-        const pastHero = window.scrollY > 280;
+        const pastHero = window.scrollY > 120;
         const downloadsVisible = rect.top < window.innerHeight && rect.bottom > 0;
         const shouldShow = pastHero && !downloadsVisible;
         bar.hidden = !shouldShow;

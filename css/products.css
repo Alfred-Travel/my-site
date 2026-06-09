@@ -1,0 +1,139 @@
+/**
+ * Products / Features page — uses homepage section shell (tai-hero, tai-agn, tai-dark, tai-join)
+ */
+
+body.products-page .products-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.products-page .footer-technical-authority {
+    display: none;
+}
+
+body.products-page .tai-hero-title {
+    max-width: 20ch;
+}
+
+/* Product grids inside AGN-style sections */
+
+body.products-page .tai-agn-section .tai-product-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: none;
+}
+
+body.products-page .tai-products-agn-follow {
+    padding-bottom: 5rem;
+}
+
+body.products-page .tai-products-agn-follow .tai-agn-container {
+    padding-top: 0;
+}
+
+body.products-page .tai-product-card {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+body.products-page .tai-product-card:hover {
+    border-color: var(--secondary-color);
+    background: #fff;
+}
+
+body.products-page .tai-product-card h3 {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+body.products-page .tai-product-card h3 i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    width: 1.1rem;
+    text-align: center;
+}
+
+body.products-page .tai-product-card p {
+    margin: 0.65rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: #444;
+}
+
+body.products-page .tai-product-card.is-primary {
+    border-color: rgba(78, 205, 196, 0.45);
+    background: #fff;
+}
+
+body.products-page .tai-product-tag {
+    display: inline-flex;
+    margin-top: 0.85rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.3rem 0.6rem;
+    color: #000;
+    background: rgba(78, 205, 196, 0.18);
+}
+
+body.products-page .tai-product-card.is-coming-soon {
+    background: #f5f5f5;
+    border-style: dashed;
+}
+
+/* Rewards block — join section with full-width grid below */
+
+body.products-page .tai-products-rewards-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+body.products-page .tai-products-rewards .tai-join-copy {
+    flex: none;
+    max-width: 42rem;
+}
+
+body.products-page .tai-products-rewards-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 1023px) {
+    body.products-page .tai-agn-section .tai-product-grid,
+    body.products-page .tai-products-rewards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    body.products-page .products-main {
+        padding-top: 78px;
+    }
+
+    body.products-page .tai-agn-section .tai-product-grid,
+    body.products-page .tai-products-rewards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.products-page .tai-products-agn-follow {
+        padding-bottom: 2.5rem;
+    }
+}

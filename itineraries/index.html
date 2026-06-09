@@ -5,136 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Trip Planner Itineraries | 64 Destinations - Alfred Travel</title>
     <meta name="description" content="Validated 7-day itineraries for 64 top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Alfred Travel","operatingSystem":"iOS, Android, Web","applicationCategory":"TravelApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"150"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},"description":"Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.","featureList":"AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards","softwareVersion":"1.0.18"}</script>
-    <style>
-        .itinerary-index-page {
-            max-width: 1380px;
-            margin: 0 auto;
-            padding: 7rem 2.2rem 4rem;
-        }
-        .itinerary-index-hero {
-            max-width: 880px;
-            margin-bottom: 2.25rem;
-        }
-        .itinerary-index-kicker {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
-        }
-        .itinerary-index-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 6vw, 4.25rem);
-            line-height: 0.96;
-            letter-spacing: -0.05em;
-            color: #1a1a1a;
-            margin-bottom: 1rem;
-        }
-        .itinerary-index-copy {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: rgba(29, 36, 51, 0.72);
-            max-width: 760px;
-        }
-        .destination-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
-        }
-        .destination-card {
-            display: block;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            border-radius: 18px;
-            padding: 0.7rem;
-            box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
-            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-        }
-        .destination-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(17, 24, 39, 0.09);
-            border-color: rgba(78, 205, 196, 0.28);
-        }
-        .destination-card-media {
-            aspect-ratio: 16 / 9;
-            border-radius: 14px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #7ea0c4 0%, #425f82 100%);
-        }
-        .destination-card-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .destination-card-body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.75rem;
-            padding: 0.85rem 0.1rem 0.15rem;
-        }
-        .destination-card-body h2 {
-            font-size: 1.05rem;
-            line-height: 1.3;
-            color: #1d2433;
-            font-weight: 700;
-        }
-        .destination-card-flag {
-            font-size: 1.15rem;
-            flex-shrink: 0;
-        }
-        @media (max-width: 1080px) {
-            .destination-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-        @media (max-width: 640px) {
-            .itinerary-index-page {
-                padding: 6.25rem 1rem 3rem;
-            }
-            .itinerary-index-title {
-                font-size: 2.65rem;
-            }
-            .destination-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/itineraries-index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5WJZ450F8');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBD76P5');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.alfredtravel.io/"},{"@type":"ListItem","position":2,"name":"Itineraries","item":"https://www.alfredtravel.io/itineraries/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI Trip Planner Itineraries | Alfred Travel","url":"https://www.alfredtravel.io/itineraries/","description":"Validated 7-day itineraries for top destinations with transit checks and route logic built in.","publisher":{"@type":"Organization","name":"Alfred Travel Tech"}}</script>
 </head>
-<body>
+<body class="itineraries-index-page tai-site">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBD76P5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../index.html"><img src="../images/Color logo with background.png.png" alt="Alfred - The Leading AI Trip Planner and AI Holiday Planner App" class="logo-image" /></a>
+    <header class="tai-header">
+        <nav class="navbar tai-navbar" aria-label="Main navigation">
+            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
+                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
+            </a>
+            <div class="tai-desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../about.html">Company</a></li>
+                    <li><a href="../products.html">Features</a></li>
+                    <li><a href="../delete-account.html">Support</a></li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../products.html">Our Features</a></li>
-                <li><a href="../blog/index.html">Blog</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../faq.html#tutorials">Tutorials</a></li>
-                <li><a href="../delete-account.html">Support</a></li>
-            </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download the AI Holiday Planner">Download App</a>
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
-    <main class="itinerary-index-page">
-        <section class="itinerary-index-hero">
-            <p class="itinerary-index-kicker">Destinations</p>
-            <h1 class="itinerary-index-title">AI Trip Planner Itineraries</h1>
-            <p class="itinerary-index-copy">Browse validated 7-day itineraries across 64 top destinations. Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (see <a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
+    <main class="itineraries-index-main">
+        <section class="tai-hero" aria-labelledby="itineraries-hero-heading">
+            <div class="tai-hero-bg">
+                <div class="tai-hero-wrapper">
+                    <div class="tai-hero-copy">
+                        <h1 id="itineraries-hero-heading" class="tai-hero-title">Validated trip itineraries</h1>
+                        <p class="tai-hero-lead">Browse 7-day plans across 64 destinations—structured for practical travel flow, with transit checks and route logic built in.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="destination-grid" aria-label="Destination itinerary grid">
+        <section class="tai-agn-section tai-itineraries-agn" aria-labelledby="itineraries-grid-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Destinations</span>
+                    <h2 id="itineraries-grid-heading" class="tai-agn-heading">Pick a city to explore</h2>
+                    <p class="tai-agn-desc">Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (<a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Open any destination for a sample itinerary and logistical validation notes.</p>
+                    <div class="destination-grid" aria-label="Destination itinerary grid">
             <a class="destination-card" href="london.html" aria-label="View itinerary for London">
                 <div class="destination-card-media">
                     <img src="../images/landmark_images/commons/london.jpg" alt="London itinerary preview" loading="lazy">
@@ -711,22 +648,29 @@
                     <span class="destination-card-flag" aria-hidden="true">🇪🇬</span>
                 </div>
             </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
         <div class="footer-content">
-            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
+            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">Company</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#press">In the Press</a></li><li><a href="../about.html#team">Our Team</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
         <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
+    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to our use of cookies. You can learn more about our <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> and <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
+    <aside id="mobile-download-bar" class="mobile-download-bar" role="complementary" aria-label="Download Alfred app">
+        <p class="mobile-download-bar-text">Free AI trip planner — iOS &amp; Android</p>
+        <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="mobile-download-bar-btn" target="_blank" rel="noopener noreferrer">Download</a>
+    </aside>
     <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
-    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -114,7 +114,7 @@ export default function MindtripAlternativePage() {
       <main style={{ maxWidth: 800, margin: "0 auto", padding: "2rem 1.5rem" }}>
         <h1
           style={{
-            fontFamily: "Space Grotesk, sans-serif",
+            fontFamily: "Inter, sans-serif",
             fontSize: "2rem",
             marginBottom: "1rem",
           }}
@@ -142,7 +142,7 @@ export default function MindtripAlternativePage() {
         </p>
 
         <section style={{ marginBottom: "2rem", lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "1.5rem" }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontSize: "1.5rem" }}>
             Why Travellers Look for a Mindtrip Alternative
           </h2>
           <p>
@@ -156,7 +156,7 @@ export default function MindtripAlternativePage() {
         </section>
 
         <section style={{ marginBottom: "2rem", lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "1.5rem" }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontSize: "1.5rem" }}>
             Alfred Travel&apos;s Difference
           </h2>
           <p>
@@ -170,7 +170,7 @@ export default function MindtripAlternativePage() {
         </section>
 
         <section style={{ marginBottom: "2rem" }}>
-          <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "1.5rem" }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontSize: "1.5rem" }}>
             Alfred Travel vs Mindtrip
           </h2>
           <p style={{ lineHeight: 1.7, marginBottom: "1rem" }}>
@@ -201,7 +201,7 @@ export default function MindtripAlternativePage() {
         </section>
 
         <section style={{ marginBottom: "2rem", lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "1.5rem" }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontSize: "1.5rem" }}>
             Who Should Use Alfred Travel?
           </h2>
           <p>
@@ -213,7 +213,7 @@ export default function MindtripAlternativePage() {
         </section>
 
         <section style={{ marginBottom: "2rem", lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "1.5rem" }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontSize: "1.5rem" }}>
             Try Alfred Travel
           </h2>
           <p>
@@ -228,7 +228,7 @@ export default function MindtripAlternativePage() {
         </section>
 
         <section style={{ marginTop: "2rem", lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "1.5rem" }}>
+          <h2 style={{ fontFamily: "Inter, sans-serif", fontSize: "1.5rem" }}>
             FAQ
           </h2>
           {FAQ_ITEMS.map((item) => (

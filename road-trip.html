@@ -22,7 +22,8 @@
     <link rel="icon" type="image/png" href="images/Color logo with background.png.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Structured Data - Organization -->
@@ -43,8 +44,8 @@
     </script>
     <style>
         .road-trip-section { padding: 7rem 5% 5rem; margin-top: 90px; background-color: var(--light-bg); max-width: 900px; margin-left: auto; margin-right: auto; }
-        .road-trip-section h1 { font-family: 'Space Grotesk', sans-serif; text-align: center; color: var(--secondary-color); font-size: 2.5rem; margin-bottom: 2rem; }
-        .road-trip-section h2 { font-family: 'Space Grotesk', sans-serif; color: var(--primary-color); font-size: 1.75rem; margin: 2rem 0 1rem; }
+        .road-trip-section h1 { font-family: var(--font-sans); font-weight: 700; letter-spacing: -0.02em; text-align: center; color: var(--secondary-color); font-size: 2.5rem; margin-bottom: 2rem; }
+        .road-trip-section h2 { font-family: var(--font-sans); font-weight: 700; letter-spacing: -0.02em; color: var(--primary-color); font-size: 1.75rem; margin: 2rem 0 1rem; }
         .feature-logic-block { margin: 2rem 0; }
         .feature-logic-block p { font-family: 'Inter', sans-serif; color: var(--text-color); margin-bottom: 1rem; line-height: 1.7; }
         .feature-table { width: 100%; border-collapse: collapse; margin: 1rem 0; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
@@ -100,11 +101,12 @@
     </main>
     <footer>
         <div class="footer-content">
-            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="index.html#features">Features</a></li></ul></div>
+            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#press">In the Press</a></li>
+                    <li><a href="about.html#team">Our Team</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="products.html">Our Features</a></li><li><a href="itineraries/index.html">Itineraries</a></li><li><a href="compare/index.html">Compare</a></li><li><a href="blog/index.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="faq.html">Help &amp; FAQ</a></li><li><a href="index.html#app-downloads">Download App</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="terms.html#privacy">Privacy Policy</a></li><li><a href="prize-tc.html">Prize Terms</a></li><li><a href="delete-account.html">Account Deletion</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="delete-account.html">Support Center</a></li><li><a href="index.html#contact">Contact Us</a></li><li><a href="faq.html">Help &amp; FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="terms.html#privacy">Privacy Policy</a></li><li><a href="prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
         <div class="footer-bottom"><p>&copy; 2025 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>

@@ -21,7 +21,7 @@ export default function AlfredVsTripPlannerAI() {
         <meta name="keywords" content={`Alfred vs ${COMPETITOR}, AI travel planner comparison, ${COMPETITOR} alternative, trip planner comparison`} />
       </Head>
       <main style={{ maxWidth: 800, margin: '0 auto', padding: '2rem 1.5rem' }}>
-        <h1 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>
+        <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>
           {title}
         </h1>
 

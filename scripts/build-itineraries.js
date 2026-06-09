@@ -36,22 +36,66 @@ const SOFTWARE_APPLICATION_SCHEMA = {
   softwareVersion: '1.0.18'
 };
 
+const INDEX_NAV = `
+    <header class="tai-header">
+        <nav class="navbar tai-navbar" aria-label="Main navigation">
+            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
+                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
+            </a>
+            <div class="tai-desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../about.html">Company</a></li>
+                    <li><a href="../products.html">Features</a></li>
+                    <li><a href="../delete-account.html">Support</a></li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>`;
+
+const INDEX_FOOTER = `
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">Company</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#press">In the Press</a></li><li><a href="../about.html#team">Our Team</a></li></ul></div>
+            <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
+        </div>
+        <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
+        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
+    </footer>
+    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to our use of cookies. You can learn more about our <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> and <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
+    <aside id="mobile-download-bar" class="mobile-download-bar" role="complementary" aria-label="Download Alfred app">
+        <p class="mobile-download-bar-text">Free AI trip planner — iOS &amp; Android</p>
+        <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="mobile-download-bar-btn" target="_blank" rel="noopener noreferrer">Download</a>
+    </aside>
+    <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
+    <script src="../js/main.js"><\/script>`;
+
 const NAV = `
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="logo">
-                <a href="../index.html"><img src="../images/Color logo with background.png.png" alt="Alfred - The Leading AI Trip Planner and AI Holiday Planner App" class="logo-image" /></a>
+                <a href="../index.html" class="brand-link" aria-label="Alfred Travel home">
+                    <img src="../images/Color logo with background.png.png" alt="Alfred Travel" class="logo-image" />
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../products.html">Our Features</a></li>
+                <li><a href="../products.html">Features</a></li>
+                <li><a href="index.html" aria-current="page">Itineraries</a></li>
                 <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../compare/index.html">Compare</a></li>
                 <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../faq.html#tutorials">Tutorials</a></li>
-                <li><a href="../delete-account.html">Support</a></li>
             </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download the AI Holiday Planner">Download App</a>
+            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download Alfred on iOS or Android">Download App</a>
             <div class="hamburger"><span></span><span></span><span></span></div>
         </nav>
     </header>`;
@@ -62,8 +106,8 @@ const FOOTER = `
             <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
         <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
@@ -315,9 +359,10 @@ function extractEntitySignals(displayName, itineraryText) {
   };
 }
 
-function buildPage(displayName, contentMap) {
+function buildPage(displayName, contentMap, index) {
   const slug = slugify(displayName);
   const pageUrl = `${BASE_URL}/itineraries/${slug}.html`;
+  const { image } = getCardMeta(displayName, index);
 
   const travelActionSchema = {
     '@context': 'https://schema.org',
@@ -351,7 +396,6 @@ function buildPage(displayName, contentMap) {
     })),
     distribution: { '@type': 'DataDownload', encodingFormat: 'text/html', contentUrl: pageUrl },
   };
-  const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
   const faqSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -388,59 +432,105 @@ function buildPage(displayName, contentMap) {
     <meta property="og:url" content="${pageUrl}">
     <meta property="og:type" content="website">
     <link rel="canonical" href="${pageUrl}">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="application/ld+json">${softwareApplicationSchema}</script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/itinerary-detail.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5WJZ450F8');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBD76P5');</script>
     <script type="application/ld+json">${JSON.stringify(travelActionSchema)}</script>
     <script type="application/ld+json">${JSON.stringify(datasetSchema)}</script>
     <script type="application/ld+json">${faqSchema}</script>
-    <style>
-        .itinerary-page { max-width: 720px; margin: 0 auto; padding: 6rem 5% 4rem; }
-        .itinerary-page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; color: var(--secondary-color); margin-bottom: 1rem; }
-        .itinerary-page h2 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--primary-color); }
-        .itinerary-page p { line-height: 1.7; }
-        .validation-box { background: rgba(78, 205, 196, 0.12); border: 1px solid rgba(78, 205, 196, 0.4); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-        .validation-box strong { color: var(--primary-color); margin-right: 0.5rem; }
-        .validation-box span { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text-color); }
-        .validation-box .check { color: var(--secondary-color); }
-        .itinerary-sample { white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--text-color); background: var(--white); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(78, 205, 196, 0.2); }
-        .itinerary-faq { margin-top: 2.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(78, 205, 196, 0.08); border: 1px solid rgba(78, 205, 196, 0.16); }
-        .itinerary-faq h2 { margin-top: 0; }
-        .itinerary-cta { margin-top: 2.5rem; text-align: center; }
-        .itinerary-cta a { display: inline-block; background: var(--secondary-color); color: var(--primary-color); padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-        .itinerary-cta a:hover { background: #3db8b0; transform: translateY(-2px); }
-    </style>
 </head>
-<body>
-    ${NAV}
-    <main class="itinerary-page">
-        <h1>7-Day ${displayName} AI Trip Planner: Validated Itinerary</h1>
-        <p>Use this ${displayName} itinerary as a route-aware starting point for a broader trip. Alfred Travel is strongest when travelers need practical structure, fewer planning gaps, and a clearer path from itinerary to booking.</p>
-        <div class="validation-box">
-            <strong>Logistical Validation:</strong>
-            <span><span class="check">✓</span> Flight Gaps Checked</span>
-            <span><span class="check">✓</span> Hotel Proximity Verified</span>
-            <span><span class="check">✓</span> Multi-LLM Confirmed</span>
-        </div>
-        <section>
-            <h2>3-Day Sample Itinerary</h2>
-            <pre class="itinerary-sample">${itineraryText}</pre>
+<body class="itinerary-detail-page tai-site">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBD76P5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    ${INDEX_NAV}
+    <main class="itinerary-detail-main">
+        <section class="tai-hero" aria-labelledby="itinerary-hero-heading">
+            <div class="tai-hero-bg">
+                <div class="tai-hero-wrapper">
+                    <div class="tai-hero-copy">
+                        <h1 id="itinerary-hero-heading" class="tai-hero-title">${displayName} · 7-day validated itinerary</h1>
+                        <p class="tai-hero-lead">Use this ${displayName} plan as a route-aware starting point for a broader trip—practical structure, fewer planning gaps, and a clearer path from itinerary to booking.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="itinerary-faq">
-            <h2>${displayName} Trip Planning FAQ</h2>
-            <p><strong>Which arrival gateway and transfer context does this ${displayName} itinerary assume?</strong><br>This plan starts from <strong>${citySignals.arrivalGateway}</strong> and keeps transfer logic practical for the first-day block.</p>
-            <p><strong>Which neighborhoods or districts are emphasized?</strong><br>This itinerary prioritizes <strong>${citySignals.neighborhoodHints.join(' • ')}</strong> to reduce routing friction.</p>
-            <p><strong>What local transport modes are relevant?</strong><br>Typical ${displayName} movement in this plan uses <strong>${citySignals.transportModes.join(', ')}</strong> depending on daily sequencing.</p>
+        <section class="tai-agn-section" aria-labelledby="itinerary-validation-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Logistical validation</span>
+                    <h2 id="itinerary-validation-heading" class="tai-agn-heading">Checked before you commit</h2>
+                    <p class="tai-agn-desc">Every Alfred itinerary runs through multi-LLM validation for gaps generic planners miss.</p>
+                    <div class="tai-itinerary-validation-grid">
+                        <div class="tai-itinerary-validation-item"><strong>Flight gaps</strong> Transfer times and connection windows verified.</div>
+                        <div class="tai-itinerary-validation-item"><strong>Hotel proximity</strong> Stay location checked against daily activity clusters.</div>
+                        <div class="tai-itinerary-validation-item"><strong>Multi-LLM review</strong> Cross-model confirmation on pacing and routing.</div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div class="itinerary-cta">
-            <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" target="_blank" rel="noopener noreferrer">Generate the full 7-day version in Alfred App</a>
-        </div>
+        <section class="tai-agn-section tai-itinerary-sample-agn" aria-labelledby="itinerary-sample-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Sample plan</span>
+                    <h2 id="itinerary-sample-heading" class="tai-agn-heading">3-day preview</h2>
+                    <p class="tai-agn-desc">A condensed look at how Alfred structures a ${displayName} trip—arrival gateway, neighborhoods, and daily pacing.</p>
+                    <div class="tai-itinerary-sample-wrap">
+                        <img src="../images/landmark_images/${image}" alt="${displayName} destination preview" class="tai-itinerary-cover" width="672" height="378" loading="lazy">
+                        <pre class="itinerary-sample">${itineraryText}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tai-dark-section tai-itinerary-faq" aria-labelledby="itinerary-faq-heading">
+            <div class="tai-dark-inner">
+                <header class="tai-dark-header">
+                    <p class="tai-section-kicker">Planning notes</p>
+                    <h2 id="itinerary-faq-heading">${displayName} trip planning FAQ</h2>
+                </header>
+                <div class="tai-dark-grid">
+                    <article class="tai-dark-card">
+                        <h3>Arrival gateway</h3>
+                        <p>This plan starts from <strong>${citySignals.arrivalGateway}</strong> and keeps transfer logic practical for the first-day block.</p>
+                    </article>
+                    <article class="tai-dark-card">
+                        <h3>Neighborhoods</h3>
+                        <p>This itinerary prioritizes <strong>${citySignals.neighborhoodHints.join(' • ')}</strong> to reduce routing friction.</p>
+                    </article>
+                    <article class="tai-dark-card">
+                        <h3>Local transport</h3>
+                        <p>Typical ${displayName} movement in this plan uses <strong>${citySignals.transportModes.join(', ')}</strong> depending on daily sequencing.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="tai-join-section tai-itinerary-cta" aria-labelledby="itinerary-cta-heading">
+            <div class="tai-join-inner">
+                <div class="tai-join-copy">
+                    <h2 id="itinerary-cta-heading">Build the full 7-day plan in Alfred</h2>
+                    <p class="tai-join-lead">Generate, validate, and edit the complete ${displayName} itinerary in the Alfred app.</p>
+                    <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="tai-btn-primary" target="_blank" rel="noopener noreferrer">Open in Alfred App</a>
+                </div>
+            </div>
+        </section>
     </main>
-    ${FOOTER}
+    ${INDEX_FOOTER}
 </body>
 </html>`;
 }
@@ -451,9 +541,10 @@ function main() {
   if (!fs.existsSync(ITINERARIES_DIR)) fs.mkdirSync(ITINERARIES_DIR, { recursive: true });
 
   let count = 0;
-  for (const name of destinations) {
+  for (let i = 0; i < destinations.length; i++) {
+    const name = destinations[i];
     const slug = slugify(name);
-    const html = buildPage(name, contentMap);
+    const html = buildPage(name, contentMap, i);
     fs.writeFileSync(path.join(ITINERARIES_DIR, `${slug}.html`), html);
     count++;
   }
@@ -475,7 +566,6 @@ function main() {
             </a>`;
     })
     .join('\n');
-  const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
   const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -483,122 +573,58 @@ function main() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Trip Planner Itineraries | ${destinations.length} Destinations - Alfred Travel</title>
     <meta name="description" content="Validated 7-day itineraries for ${destinations.length} top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">${softwareApplicationSchema}</script>
-    <style>
-        .itinerary-index-page {
-            max-width: 1380px;
-            margin: 0 auto;
-            padding: 7rem 2.2rem 4rem;
-        }
-        .itinerary-index-hero {
-            max-width: 880px;
-            margin-bottom: 2.25rem;
-        }
-        .itinerary-index-kicker {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
-        }
-        .itinerary-index-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 6vw, 4.25rem);
-            line-height: 0.96;
-            letter-spacing: -0.05em;
-            color: #1a1a1a;
-            margin-bottom: 1rem;
-        }
-        .itinerary-index-copy {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: rgba(29, 36, 51, 0.72);
-            max-width: 760px;
-        }
-        .destination-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
-        }
-        .destination-card {
-            display: block;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            border-radius: 18px;
-            padding: 0.7rem;
-            box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
-            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-        }
-        .destination-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(17, 24, 39, 0.09);
-            border-color: rgba(78, 205, 196, 0.28);
-        }
-        .destination-card-media {
-            aspect-ratio: 16 / 9;
-            border-radius: 14px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #7ea0c4 0%, #425f82 100%);
-        }
-        .destination-card-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .destination-card-body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.75rem;
-            padding: 0.85rem 0.1rem 0.15rem;
-        }
-        .destination-card-body h2 {
-            font-size: 1.05rem;
-            line-height: 1.3;
-            color: #1d2433;
-            font-weight: 700;
-        }
-        .destination-card-flag {
-            font-size: 1.15rem;
-            flex-shrink: 0;
-        }
-        @media (max-width: 1080px) {
-            .destination-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-        @media (max-width: 640px) {
-            .itinerary-index-page {
-                padding: 6.25rem 1rem 3rem;
-            }
-            .itinerary-index-title {
-                font-size: 2.65rem;
-            }
-            .destination-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/itineraries-index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5WJZ450F8');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBD76P5');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.alfredtravel.io/"},{"@type":"ListItem","position":2,"name":"Itineraries","item":"https://www.alfredtravel.io/itineraries/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI Trip Planner Itineraries | Alfred Travel","url":"https://www.alfredtravel.io/itineraries/","description":"Validated 7-day itineraries for top destinations with transit checks and route logic built in.","publisher":{"@type":"Organization","name":"Alfred Travel Tech"}}</script>
 </head>
-<body>
-    ${NAV}
-    <main class="itinerary-index-page">
-        <section class="itinerary-index-hero">
-            <p class="itinerary-index-kicker">Destinations</p>
-            <h1 class="itinerary-index-title">AI Trip Planner Itineraries</h1>
-            <p class="itinerary-index-copy">Browse validated 7-day itineraries across ${destinations.length} top destinations. Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (see <a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Each plan is structured for practical travel flow, with transit checks and route logic built in.</p>
+<body class="itineraries-index-page tai-site">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBD76P5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    ${INDEX_NAV}
+    <main class="itineraries-index-main">
+        <section class="tai-hero" aria-labelledby="itineraries-hero-heading">
+            <div class="tai-hero-bg">
+                <div class="tai-hero-wrapper">
+                    <div class="tai-hero-copy">
+                        <h1 id="itineraries-hero-heading" class="tai-hero-title">Validated trip itineraries</h1>
+                        <p class="tai-hero-lead">Browse 7-day plans across ${destinations.length} destinations—structured for practical travel flow, with transit checks and route logic built in.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="destination-grid" aria-label="Destination itinerary grid">
+        <section class="tai-agn-section tai-itineraries-agn" aria-labelledby="itineraries-grid-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Destinations</span>
+                    <h2 id="itineraries-grid-heading" class="tai-agn-heading">Pick a city to explore</h2>
+                    <p class="tai-agn-desc">Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (<a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Open any destination for a sample itinerary and logistical validation notes.</p>
+                    <div class="destination-grid" aria-label="Destination itinerary grid">
 ${destinationCards}
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    ${FOOTER}
+    ${INDEX_FOOTER}
 </body>
 </html>`;
   fs.writeFileSync(path.join(ITINERARIES_DIR, 'index.html'), indexHtml);

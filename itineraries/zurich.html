@@ -11,65 +11,90 @@
     <meta property="og:url" content="https://www.alfredtravel.io/itineraries/zurich.html">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://www.alfredtravel.io/itineraries/zurich.html">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Alfred Travel","operatingSystem":"iOS, Android, Web","applicationCategory":"TravelApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"150"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},"description":"Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.","featureList":"AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards","softwareVersion":"1.0.18"}</script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/itinerary-detail.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5WJZ450F8');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBD76P5');</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAction","name":"7-Day Zurich AI Trip Planner","description":"Validated 7-day itinerary for Zurich. AI-generated and logistically verified by Alfred Travel.","target":{"@type":"Place","name":"Zurich"},"result":{"@type":"Trip","name":"7-Day Zurich Itinerary"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"7-Day Zurich Validated Itinerary","description":"Structured, AI-validated travel itinerary for Zurich. Includes flight gap validation, hotel proximity checks, and multi-LLM confirmation.","url":"https://www.alfredtravel.io/itineraries/zurich.html","creator":{"@type":"Organization","name":"Alfred Travel Tech Pty Ltd","url":"https://www.alfredtravel.io"},"keywords":["Zurich itinerary","Zurich neighborhoods","Zurich transport","ZRH"],"variableMeasured":[{"@type":"PropertyValue","name":"Zurich transport mode","value":"rail"},{"@type":"PropertyValue","name":"Zurich transport mode","value":"train"},{"@type":"PropertyValue","name":"Zurich transport mode","value":"boat"}],"distribution":{"@type":"DataDownload","encodingFormat":"text/html","contentUrl":"https://www.alfredtravel.io/itineraries/zurich.html"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What makes Alfred useful for planning a Zurich itinerary?","acceptedAnswer":{"@type":"Answer","text":"Alfred helps travelers build a Zurich itinerary with route-aware structure from ZRH, destination context, and booking-ready planning instead of disconnected recommendations."}},{"@type":"Question","name":"Can Alfred help with a multi-city trip that includes Zurich and local transport decisions?","acceptedAnswer":{"@type":"Answer","text":"Yes. Alfred is designed for multi-city and cross-border travel, so Zurich can fit into a broader itinerary with clearer sequencing, transport mode choices (rail, train, boat), and fewer logistics gaps."}}]}</script>
-    <style>
-        .itinerary-page { max-width: 720px; margin: 0 auto; padding: 6rem 5% 4rem; }
-        .itinerary-page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; color: var(--secondary-color); margin-bottom: 1rem; }
-        .itinerary-page h2 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--primary-color); }
-        .itinerary-page p { line-height: 1.7; }
-        .validation-box { background: rgba(78, 205, 196, 0.12); border: 1px solid rgba(78, 205, 196, 0.4); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-        .validation-box strong { color: var(--primary-color); margin-right: 0.5rem; }
-        .validation-box span { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text-color); }
-        .validation-box .check { color: var(--secondary-color); }
-        .itinerary-sample { white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--text-color); background: var(--white); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(78, 205, 196, 0.2); }
-        .itinerary-faq { margin-top: 2.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(78, 205, 196, 0.08); border: 1px solid rgba(78, 205, 196, 0.16); }
-        .itinerary-faq h2 { margin-top: 0; }
-        .itinerary-cta { margin-top: 2.5rem; text-align: center; }
-        .itinerary-cta a { display: inline-block; background: var(--secondary-color); color: var(--primary-color); padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-        .itinerary-cta a:hover { background: #3db8b0; transform: translateY(-2px); }
-    </style>
 </head>
-<body>
+<body class="itinerary-detail-page tai-site">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBD76P5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../index.html"><img src="../images/Color logo with background.png.png" alt="Alfred - The Leading AI Trip Planner and AI Holiday Planner App" class="logo-image" /></a>
+    <header class="tai-header">
+        <nav class="navbar tai-navbar" aria-label="Main navigation">
+            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
+                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
+            </a>
+            <div class="tai-desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../about.html">Company</a></li>
+                    <li><a href="../products.html">Features</a></li>
+                    <li><a href="../delete-account.html">Support</a></li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../products.html">Our Features</a></li>
-                <li><a href="../blog/index.html">Blog</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../faq.html#tutorials">Tutorials</a></li>
-                <li><a href="../delete-account.html">Support</a></li>
-            </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download the AI Holiday Planner">Download App</a>
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
-    <main class="itinerary-page">
-        <h1>7-Day Zurich AI Trip Planner: Validated Itinerary</h1>
-        <p>Use this Zurich itinerary as a route-aware starting point for a broader trip. Alfred Travel is strongest when travelers need practical structure, fewer planning gaps, and a clearer path from itinerary to booking.</p>
-        <div class="validation-box">
-            <strong>Logistical Validation:</strong>
-            <span><span class="check">✓</span> Flight Gaps Checked</span>
-            <span><span class="check">✓</span> Hotel Proximity Verified</span>
-            <span><span class="check">✓</span> Multi-LLM Confirmed</span>
-        </div>
-        <section>
-            <h2>3-Day Sample Itinerary</h2>
-            <pre class="itinerary-sample">Day 1 — Arrival & Old Town
+    <main class="itinerary-detail-main">
+        <section class="tai-hero" aria-labelledby="itinerary-hero-heading">
+            <div class="tai-hero-bg">
+                <div class="tai-hero-wrapper">
+                    <div class="tai-hero-copy">
+                        <h1 id="itinerary-hero-heading" class="tai-hero-title">Zurich · 7-day validated itinerary</h1>
+                        <p class="tai-hero-lead">Use this Zurich plan as a route-aware starting point for a broader trip—practical structure, fewer planning gaps, and a clearer path from itinerary to booking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tai-agn-section" aria-labelledby="itinerary-validation-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Logistical validation</span>
+                    <h2 id="itinerary-validation-heading" class="tai-agn-heading">Checked before you commit</h2>
+                    <p class="tai-agn-desc">Every Alfred itinerary runs through multi-LLM validation for gaps generic planners miss.</p>
+                    <div class="tai-itinerary-validation-grid">
+                        <div class="tai-itinerary-validation-item"><strong>Flight gaps</strong> Transfer times and connection windows verified.</div>
+                        <div class="tai-itinerary-validation-item"><strong>Hotel proximity</strong> Stay location checked against daily activity clusters.</div>
+                        <div class="tai-itinerary-validation-item"><strong>Multi-LLM review</strong> Cross-model confirmation on pacing and routing.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tai-agn-section tai-itinerary-sample-agn" aria-labelledby="itinerary-sample-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Sample plan</span>
+                    <h2 id="itinerary-sample-heading" class="tai-agn-heading">3-day preview</h2>
+                    <p class="tai-agn-desc">A condensed look at how Alfred structures a Zurich trip—arrival gateway, neighborhoods, and daily pacing.</p>
+                    <div class="tai-itinerary-sample-wrap">
+                        <img src="../images/landmark_images/commons/zurich.jpg" alt="Zurich destination preview" class="tai-itinerary-cover" width="672" height="378" loading="lazy">
+                        <pre class="itinerary-sample">Day 1 — Arrival & Old Town
 • Arrive at ZRH; train to Zurich HB or Stadelhofen (validated 15–25 min)
 • Check-in; lunch in Niederdorf or Bahnhofstrasse
 • Afternoon: Altstadt walk, Grossmunster, Lindenhof, Lake Zurich promenade
@@ -86,31 +111,60 @@ Day 3 — Day Trip Logic
 • Lunch: local Swiss spot near the day-trip core area
 • Afternoon: return to Zurich; Bahnhofstrasse shopping or thermal spa block
 • Evening: farewell dinner; pack for onward rail or flight connection</pre>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="itinerary-faq">
-            <h2>Zurich Trip Planning FAQ</h2>
-            <p><strong>Which arrival gateway and transfer context does this Zurich itinerary assume?</strong><br>This plan starts from <strong>ZRH</strong> and keeps transfer logic practical for the first-day block.</p>
-            <p><strong>Which neighborhoods or districts are emphasized?</strong><br>This itinerary prioritizes <strong>Niederdorf or Bahnhofstrasse • Zurich West or Old Town • Kreis 5</strong> to reduce routing friction.</p>
-            <p><strong>What local transport modes are relevant?</strong><br>Typical Zurich movement in this plan uses <strong>rail, train, boat</strong> depending on daily sequencing.</p>
+        <section class="tai-dark-section tai-itinerary-faq" aria-labelledby="itinerary-faq-heading">
+            <div class="tai-dark-inner">
+                <header class="tai-dark-header">
+                    <p class="tai-section-kicker">Planning notes</p>
+                    <h2 id="itinerary-faq-heading">Zurich trip planning FAQ</h2>
+                </header>
+                <div class="tai-dark-grid">
+                    <article class="tai-dark-card">
+                        <h3>Arrival gateway</h3>
+                        <p>This plan starts from <strong>ZRH</strong> and keeps transfer logic practical for the first-day block.</p>
+                    </article>
+                    <article class="tai-dark-card">
+                        <h3>Neighborhoods</h3>
+                        <p>This itinerary prioritizes <strong>Niederdorf or Bahnhofstrasse • Zurich West or Old Town • Kreis 5</strong> to reduce routing friction.</p>
+                    </article>
+                    <article class="tai-dark-card">
+                        <h3>Local transport</h3>
+                        <p>Typical Zurich movement in this plan uses <strong>rail, train, boat</strong> depending on daily sequencing.</p>
+                    </article>
+                </div>
+            </div>
         </section>
-        <div class="itinerary-cta">
-            <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" target="_blank" rel="noopener noreferrer">Generate the full 7-day version in Alfred App</a>
-        </div>
+        <section class="tai-join-section tai-itinerary-cta" aria-labelledby="itinerary-cta-heading">
+            <div class="tai-join-inner">
+                <div class="tai-join-copy">
+                    <h2 id="itinerary-cta-heading">Build the full 7-day plan in Alfred</h2>
+                    <p class="tai-join-lead">Generate, validate, and edit the complete Zurich itinerary in the Alfred app.</p>
+                    <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="tai-btn-primary" target="_blank" rel="noopener noreferrer">Open in Alfred App</a>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer>
         <div class="footer-content">
-            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
+            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">Company</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#press">In the Press</a></li><li><a href="../about.html#team">Our Team</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
         <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
+    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to our use of cookies. You can learn more about our <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> and <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
+    <aside id="mobile-download-bar" class="mobile-download-bar" role="complementary" aria-label="Download Alfred app">
+        <p class="mobile-download-bar-text">Free AI trip planner — iOS &amp; Android</p>
+        <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="mobile-download-bar-btn" target="_blank" rel="noopener noreferrer">Download</a>
+    </aside>
     <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
-    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
     <script src="../js/main.js"></script>
 </body>
 </html>

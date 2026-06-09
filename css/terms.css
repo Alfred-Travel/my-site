@@ -1,0 +1,95 @@
+/**
+ * Terms & privacy page — TravelAI shell + legal document typography
+ */
+
+body.terms-page .terms-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.terms-page .footer-technical-authority {
+    display: none;
+}
+
+body.terms-page .tai-hero-title {
+    max-width: min(100%, 14rem);
+}
+
+body.terms-page .tai-hero-lead {
+    max-width: 36rem;
+}
+
+body.terms-page .tai-terms-doc {
+    max-width: 46rem;
+    margin-top: 2rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #1a1a1a;
+}
+
+body.terms-page .tai-terms-doc p {
+    margin: 0 0 1rem;
+}
+
+body.terms-page .tai-terms-doc h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    margin: 2rem 0 0.75rem;
+    scroll-margin-top: 100px;
+}
+
+body.terms-page .tai-terms-doc h2:first-of-type {
+    margin-top: 0;
+}
+
+body.terms-page .tai-terms-doc h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    margin: 1.5rem 0 0.65rem;
+}
+
+body.terms-page .tai-terms-doc ul {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+}
+
+body.terms-page .tai-terms-doc li {
+    margin-bottom: 0.35rem;
+}
+
+body.terms-page .tai-terms-doc a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+body.terms-page .tai-terms-effective {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #666;
+    margin: 0 0 1.25rem;
+}
+
+@media (max-width: 767px) {
+    body.terms-page .terms-main {
+        padding-top: 78px;
+    }
+
+    body.terms-page .tai-hero-title {
+        max-width: none;
+    }
+
+    body.terms-page .tai-terms-doc {
+        margin-top: 1.5rem;
+    }
+}

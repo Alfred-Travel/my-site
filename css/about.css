@@ -1,0 +1,281 @@
+/**
+ * About / Company page — uses homepage section shell (tai-hero, tai-agn, tai-join, tai-dark)
+ */
+
+body.about-page .about-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.about-page .footer-technical-authority {
+    display: none;
+}
+
+body.about-page .tai-hero-title {
+    max-width: min(100%, 20rem);
+}
+
+body.about-page .tai-hero-lead {
+    max-width: 36rem;
+}
+
+/* Mission — AGN two-column layout */
+
+body.about-page .tai-about-mission .tai-agn-copy {
+    flex: 1 1 22rem;
+    min-width: min(100%, 20rem);
+    max-width: 36rem;
+}
+
+body.about-page .tai-about-mission .tai-agn-desc {
+    max-width: none;
+}
+
+body.about-page .tai-about-mission .tai-about-points {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    max-width: none;
+    display: grid;
+    gap: 0.65rem;
+}
+
+body.about-page .tai-about-mission .tai-about-points li {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: #1a1a1a;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+body.about-page .tai-about-mission .tai-about-points + .tai-agn-desc {
+    padding-top: 1.25rem;
+}
+
+body.about-page .tai-about-mission-visual {
+    flex: 0 0 auto;
+    width: min(32rem, 42%);
+    max-width: 32rem;
+    align-self: center;
+}
+
+body.about-page .tai-about-mission-visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+}
+
+body.about-page .tai-about-mission .tai-agn-desc + .tai-agn-desc {
+    display: block;
+}
+
+/* In the Press — static grid */
+
+body.about-page .tai-about-press-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+body.about-page .tai-about-press .tai-join-copy {
+    flex: none;
+    max-width: 42rem;
+}
+
+body.about-page .tai-about-press-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    width: 100%;
+}
+
+body.about-page .tai-about-press-grid .press-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 14px;
+    box-shadow: 0 0 24px rgba(149, 157, 165, 0.12);
+    padding: 1.25rem 1.35rem;
+    margin: 0;
+}
+
+body.about-page .tai-about-press-grid .press-card-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+}
+
+body.about-page .tai-about-press .press-outlet-logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 1.75rem;
+    object-fit: contain;
+    object-position: left center;
+}
+
+body.about-page .tai-about-press .press-outlet-logo--tdm {
+    max-height: 1.5rem;
+}
+
+body.about-page .tai-about-press .press-outlet-logo--brandbeat {
+    max-height: 1.35rem;
+}
+
+body.about-page .tai-about-press .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body.about-page .tai-about-press-grid .press-card p {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444;
+    margin: 0;
+    flex-grow: 1;
+}
+
+body.about-page .tai-about-press-grid .press-card a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-top: auto;
+}
+
+/* Team — dark section */
+
+body.about-page .tai-about-team .tai-dark-inner {
+    max-width: 1024px;
+}
+
+body.about-page .tai-about-team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.about-page .tai-about-team .team-member {
+    background: #1b1b1b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    text-align: left;
+}
+
+body.about-page .tai-about-team .member-image {
+    width: 72px;
+    height: 72px;
+    margin: 0 0 0.85rem;
+    overflow: hidden;
+    background: #333;
+    border-radius: 50%;
+}
+
+body.about-page .tai-about-team .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+body.about-page .tai-about-team .team-member h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.35rem;
+}
+
+body.about-page .tai-about-team .team-member .position {
+    color: var(--secondary-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin: 0 0 0.65rem;
+}
+
+body.about-page .tai-about-team .team-member p {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+}
+
+body.about-page .tai-about-team .team-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body.about-page .tai-about-team .team-link:hover {
+    color: #6ee0d8;
+}
+
+body.about-page .tai-about-team .team-member:hover {
+    transform: none;
+}
+
+@media (max-width: 767px) {
+    body.about-page .about-main {
+        padding-top: 78px;
+    }
+
+    body.about-page .tai-hero-title {
+        max-width: none;
+    }
+
+    body.about-page .tai-about-mission .tai-agn-copy {
+        flex: none;
+        min-width: 0;
+        max-width: none;
+    }
+
+    body.about-page .tai-about-mission-visual {
+        display: block;
+        width: 100%;
+        max-width: 28rem;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    body.about-page .tai-about-mission .tai-about-points + .tai-agn-desc {
+        padding-top: 1rem;
+    }
+
+    body.about-page .tai-about-press-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.about-page .tai-about-team-grid {
+        grid-template-columns: 1fr;
+    }
+}

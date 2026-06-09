@@ -1,0 +1,110 @@
+/**
+ * Blog index — TravelAI shell (tai-hero + AGN article grid)
+ */
+
+body.blog-index-page .blog-index-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.blog-index-page .footer-technical-authority {
+    display: none;
+}
+
+body.blog-index-page .tai-hero-title {
+    max-width: min(100%, 18rem);
+}
+
+body.blog-index-page .tai-hero-lead {
+    max-width: 36rem;
+}
+
+body.blog-index-page .blog-index-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+body.blog-index-page .blog-index-item {
+    margin: 0;
+}
+
+body.blog-index-page .blog-index-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+body.blog-index-page .blog-index-link:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    border-color: var(--secondary-color);
+}
+
+body.blog-index-page .blog-index-meta {
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 0.65rem;
+    order: -1;
+}
+
+body.blog-index-page .blog-index-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    margin: 0 0 0.55rem;
+}
+
+body.blog-index-page .blog-index-link:hover .blog-index-title {
+    color: #000;
+}
+
+body.blog-index-page .blog-index-excerpt {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: #444;
+    margin: 0;
+    flex: 1;
+}
+
+body.blog-index-page .tai-blog-takeaway .tai-dark-inner {
+    max-width: 1024px;
+}
+
+body.blog-index-page .tai-blog-takeaway .tai-dark-header {
+    max-width: 40rem;
+}
+
+@media (max-width: 767px) {
+    body.blog-index-page .blog-index-main {
+        padding-top: 78px;
+    }
+
+    body.blog-index-page .tai-hero-title {
+        max-width: none;
+    }
+
+    body.blog-index-page .blog-index-list {
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+    }
+}

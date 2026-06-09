@@ -15,10 +15,11 @@
     --section-bg: #E0E0E0;
     --creamy-text: #F5E6D3;
     --dark-bg: #1A1A1A;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 400;
     line-height: 1.6;
     color: #1d2433;
@@ -83,7 +84,7 @@ html {
 }
 
 .logo h1 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--creamy-text);
@@ -133,7 +134,7 @@ html {
 }
 
 .download-cta {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     background: #121926;
     color: #ffffff;
     padding: 0.75rem 1.75rem;
@@ -180,7 +181,7 @@ html {
 }
 
 .page-header h1 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -205,7 +206,7 @@ html {
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 2rem;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 2rem;
     letter-spacing: -0.02em;
 }
@@ -314,7 +315,7 @@ html {
 }
 
 .delete-info h1 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-size: clamp(3rem, 6vw, 4.8rem);
@@ -461,7 +462,7 @@ html {
 }
 
 .mission-section h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -470,7 +471,7 @@ html {
 }
 
 .mission-section h3 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--secondary-color);
     margin-bottom: 1rem;
     margin-top: 2rem;
@@ -498,13 +499,16 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(2rem, 4vw, 4rem);
     align-items: start;
+    justify-content: space-between;
     margin-bottom: 2rem;
-    max-width: 1400px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-column {
@@ -528,7 +532,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 }
 
 .footer-column h3 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--secondary-color);
@@ -568,7 +572,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
     border-top: 1px solid rgba(245, 230, 211, 0.2);
 }
 .footer-technical-authority h4 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--secondary-color);
@@ -602,8 +606,16 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 
 @media (max-width: 900px) {
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem;
+        justify-content: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
     }
 }
 
@@ -710,7 +722,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 
 .hero-headline {
     max-width: 8ch;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: clamp(3.25rem, 6vw, 5rem);
     font-weight: 700;
     letter-spacing: -0.04em;
@@ -744,7 +756,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
     min-width: 190px;
     padding: 1rem 1.65rem;
     border-radius: 999px;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
@@ -878,7 +890,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 }
 
 .search-button {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     background: var(--secondary-color);
     color: var(--white);
     border: none;
@@ -1001,7 +1013,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 }
 
 .cta-button {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     display: inline-block;
     padding: 1rem 2rem;
     background-color: var(--secondary-color);
@@ -1032,7 +1044,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 }
 
 #app-downloads h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--secondary-color);
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -1071,7 +1083,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 }
 
 .store-label {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -1141,7 +1153,7 @@ footer .footer-links li:last-child:has(> a[href$="faq.html"]) {
 }
 
 #features h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     text-align: center;
     margin-bottom: 3rem;
     color: var(--primary-color);
@@ -1226,7 +1238,7 @@ i[class^="fa"] {
 }
 
 .service-card h3 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--primary-color);
     margin-bottom: 0.9rem;
     font-size: 1.2rem;
@@ -1257,7 +1269,7 @@ i[class^="fa"] {
 }
 
 .comparison-section h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     text-align: center;
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -1314,7 +1326,7 @@ i[class^="fa"] {
     list-style: none;
     cursor: pointer;
     display: block;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -1425,7 +1437,7 @@ i[class^="fa"] {
 }
 
 .press-content h3 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.65rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
@@ -1457,7 +1469,7 @@ i[class^="fa"] {
     color: var(--primary-color);
     border-radius: 999px;
     padding: 0.7rem 1rem;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1489,7 +1501,7 @@ i[class^="fa"] {
 }
 
 .press-card h4 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--primary-color);
     font-size: 1.15rem;
     margin: 0;
@@ -1541,7 +1553,7 @@ i[class^="fa"] {
 }
 
 .press-preview-source {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -1575,7 +1587,7 @@ i[class^="fa"] {
 }
 
 .faq-ai-section h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     text-align: center;
     margin-bottom: 2.5rem;
     color: var(--primary-color);
@@ -1614,7 +1626,7 @@ i[class^="fa"] {
 }
 
 #how-it-works h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     text-align: center;
     margin-bottom: 3rem;
     color: var(--primary-color);
@@ -1745,7 +1757,7 @@ i[class^="fa"] {
 }
 
 .how-card-text h3 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     color: var(--secondary-color);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
@@ -2264,7 +2276,7 @@ body.blog-page {
     padding: 2.5rem 2rem;
 }
 .blog-index-heading {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
     color: #111827;
@@ -2295,7 +2307,7 @@ body.blog-page {
     opacity: 0.6;
 }
 .blog-index-section-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.5rem;
     color: var(--primary-color);
     margin: 2.5rem 0 1.25rem;
@@ -2336,7 +2348,7 @@ body.blog-page {
     box-shadow: 0 16px 30px rgba(78, 205, 196, 0.17);
 }
 .blog-index-title {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.2rem;
     font-weight: 600;
     color: #111827;
@@ -2397,12 +2409,12 @@ body.blog-page {
     margin-bottom: 0.5rem;
 }
 .blog-article-title {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 2.25rem;
     font-weight: 700;
     color: var(--primary-color);
     line-height: 1.25;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.02em;
 }
 .blog-takeaways-callout {
     background: rgba(78, 205, 196, 0.12);
@@ -2412,7 +2424,7 @@ body.blog-page {
     border-radius: 0 8px 8px 0;
 }
 .blog-takeaways-title {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -2436,7 +2448,7 @@ body.blog-page {
     color: var(--text-color);
 }
 .blog-article-body h2 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -2444,7 +2456,7 @@ body.blog-page {
     margin-bottom: 0.75rem;
 }
 .blog-article-body h3 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-color);
@@ -2494,7 +2506,7 @@ body.blog-page {
     padding: 0.85rem 1rem;
     text-align: left;
     font-weight: 600;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     letter-spacing: 0.02em;
 }
@@ -2826,7 +2838,7 @@ footer .footer-technical-authority h4 {
 
 .itinerary-swipe-focus {
     color: #e7f2ff;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.05rem;
     margin: 0 0 0.9rem;
 }
@@ -2973,4 +2985,432 @@ footer .footer-technical-authority h4 {
 
 body.has-mobile-download-bar {
     padding-bottom: 4.5rem;
+}
+
+/* ==========================================================================
+   Homepage — dark hero / light body (TravelAI-inspired, download-first)
+   ========================================================================== */
+
+body.home-page {
+    background: var(--alfred-body-bg);
+}
+
+body.home-page .navbar {
+    background: rgba(17, 24, 39, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.home-page .brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+}
+
+body.home-page .brand-wordmark {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--alfred-hero-text);
+}
+
+body.home-page .logo-image-fallback {
+    display: none;
+}
+
+body.home-page .nav-links a {
+    color: rgba(249, 250, 251, 0.88);
+}
+
+body.home-page .nav-links a:hover {
+    color: #fff;
+}
+
+body.home-page .nav-links a::after {
+    background-color: var(--alfred-teal);
+}
+
+body.home-page .download-cta {
+    background: var(--alfred-teal);
+    color: var(--alfred-hero-bg);
+}
+
+body.home-page .download-cta:hover {
+    background: var(--alfred-teal-hover);
+    color: var(--alfred-hero-bg);
+}
+
+body.home-page .hamburger span {
+    background-color: #fff;
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-bottom: 2rem;
+}
+
+.home-section-inner {
+    width: min(var(--content-max), calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.hero-dark {
+    background:
+        radial-gradient(ellipse 80% 60% at 70% 20%, rgba(78, 205, 196, 0.08), transparent 55%),
+        linear-gradient(180deg, var(--alfred-hero-bg) 0%, var(--alfred-hero-bg-deep) 100%);
+    color: var(--alfred-hero-text);
+    padding: calc(var(--nav-height) + 2.5rem) 1rem 3.5rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    margin-bottom: 0.5rem;
+}
+
+.hero-dark-inner {
+    width: min(var(--content-max), calc(100% - 1rem));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr  minmax(260px, 340px);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.hero-dark .hero-kicker {
+    color: var(--alfred-teal);
+    letter-spacing: 0.14em;
+    margin-bottom: 0.85rem;
+}
+
+.hero-dark .hero-headline {
+    max-width: 14ch;
+    color: var(--alfred-hero-text);
+    font-size: clamp(2.35rem, 5vw, 3.75rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.1rem;
+    text-align: left;
+}
+
+.hero-dark .hero-subtext {
+    max-width: 42ch;
+    color: var(--alfred-hero-muted);
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+    text-align: left;
+}
+
+.hero-store-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.hero-store-actions--center {
+    justify-content: center;
+}
+
+.store-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.65rem;
+    background: #fff;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.store-badge-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.store-badge-inline {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+.hero-secondary-links {
+    margin: 1.25rem 0 0;
+    font-size: 0.95rem;
+    color: var(--alfred-hero-muted);
+}
+
+.hero-secondary-links a {
+    color: rgba(249, 250, 251, 0.92);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.hero-secondary-links span {
+    margin: 0 0.45rem;
+    opacity: 0.5;
+}
+
+.hero-phone-frame {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 32px;
+    padding: 10px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.45);
+}
+
+.hero-promo-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+    background: #000;
+}
+
+.home-section {
+    width: min(var(--content-max), calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.pillars-section {
+    padding: 2.5rem 0 1rem;
+}
+
+.section-intro {
+    max-width: 640px;
+    margin-bottom: 2rem;
+}
+
+.section-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--alfred-muted);
+    margin: 0 0 0.65rem;
+}
+
+.section-intro h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.75rem, 3vw, 2.35rem);
+    letter-spacing: -0.03em;
+    color: var(--alfred-ink);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.pillar-card {
+    background: var(--alfred-surface);
+    border: 1px solid var(--alfred-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.35rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.pillar-index {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--alfred-teal);
+    margin-bottom: 0.75rem;
+}
+
+.pillar-card h3 {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    margin: 0 0 0.5rem;
+    color: var(--alfred-ink);
+}
+
+.pillar-card p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--alfred-muted-text);
+}
+
+.resources-strip {
+    padding: 0.25rem 0 0.5rem;
+}
+
+.resources-strip-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--alfred-surface);
+    border: 1px solid var(--alfred-border);
+    border-radius: 16px;
+}
+
+.resources-label {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--alfred-muted);
+}
+
+.resources-links {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.resources-links a {
+    color: var(--alfred-ink);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.resources-links a:hover {
+    color: var(--alfred-teal-hover);
+    text-decoration: underline;
+}
+
+body.home-page #app-downloads,
+body.home-page #how-it-works,
+body.home-page #features,
+body.home-page .comparison-section,
+body.home-page #faq-ai {
+    width: min(var(--content-max), calc(100% - 2rem));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-cta-final {
+    width: min(var(--content-max), calc(100% - 2rem));
+    margin: 0.5rem auto 0;
+    padding: 3rem 1.5rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.download-cta-final-inner {
+    width: 100%;
+}
+
+.download-cta-final h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+    color: var(--alfred-hero-text);
+}
+
+.download-cta-final-copy {
+    margin: 0 auto 1.75rem;
+    max-width: 46ch;
+    color: var(--alfred-hero-muted);
+    line-height: 1.65;
+}
+
+.hero-button-light {
+    background: var(--alfred-teal) !important;
+    color: var(--alfred-hero-bg) !important;
+    min-width: 0;
+    padding: 0.95rem 1.5rem;
+}
+
+.hero-button-outline-light {
+    background: transparent !important;
+    color: var(--alfred-hero-text) !important;
+    border: 1px solid rgba(249, 250, 251, 0.35) !important;
+    min-width: 0;
+    padding: 0.95rem 1.5rem;
+}
+
+.hero-button-outline-light:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.download-cta-final.hero-dark {
+    padding: 3rem 1.5rem;
+    border-radius: var(--radius-lg);
+}
+
+body.home-page #hero.hero-dark {
+    padding-top: calc(var(--nav-height) + 2rem);
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 960px) {
+    .hero-dark-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-dark-copy {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-dark-media {
+        order: 0;
+    }
+
+    .hero-dark .hero-headline,
+    .hero-dark .hero-subtext {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .hero-store-actions {
+        justify-content: center;
+    }
+
+    .hero-secondary-links {
+        text-align: center;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body.home-page .nav-links {
+        background: var(--alfred-hero-bg);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    body.home-page .nav-links a {
+        color: var(--alfred-hero-text);
+    }
+
+    body.home-page .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-phone-frame {
+        max-width: 280px;
+    }
+
+    .hero-dark {
+        border-radius: 0;
+        padding-bottom: 2.5rem;
+    }
 }

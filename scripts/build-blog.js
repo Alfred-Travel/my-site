@@ -37,39 +37,26 @@ const SOFTWARE_APPLICATION_SCHEMA = {
   softwareVersion: '1.0.18'
 };
 
-// Deterministic "random" date for itinerary before 2026-03-02 (based on destination name)
-function itineraryDate(destination) {
-  if (destination === 'London') return '2026-03-02';
-  const start = new Date('2025-01-01').getTime();
-  const end = new Date('2026-03-01').getTime();
-  const range = end - start;
-  let hash = 0;
-  for (let i = 0; i < destination.length; i++) hash = ((hash << 5) - hash) + destination.charCodeAt(i);
-  const offset = Math.abs(hash) % range;
-  const d = new Date(start + offset);
-  return d.toISOString().slice(0, 10);
-}
-
 function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
 }
 
 const NAV = `
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="logo">
-                <a href="../index.html"><img src="../images/Color logo with background.png.png" alt="Alfred - The Leading AI Trip Planner and AI Holiday Planner App" class="logo-image" /></a>
+                <a href="../index.html" class="brand-link" aria-label="Alfred Travel home">
+                    <img src="../images/Color logo with background.png.png" alt="Alfred Travel" class="logo-image" />
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../products.html">Our Features</a></li>
+                <li><a href="../products.html">Features</a></li>
+                <li><a href="../itineraries/index.html">Itineraries</a></li>
                 <li><a href="index.html" class="nav-blog-active">Blog</a></li>
+                <li><a href="../compare/index.html">Compare</a></li>
                 <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../faq.html#tutorials">Tutorials</a></li>
-                <li><a href="../delete-account.html">Support</a></li>
             </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download the AI Holiday Planner">Download App</a>
+            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download Alfred on iOS or Android">Download App</a>
             <div class="hamburger"><span></span><span></span><span></span></div>
         </nav>
     </header>`;
@@ -80,12 +67,56 @@ const FOOTER = `
             <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
         <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
     <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
+    <script src="../js/main.js"><\/script>`;
+
+const INDEX_NAV = `
+    <header class="tai-header">
+        <nav class="navbar tai-navbar" aria-label="Main navigation">
+            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
+                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
+            </a>
+            <div class="tai-desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../about.html">Company</a></li>
+                    <li><a href="../products.html">Features</a></li>
+                    <li><a href="../delete-account.html">Support</a></li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>`;
+
+const INDEX_FOOTER = `
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">Company</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#press">In the Press</a></li><li><a href="../about.html#team">Our Team</a></li></ul></div>
+            <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
+        </div>
+        <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
+        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
+    </footer>
+    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to our use of cookies. You can learn more about our <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> and <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
+    <aside id="mobile-download-bar" class="mobile-download-bar" role="complementary" aria-label="Download Alfred app">
+        <p class="mobile-download-bar-text">Free AI trip planner — iOS &amp; Android</p>
+        <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="mobile-download-bar-btn" target="_blank" rel="noopener noreferrer">Download</a>
+    </aside>
+    <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
     <script src="../js/main.js"><\/script>`;
 
 function mdToHtml(md) {
@@ -180,7 +211,8 @@ function buildPost(slug, post, contentHtml) {
     <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="application/ld+json">\n${schemaSoftware}\n    </script>
@@ -205,24 +237,15 @@ ${FOOTER}
 </html>`;
 }
 
-function buildIndex(posts, destinations) {
-  const blogItems = posts.map(p => ({
-    date: p.data.date || '',
-    title: p.data.title,
-    href: `${p.slug}.html`,
-    meta: `${escapeHtml(p.data.author || 'Alfred Team')} &middot; ${escapeHtml(p.data.category || 'AI Travel Logistics')}`,
-    excerpt: (p.data.description || p.data.title).slice(0, 160)
-  }));
-
-  const itineraryItems = (destinations || []).map(name => ({
-    date: itineraryDate(name),
-    title: `AI Travel Planner for ${name}`,
-    href: `../itineraries/${slugify(name)}.html`,
-    meta: 'Alfred Team &middot; Destination Itinerary',
-    excerpt: `7-day validated itinerary for ${name}. Flight gaps checked, hotel proximity verified, multi-LLM confirmed.`
-  }));
-
-  const allItems = [...blogItems, ...itineraryItems]
+function buildIndex(posts) {
+  const allItems = posts
+    .map(p => ({
+      date: p.data.date || '',
+      title: p.data.title,
+      href: `${p.slug}.html`,
+      meta: `${escapeHtml(p.data.author || 'Alfred Team')} &middot; ${escapeHtml(p.data.category || 'AI Travel Logistics')}`,
+      excerpt: (p.data.description || p.data.title).slice(0, 160),
+    }))
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
     .map(item => `<li class="blog-index-item">
         <a href="${item.href}" class="blog-index-link">
@@ -233,7 +256,15 @@ function buildIndex(posts, destinations) {
       </li>`)
     .join('\n');
 
-  const schemaSoftware = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA, null, 2);
+  const breadcrumbSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE_URL}/blog/` },
+    ],
+  });
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -242,26 +273,64 @@ function buildIndex(posts, destinations) {
     <title>Blog | AI Travel Logistics Authority - Alfred Travel</title>
     <meta name="description" content="Alfred Travel Blog: authority content on AI trip planning, itinerary validation, multi-city routing, and booking-ready travel execution.">
     <link rel="canonical" href="${BASE_URL}/blog/">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="application/ld+json">\n${schemaSoftware}\n    </script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/blog-index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5WJZ450F8');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBD76P5');</script>
+    <script type="application/ld+json">${breadcrumbSchema}</script>
 </head>
-<body class="blog-page">
-${NAV}
-    <main class="blog-main">
-        <div class="blog-index">
-            <header class="blog-index-header">
-                <h1 class="blog-index-heading">Blog</h1>
-                <p class="blog-index-tagline">#1 authority in AI travel logistics. Cross-border planning, itinerary validation, and the science of trip planning.</p>
+<body class="blog-index-page tai-site">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBD76P5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+${INDEX_NAV}
+    <main class="blog-index-main">
+        <section class="tai-hero" aria-labelledby="blog-hero-heading">
+            <div class="tai-hero-bg">
+                <div class="tai-hero-wrapper">
+                    <div class="tai-hero-copy">
+                        <h1 id="blog-hero-heading" class="tai-hero-title">Travel planning, decoded</h1>
+                        <p class="tai-hero-lead">Industry takes, destination guides, and practical notes from the team building Alfred—written for travelers who want structure, not slideshows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tai-agn-section tai-blog-agn" aria-labelledby="blog-articles-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Articles</span>
+                    <h2 id="blog-articles-heading" class="tai-agn-heading">Browse the archive</h2>
+                    <p class="tai-agn-desc">Skift reactions, destination guides, and planning notes—newest first.</p>
+                    <ul class="blog-index-list" role="list">\n${allItems}\n                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="tai-dark-section tai-blog-takeaway" aria-labelledby="blog-takeaway-heading">
+            <div class="tai-dark-inner">
+                <header class="tai-dark-header">
+                    <p class="tai-section-kicker">From the Alfred team</p>
+                    <h2 id="blog-takeaway-heading">Planning science, not travel fluff</h2>
+                    <p class="tai-dark-lead">Every post connects industry moves to executable trip logistics—validation, routing, and booking-ready workflows built into the Alfred app.</p>
                 </header>
-            <ol class="blog-index-list" start="1">\n${allItems}\n            </ol>
-        </div>
+            </div>
+        </section>
     </main>
-${FOOTER}
+${INDEX_FOOTER}
 </body>
 </html>`;
 }
@@ -308,7 +377,7 @@ let destinations = [];
 if (fs.existsSync(DESTINATIONS_PATH)) {
   destinations = JSON.parse(fs.readFileSync(DESTINATIONS_PATH, 'utf8'));
 }
-fs.writeFileSync(path.join(BLOG_DIR, 'index.html'), buildIndex(posts, destinations), 'utf8');
+fs.writeFileSync(path.join(BLOG_DIR, 'index.html'), buildIndex(posts), 'utf8');
 console.log('Wrote blog/index.html');
 
 // Build sitemap.xml

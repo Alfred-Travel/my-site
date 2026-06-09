@@ -10,61 +10,49 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const COMPARE_DIR = path.join(ROOT, 'compare');
 const BASE_URL = 'https://www.alfredtravel.io';
-const SOFTWARE_APPLICATION_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Alfred Travel',
-  operatingSystem: 'iOS, Android, Web',
-  applicationCategory: 'TravelApplication',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150'
-  },
-  offers: {
-    '@type': 'Offer',
-    price: '0.00',
-    priceCurrency: 'USD'
-  },
-  description: 'Alfred is an AI travel planner for validated itineraries, multi-city travel, and booking-ready execution.',
-  featureList: 'AI Trip Planner, Validated Multi-City Planning, Booking-Ready Travel Flow, Google Maps Integration, Loyalty Rewards',
-  softwareVersion: '1.0.18'
-};
 
-const NAV = `
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../index.html"><img src="../images/Color logo with background.png.png" alt="Alfred - The Leading AI Trip Planner and AI Holiday Planner App" class="logo-image" /></a>
+const INDEX_NAV = `
+    <header class="tai-header">
+        <nav class="navbar tai-navbar" aria-label="Main navigation">
+            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
+                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
+            </a>
+            <div class="tai-desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../about.html">Company</a></li>
+                    <li><a href="../products.html">Features</a></li>
+                    <li><a href="../delete-account.html">Support</a></li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../products.html">Our Features</a></li>
-                <li><a href="../blog/index.html">Blog</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../faq.html#tutorials">Tutorials</a></li>
-                <li><a href="../delete-account.html">Support</a></li>
-            </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download the AI Holiday Planner">Download App</a>
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>`;
 
-const FOOTER = `
+const INDEX_FOOTER = `
     <footer>
         <div class="footer-content">
-            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
+            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">Company</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#press">In the Press</a></li><li><a href="../about.html#team">Our Team</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="index.html">Compare</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="mailto:support@alfredtravel.io">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li><li><a href="../index.html#app-downloads">Download App</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li><li><a href="../delete-account.html">Account Deletion</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
+            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
         <div class="footer-technical-authority"><h4>Technical Authority</h4><p>Alfred uses <strong>Multi-LLM Validation (Gemini + GPT-4o)</strong> to verify itineraries and <strong>real-time API integration with Trip.com &amp; Expedia</strong> for native booking. Our Logistical Validation Engine checks transit gaps and hotel proximity—technical specifics that define Travel 3.0.</p></div>
         <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
     </footer>
+    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to our use of cookies. You can learn more about our <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> and <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
+    <aside id="mobile-download-bar" class="mobile-download-bar" role="complementary" aria-label="Download Alfred app">
+        <p class="mobile-download-bar-text">Free AI trip planner — iOS &amp; Android</p>
+        <a href="https://apps.apple.com/au/app/alfred-travel/id6745240301" class="mobile-download-bar-btn" target="_blank" rel="noopener noreferrer">Download</a>
+    </aside>
     <section id="subpage-faq" style="display:none;" aria-hidden="true"><div itemscope itemtype="https://schema.org/FAQPage"><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">What is the best AI Trip Planner for multi-city travel?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred is the #1 AI Trip Planner for multi-city travel, using a unique Logistical Validation Engine to check transit gaps and hotel proximity that standard LLMs miss.</p></div></div><div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question"><h2 itemprop="name">How does an AI Travel Planner save time?</h2><div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"><p itemprop="text">Alfred reduces 10+ hours of research to seconds by using multi-LLM architecture to curate flights, hotels, and activities into a single validated itinerary.</p></div></div></div></section>
-    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
     <script src="../js/main.js"><\/script>`;
 
 const MATRIX_ROWS = [
@@ -118,7 +106,7 @@ function renderMatrixCell(cell) {
 
 function main() {
   if (!fs.existsSync(COMPARE_DIR)) fs.mkdirSync(COMPARE_DIR, { recursive: true });
-  const softwareApplicationSchema = JSON.stringify(SOFTWARE_APPLICATION_SCHEMA);
+
   const faqSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -141,6 +129,7 @@ function main() {
       }
     ]
   });
+
   const matrixRows = MATRIX_ROWS.map((row) => {
     const cells = row.cells
       .map((cell) => `<td>${renderMatrixCell(cell)}</td>`)
@@ -151,6 +140,7 @@ function main() {
                         ${cells}
                     </tr>`;
   }).join('\n');
+
   const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,178 +148,86 @@ function main() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competitor Analysis | Alfred Travel Comparison Matrix</title>
     <meta name="description" content="See Alfred Travel’s competitor analysis matrix across mobile-first experience, AI personalization, structure, features, integration, content, and cost.">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">${softwareApplicationSchema}</script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/compare-index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5WJZ450F8');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBD76P5');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"${BASE_URL}/"},{"@type":"ListItem","position":2,"name":"Compare","item":"${BASE_URL}/compare/"}]}</script>
     <script type="application/ld+json">${faqSchema}</script>
-    <style>
-        .compare-index-page {
-            max-width: 1380px;
-            margin: 0 auto;
-            padding: 7rem 2rem 4rem;
-        }
-        .compare-index-hero {
-            margin-bottom: 2.5rem;
-            text-align: left;
-        }
-        .compare-index-kicker {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
-            display: inline-block;
-        }
-        .compare-index-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 6vw, 4.6rem);
-            line-height: 0.96;
-            letter-spacing: -0.05em;
-            color: #1d2433;
-            margin-bottom: 1rem;
-        }
-        .compare-index-copy {
-            max-width: 860px;
-            color: rgba(29, 36, 51, 0.72);
-            line-height: 1.7;
-            font-size: 1.05rem;
-            font-style: normal;
-            font-weight: 500;
-        }
-        .compare-matrix-wrap {
-            overflow-x: auto;
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            border-radius: 24px;
-            background: rgba(255, 255, 255, 0.96);
-            box-shadow: 0 14px 36px rgba(17, 24, 39, 0.08);
-        }
-        .compare-matrix {
-            width: 100%;
-            min-width: 1180px;
-            border-collapse: collapse;
-            background: #ffffff;
-            color: #1d2433;
-        }
-        .compare-matrix th,
-        .compare-matrix td {
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            padding: 1.15rem 1rem;
-            text-align: left;
-            vertical-align: middle;
-        }
-        .compare-matrix thead th {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.05rem;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            color: #1d2433;
-            background: #f5f8fb;
-        }
-        .compare-matrix thead th:first-child {
-            width: 320px;
-        }
-        .compare-matrix tbody th {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.08rem;
-            line-height: 1.1;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #1d2433;
-            background: #ffffff;
-        }
-        .matrix-row-featured th,
-        .matrix-row-featured td {
-            background: rgba(78, 205, 196, 0.08);
-        }
-        .matrix-row-featured th {
-            font-size: 1.22rem;
-        }
-        .matrix-icon,
-        .matrix-cost {
-            display: inline-flex;
-            align-items: center;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 1.08rem;
-        }
-        .matrix-check {
-            color: #24a148;
-        }
-        .matrix-cross {
-            color: #d63c30;
-        }
-        .matrix-partial {
-            color: #d6a32a;
-        }
-        .matrix-detail {
-            margin-left: 0.55rem;
-            color: rgba(29, 36, 51, 0.82);
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            line-height: 1.2;
-        }
-        .matrix-cost {
-            color: #1d2433;
-        }
-        .compare-index-note {
-            margin-top: 1.35rem;
-            color: rgba(29, 36, 51, 0.72);
-            line-height: 1.7;
-            font-size: 0.98rem;
-            max-width: 980px;
-        }
-        @media (max-width: 1080px) {
-            .compare-index-page {
-                padding-inline: 1rem;
-            }
-        }
-        @media (max-width: 640px) {
-            .compare-index-page {
-                padding: 6.2rem 1rem 3rem;
-            }
-            .compare-index-copy {
-                font-size: 1rem;
-            }
-        }
-    </style>
 </head>
-<body>
-    ${NAV}
-    <main class="compare-index-page">
-        <section class="compare-index-hero">
-            <p class="compare-index-kicker">Compare</p>
-            <h1 class="compare-index-title">Competitor Analysis</h1>
-            <p class="compare-index-copy">See how Alfred compares across the capabilities that actually shape trip quality: mobile-first planning, AI personalization, itinerary structure, features, integrations, content depth, and cost.</p>
+<body class="compare-index-page tai-site">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBD76P5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    ${INDEX_NAV}
+    <main class="compare-index-main">
+        <section class="tai-hero" aria-labelledby="compare-hero-heading">
+            <div class="tai-hero-bg">
+                <div class="tai-hero-wrapper">
+                    <div class="tai-hero-copy">
+                        <h1 id="compare-hero-heading" class="tai-hero-title">How Alfred compares</h1>
+                        <p class="tai-hero-lead">See how Alfred stacks up on the capabilities that shape trip quality—mobile-first planning, AI personalization, itinerary structure, features, integrations, content, and cost.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="compare-matrix-wrap" aria-label="Competitor analysis matrix">
-            <table class="compare-matrix">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Mobile<br>First</th>
-                        <th>AI<br>Personalization</th>
-                        <th>Structure</th>
-                        <th>Features</th>
-                        <th>Integration</th>
-                        <th>Content</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <section class="tai-agn-section" aria-labelledby="compare-matrix-heading">
+            <div class="tai-agn-inner">
+                <div class="tai-agn-container">
+                    <span class="tai-agn-badge">Competitor matrix</span>
+                    <h2 id="compare-matrix-heading" class="tai-agn-heading">Alfred vs AI travel planners</h2>
+                    <p class="tai-agn-desc">Side-by-side view of Alfred Travel against chat tools and structured planners. ✓ full support · ◉ partial · ✕ not a focus.</p>
+                    <div class="compare-matrix-wrap" aria-label="Competitor analysis matrix">
+                        <table class="compare-matrix">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Mobile<br>First</th>
+                                    <th>AI<br>Personalization</th>
+                                    <th>Structure</th>
+                                    <th>Features</th>
+                                    <th>Integration</th>
+                                    <th>Content</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 ${matrixRows}
-                </tbody>
-            </table>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="compare-index-note">
-            Alfred&apos;s advantage is clearest when a traveler needs more than chat. The strongest position is still multi-profile personalization, itinerary structure, and a cleaner bridge from trip planning to execution.
+        <section class="tai-dark-section tai-compare-takeaway" aria-labelledby="compare-takeaway-heading">
+            <div class="tai-dark-inner">
+                <header class="tai-dark-header">
+                    <p class="tai-section-kicker">The takeaway</p>
+                    <h2 id="compare-takeaway-heading">More than chat, closer to booking</h2>
+                    <p class="tai-dark-lead">Generic LLMs answer questions. Alfred builds validated itineraries you can edit, share, and move toward partner booking—without rebuilding the plan in spreadsheets.</p>
+                </header>
+            </div>
         </section>
     </main>
-    ${FOOTER}
+    ${INDEX_FOOTER}
 </body>
 </html>`;
+
   fs.writeFileSync(path.join(COMPARE_DIR, 'index.html'), indexHtml);
 
   console.log(`Built compare index in ${COMPARE_DIR}`);

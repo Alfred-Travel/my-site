@@ -1,0 +1,56 @@
+/**
+ * Alfred Travel — shared design tokens
+ * Imported by static pages (index.html, build scripts) and Next.js (globals.css)
+ */
+:root {
+  /* TravelAI-inspired accent */
+  --alfred-mint: #3dffe2;
+  --alfred-mint-hover: #26ddc2;
+  --alfred-mint-muted: rgba(61, 255, 226, 0.14);
+
+  /* Brand */
+  --alfred-teal: var(--alfred-mint);
+  --alfred-teal-hover: var(--alfred-mint-hover);
+  --alfred-teal-muted: var(--alfred-mint-muted);
+
+  /* Neutrals */
+  --alfred-ink: #111827;
+  --alfred-ink-soft: #1d2433;
+  --alfred-body-bg: #f6f8fb;
+  --alfred-surface: #ffffff;
+  --alfred-muted: #6b7280;
+  --alfred-muted-text: #4b5563;
+  --alfred-border: rgba(17, 24, 39, 0.08);
+  --alfred-border-strong: rgba(17, 24, 39, 0.16);
+
+  /* Hero (dark band) */
+  --alfred-hero-bg: #111827;
+  --alfred-hero-bg-deep: #0b1020;
+  --alfred-hero-text: #f9fafb;
+  --alfred-hero-muted: rgba(249, 250, 251, 0.72);
+
+  /* Legacy aliases (existing styles.css) */
+  --primary-color: var(--alfred-ink);
+  --secondary-color: var(--alfred-teal);
+  --accent-color: var(--alfred-teal);
+  --text-color: var(--alfred-ink-soft);
+  --light-bg: var(--alfred-body-bg);
+  --white: var(--alfred-surface);
+  --section-bg: #e5e7eb;
+  --creamy-text: #f5e6d3;
+  --dark-bg: var(--alfred-hero-bg);
+
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --content-max: 1200px;
+  --nav-height: 72px;
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 16px 44px rgba(17, 24, 39, 0.06);
+  --shadow-card: 0 24px 60px rgba(17, 24, 39, 0.08);
+}

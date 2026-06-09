@@ -1,0 +1,158 @@
+/**
+ * FAQ page — TravelAI shell (hero + AGN FAQ grids + tutorials)
+ */
+
+body.faq-page .faq-main {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 0;
+}
+
+body.faq-page .footer-technical-authority {
+    display: none;
+}
+
+body.faq-page .tai-hero-title {
+    max-width: min(100%, 16rem);
+}
+
+body.faq-page .tai-hero-lead {
+    max-width: 36rem;
+}
+
+body.faq-page .tai-faq-group {
+    margin-top: 2.5rem;
+}
+
+body.faq-page .tai-faq-group:first-of-type {
+    margin-top: 0;
+}
+
+body.faq-page .tai-faq-group-heading {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    margin: 0 0 1rem;
+}
+
+body.faq-page .tai-faq-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+body.faq-page .tai-faq-card {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    height: 100%;
+}
+
+body.faq-page .tai-faq-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    margin: 0 0 0.55rem;
+}
+
+body.faq-page .tai-faq-card p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: #444;
+    margin: 0;
+}
+
+body.faq-page .tai-faq-card a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+body.faq-page .tai-faq-tutorials .tai-agn-container {
+    scroll-margin-top: 100px;
+}
+
+body.faq-page .tai-tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+body.faq-page .tai-tutorial-card {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    height: 100%;
+}
+
+body.faq-page .tai-tutorial-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #000;
+    margin: 0 0 0.55rem;
+}
+
+body.faq-page .tai-tutorial-card p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: #444;
+    margin: 0 0 1rem;
+    flex: 1;
+}
+
+body.faq-page .tai-tutorial-link {
+    align-self: flex-start;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    background: var(--secondary-color);
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.faq-page .tai-tutorial-link:hover {
+    transform: translateY(-1px);
+    background: #2eebd4;
+}
+
+@media (max-width: 1023px) {
+    body.faq-page .tai-tutorial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    body.faq-page .faq-main {
+        padding-top: 78px;
+    }
+
+    body.faq-page .tai-hero-title {
+        max-width: none;
+    }
+
+    body.faq-page .tai-faq-cards,
+    body.faq-page .tai-tutorial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.faq-page .tai-faq-group {
+        margin-top: 2rem;
+    }
+}
