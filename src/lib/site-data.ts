@@ -24,11 +24,6 @@ export const softwareApplicationSchema = {
   operatingSystem: "iOS, Android, Web",
   applicationCategory: "TravelApplication",
   applicationSubCategory: "AI Trip Planner",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    ratingCount: "150",
-  },
   offers: {
     "@type": "Offer",
     price: "0.00",
