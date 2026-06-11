@@ -813,6 +813,106 @@ footer {
     text-decoration: underline;
 }
 
+.start-here-section {
+    padding: 4rem 5%;
+    background: linear-gradient(180deg, rgba(78, 205, 196, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.start-here-intro {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.start-here-eyebrow {
+    margin: 0 0 0.75rem;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.start-here-intro h2 {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.start-here-summary {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.start-here-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.start-here-card {
+    background-color: var(--white);
+    border: 1px solid rgba(78, 205, 196, 0.18);
+    border-radius: 18px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 24px rgba(26, 26, 26, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.start-here-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(78, 205, 196, 0.12);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.start-here-card h3 {
+    margin: 0;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.start-here-card p {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.start-here-links {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.start-here-links a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.start-here-links a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 0;
@@ -875,6 +975,18 @@ footer {
 
     .hero-quick-links {
         gap: 0.5rem 1rem;
+    }
+
+    .start-here-section {
+        padding: 3rem 1rem;
+    }
+
+    .start-here-intro h2 {
+        font-size: 1.7rem;
+    }
+
+    .start-here-card {
+        padding: 1.5rem;
     }
     
     .search-input {
