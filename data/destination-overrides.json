@@ -95,5 +95,21 @@
       "transportModes": ["Uber", "metro", "private driver"],
       "faqSnippet": "Alfred builds Cairo days around traffic buffers, museum hours, and Giza timing so pyramid visits do not collapse the rest of the trip."
     }
+  },
+  "Delhi": {
+    "flag": "🇮🇳",
+    "legacyImage": "taj_mahal.jpg",
+    "commonsSearch": "India Gate New Delhi",
+    "itinerary": {
+      "day1": "Day 1 — Arrival, Aerocity or Connaught Place Reset\n• Arrive at DEL; Metro Airport Express or pre-booked car into Aerocity/Connaught Place (validated 20–40 min depending hotel)\n• Check-in and keep the first block light after flight arrival; lunch in Aerocity or Connaught Place\n• Afternoon: India Gate, Kartavya Path and National War Memorial loop if heat allows\n• Evening: early dinner in Khan Market or Connaught Place; sleep early before heavier monument day",
+      "day2": "Day 2 — Old Delhi and Mughal Core\n• Morning: Jama Masjid and Chandni Chowk with early start before traffic and crowd density rises\n• Lunch: Old Delhi food stop with a fixed regroup point for groups\n• Afternoon: Red Fort exterior zone or Raj Ghat, then transfer with buffer toward New Delhi\n• Evening: recover in Lodhi Colony or South Delhi; avoid stacking too many cross-city hops after 5pm traffic",
+      "day3": "Day 3 — Humayun's Tomb, Qutub and Departure Logic\n• Morning: Humayun's Tomb when gates open, then Lodhi Garden or Nizamuddin area depending pace\n• Lunch: South Delhi café block near Hauz Khas or Mehrauli corridor\n• Afternoon: Qutub Minar with realistic buffer for security and queue time\n• Evening: farewell dinner and pack; confirm DEL transfer with heavy traffic margin, especially for international departures"
+    },
+    "meta": {
+      "airportCode": "DEL",
+      "neighborhoods": ["Connaught Place", "Aerocity", "South Delhi"],
+      "transportModes": ["metro", "ride-hail", "auto-rickshaw"],
+      "faqSnippet": "Alfred helps pace Delhi around airport transfers, monument queues, and cross-city traffic so first-time itineraries stay executable."
+    }
   }
 }
