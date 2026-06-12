@@ -39,17 +39,25 @@ body.tai-site .navbar.shrink {
     left: 0;
     right: 0;
     z-index: 1000;
+    width: 100%;
+    background: #000;
 }
 
 body.tai-site .tai-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    background: transparent;
     backdrop-filter: none;
     border-bottom: none;
+    box-shadow: none;
     height: 90px;
     min-height: 90px;
+    width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 60px;
@@ -244,9 +252,11 @@ body.home-page #hero {
 
 .tai-hero {
     background: #000;
+    width: 100%;
 }
 
 .tai-hero-bg {
+    width: 100%;
     background-color: #000;
     background-image:
         linear-gradient(105deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.4) 68%, rgba(0, 0, 0, 0.18) 100%),
@@ -254,8 +264,6 @@ body.home-page #hero {
     background-size: cover;
     background-position: 72% center;
     background-repeat: no-repeat;
-    max-width: 1920px;
-    margin: 0 auto;
 }
 
 .tai-hero-wrapper {
@@ -955,6 +963,16 @@ body.home-page .mobile-download-bar-btn {
 }
 
 /* ---- Responsive ---- */
+
+@media (min-width: 1921px) {
+    .tai-hero-bg {
+        background-position: center center;
+    }
+
+    .tai-hero-wrapper {
+        min-height: clamp(560px, 42vw, 720px);
+    }
+}
 
 @media (max-width: 1023px) {
     body.tai-site .tai-navbar {
