@@ -202,7 +202,7 @@ function buildPost(slug, post, contentHtml) {
     <title>${escapeHtml(post.data.title)} | Alfred Travel Blog</title>
     <meta name="description" content="${escapeHtml(post.data.description || post.data.title)}">${keywordsMeta}
     <link rel="canonical" href="${BASE_URL}/blog/${slug}.html">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
+    <link rel="icon" type="image/png" href="/images/brand/alfred-logo-header.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -267,7 +267,7 @@ function buildIndex(posts) {
     <title>Blog | AI Travel Logistics Authority - Alfred Travel</title>
     <meta name="description" content="Alfred Travel Blog: authority content on AI trip planning, itinerary validation, multi-city routing, and booking-ready travel execution.">
     <link rel="canonical" href="${BASE_URL}/blog/">
-    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
+    <link rel="icon" type="image/png" href="/images/brand/alfred-logo-header.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">

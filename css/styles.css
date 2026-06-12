@@ -2996,9 +2996,9 @@ body.home-page {
 }
 
 body.home-page .navbar {
-    background: rgba(17, 24, 39, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
 }
 
 body.home-page .brand-link {
