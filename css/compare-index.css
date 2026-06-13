@@ -4,20 +4,17 @@
 
 body.compare-index-page .compare-index-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.compare-index-page {
+    --tai-hero-title-max: min(100%, 27rem);
+    --tai-hero-lead-max: 40rem;
 }
 
 body.compare-index-page .footer-technical-authority {
     display: none;
-}
-
-body.compare-index-page .tai-hero-title {
-    max-width: min(100%, 16rem);
-}
-
-body.compare-index-page .tai-hero-lead {
-    max-width: 40rem;
 }
 
 body.compare-index-page .compare-matrix-wrap {
@@ -47,7 +44,7 @@ body.compare-index-page .compare-matrix td {
 }
 
 body.compare-index-page .compare-matrix thead th {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.25;
@@ -60,7 +57,7 @@ body.compare-index-page .compare-matrix thead th:first-child {
 }
 
 body.compare-index-page .compare-matrix tbody th {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.8125rem;
     line-height: 1.2;
     font-weight: 700;
@@ -84,7 +81,7 @@ body.compare-index-page .matrix-icon,
 body.compare-index-page .matrix-cost {
     display: inline-flex;
     align-items: center;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.9375rem;
 }
@@ -104,7 +101,7 @@ body.compare-index-page .matrix-partial {
 body.compare-index-page .matrix-detail {
     margin-left: 0.45rem;
     color: #444;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-weight: 500;
     font-size: 0.8125rem;
     line-height: 1.2;
@@ -127,13 +124,8 @@ body.compare-index-page .tai-compare-takeaway .tai-dark-header {
 
 @media (max-width: 767px) {
     body.compare-index-page .compare-index-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.compare-index-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.compare-index-page .compare-matrix-wrap {
         margin-top: 1.5rem;
     }

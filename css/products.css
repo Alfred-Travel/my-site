@@ -4,16 +4,12 @@
 
 body.products-page .products-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
 }
 
 body.products-page .footer-technical-authority {
     display: none;
-}
-
-body.products-page .tai-hero-title {
-    max-width: 20ch;
 }
 
 /* Product grids inside AGN-style sections */
@@ -49,7 +45,7 @@ body.products-page .tai-product-card:hover {
 
 body.products-page .tai-product-card h3 {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.0625rem;
     font-weight: 700;
     line-height: 1.35;
@@ -125,7 +121,7 @@ body.products-page .tai-products-rewards-grid {
 
 @media (max-width: 767px) {
     body.products-page .products-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
 
     body.products-page .tai-agn-section .tai-product-grid,

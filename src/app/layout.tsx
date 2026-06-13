@@ -37,6 +37,15 @@ export const metadata: Metadata = {
     siteName: "Alfred Travel",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/images/brand/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/brand/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/images/brand/favicon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/images/brand/apple-touch-icon.png",
+  },
   twitter: {
     card: "summary_large_image",
     title: "Alfred | The World’s Smartest AI Trip Planner & Travel Assistant",

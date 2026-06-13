@@ -4,20 +4,16 @@
 
 body.itinerary-detail-page .itinerary-detail-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.itinerary-detail-page {
+    --tai-hero-title-max: min(100%, 30rem);
 }
 
 body.itinerary-detail-page .footer-technical-authority {
     display: none;
-}
-
-body.itinerary-detail-page .tai-hero-title {
-    max-width: min(100%, 20rem);
-}
-
-body.itinerary-detail-page .tai-hero-lead {
-    max-width: 36rem;
 }
 
 body.itinerary-detail-page .tai-itinerary-validation-grid {
@@ -66,7 +62,7 @@ body.itinerary-detail-page .tai-itinerary-cover {
 
 body.itinerary-detail-page .itinerary-sample {
     white-space: pre-wrap;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.65;
     color: #1a1a1a;
@@ -104,13 +100,8 @@ body.itinerary-detail-page .tai-itinerary-cta .tai-btn-primary {
 
 @media (max-width: 767px) {
     body.itinerary-detail-page .itinerary-detail-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.itinerary-detail-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.itinerary-detail-page .tai-itinerary-validation-grid {
         grid-template-columns: 1fr;
         margin-top: 1.5rem;

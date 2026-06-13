@@ -4,20 +4,12 @@
 
 body.blog-index-page .blog-index-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
 }
 
 body.blog-index-page .footer-technical-authority {
     display: none;
-}
-
-body.blog-index-page .tai-hero-title {
-    max-width: min(100%, 18rem);
-}
-
-body.blog-index-page .tai-hero-lead {
-    max-width: 36rem;
 }
 
 body.blog-index-page .blog-index-list {
@@ -54,7 +46,7 @@ body.blog-index-page .blog-index-link:hover {
 }
 
 body.blog-index-page .blog-index-meta {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -65,7 +57,7 @@ body.blog-index-page .blog-index-meta {
 }
 
 body.blog-index-page .blog-index-title {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.0625rem;
     font-weight: 700;
     line-height: 1.35;
@@ -78,7 +70,7 @@ body.blog-index-page .blog-index-link:hover .blog-index-title {
 }
 
 body.blog-index-page .blog-index-excerpt {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.55;
     color: #444;
@@ -96,11 +88,7 @@ body.blog-index-page .tai-blog-takeaway .tai-dark-header {
 
 @media (max-width: 767px) {
     body.blog-index-page .blog-index-main {
-        padding-top: 78px;
-    }
-
-    body.blog-index-page .tai-hero-title {
-        max-width: none;
+        padding-top: var(--tai-nav-height-mobile);
     }
 
     body.blog-index-page .blog-index-list {

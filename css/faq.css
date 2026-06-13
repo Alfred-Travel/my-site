@@ -4,20 +4,16 @@
 
 body.faq-page .faq-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.faq-page {
+    --tai-hero-title-max: min(100%, 27rem);
 }
 
 body.faq-page .footer-technical-authority {
     display: none;
-}
-
-body.faq-page .tai-hero-title {
-    max-width: min(100%, 16rem);
-}
-
-body.faq-page .tai-hero-lead {
-    max-width: 36rem;
 }
 
 body.faq-page .tai-faq-group {
@@ -29,7 +25,7 @@ body.faq-page .tai-faq-group:first-of-type {
 }
 
 body.faq-page .tai-faq-group-heading {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.35;
@@ -52,7 +48,7 @@ body.faq-page .tai-faq-card {
 }
 
 body.faq-page .tai-faq-card h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
@@ -61,7 +57,7 @@ body.faq-page .tai-faq-card h3 {
 }
 
 body.faq-page .tai-faq-card p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.55;
     color: #444;
@@ -97,7 +93,7 @@ body.faq-page .tai-tutorial-card {
 }
 
 body.faq-page .tai-tutorial-card h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
@@ -106,7 +102,7 @@ body.faq-page .tai-tutorial-card h3 {
 }
 
 body.faq-page .tai-tutorial-card p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.55;
     color: #444;
@@ -116,7 +112,7 @@ body.faq-page .tai-tutorial-card p {
 
 body.faq-page .tai-tutorial-link {
     align-self: flex-start;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
@@ -140,13 +136,8 @@ body.faq-page .tai-tutorial-link:hover {
 
 @media (max-width: 767px) {
     body.faq-page .faq-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.faq-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.faq-page .tai-faq-cards,
     body.faq-page .tai-tutorial-grid {
         grid-template-columns: 1fr;

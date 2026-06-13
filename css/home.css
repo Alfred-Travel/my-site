@@ -19,16 +19,18 @@
 }
 
 body.tai-site {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: var(--font-body);
     background: #fff;
     color: #000;
     padding-top: 0;
 }
 
 body.tai-site .navbar.shrink {
-    padding: 0 60px;
-    height: 90px;
-    min-height: 90px;
+    position: relative;
+    padding: 0 var(--tai-shell-gutter);
+    height: var(--tai-nav-height);
+    min-height: var(--tai-nav-height);
+    background: transparent !important;
 }
 
 /* ---- Header (TravelAI: logo left, links + pill right) ---- */
@@ -39,20 +41,24 @@ body.tai-site .navbar.shrink {
     left: 0;
     right: 0;
     z-index: 1000;
+    background: #000;
 }
 
 body.tai-site .tai-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000;
-    backdrop-filter: none;
-    border-bottom: none;
-    height: 90px;
-    min-height: 90px;
-    max-width: 1920px;
+    position: relative;
+    width: 100%;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
-    padding: 0 60px;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    height: var(--tai-nav-height);
+    min-height: var(--tai-nav-height);
+    padding: 0 var(--tai-shell-gutter);
     box-sizing: border-box;
 }
 
@@ -63,15 +69,24 @@ body.tai-site .tai-navbar {
     gap: 0.65rem;
     text-decoration: none;
     line-height: 1;
+    color: #fff;
 }
 
-.tai-header-logo-img {
+.tai-header-logo-mark {
     display: block;
-    height: 56px;
-    width: auto;
-    max-width: min(220px, 45vw);
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
     object-fit: contain;
+}
+
+.tai-header-logo-text {
+    font-family: var(--font-body);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+    line-height: 1;
 }
 
 .tai-desktop-nav {
@@ -132,25 +147,26 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
     height: 30px;
     padding: 0 1rem;
     border-radius: 100px;
-    border: 1px solid #5c5c5c;
-    background: #2b2b2b;
+    border: 1px solid transparent;
+    background: var(--alfred-mint);
     letter-spacing: 0.02em;
+    transition: background 0.25s ease;
 }
 
 .tai-nav-pill a {
-    color: #fff !important;
+    color: #000 !important;
     font-size: 0.875rem !important;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
     text-transform: capitalize !important;
     text-decoration: none;
 }
 
 .tai-nav-pill a:hover {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .tai-nav-pill:hover {
-    background: #3a3a3a;
+    background: var(--alfred-mint-hover);
 }
 
 body.tai-site .tai-hamburger {
@@ -188,7 +204,7 @@ body.home-page .home-main {
     display: block;
     padding-bottom: 0;
     gap: 0;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
 }
 
 body.home-page #hero {
@@ -244,6 +260,7 @@ body.home-page #hero {
 
 .tai-hero {
     background: #000;
+    width: 100%;
 }
 
 .tai-hero-bg {
@@ -254,7 +271,8 @@ body.home-page #hero {
     background-size: cover;
     background-position: 72% center;
     background-repeat: no-repeat;
-    max-width: 1920px;
+    width: 100%;
+    max-width: var(--tai-shell-wide);
     margin: 0 auto;
 }
 
@@ -262,26 +280,32 @@ body.home-page #hero {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: 1440px;
-    min-height: 560px;
+    width: 100%;
+    max-width: var(--tai-shell-max);
+    min-height: var(--tai-hero-min-height);
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 var(--tai-shell-gutter);
     box-sizing: border-box;
 }
 
 .tai-hero-copy {
-    flex: 0 1 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--tai-hero-stack);
+    flex: 0 1 var(--tai-hero-title-max);
+    max-width: var(--tai-hero-title-max);
     position: relative;
     z-index: 1;
 }
 
 .tai-hero-title {
-    font-family: "Inter", sans-serif;
-    font-size: clamp(2.25rem, 4.2vw, 3rem);
-    font-weight: 700;
-    line-height: 1.12;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1.08;
     color: #fff;
-    max-width: 15ch;
+    max-width: 100%;
     margin: 0;
     letter-spacing: -0.03em;
 }
@@ -291,9 +315,9 @@ body.home-page #hero {
     font-weight: 400;
     line-height: 1.65;
     color: rgba(255, 255, 255, 0.86);
-    max-width: 32rem;
+    max-width: var(--tai-hero-lead-max);
     margin: 0;
-    padding-top: 2rem;
+    padding-top: 0;
 }
 
 .tai-hero-actions {
@@ -301,7 +325,7 @@ body.home-page #hero {
     flex-flow: row nowrap;
     gap: 1.25rem;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 0;
 }
 
 .tai-hero-actions .tai-btn-primary {
@@ -318,9 +342,9 @@ body.home-page #hero {
 }
 
 .tai-intent-inner {
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 var(--tai-shell-gutter);
 }
 
 .tai-intent-header {
@@ -338,7 +362,7 @@ body.home-page #hero {
 }
 
 .tai-intent-header h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: clamp(1.75rem, 3vw, 2.5rem);
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -373,7 +397,7 @@ body.home-page #hero {
 }
 
 .tai-intent-card h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.125rem;
     line-height: 1.25;
     color: #000;
@@ -435,9 +459,9 @@ body.home-page #hero {
 .tai-agn-inner {
     position: relative;
     z-index: 1;
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 var(--tai-shell-gutter);
 }
 
 .tai-agn-container {
@@ -484,10 +508,10 @@ body.home-page #hero {
 }
 
 .tai-agn-heading {
-    font-family: "Inter", sans-serif;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
-    font-weight: 800;
-    line-height: 1.15;
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.12;
     color: #000;
     margin: 0;
     padding-top: 1.75rem;
@@ -567,7 +591,7 @@ body.home-page #hero {
 }
 
 .tai-dark-header h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 700;
     line-height: 1.2;
@@ -600,7 +624,7 @@ body.home-page #hero {
 }
 
 .tai-dark-card h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 1.35;
@@ -639,19 +663,19 @@ body.about-page .tai-download-section {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 5rem 60px;
+    padding: 5rem var(--tai-shell-gutter);
     border-top: 1px solid #eee;
 }
 
 .tai-download-inner {
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
     text-align: center;
 }
 
 body.home-page .tai-download-section h2,
 body.about-page .tai-download-section h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 1.2;
@@ -740,11 +764,11 @@ body.home-page .comparison-section {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 2rem 60px 3rem;
+    padding: 2rem var(--tai-shell-gutter) 3rem;
 }
 
 body.home-page .press-section {
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -766,7 +790,7 @@ body.home-page .press-eyebrow {
 }
 
 body.home-page .press-content h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.25;
@@ -790,7 +814,7 @@ body.home-page .press-card {
 }
 
 body.home-page .press-card h4 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 700;
     color: #000;
@@ -838,7 +862,7 @@ body.home-page .press-preview.is-active {
 
 .tai-join-section {
     background: #fafafa;
-    padding: 5rem 60px;
+    padding: 5rem var(--tai-shell-gutter);
     position: relative;
     isolation: isolate;
     overflow: hidden;
@@ -857,7 +881,7 @@ body.home-page .press-preview.is-active {
 .tai-join-inner {
     position: relative;
     z-index: 1;
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -871,7 +895,7 @@ body.home-page .press-preview.is-active {
 }
 
 .tai-join-copy h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 700;
     line-height: 1.2;
@@ -949,16 +973,16 @@ body.home-page .tai-faq-section {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 2rem 60px 4rem;
+    padding: 2rem var(--tai-shell-gutter) 4rem;
 }
 
 body.home-page .tai-faq-section h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 50px;
     color: #000;
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin-left: auto;
     margin-right: auto;
 }
@@ -970,14 +994,14 @@ body.home-page .tai-faq-section .content-accordion {
 }
 
 body.home-page .tai-faq-section .content-accordion summary {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 600;
     color: #000;
 }
 
 body.home-page .tai-faq-section .details-accordion-wrapper {
-    max-width: 1440px;
+    max-width: var(--tai-shell-max);
     margin: 0 auto;
 }
 
@@ -1010,7 +1034,7 @@ body.tai-site footer {
     background: #000;
     color: #7e7e7e;
     margin-top: 0;
-    padding: 3rem 60px 1.5rem;
+    padding: 3rem var(--tai-shell-gutter) 1.5rem;
 }
 
 body.tai-site .footer-content {
@@ -1054,7 +1078,7 @@ body.home-page .mobile-download-bar-btn {
 
 @media (max-width: 1023px) {
     body.tai-site .tai-navbar {
-        padding: 0 40px;
+        padding: 0 var(--tai-shell-gutter-tablet);
     }
 
     body.tai-site .tai-hamburger {
@@ -1116,8 +1140,8 @@ body.home-page .mobile-download-bar-btn {
     body.about-page .tai-download-section,
     body.home-page .comparison-section,
     body.home-page .tai-faq-section {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: var(--tai-shell-gutter-tablet);
+        padding-right: var(--tai-shell-gutter-tablet);
     }
 
     .tai-hero-wrapper {
@@ -1156,25 +1180,34 @@ body.home-page .mobile-download-bar-btn {
 }
 
 @media (max-width: 767px) {
+    body.tai-site {
+        --tai-hero-title-max: 100%;
+        --tai-hero-lead-max: 100%;
+    }
+
     body.home-page .home-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
 
     body.tai-site .tai-navbar {
-        height: 78px;
-        min-height: 78px;
-        padding: 0 30px;
+        height: var(--tai-nav-height-mobile);
+        min-height: var(--tai-nav-height-mobile);
+        padding: 0 var(--tai-shell-gutter-mobile);
     }
 
-    body.tai-site .tai-header-logo-img {
-        height: 48px;
-        max-width: min(190px, 55vw);
+    body.tai-site .tai-header-logo-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    body.tai-site .tai-header-logo-text {
+        font-size: 1.2rem;
     }
 
     body.tai-site .navbar.shrink {
-        height: 78px;
-        min-height: 78px;
-        padding: 0 30px;
+        height: var(--tai-nav-height-mobile);
+        min-height: var(--tai-nav-height-mobile);
+        padding: 0 var(--tai-shell-gutter-mobile);
     }
 
     .tai-hero-bg {
@@ -1183,11 +1216,11 @@ body.home-page .mobile-download-bar-btn {
     }
 
     .tai-hero-wrapper {
-        padding: 0 24px 3.5rem;
+        padding: 0 var(--tai-shell-gutter-mobile) 3.5rem;
     }
 
     .tai-intent-inner {
-        padding: 0 24px;
+        padding: 0 var(--tai-shell-gutter-mobile);
     }
 
     .tai-intent-section {
@@ -1210,13 +1243,11 @@ body.home-page .mobile-download-bar-btn {
     }
 
     .tai-hero-title {
-        max-width: none;
         font-size: 2rem;
-        line-height: 1.15;
+        line-height: 1.12;
     }
 
     .tai-hero-lead {
-        max-width: none;
         font-size: 1rem;
         line-height: 1.65;
     }
@@ -1233,8 +1264,8 @@ body.home-page .mobile-download-bar-btn {
     body.about-page .tai-download-section,
     body.home-page .comparison-section,
     body.home-page .tai-faq-section {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: var(--tai-shell-gutter-mobile);
+        padding-right: var(--tai-shell-gutter-mobile);
     }
 
     .tai-agn-container {
@@ -1361,12 +1392,7 @@ body.home-page .mobile-download-bar-btn {
     }
 
     .tai-hero-lead {
-        padding-top: 1.25rem;
         font-size: 0.9375rem;
-    }
-
-    .tai-hero-actions {
-        padding-top: 1.5rem;
     }
 
     .tai-hero-actions .tai-btn-primary {

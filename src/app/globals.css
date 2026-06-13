@@ -1,4 +1,5 @@
 @import "../../css/tokens.css";
+@import "../../css/typography.css";
 
 :root {
   --primary-color: #1a1a1a;
@@ -151,9 +152,38 @@ a {
 h1,
 h2,
 h3 {
-  font-family: var(--font-sans);
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-heading);
+}
+
+h1,
+.hero-title,
+.planner-hero-title,
+.text-page-title {
+  font-family: var(--font-heading);
+}
+
+h2.text-section-title,
+.section-heading {
+  font-family: var(--font-heading);
+}
+
+h2:not(.text-section-title):not(.section-heading),
+h3,
+h4,
+button,
+input,
+select,
+textarea,
+label,
+.navbar a,
+.site-header a,
+.primary-button,
+.secondary-button,
+.footer-column h3,
+.footer-technical-authority h4,
+.faq-question {
+  font-family: var(--font-body);
 }
 
 .hero-title,
@@ -343,7 +373,7 @@ h3 {
 
 .city-itinerary-card pre {
   white-space: pre-wrap;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.75;
   color: var(--muted-text);
   margin: 0;

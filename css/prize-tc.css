@@ -4,26 +4,22 @@
 
 body.prize-tc-page .prize-tc-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.prize-tc-page {
+    --tai-hero-title-max: min(100%, 27rem);
 }
 
 body.prize-tc-page .footer-technical-authority {
     display: none;
 }
 
-body.prize-tc-page .tai-hero-title {
-    max-width: min(100%, 16rem);
-}
-
-body.prize-tc-page .tai-hero-lead {
-    max-width: 36rem;
-}
-
 body.prize-tc-page .tai-terms-doc {
     max-width: 46rem;
     margin-top: 2rem;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.65;
     color: #1a1a1a;
@@ -34,7 +30,7 @@ body.prize-tc-page .tai-terms-doc p {
 }
 
 body.prize-tc-page .tai-terms-doc h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.35;
@@ -90,13 +86,8 @@ body.prize-tc-page .tai-prize-callout p:last-child {
 
 @media (max-width: 767px) {
     body.prize-tc-page .prize-tc-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.prize-tc-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.prize-tc-page .tai-terms-doc {
         margin-top: 1.5rem;
     }

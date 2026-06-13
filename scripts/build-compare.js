@@ -6,6 +6,9 @@
 
 const fs = require('fs');
 const path = require('path');
+const { typographyPreconnect, typographyStylesheet } = require('./typography-head');
+const { faviconHead } = require('./favicon-head');
+const { headerLogoHtml } = require('./header-logo');
 
 const ROOT = path.resolve(__dirname, '..');
 const COMPARE_DIR = path.join(ROOT, 'compare');
@@ -14,9 +17,7 @@ const BASE_URL = 'https://www.alfredtravel.io';
 const INDEX_NAV = `
     <header class="tai-header">
         <nav class="navbar tai-navbar" aria-label="Main navigation">
-            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
-                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
-            </a>
+            ${headerLogoHtml('../index.html', '..')}
             <div class="tai-desktop-nav">
                 <ul class="nav-links">
                     <li><a href="../about.html">Company</a></li>
@@ -147,14 +148,13 @@ function main() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competitor Analysis | Alfred Travel Comparison Matrix</title>
     <meta name="description" content="See Alfred Travel’s competitor analysis matrix across mobile-first experience, AI personalization, structure, features, integration, content, and cost.">
-    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    ${faviconHead('..')}
+    ${typographyPreconnect()}
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/compare-index.css">
+    ${typographyStylesheet('..')}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

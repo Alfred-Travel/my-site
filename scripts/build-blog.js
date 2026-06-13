@@ -15,6 +15,9 @@ const POSTS_DIR = path.join(ROOT, '_posts');
 const CONTENT_BLOG_DIR = path.join(ROOT, 'content', 'blog');
 const BLOG_DIR = path.join(ROOT, 'blog');
 const DESTINATIONS_PATH = path.join(ROOT, 'destinations.json');
+const { typographyPreconnect, typographyStylesheet } = require('./typography-head');
+const { faviconHead } = require('./favicon-head');
+const { headerLogoHtml } = require('./header-logo');
 const BASE_URL = 'https://www.alfredtravel.io';
 const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -73,9 +76,7 @@ const FOOTER = `
 const INDEX_NAV = `
     <header class="tai-header">
         <nav class="navbar tai-navbar" aria-label="Main navigation">
-            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
-                <img src="../images/brand/alfred-logo-header.png" alt="Alfred Travel" class="tai-header-logo-img" width="180" height="56" />
-            </a>
+            ${headerLogoHtml('../index.html', '..')}
             <div class="tai-desktop-nav">
                 <ul class="nav-links">
                     <li><a href="../about.html">Company</a></li>
@@ -202,13 +203,12 @@ function buildPost(slug, post, contentHtml) {
     <title>${escapeHtml(post.data.title)} | Alfred Travel Blog</title>
     <meta name="description" content="${escapeHtml(post.data.description || post.data.title)}">${keywordsMeta}
     <link rel="canonical" href="${BASE_URL}/blog/${slug}.html">
-    <link rel="icon" type="image/png" href="../images/Color logo with background.png.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    ${faviconHead('..')}
+    ${typographyPreconnect()}
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    ${typographyStylesheet('..')}
     <script type="application/ld+json">\n${schemaSoftware}\n    </script>
     <script type="application/ld+json">\n${schemaBlog}\n    </script>
     <script type="application/ld+json">\n${schemaBreadcrumb}\n    </script>${schemaFaq}
@@ -267,14 +267,13 @@ function buildIndex(posts) {
     <title>Blog | AI Travel Logistics Authority - Alfred Travel</title>
     <meta name="description" content="Alfred Travel Blog: authority content on AI trip planning, itinerary validation, multi-city routing, and booking-ready travel execution.">
     <link rel="canonical" href="${BASE_URL}/blog/">
-    <link rel="icon" type="image/png" href="../images/brand/alfred-mark.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    ${faviconHead('..')}
+    ${typographyPreconnect()}
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/blog-index.css">
+    ${typographyStylesheet('..')}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5WJZ450F8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

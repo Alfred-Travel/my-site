@@ -40,12 +40,32 @@
   --creamy-text: #f5e6d3;
   --dark-bg: var(--alfred-hero-bg);
 
-  /* Typography */
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography — premium concierge system */
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Satoshi", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: var(--font-body);
+
+  --leading-body: 1.65;
+  --leading-tight: 1.08;
+  --tracking-heading: -0.02em;
+  --tracking-label: 0.12em;
 
   /* Layout */
   --content-max: 1200px;
   --nav-height: 72px;
+
+  /* TravelAI shell grid — header, hero, and AGN sections share these */
+  --tai-shell-max: 1440px;
+  --tai-shell-wide: 1920px;
+  --tai-shell-gutter: 60px;
+  --tai-shell-gutter-tablet: 40px;
+  --tai-shell-gutter-mobile: 30px;
+  --tai-nav-height: 90px;
+  --tai-nav-height-mobile: 78px;
+  --tai-hero-min-height: 34rem;
+  --tai-hero-title-max: min(100%, 30rem);
+  --tai-hero-lead-max: 36rem;
+  --tai-hero-stack: 1.25rem;
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-pill: 999px;

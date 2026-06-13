@@ -2,22 +2,18 @@
  * About / Company page — uses homepage section shell (tai-hero, tai-agn, tai-join, tai-dark)
  */
 
+body.about-page {
+    --tai-hero-title-max: min(100%, 33rem);
+}
+
 body.about-page .about-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
 }
 
 body.about-page .footer-technical-authority {
     display: none;
-}
-
-body.about-page .tai-hero-title {
-    max-width: min(100%, 20rem);
-}
-
-body.about-page .tai-hero-lead {
-    max-width: 36rem;
 }
 
 /* Mission — AGN two-column layout */
@@ -108,7 +104,7 @@ body.about-page .tai-about-press-grid .press-card {
 }
 
 body.about-page .tai-about-press-grid .press-card-title {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 700;
     color: #000;
@@ -204,7 +200,7 @@ body.about-page .tai-about-team .member-image img {
 }
 
 body.about-page .tai-about-team .team-member h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.0625rem;
     font-weight: 700;
     color: #fff;
@@ -246,13 +242,8 @@ body.about-page .tai-about-team .team-member:hover {
 
 @media (max-width: 767px) {
     body.about-page .about-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.about-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.about-page .tai-about-mission .tai-agn-copy {
         flex: none;
         min-width: 0;

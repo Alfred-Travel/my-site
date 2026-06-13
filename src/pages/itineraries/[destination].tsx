@@ -133,7 +133,7 @@ export default function ItineraryPage({ destination }: ItineraryPageProps) {
       </Head>
 
       <main style={{ maxWidth: 720, margin: '0 auto', padding: '2rem 1.5rem' }}>
-        <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: '2rem', marginBottom: '1rem' }}>
+        <h1 className="text-page-title" style={{ marginBottom: '1rem' }}>
           7-Day {displayName} AI Trip Planner: Validated Itinerary
         </h1>
 
@@ -144,11 +144,9 @@ export default function ItineraryPage({ destination }: ItineraryPageProps) {
             3-Day Sample Itinerary
           </h2>
           <pre
+            className="font-body text-body"
             style={{
               whiteSpace: 'pre-wrap',
-              fontFamily: 'Inter, sans-serif',
-              fontSize: '0.95rem',
-              lineHeight: 1.7,
               color: '#1A1A1A',
             }}
           >

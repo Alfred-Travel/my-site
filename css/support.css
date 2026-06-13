@@ -4,20 +4,16 @@
 
 body.support-page .support-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.support-page {
+    --tai-hero-title-max: min(100%, 27rem);
 }
 
 body.support-page .footer-technical-authority {
     display: none;
-}
-
-body.support-page .tai-hero-title {
-    max-width: min(100%, 16rem);
-}
-
-body.support-page .tai-hero-lead {
-    max-width: 36rem;
 }
 
 body.support-page .tai-support-grid {
@@ -35,7 +31,7 @@ body.support-page .tai-support-card {
 }
 
 body.support-page .tai-support-card h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
@@ -44,7 +40,7 @@ body.support-page .tai-support-card h3 {
 }
 
 body.support-page .tai-support-card p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.55;
     color: #444;
@@ -64,7 +60,7 @@ body.support-page .tai-support-card a:hover {
 
 body.support-page .tai-support-contact {
     margin-top: 1.75rem;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.6;
     color: #1a1a1a;
@@ -97,13 +93,8 @@ body.support-page .tai-support-deletion .tai-dark-card a {
 
 @media (max-width: 767px) {
     body.support-page .support-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.support-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.support-page .tai-support-grid {
         grid-template-columns: 1fr;
         margin-top: 1.5rem;

@@ -4,26 +4,22 @@
 
 body.terms-page .terms-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.terms-page {
+    --tai-hero-title-max: min(100%, 24rem);
 }
 
 body.terms-page .footer-technical-authority {
     display: none;
 }
 
-body.terms-page .tai-hero-title {
-    max-width: min(100%, 14rem);
-}
-
-body.terms-page .tai-hero-lead {
-    max-width: 36rem;
-}
-
 body.terms-page .tai-terms-doc {
     max-width: 46rem;
     margin-top: 2rem;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.65;
     color: #1a1a1a;
@@ -34,7 +30,7 @@ body.terms-page .tai-terms-doc p {
 }
 
 body.terms-page .tai-terms-doc h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.35;
@@ -48,7 +44,7 @@ body.terms-page .tai-terms-doc h2:first-of-type {
 }
 
 body.terms-page .tai-terms-doc h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
@@ -82,13 +78,8 @@ body.terms-page .tai-terms-effective {
 
 @media (max-width: 767px) {
     body.terms-page .terms-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.terms-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.terms-page .tai-terms-doc {
         margin-top: 1.5rem;
     }

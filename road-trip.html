@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/brand/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/brand/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/brand/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/brand/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI road trip planner | Turn-by-turn trip routing with Alfred</title>
     <meta name="description" content="Plan road trips with AI-assisted turn-by-turn route logic, realistic stop pacing, and destination sequencing for smoother travel days.">
@@ -19,13 +24,13 @@
     <meta name="twitter:description" content="Plan road trips with AI-assisted turn-by-turn route logic, realistic stop pacing, and destination sequencing for smoother travel days.">
     <meta name="twitter:image" content="https://www.alfredtravel.io/images/Color%20logo%20with%20background.png.png">
 <meta name="keywords" content="AI road trip planner, turn by turn itinerary, route planning app, road trip planning tool">
-    <link rel="icon" type="image/png" href="images/Color logo with background.png.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/typography.css">
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"Alfred Travel Tech","legalName":"Alfred Travel Tech Pty Ltd","url":"https://www.alfredtravel.io","logo":"https://www.alfredtravel.io/images/Color%20logo%20with%20background.png.png","description":"AI-powered travel itinerary builder. Superior AI Travel Logistics.","foundingDate":"2024","contactPoint":{"@type":"ContactPoint","email":"support@alfredtravel.io","contactType":"customer service"},"sameAs":["https://apps.apple.com/au/app/alfred-travel/id6745240301","https://play.google.com/store/apps/details?id=io.alfredtravel.app"]}
@@ -44,10 +49,10 @@
     </script>
     <style>
         .road-trip-section { padding: 7rem 5% 5rem; margin-top: 90px; background-color: var(--light-bg); max-width: 900px; margin-left: auto; margin-right: auto; }
-        .road-trip-section h1 { font-family: var(--font-sans); font-weight: 700; letter-spacing: -0.02em; text-align: center; color: var(--secondary-color); font-size: 2.5rem; margin-bottom: 2rem; }
-        .road-trip-section h2 { font-family: var(--font-sans); font-weight: 700; letter-spacing: -0.02em; color: var(--primary-color); font-size: 1.75rem; margin: 2rem 0 1rem; }
+        .road-trip-section h1 { font-family: var(--font-heading); font-weight: 500; letter-spacing: -0.02em; text-align: center; color: var(--secondary-color); font-size: 2.5rem; margin-bottom: 2rem; }
+        .road-trip-section h2 { font-family: var(--font-heading); font-weight: 500; letter-spacing: -0.02em; color: var(--primary-color); font-size: 1.75rem; margin: 2rem 0 1rem; }
         .feature-logic-block { margin: 2rem 0; }
-        .feature-logic-block p { font-family: 'Inter', sans-serif; color: var(--text-color); margin-bottom: 1rem; line-height: 1.7; }
+        .feature-logic-block p { font-family: var(--font-body); color: var(--text-color); margin-bottom: 1rem; line-height: 1.7; }
         .feature-table { width: 100%; border-collapse: collapse; margin: 1rem 0; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
         .feature-table th, .feature-table td { padding: 0.75rem 1rem; border: 1px solid rgba(78, 205, 196, 0.2); text-align: left; }
         .feature-table thead th { background: var(--secondary-color); color: var(--white); font-weight: 600; }

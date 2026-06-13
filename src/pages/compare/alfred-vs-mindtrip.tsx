@@ -60,7 +60,7 @@ export default function AlfredVsMindtrip() {
           <Link href="/mindtrip-alternative">Alfred Travel: a practical Mindtrip alternative</Link>{' '}
           for itinerary intent and booking readiness—then return here for nuance.
         </p>
-        <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: '2rem', marginBottom: '2rem' }}>
+        <h1 className="text-page-title" style={{ marginBottom: '2rem' }}>
           {title}
         </h1>
 
@@ -92,7 +92,7 @@ export default function AlfredVsMindtrip() {
         </p>
 
         <section style={{ marginTop: '2rem', lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: 'Inter, sans-serif', fontSize: '1.5rem' }}>
+          <h2 className="text-section-title">
             Alfred vs Mindtrip for 2026 travel intent
           </h2>
           <p>
@@ -110,7 +110,7 @@ export default function AlfredVsMindtrip() {
         </section>
 
         <section style={{ marginTop: '2rem', lineHeight: 1.7 }}>
-          <h2 style={{ fontFamily: 'Inter, sans-serif', fontSize: '1.5rem' }}>
+          <h2 className="text-section-title">
             FAQ
           </h2>
           <p>

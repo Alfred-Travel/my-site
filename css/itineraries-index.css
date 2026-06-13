@@ -4,20 +4,16 @@
 
 body.itineraries-index-page .itineraries-index-main {
     display: block;
-    padding-top: 90px;
+    padding-top: var(--tai-nav-height);
     padding-bottom: 0;
+}
+
+body.itineraries-index-page {
+    --tai-hero-title-max: min(100%, 27rem);
 }
 
 body.itineraries-index-page .footer-technical-authority {
     display: none;
-}
-
-body.itineraries-index-page .tai-hero-title {
-    max-width: min(100%, 18rem);
-}
-
-body.itineraries-index-page .tai-hero-lead {
-    max-width: 36rem;
 }
 
 body.itineraries-index-page .tai-itineraries-agn .tai-agn-desc a {
@@ -76,7 +72,7 @@ body.itineraries-index-page .destination-card-body {
 }
 
 body.itineraries-index-page .destination-card-body h2 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.35;
     color: #000;
@@ -97,13 +93,8 @@ body.itineraries-index-page .destination-card-flag {
 
 @media (max-width: 767px) {
     body.itineraries-index-page .itineraries-index-main {
-        padding-top: 78px;
+        padding-top: var(--tai-nav-height-mobile);
     }
-
-    body.itineraries-index-page .tai-hero-title {
-        max-width: none;
-    }
-
     body.itineraries-index-page .destination-grid {
         grid-template-columns: 1fr;
         margin-top: 1.5rem;
