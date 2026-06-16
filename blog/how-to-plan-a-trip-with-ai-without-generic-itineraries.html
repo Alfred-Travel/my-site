@@ -88,7 +88,7 @@
 }
     </script>
     <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How should I use AI to plan a trip?","acceptedAnswer":{"@type":"Answer","text":"Use AI to build and compare route options, then validate timing, hotel fit, and pacing before booking. The best results come from giving the model real constraints instead of broad prompts."}},{"@type":"Question","name":"Why do AI trip itineraries feel generic?","acceptedAnswer":{"@type":"Answer","text":"They often start from attraction lists instead of traveller constraints. That leads to schedules that look polished but ignore transfer friction, energy levels, and booking realities."}},{"@type":"Question","name":"What should an AI travel planner validate before booking?","acceptedAnswer":{"@type":"Answer","text":"At minimum: route order, airport or rail transfer windows, hotel location relative to your day plan, day density, and whether a long-haul or red-eye requires recovery time."}},{"@type":"Question","name":"What details should I give AI before asking for an itinerary?","acceptedAnswer":{"@type":"Answer","text":"Include dates, arrival and departure cities, number of stops, transfer tolerance, budget shape, accommodation preferences, and any pace constraints such as travelling with children or needing recovery time after long-haul flights."}},{"@type":"Question","name":"What details should I add when points, borders, or family logistics matter?","acceptedAnswer":{"@type":"Answer","text":"Tell the planner about loyalty programs, points-versus-cash preferences, passport or visa constraints, baggage tolerance, latest acceptable arrival times, and family timing limits. Those details change route order, hotel choice, and whether a transfer is actually safe."}},{"@type":"Question","name":"Can AI plan a multi-city trip well?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only when the planner checks sequencing and buffers. Multi-city trips break when each leg is treated as an isolated suggestion rather than part of one connected route."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How should I use AI to plan a trip?","acceptedAnswer":{"@type":"Answer","text":"Use AI to build and compare route options, then validate timing, hotel fit, and pacing before booking. The best results come from giving the model real constraints instead of broad prompts."}},{"@type":"Question","name":"Why do AI trip itineraries feel generic?","acceptedAnswer":{"@type":"Answer","text":"They often start from attraction lists instead of traveller constraints. That leads to schedules that look polished but ignore transfer friction, energy levels, and booking realities."}},{"@type":"Question","name":"What should an AI travel planner validate before booking?","acceptedAnswer":{"@type":"Answer","text":"At minimum: route order, airport or rail transfer windows, hotel location relative to your day plan, day density, and whether a long-haul or red-eye requires recovery time."}},{"@type":"Question","name":"What details should I give AI before asking for an itinerary?","acceptedAnswer":{"@type":"Answer","text":"Include dates, arrival and departure cities, number of stops, transfer tolerance, budget shape, accommodation preferences, and any pace constraints such as travelling with children or needing recovery time after long-haul flights."}},{"@type":"Question","name":"What details should I add when points, borders, or family logistics matter?","acceptedAnswer":{"@type":"Answer","text":"Tell the planner about loyalty programs, points-versus-cash preferences, passport or visa constraints, baggage tolerance, latest acceptable arrival times, and family timing limits. Those details change route order, hotel choice, and whether a transfer is actually safe."}},{"@type":"Question","name":"What follow-up prompt should I ask after the first AI itinerary?","acceptedAnswer":{"@type":"Answer","text":"Ask the model to rank the options by transfer risk, hotel switching, and recovery time, then rewrite the best option with warnings for borders, points, or family timing. The second pass is usually where a generic itinerary becomes usable."}},{"@type":"Question","name":"Can AI plan a multi-city trip well?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only when the planner checks sequencing and buffers. Multi-city trips break when each leg is treated as an isolated suggestion rather than part of one connected route."}}]}
     </script>
 </head>
 <body class="blog-page">
@@ -216,7 +216,40 @@
 </tr>
 </tbody></table>
 <p>If your trip mixes rail and flights, pressure-test the answer with our <a href="../blog/rail-vs-flight-cost-analysis.html">rail vs flight cost analysis</a>. If you are balancing adults, kids, or different travel styles, cross-check the route against <a href="../blog/bali-for-families.html">family pacing</a> and <a href="../blog/future-of-group-planning.html">group preference trade-offs</a> before booking.</p>
-<h2>7) Keep the answers structured enough to reuse</h2>
+<h2>7) Use follow-up prompts to force trade-offs into the open</h2>
+<p>A first AI itinerary can sound confident while still hiding the real compromises. The fastest way to improve it is to ask a <strong>second-pass prompt</strong> that forces the model to explain what breaks first.</p>
+<p>Use follow-up prompts like these:</p>
+<table>
+<thead>
+<tr>
+<th>If your trip depends on...</th>
+<th>Ask AI this follow-up prompt</th>
+<th>A useful answer should include</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Comparing route shapes</td>
+<td>&quot;Rank these options by least transfer risk, least hotel switching, and best recovery time after arrival. Tell me which city should be cut first if I need a simpler trip.&quot;</td>
+<td>A ranked recommendation, the main trade-off in each option, and the first stress point to remove</td>
+</tr>
+<tr>
+<td>Points or loyalty rules</td>
+<td>&quot;Rewrite this route assuming I prefer alliance-friendly flights, want to compare points versus cash, and do not want a repositioning leg unless it saves a major amount.&quot;</td>
+<td>Cash-versus-points pinch points, reposition warnings, and where loyalty preferences change the route</td>
+</tr>
+<tr>
+<td>Borders or major events</td>
+<td>&quot;Stress-test this itinerary for border queues, event-day crowding, and the latest safe arrival time for each transfer day.&quot;</td>
+<td>Brittle same-day legs, buffer recommendations, and any stop that needs an earlier arrival</td>
+</tr>
+<tr>
+<td>Family or mixed-energy pacing</td>
+<td>&quot;Rewrite this plan with one recovery block after heavy travel days, shorter walking windows, and one low-friction backup option per day.&quot;</td>
+<td>A lighter day structure, neighbourhood logic, and where over-scheduling is most likely</td>
+</tr>
+</tbody></table>
+<p>If the answer still refuses to show trade-offs, the planner is probably generating polished text instead of helping you make decisions. That is a good time to compare the route against Alfred’s <a href="../blog/ai-hotel-vs-airbnb-logic.html">hotel vs Airbnb logic guide</a> or the <a href="../ai-trip-planner/index.html">AI Trip Planner</a> before you book.</p>
+<h2>8) Keep the answers structured enough to reuse</h2>
 <p>Google’s AI-search guidance increasingly rewards <strong>clear, useful, non-commodity content</strong>. The same principle applies when you use AI to plan a trip for yourself: structure beats noise.</p>
 <p>Ask for outputs like:</p>
 <ul>
@@ -228,12 +261,12 @@
 </ul>
 <p>That is far more reusable than a wall of generic prose.</p>
 <p>If you are comparing options, save the output in sections such as <strong>route</strong>, <strong>timing risks</strong>, <strong>hotel logic</strong>, and <strong>trade-offs</strong>. This makes it easier to judge whether the planner is helping you think or just generating volume.</p>
-<h2>8) Use AI differently for single-city and multi-city trips</h2>
+<h2>9) Use AI differently for single-city and multi-city trips</h2>
 <p>A single-city trip mostly needs help with <strong>neighbourhood fit, day clustering, and pacing</strong>.</p>
 <p>A multi-city trip needs help with <strong>sequence, transport legs, recovery windows, and booking order</strong>.</p>
 <p>That distinction matters because a planner that looks strong on destination ideas can still fail when you cross a border or add multiple hotel changes. If your trip has more moving parts, you need a planner that behaves more like a logistics layer than a chat surface.</p>
 <p>For a route with multiple stops, start with Alfred’s <a href="../ai-trip-planner/index.html">AI Trip Planner</a>, then compare the output against destination examples in the <a href="../itineraries/index.html">itinerary library</a>. If you are planning for children or a group, pressure-test the result against our guides to <a href="../blog/bali-for-families.html">family pacing</a> and <a href="../blog/future-of-group-planning.html">group preference trade-offs</a>. If the stay type is still unclear, use the <a href="../blog/ai-hotel-vs-airbnb-logic.html">hotel vs Airbnb logic guide</a> before you book.</p>
-<h2>9) Do not let AI hide trade-offs from you</h2>
+<h2>10) Do not let AI hide trade-offs from you</h2>
 <p>A generic itinerary usually pretends you can have everything at once:</p>
 <ul>
 <li>cheapest hotel,</li>
