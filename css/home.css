@@ -144,7 +144,11 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
 }
 
 .tai-nav-pill-item {
-    margin-left: 0.25rem;
+    margin-left: 0;
+}
+
+.tai-nav-pill-item + .tai-nav-pill-item {
+    margin-left: 0.5rem;
 }
 
 .tai-nav-pill {
@@ -152,6 +156,7 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
     align-items: center;
     justify-content: center;
     height: 30px;
+    min-width: 0;
     padding: 0 1rem;
     border-radius: 100px;
     border: 1px solid transparent;
@@ -164,8 +169,9 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
     color: #000 !important;
     font-size: 0.875rem !important;
     font-weight: 700 !important;
-    text-transform: capitalize !important;
+    text-transform: none !important;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .tai-nav-pill a:hover {

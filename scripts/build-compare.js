@@ -9,6 +9,7 @@ const path = require('path');
 const { typographyPreconnect, typographyStylesheet } = require('./typography-head');
 const { faviconHead } = require('./favicon-head');
 const { headerLogoHtml } = require('./header-logo');
+const { navPillsHtml } = require('./header-nav-pills');
 
 const ROOT = path.resolve(__dirname, '..');
 const COMPARE_DIR = path.join(ROOT, 'compare');
@@ -23,9 +24,7 @@ const INDEX_NAV = `
                     <li><a href="../about.html">Company</a></li>
                     <li><a href="../products.html">Features</a></li>
                     <li><a href="../delete-account.html">Support</a></li>
-                    <li class="tai-nav-pill-item">
-                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
-                    </li>
+                    ${navPillsHtml('../index.html#app-downloads')}
                 </ul>
             </div>
             <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
