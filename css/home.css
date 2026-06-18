@@ -106,6 +106,7 @@ body.tai-site .tai-desktop-nav .nav-links {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 1rem;
     margin: 0;
     padding: 0;
@@ -145,6 +146,7 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
 
 .tai-nav-pill-item {
     margin-left: 0;
+    flex-shrink: 0;
 }
 
 .tai-nav-pill-item + .tai-nav-pill-item {
@@ -155,23 +157,26 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
-    min-width: 0;
-    padding: 0 1rem;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 2.75rem;
+    padding: 0.75rem 1.75rem;
     border-radius: 100px;
     border: 1px solid transparent;
     background: var(--alfred-mint);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     transition: background 0.25s ease;
 }
 
 .tai-nav-pill a {
     color: #000 !important;
-    font-size: 0.875rem !important;
-    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
     text-transform: none !important;
     text-decoration: none;
     white-space: nowrap;
+    line-height: 1.2;
 }
 
 .tai-nav-pill a:hover {

@@ -2255,8 +2255,8 @@ nav ul li a.active {
 }
 
 /* ========== Blog (AIO, text-heavy, 2026 UX) ========== */
-body.blog-page {
-    padding-top: 0;
+body.blog-page.tai-site .blog-main {
+    padding-top: calc(var(--tai-nav-height) + 2rem);
 }
 .blog-main {
     padding: 7rem 5% 4rem;

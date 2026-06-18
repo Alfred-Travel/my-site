@@ -1,12 +1,13 @@
 /**
- * TravelAI header nav CTAs — Web Login + Download App pills
+ * TravelAI header nav CTAs — Start Exploring + Download App pills
  */
 
 const WEB_LOGIN_URL = 'https://web.alfredtravel.io';
+const EXPLORE_LABEL = 'Start Exploring';
 
-function webLoginPillHtml() {
+function explorePillHtml() {
   return `<li class="tai-nav-pill-item">
-                        <span class="tai-nav-pill"><a href="${WEB_LOGIN_URL}">Web Login</a></span>
+                        <span class="tai-nav-pill"><a href="${WEB_LOGIN_URL}">${EXPLORE_LABEL}</a></span>
                     </li>`;
 }
 
@@ -18,18 +19,21 @@ function downloadAppPillHtml(downloadHref) {
 
 function navPillsHtml(downloadHref = '#app-downloads') {
   return `${downloadAppPillHtml(downloadHref)}
-                    ${webLoginPillHtml()}`;
+                    ${explorePillHtml()}`;
 }
 
 const NAV_PILLS_BLOCK =
   /<li class="tai-nav-pill-item">[\s\S]*?<\/li>\s*(?:<li class="tai-nav-pill-item">[\s\S]*?<\/li>\s*)?/;
 
+const EXPLORE_PILL_LINK =
+  /<span class="tai-nav-pill"><a href="[^"]*"[^>]*>(?:Web Login|Start Exploring)<\/a><\/span>/g;
+
 function ensureNavPillsInHtml(html) {
   if (!html.includes('tai-nav-pill')) return html;
 
   html = html.replace(
-    /<span class="tai-nav-pill"><a href="[^"]*"[^>]*>Web Login<\/a><\/span>/g,
-    `<span class="tai-nav-pill"><a href="${WEB_LOGIN_URL}">Web Login</a></span>`
+    EXPLORE_PILL_LINK,
+    `<span class="tai-nav-pill"><a href="${WEB_LOGIN_URL}">${EXPLORE_LABEL}</a></span>`
   );
 
   const downloadMatch = html.match(
@@ -37,7 +41,7 @@ function ensureNavPillsInHtml(html) {
   );
   const downloadHref = downloadMatch ? downloadMatch[1] : '#app-downloads';
 
-  if (html.includes('Web Login')) {
+  if (html.includes(EXPLORE_LABEL) || html.includes('Web Login')) {
     return html.replace(NAV_PILLS_BLOCK, `${navPillsHtml(downloadHref)}\n                    `);
   }
 
@@ -49,7 +53,9 @@ function ensureNavPillsInHtml(html) {
 
 module.exports = {
   WEB_LOGIN_URL,
-  webLoginPillHtml,
+  EXPLORE_LABEL,
+  explorePillHtml,
+  webLoginPillHtml: explorePillHtml,
   downloadAppPillHtml,
   navPillsHtml,
   ensureNavPillsInHtml,

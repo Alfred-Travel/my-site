@@ -17,8 +17,7 @@ const BLOG_DIR = path.join(ROOT, 'blog');
 const DESTINATIONS_PATH = path.join(ROOT, 'destinations.json');
 const { typographyPreconnect, typographyStylesheet } = require('./typography-head');
 const { faviconHead } = require('./favicon-head');
-const { headerLogoHtml } = require('./header-logo');
-const { navPillsHtml } = require('./header-nav-pills');
+const { travelAiHeaderHtml } = require('./travelai-header');
 const BASE_URL = 'https://www.alfredtravel.io';
 const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -40,59 +39,13 @@ function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '-');
 }
 
-const NAV = `
-    <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="logo">
-                <a href="../index.html" class="brand-link" aria-label="Alfred Travel home">
-                    <img src="../images/Color logo with background.png.png" alt="Alfred Travel" class="logo-image" />
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../products.html">Features</a></li>
-                <li><a href="../itineraries/index.html">Itineraries</a></li>
-                <li><a href="index.html" class="nav-blog-active">Blog</a></li>
-                <li><a href="../compare/index.html">Compare</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-            </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download Alfred on iOS or Android">Download App</a>
-            <div class="hamburger"><span></span><span></span><span></span></div>
-        </nav>
-    </header>`;
+const BLOG_HEADER = travelAiHeaderHtml({
+  logoHref: '../index.html',
+  assetPrefix: '..',
+  downloadHref: '../index.html#app-downloads',
+});
 
-const FOOTER = `
-    <footer>
-        <div class="footer-content">
-            <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#team">Our Team</a></li><li><a href="../index.html#features">Features</a></li></ul></div>
-            <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
-            <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
-            <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
-            <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2026 Alfred Travel Tech Pty Ltd. All rights reserved.</p></div>
-    </footer>
-    <div id="cookies-banner" class="cookies-banner"><div class="cookies-content"><div class="cookies-text"><h3>🍪 We use cookies</h3><p>We use cookies and similar technologies. <a href="../terms.html#privacy" class="cookies-link">Privacy Policy</a> · <a href="#" class="cookies-link" id="cookie-settings">Cookie Settings</a>.</p></div><div class="cookies-buttons"><button id="accept-all-cookies" class="btn btn-primary">Accept All</button><button id="reject-cookies" class="btn btn-secondary">Reject All</button></div></div></div>
-    <script src="../js/main.js"><\/script>`;
-
-const INDEX_NAV = `
-    <header class="tai-header">
-        <nav class="navbar tai-navbar" aria-label="Main navigation">
-            ${headerLogoHtml('../index.html', '..')}
-            <div class="tai-desktop-nav">
-                <ul class="nav-links">
-                    <li><a href="../about.html">Company</a></li>
-                    <li><a href="../products.html">Features</a></li>
-                    <li><a href="../delete-account.html">Support</a></li>
-                    ${navPillsHtml('../index.html#app-downloads')}
-                </ul>
-            </div>
-            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>`;
+const INDEX_NAV = BLOG_HEADER;
 
 const INDEX_FOOTER = `
     <footer>
@@ -206,14 +159,15 @@ function buildPost(slug, post, contentHtml) {
     ${typographyPreconnect()}
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     ${typographyStylesheet('..')}
     <script type="application/ld+json">\n${schemaSoftware}\n    </script>
     <script type="application/ld+json">\n${schemaBlog}\n    </script>
     <script type="application/ld+json">\n${schemaBreadcrumb}\n    </script>${schemaFaq}
 </head>
-<body class="blog-page">
-${NAV}
+<body class="blog-page tai-site">
+${BLOG_HEADER}
     <main class="blog-main">
         <article class="blog-article">
             <nav class="blog-breadcrumb" aria-label="Breadcrumb">Home &rarr; <a href="index.html">Blog</a> &rarr; ${escapeHtml(category)} &rarr; <span>${escapeHtml(post.data.title)}</span></nav>
@@ -225,7 +179,7 @@ ${NAV}
             <div class="blog-article-body">${contentHtml}</div>
         </article>
     </main>
-${FOOTER}
+${INDEX_FOOTER}
 </body>
 </html>`;
 }

@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/typography.css">
     <script type="application/ld+json">
     {
@@ -81,25 +82,31 @@
         .landing-card-link:hover { color: var(--secondary-color); }
     </style>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/Color logo with background.png.png" alt="Alfred - The Leading AI Trip Planner and AI Holiday Planner App" class="logo-image" />
-                </a>
+<body class="tai-site">
+        <header class="tai-header">
+        <nav class="navbar tai-navbar" aria-label="Main navigation">
+            <a href="../index.html" class="tai-header-logo" aria-label="Alfred Travel home">
+                <img src="../images/brand/alfred-header-mark.png" srcset="../images/brand/alfred-header-mark@2x.png 2x" alt="" class="tai-header-logo-mark" width="36" height="36" decoding="async" aria-hidden="true" />
+                <span class="tai-header-logo-text">Alfred</span>
+            </a>
+            <div class="tai-desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../about.html">Company</a></li>
+                    <li><a href="../products.html">Features</a></li>
+                    <li><a href="../delete-account.html">Support</a></li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="../index.html#app-downloads">Download App</a></span>
+                    </li>
+                    <li class="tai-nav-pill-item">
+                        <span class="tai-nav-pill"><a href="https://web.alfredtravel.io">Start Exploring</a></span>
+                    </li>
+                    </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../products.html">Our Features</a></li>
-                <li><a href="../blog/index.html">Blog</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../faq.html#tutorials">Tutorials</a></li>
-                <li><a href="../delete-account.html">Support</a></li>
-            </ul>
-            <a href="../index.html#app-downloads" class="download-cta" aria-label="Download the AI Holiday Planner">Download App</a>
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <button type="button" class="hamburger tai-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
     <main class="landing-page">
