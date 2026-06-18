@@ -149,19 +149,12 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
     flex-shrink: 0;
 }
 
-.tai-nav-pill-item + .tai-nav-pill-item {
-    margin-left: 0.5rem;
-}
-
 .tai-nav-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     box-sizing: border-box;
-    height: auto;
-    min-height: 2.75rem;
-    padding: 0.75rem 1.75rem;
     border-radius: 100px;
     border: 1px solid transparent;
     background: var(--alfred-mint);
@@ -169,21 +162,29 @@ body.tai-site .tai-desktop-nav .nav-links a::after {
     transition: background 0.25s ease;
 }
 
-.tai-nav-pill a {
+body.tai-site .tai-desktop-nav .tai-nav-pill {
+    height: auto;
+    min-height: 0;
+    padding: 0.5em 1.15em;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+body.tai-site .tai-desktop-nav .tai-nav-pill a {
     color: #000 !important;
-    font-size: 0.95rem !important;
+    font-size: 1em !important;
     font-weight: 600 !important;
     text-transform: none !important;
     text-decoration: none;
     white-space: nowrap;
-    line-height: 1.2;
+    line-height: inherit;
 }
 
-.tai-nav-pill a:hover {
+body.tai-site .tai-desktop-nav .tai-nav-pill a:hover {
     color: #000 !important;
 }
 
-.tai-nav-pill:hover {
+body.tai-site .tai-desktop-nav .tai-nav-pill:hover {
     background: var(--alfred-mint-hover);
 }
 
@@ -1045,9 +1046,9 @@ body.home-page .mobile-download-bar-btn {
         margin-top: 0.5rem;
     }
 
-    body.tai-site .tai-nav-pill {
-        height: auto;
-        padding: 0.65rem 1.25rem;
+    body.tai-site .tai-desktop-nav .nav-links.active .tai-nav-pill {
+        font-size: 1.25rem;
+        padding: 0.45em 1.15em;
     }
 
     body.tai-nav-open {

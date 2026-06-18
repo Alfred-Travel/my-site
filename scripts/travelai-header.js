@@ -1,5 +1,5 @@
 /**
- * Shared TravelAI header shell (logo + nav links + Download App / Start Exploring pills)
+ * Shared TravelAI header shell (logo + nav links + Start Exploring pill)
  */
 const { headerLogoHtml } = require('./header-logo');
 const { navPillsHtml } = require('./header-nav-pills');

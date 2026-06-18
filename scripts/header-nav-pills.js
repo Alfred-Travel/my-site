@@ -1,5 +1,5 @@
 /**
- * TravelAI header nav CTAs — Start Exploring + Download App pills
+ * TravelAI header nav CTA — Start Exploring pill only (Download App lives in hero)
  */
 
 const WEB_LOGIN_URL = 'https://web.alfredtravel.io';
@@ -11,44 +11,39 @@ function explorePillHtml() {
                     </li>`;
 }
 
-function downloadAppPillHtml(downloadHref) {
-  return `<li class="tai-nav-pill-item">
-                        <span class="tai-nav-pill"><a href="${downloadHref}">Download App</a></span>
-                    </li>`;
+/** @deprecated Header no longer includes Download App; kept for build script compatibility */
+function downloadAppPillHtml() {
+  return '';
 }
 
-function navPillsHtml(downloadHref = '#app-downloads') {
-  return `${downloadAppPillHtml(downloadHref)}
-                    ${explorePillHtml()}`;
+function navPillsHtml() {
+  return explorePillHtml();
 }
 
-const NAV_PILLS_BLOCK =
-  /<li class="tai-nav-pill-item">[\s\S]*?<\/li>\s*(?:<li class="tai-nav-pill-item">[\s\S]*?<\/li>\s*)?/;
+const NAV_PILL_ITEMS =
+  /(?:<li class="tai-nav-pill-item">\s*<span class="tai-nav-pill">[\s\S]*?<\/span>\s*<\/li>\s*)+/g;
 
 const EXPLORE_PILL_LINK =
   /<span class="tai-nav-pill"><a href="[^"]*"[^>]*>(?:Web Login|Start Exploring)<\/a><\/span>/g;
 
 function ensureNavPillsInHtml(html) {
-  if (!html.includes('tai-nav-pill')) return html;
+  if (!html.includes('tai-nav-pill') && !html.includes('tai-desktop-nav')) return html;
 
   html = html.replace(
     EXPLORE_PILL_LINK,
     `<span class="tai-nav-pill"><a href="${WEB_LOGIN_URL}">${EXPLORE_LABEL}</a></span>`
   );
 
-  const downloadMatch = html.match(
-    /<li class="tai-nav-pill-item">\s*<span class="tai-nav-pill"><a href="([^"]*)">Download App<\/a><\/span>\s*<\/li>/
-  );
-  const downloadHref = downloadMatch ? downloadMatch[1] : '#app-downloads';
-
-  if (html.includes(EXPLORE_LABEL) || html.includes('Web Login')) {
-    return html.replace(NAV_PILLS_BLOCK, `${navPillsHtml(downloadHref)}\n                    `);
+  if (html.includes('tai-nav-pill')) {
+    html = html.replace(NAV_PILL_ITEMS, `${navPillsHtml()}\n                    `);
+  } else if (html.includes('tai-desktop-nav') && !html.includes(EXPLORE_LABEL)) {
+    html = html.replace(
+      /(<div class="tai-desktop-nav">[\s\S]*?<ul class="nav-links">[\s\S]*?)(<\/ul>)/,
+      `$1                    ${navPillsHtml()}\n                    $2`
+    );
   }
 
-  return html.replace(
-    /<li class="tai-nav-pill-item">\s*<span class="tai-nav-pill"><a href="([^"]*)">Download App<\/a><\/span>\s*<\/li>/,
-    (_, href) => navPillsHtml(href)
-  );
+  return html;
 }
 
 module.exports = {
@@ -59,5 +54,5 @@ module.exports = {
   downloadAppPillHtml,
   navPillsHtml,
   ensureNavPillsInHtml,
-  NAV_PILLS_BLOCK,
+  NAV_PILL_ITEMS,
 };
