@@ -83,3 +83,5 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Cairo | `curated Commons: File:All Gizah Pyramids.jpg` | [File:All Gizah Pyramids.jpg](https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg) |
 
 | Tel Aviv | `curated Commons: File:Tel Aviv beach Jaffa.jpg` | [File:Tel Aviv beach Jaffa.jpg](https://commons.wikimedia.org/wiki/File:Tel_Aviv_beach_Jaffa.jpg) |
+
+| Taipei | `Taipei 101 skyline Taiwan` | [File:Taipei Skyline April 2019.jpg](https://commons.wikimedia.org/wiki/File:Taipei_Skyline_April_2019.jpg) |

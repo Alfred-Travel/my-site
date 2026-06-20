@@ -16,6 +16,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Itineraries: https://www.alfredtravel.io/itineraries/
 - Orlando itinerary (family / parks corridor): https://www.alfredtravel.io/itineraries/orlando.html
 - Dubrovnik itinerary (Croatia / Adriatic routing): https://www.alfredtravel.io/itineraries/dubrovnik.html
+- Taipei itinerary (Taiwan / Asia urban routing): https://www.alfredtravel.io/itineraries/taipei.html
 - Compare tools: https://www.alfredtravel.io/compare/
 - Alfred vs Mindtrip: https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html
 - Alfred vs Layla: https://www.alfredtravel.io/compare/alfred-vs-layla.html
@@ -33,7 +34,9 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Alfred vs GuideGeek
 - AI travel planner comparison
 - AI travel discovery and hotel AI visibility
+- Hotel app AI trip planner and trip planner app queries
 - Dubrovnik itinerary and Croatia trip planning
+- Taipei itinerary and Taiwan trip planning
 - Kyoto itinerary and destination planning
 
 ## Product context

@@ -96,6 +96,22 @@
       "faqSnippet": "Alfred builds Cairo days around traffic buffers, museum hours, and Giza timing so pyramid visits do not collapse the rest of the trip."
     }
   },
+  "Taipei": {
+    "flag": "🇹🇼",
+    "legacyImage": "marina_bay_sands.jpg",
+    "commonsSearch": "Taipei 101 skyline Taiwan",
+    "itinerary": {
+      "day1": "Day 1 — Arrival & Central Taipei Reset\n• Arrive at TPE; Airport MRT to Taipei Main Station or a taxi to Da'an/Ximending base (validated 35–55 min)\n• Check-in near Ximending, Da'an, or Zhongzheng for easier MRT coverage; lunch with beef noodle soup or xiao long bao\n• Afternoon: Chiang Kai-shek Memorial Hall, Liberty Square, and Yongkang Street without cross-city backtracking\n• Evening: light first-night finish at Ningxia or Raohe Night Market; keep the post-flight block flexible for families",
+      "day2": "Day 2 — Skyline, Museums & Neighborhood Logic\n• Morning: Taipei 101 area, Sun Yat-sen Memorial Hall, and Xinyi walking loop before afternoon heat or rain builds\n• Lunch: Din Tai Fung, food court, or local set meal in Xinyi\n• Afternoon: National Palace Museum OR Huashan 1914 / Songshan Cultural Park depending whether the trip skews family, design, or classic sightseeing\n• Evening: dinner in Da'an or Xinyi; optional Elephant Mountain only if energy and weather still cooperate",
+      "day3": "Day 3 — Family-Friendly Extension or Scenic Buffer\n• Morning: Taipei Zoo plus Maokong Gondola for a lower-friction family block, or Beitou hot-spring district for a slower adult-heavy pace\n• Lunch: tea-house meal in Maokong or casual lunch in Beitou/Tamsui corridor\n• Afternoon: return via MRT with buffer for shopping in Ximending, Taipei Main, or a Tamsui riverfront finish if the weather is clear\n• Evening: farewell dinner, repack, and confirm airport timing with enough buffer for TPE departure"
+    },
+    "meta": {
+      "airportCode": "TPE",
+      "neighborhoods": ["Ximending", "Da'an", "Zhongzheng"],
+      "transportModes": ["MRT", "Airport MRT", "gondola", "taxi"],
+      "faqSnippet": "Alfred helps pace Taipei around Airport MRT transfers, night-market timing, rain-friendly backups, and family-friendly MRT sequencing."
+    }
+  },
   "Delhi": {
     "flag": "🇮🇳",
     "legacyImage": "taj_mahal.jpg",
