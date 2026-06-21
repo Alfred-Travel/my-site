@@ -297,7 +297,7 @@ body.home-page #hero {
 
 .tai-hero-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     max-width: var(--tai-shell-max);
