@@ -226,6 +226,10 @@ body.home-page .home-main {
     padding-top: var(--tai-nav-height);
 }
 
+body.home-page {
+    --tai-hero-title-max: min(100%, 36rem);
+}
+
 body.home-page #hero {
     padding: 0;
     background: transparent;
