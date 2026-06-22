@@ -112,6 +112,22 @@
       "faqSnippet": "Alfred helps pace Taipei around Airport MRT transfers, night-market timing, rain-friendly backups, and family-friendly MRT sequencing."
     }
   },
+  "Christchurch": {
+    "flag": "🇳🇿",
+    "legacyImage": "mount_cook.jpg",
+    "commonsSearch": "Christchurch Cathedral Square New Zealand",
+    "itinerary": {
+      "day1": "Day 1 — Arrival, Central City Reset & Riverside Logic\n• Arrive at CHC; taxi, shuttle, or rideshare to the central city/Riccarton base (validated 20–30 min)\n• Check-in near the central city, Riverside, or Riccarton so jet-lag recovery stays walkable; easy lunch at Riverside Market\n• Afternoon: Avon River / Botanic Gardens / Tram corridor loop instead of stacking long transfers on arrival day\n• Evening: early dinner in the central city; keep the first night light if the trip includes children or a same-day Australian arrival",
+      "day2": "Day 2 — Family-Friendly Christchurch Without Cross-City Friction\n• Morning: Margaret Mahy Playground, Tūranga, and nearby central-city blocks while energy is highest\n• Lunch: casual central-city stop before moving east or south\n• Afternoon: choose one clean second block — Christchurch Gondola + Sumner finish OR Willowbank / Orana style wildlife stop, depending weather and family pace\n• Evening: dinner back near the hotel so the day does not end with a heavy return leg across town",
+      "day3": "Day 3 — Scenic Extension or Easy Buffer Day\n• Morning: half-day to Akaroa OR a slower local day with markets, museums, and riverfront time depending driving tolerance\n• Lunch: Akaroa harbour meal or a central-city café if keeping the day local\n• Afternoon: souvenir, snack, and repack buffer before departure rather than over-programming the final block\n• Evening: confirm CHC airport timing with enough margin for rental-car return or family packing delays"
+    },
+    "meta": {
+      "airportCode": "CHC",
+      "neighborhoods": ["Central City", "Riccarton", "Sumner"],
+      "transportModes": ["rideshare", "tram", "rental car"],
+      "faqSnippet": "Alfred helps pace Christchurch around short airport transfers, family-friendly city blocks, and optional South Island day extensions without wasting the trip on backtracking."
+    }
+  },
   "Delhi": {
     "flag": "🇮🇳",
     "legacyImage": "taj_mahal.jpg",

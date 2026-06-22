@@ -19,6 +19,16 @@ const { typographyPreconnect, typographyStylesheet } = require('./typography-hea
 const { faviconHead } = require('./favicon-head');
 const { travelAiHeaderHtml } = require('./travelai-header');
 const BASE_URL = 'https://www.alfredtravel.io';
+const LEGACY_INDEX_POSTS = [
+  {
+    slug: 'travel-discovery-ai-visibility-2026',
+    date: '2026-06-20',
+    title: 'AI Travel Discovery Is Changing How Better Trips Get Planned',
+    author: 'Alfred Team',
+    category: 'AIO Insights',
+    description: 'Skift and PhocusWire show AI travel discovery shifting toward conversational planning, better hotel visibility, and structured trip answers travelers can actually use.',
+  },
+];
 const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -185,14 +195,23 @@ ${INDEX_FOOTER}
 }
 
 function buildIndex(posts) {
-  const allItems = posts
-    .map(p => ({
+  const postItems = posts.map(p => ({
       date: p.data.date || '',
       title: p.data.title,
       href: `${p.slug}.html`,
       meta: `${escapeHtml(p.data.author || 'Alfred Team')} &middot; ${escapeHtml(p.data.category || 'AI Travel Logistics')}`,
       excerpt: (p.data.description || p.data.title).slice(0, 160),
-    }))
+    }));
+  const legacyItems = LEGACY_INDEX_POSTS
+    .filter(legacy => !posts.some(p => p.slug === legacy.slug))
+    .map(legacy => ({
+      date: legacy.date,
+      title: legacy.title,
+      href: `${legacy.slug}.html`,
+      meta: `${escapeHtml(legacy.author)} &middot; ${escapeHtml(legacy.category)}`,
+      excerpt: legacy.description.slice(0, 160),
+    }));
+  const allItems = [...postItems, ...legacyItems]
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
     .map(item => `<li class="blog-index-item">
         <a href="${item.href}" class="blog-index-link">
@@ -347,6 +366,14 @@ const blogUrls = posts.map(p => ({
   changefreq: 'monthly',
   priority: '0.7'
 }));
+const extraBlogUrls = LEGACY_INDEX_POSTS
+  .filter(legacy => !posts.some(p => p.slug === legacy.slug))
+  .map(legacy => ({
+    loc: BASE_URL + '/blog/' + legacy.slug + '.html',
+    lastmod: legacy.date,
+    changefreq: 'monthly',
+    priority: '0.7'
+  }));
 const itineraryUrls = destinations.map(name => ({
   loc: BASE_URL + '/itineraries/' + slugify(name) + '.html',
   changefreq: 'weekly',
@@ -355,8 +382,12 @@ const itineraryUrls = destinations.map(name => ({
 const compareUrls = [
   { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
   { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.75' },
+  { loc: BASE_URL + '/compare/alfred-vs-layla.html', changefreq: 'weekly', priority: '0.75' },
+  { loc: BASE_URL + '/compare/alfred-vs-guidegeek.html', changefreq: 'weekly', priority: '0.75' },
 ];
-const extraItineraryUrls = [];
+const extraItineraryUrls = [
+  { loc: BASE_URL + '/itineraries/dubrovnik.html', changefreq: 'weekly', priority: '0.8' },
+];
 const nextAppUrls = [
   { loc: BASE_URL + '/mindtrip-alternative', changefreq: 'weekly', priority: '0.84' },
 ];
@@ -365,6 +396,7 @@ const sitemapLines = [
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...staticUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...blogUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
+  ...extraBlogUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...itineraryUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...extraItineraryUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),
   ...compareUrls.map(u => `  <url><loc>${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`),

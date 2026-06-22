@@ -191,6 +191,14 @@ const CITY_FLAGS = {
 };
 
 const DESTINATION_OVERRIDES = loadDestinationOverrides();
+const MANUAL_INDEX_CARDS = [
+  {
+    name: 'Dubrovnik',
+    slug: 'dubrovnik',
+    image: 'old_city_of_dubrovnik.jpg',
+    flag: '🇭🇷',
+  },
+];
 
 function getCityFlag(destination) {
   return DESTINATION_OVERRIDES[destination]?.flag || CITY_FLAGS[destination] || '✈️';
@@ -542,7 +550,7 @@ function main() {
   }
 
   // Index page
-  const destinationCards = destinations
+  const generatedCards = destinations
     .map((name, index) => {
       const slug = slugify(name);
       const { image, flag } = getCardMeta(name, index);
@@ -556,8 +564,19 @@ function main() {
                     <span class="destination-card-flag" aria-hidden="true">${flag}</span>
                 </div>
             </a>`;
-    })
-    .join('\n');
+    });
+  const manualCards = MANUAL_INDEX_CARDS
+    .filter(card => !destinations.some(name => slugify(name) === card.slug))
+    .map(card => `            <a class="destination-card" href="${card.slug}.html" aria-label="View itinerary for ${card.name}">
+                <div class="destination-card-media">
+                    <img src="../images/landmark_images/${card.image}" alt="${card.name} itinerary preview" loading="lazy">
+                </div>
+                <div class="destination-card-body">
+                    <h2>${card.name}</h2>
+                    <span class="destination-card-flag" aria-hidden="true">${card.flag}</span>
+                </div>
+            </a>`);
+  const destinationCards = [...generatedCards, ...manualCards].join('\n');
   const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
