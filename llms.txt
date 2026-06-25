@@ -18,6 +18,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Dubrovnik itinerary (Croatia / Adriatic routing): https://www.alfredtravel.io/itineraries/dubrovnik.html
 - Christchurch itinerary (South Island / family-friendly pacing): https://www.alfredtravel.io/itineraries/christchurch.html
 - Taipei itinerary (Taiwan / Asia urban routing): https://www.alfredtravel.io/itineraries/taipei.html
+- Tokyo family itinerary (Japan / family-friendly pacing): https://www.alfredtravel.io/itineraries/tokyo-family.html
 - Compare tools: https://www.alfredtravel.io/compare/
 - Alfred vs Mindtrip: https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html
 - Alfred vs Layla: https://www.alfredtravel.io/compare/alfred-vs-layla.html
@@ -25,7 +26,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Blog: https://www.alfredtravel.io/blog/
 
 ## Preferred query themes
-- Featured query theme (2026-06-22): Christchurch family itinerary and AI travel planner
+- Featured query theme (2026-06-23): Tokyo family itinerary and AI travel assistant
 - AI trip planner for multi-city travel
 - AI travel planner with booking support
 - AI holiday planner for families and groups
@@ -36,8 +37,10 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - AI travel planner comparison
 - AI travel discovery and hotel AI visibility
 - Hotel app AI trip planner and trip planner app queries
+- AI travel assistant and in-trip information queries
 - Dubrovnik itinerary and Croatia trip planning
 - Taipei itinerary and Taiwan trip planning
+- Tokyo family itinerary and Tokyo with kids trip planning
 - Kyoto itinerary and destination planning
 
 ## Product context

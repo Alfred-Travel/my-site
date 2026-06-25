@@ -198,6 +198,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'old_city_of_dubrovnik.jpg',
     flag: '🇭🇷',
   },
+  {
+    name: 'Tokyo Family',
+    slug: 'tokyo-family',
+    image: 'commons/tokyo.jpg',
+    flag: '🇯🇵',
+  },
 ];
 
 function getCityFlag(destination) {
@@ -577,13 +583,14 @@ function main() {
                 </div>
             </a>`);
   const destinationCards = [...generatedCards, ...manualCards].join('\n');
+  const totalItineraryCount = destinations.length + manualCards.length;
   const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trip Planner Itineraries | ${destinations.length} Destinations - Alfred Travel</title>
-    <meta name="description" content="Validated 7-day itineraries for ${destinations.length} top destinations. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
+    <title>AI Trip Planner Itineraries | ${totalItineraryCount} Validated Plans - Alfred Travel</title>
+    <meta name="description" content="Validated 7-day itineraries across ${totalItineraryCount} plans. AI Travel Planner and AI Holiday Planner with flight gaps checked, hotel proximity verified.">
     ${faviconHead('..')}
     ${typographyPreconnect()}
     <link rel="stylesheet" href="../css/tokens.css">
@@ -616,7 +623,7 @@ function main() {
                 <div class="tai-hero-wrapper">
                     <div class="tai-hero-copy">
                         <h1 id="itineraries-hero-heading" class="tai-hero-title">Validated trip itineraries</h1>
-                        <p class="tai-hero-lead">Browse 7-day plans across ${destinations.length} destinations—structured for practical travel flow, with transit checks and route logic built in.</p>
+                        <p class="tai-hero-lead">Browse 7-day plans across ${totalItineraryCount} itinerary pages—structured for practical travel flow, with transit checks, route logic, and family-ready variants built in.</p>
                     </div>
                 </div>
             </div>
@@ -624,9 +631,9 @@ function main() {
         <section class="tai-agn-section tai-itineraries-agn" aria-labelledby="itineraries-grid-heading">
             <div class="tai-agn-inner">
                 <div class="tai-agn-container">
-                    <span class="tai-agn-badge">Destinations</span>
-                    <h2 id="itineraries-grid-heading" class="tai-agn-heading">Pick a city to explore</h2>
-                    <p class="tai-agn-desc">Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (<a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Open any destination for a sample itinerary and logistical validation notes.</p>
+                    <span class="tai-agn-badge">Itinerary pages</span>
+                    <h2 id="itineraries-grid-heading" class="tai-agn-heading">Pick a plan to explore</h2>
+                    <p class="tai-agn-desc">Index photos are sourced from <a href="https://commons.wikimedia.org/" rel="noopener noreferrer">Wikimedia Commons</a> (<a href="../images/landmark_images/commons/ATTRIBUTION.md">image credits</a>). Open any page for a sample itinerary and logistical validation notes.</p>
                     <div class="destination-grid" aria-label="Destination itinerary grid">
 ${destinationCards}
                     </div>
