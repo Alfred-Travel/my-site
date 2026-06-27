@@ -204,6 +204,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'commons/tokyo.jpg',
     flag: '🇯🇵',
   },
+  {
+    name: 'Osaka Family',
+    slug: 'osaka-family',
+    image: 'commons/osaka.jpg',
+    flag: '🇯🇵',
+  },
 ];
 
 function getCityFlag(destination) {
