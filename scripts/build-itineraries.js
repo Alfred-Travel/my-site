@@ -210,6 +210,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'commons/osaka.jpg',
     flag: '🇯🇵',
   },
+  {
+    name: 'Seoul Family',
+    slug: 'seoul-family',
+    image: 'commons/seoul.jpg',
+    flag: '🇰🇷',
+  },
 ];
 
 function getCityFlag(destination) {
