@@ -12,6 +12,7 @@
   <url><loc>https://www.alfredtravel.io/terms.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/delete-account.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.alfredtravel.io/prize-tc.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/hotel-ai-trip-planners-family-first-night.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/travelers-research-less-family-city-trip.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-travel-discovery-hotel-base-decision.html</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-travel-assistant-worth-paying-for.html</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -141,6 +142,7 @@
   <url><loc>https://www.alfredtravel.io/itineraries/tokyo-family.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/osaka-family.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/seoul-family.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/auckland-family.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/alfred-vs-layla.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>

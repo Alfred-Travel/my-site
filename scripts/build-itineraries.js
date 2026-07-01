@@ -216,6 +216,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'commons/seoul.jpg',
     flag: '🇰🇷',
   },
+  {
+    name: 'Auckland Family',
+    slug: 'auckland-family',
+    image: 'commons/auckland.jpg',
+    flag: '🇳🇿',
+  },
 ];
 
 function getCityFlag(destination) {
