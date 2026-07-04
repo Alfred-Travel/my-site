@@ -222,6 +222,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'commons/auckland.jpg',
     flag: '🇳🇿',
   },
+  {
+    name: 'Christchurch Family',
+    slug: 'christchurch-family',
+    image: 'mount_cook.jpg',
+    flag: '🇳🇿',
+  },
 ];
 
 function getCityFlag(destination) {
