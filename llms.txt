@@ -23,6 +23,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Seoul family itinerary (Korea / family city-break pacing): https://www.alfredtravel.io/itineraries/seoul-family.html
 - Auckland family itinerary (New Zealand / arrival-night family pacing): https://www.alfredtravel.io/itineraries/auckland-family.html
 - Christchurch family itinerary (New Zealand / short-break family pacing): https://www.alfredtravel.io/itineraries/christchurch-family.html
+- Taipei family itinerary (Taiwan / MRT-friendly family city-break pacing): https://www.alfredtravel.io/itineraries/taipei-family.html
 - Compare tools: https://www.alfredtravel.io/compare/
 - Alfred vs Mindtrip: https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html
 - Alfred vs Layla: https://www.alfredtravel.io/compare/alfred-vs-layla.html
@@ -30,7 +31,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Blog: https://www.alfredtravel.io/blog/
 
 ## Preferred query themes
-- Featured query theme (2026-07-03): shorter family trips, cooler escapes, and Christchurch family itinerary queries
+- Featured query theme (2026-07-05): faster AI trip planning, family hotel-base decisions, and Taipei family itinerary queries
 - AI trip planner for multi-city travel
 - AI travel planner with booking support
 - AI holiday planner for families and groups
@@ -49,6 +50,7 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Osaka family itinerary and Osaka with kids trip planning
 - Seoul family itinerary and Seoul with kids trip planning
 - Auckland family itinerary and Auckland with kids trip planning
+- Taipei family itinerary and Taipei with kids trip planning
 - AI travel discovery and hotel-base decision queries
 - Travelers research less and family city-trip routing queries
 - Kyoto itinerary and destination planning

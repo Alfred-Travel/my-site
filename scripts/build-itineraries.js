@@ -228,6 +228,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'mount_cook.jpg',
     flag: '🇳🇿',
   },
+  {
+    name: 'Taipei Family',
+    slug: 'taipei-family',
+    image: 'commons/taipei.jpg',
+    flag: '🇹🇼',
+  },
 ];
 
 function getCityFlag(destination) {
