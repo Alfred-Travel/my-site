@@ -234,6 +234,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'commons/taipei.jpg',
     flag: '🇹🇼',
   },
+  {
+    name: 'Rome Family',
+    slug: 'rome-family',
+    image: 'commons/rome.jpg',
+    flag: '🇮🇹',
+  },
 ];
 
 function getCityFlag(destination) {
