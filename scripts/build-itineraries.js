@@ -240,6 +240,12 @@ const MANUAL_INDEX_CARDS = [
     image: 'commons/rome.jpg',
     flag: '🇮🇹',
   },
+  {
+    name: 'Honolulu Family',
+    slug: 'honolulu-family',
+    image: 'waikiki_beach.jpg',
+    flag: '🇺🇸',
+  },
 ];
 
 function getCityFlag(destination) {

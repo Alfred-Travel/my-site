@@ -394,6 +394,7 @@ const extraItineraryUrls = [
   { loc: BASE_URL + '/itineraries/christchurch-family.html', changefreq: 'weekly', priority: '0.8' },
   { loc: BASE_URL + '/itineraries/taipei-family.html', changefreq: 'weekly', priority: '0.8' },
   { loc: BASE_URL + '/itineraries/rome-family.html', changefreq: 'weekly', priority: '0.8' },
+  { loc: BASE_URL + '/itineraries/honolulu-family.html', changefreq: 'weekly', priority: '0.8' },
 ];
 const nextAppUrls = [
   { loc: BASE_URL + '/mindtrip-alternative', changefreq: 'weekly', priority: '0.84' },
