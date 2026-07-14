@@ -517,10 +517,7 @@ footer {
     flex-direction: column;
 }
 
-/* Hide redundant Solutions footer column while keeping URLs elsewhere in site signals */
-footer .footer-column:has(> .footer-links > li > a[href$="ai-trip-planner/index.html"]) {
-    display: none;
-}
+
 
 /* Remove redundant Company footer link when Features column exists */
 footer .footer-links li:has(> a[href$="#features"]) {

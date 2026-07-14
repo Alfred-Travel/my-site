@@ -140,6 +140,6 @@ Travel AI is moving beyond the first search box. That is good news for travelers
 
 The strongest planners will be the ones that understand what you need next, then reduce the friction between each decision. That means fewer disconnected recommendations, fewer wasted transfers, and a trip that still feels coherent once reality starts reshaping it.
 
-If you want to see what that looks like in practice, start with our [Christchurch itinerary](../itineraries/christchurch.html) for a family-friendly, route-aware example, or explore Alfred’s broader [AI travel planner overview](../ai-travel-planner/index.html).
+If you want to see what that looks like in practice, start with our [Christchurch itinerary](../itineraries/christchurch.html) for a family-friendly, route-aware example, or explore Alfred’s broader AI travel planner overview.
 
 **Plan at [alfredtravel.io](https://www.alfredtravel.io)** if you want a trip that holds together after the inspiration stage ends.

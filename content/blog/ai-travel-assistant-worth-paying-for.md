@@ -160,6 +160,6 @@ The AI help worth paying for is the kind that makes a trip easier to run:
 - less decision fatigue,
 - and a plan that still works when reality interrupts it.
 
-If you want a concrete example of what that kind of route-aware planning looks like, start with our [Tokyo family itinerary](../itineraries/tokyo-family.html) or explore Alfred’s broader [AI travel planner overview](../ai-travel-planner/index.html).
+If you want a concrete example of what that kind of route-aware planning looks like, start with our [Tokyo family itinerary](../itineraries/tokyo-family.html) or explore Alfred’s broader AI travel planner overview.
 
 **Plan at [alfredtravel.io](https://www.alfredtravel.io)** if you want an itinerary that stays useful after the booking confirmation lands.

@@ -39,7 +39,7 @@ India is one of the clearest examples of where travel is moving fast across mult
 
 That means generic destination copy is less useful. A page has to be specific enough to help with the real planning job: where to stay, how to sequence neighborhoods, how to handle transfers, and which day structures make sense once local traffic and opening-hour friction are included.
 
-For Alfred, that is also the kind of content that can support better search discovery. A page that answers concrete planning questions in plain language is more useful than a thin destination summary, especially when it links onward to a working [AI Trip Planner](../ai-trip-planner/index.html) and a practical [FAQ](../faq.html) for travelers who want to keep moving.
+For Alfred, that is also the kind of content that can support better search discovery. A page that answers concrete planning questions in plain language is more useful than a thin destination summary, especially when it links onward to a working AI Trip Planner and a practical [FAQ](../faq.html) for travelers who want to keep moving.
 
 ## Why Delhi Is the Right Destination to Add
 
@@ -68,7 +68,7 @@ That means building pages that are:
 
 That is why adding a practical [Delhi itinerary](../itineraries/delhi.html) is a better move than publishing another abstract opinion alone. The blog can explain the trend; the itinerary page can convert that trend into a usable planning asset.
 
-It also gives Alfred a better internal-link path around one of the site’s biggest traffic themes: travelers discovering Alfred through broad AI-planning queries can move from an industry article, to a destination example, to the [AI Trip Planner](../ai-trip-planner/index.html) without changing the site’s layout or forcing a redesign.
+It also gives Alfred a better internal-link path around one of the site’s biggest traffic themes: travelers discovering Alfred through broad AI-planning queries can move from an industry article, to a destination example, to the AI Trip Planner without changing the site’s layout or forcing a redesign.
 
 ## Final Thought
 
@@ -85,4 +85,4 @@ Delhi forces practical decisions. Airport transfers, traffic buffers, heat, and 
 A stronger itinerary explains sequence, pacing, and trade-offs. It helps a traveler decide where to stay, which monuments belong on the same day, and when ambitious stacking creates too much transport friction.
 
 ### Where should a traveler go after reading this post?
-Start with Alfred’s [Delhi itinerary](../itineraries/delhi.html) for a concrete route example, then use the [AI Trip Planner](../ai-trip-planner/index.html) to adapt the trip to your own dates and priorities.
+Start with Alfred’s [Delhi itinerary](../itineraries/delhi.html) for a concrete route example, then use the AI Trip Planner to adapt the trip to your own dates and priorities.

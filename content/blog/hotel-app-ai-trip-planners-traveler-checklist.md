@@ -78,6 +78,6 @@ That is good for category awareness. It is also a reminder that the best planner
 
 That is where structured itinerary logic becomes more important than slick chat.
 
-If you want to compare that planning style against a real city example, start with our [Taipei itinerary](../itineraries/taipei.html) or the broader [AI travel planner overview](../ai-travel-planner/index.html).
+If you want to compare that planning style against a real city example, start with our [Taipei itinerary](../itineraries/taipei.html) or the broader AI travel planner overview.
 
 **Plan at [alfredtravel.io](https://www.alfredtravel.io)** if you want a trip you can adjust, validate, and actually run once real-world timing kicks in.
