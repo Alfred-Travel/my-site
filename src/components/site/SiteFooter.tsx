@@ -6,15 +6,21 @@ const footerGroups = [
     links: [
       { href: "/about.html", label: "About Us" },
       { href: "/about.html#mission", label: "Our Mission" },
+      { href: "/about.html#press", label: "In the Press" },
       { href: "/about.html#team", label: "Our Team" },
-      { href: "/products.html", label: "Features" },
+    ],
+  },
+  {
+    title: "Features",
+    links: [
+      { href: "/products.html", label: "Our Features" },
     ],
   },
   {
     title: "Explore",
     links: [
-      { href: "/compare/", label: "Compare" },
       { href: "/itineraries/index.html", label: "Itineraries" },
+      { href: "/compare/", label: "Compare" },
       { href: "/blog/index.html", label: "Blog" },
       { href: "/faq.html", label: "FAQ" },
     ],
