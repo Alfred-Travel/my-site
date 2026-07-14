@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.alfredtravel.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.alfredtravel.io/ai-trip-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.alfredtravel.io/ai-travel-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.alfredtravel.io/ai-holiday-planner/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/products.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.alfredtravel.io/road-trip.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -152,8 +149,6 @@
   <url><loc>https://www.alfredtravel.io/itineraries/rome-family.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/honolulu-family.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/alfred-vs-layla.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.alfredtravel.io/compare/alfred-vs-guidegeek.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.alfredtravel.io/mindtrip-alternative</loc><changefreq>weekly</changefreq><priority>0.84</priority></url>
 </urlset>

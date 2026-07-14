@@ -11,10 +11,6 @@ const SKIP = new Set(['node_modules', '.git', '.next', 'dist']);
 
 const TARGETS = [
   { file: 'road-trip.html', homeCssHref: 'css/home.css', logoHref: 'index.html', assetPrefix: '', downloadHref: 'index.html#app-downloads' },
-  { file: 'ai-trip-planner/index.html', homeCssHref: '../css/home.css', logoHref: '../index.html', assetPrefix: '..', downloadHref: '../index.html#app-downloads' },
-  { file: 'ai-travel-planner/index.html', homeCssHref: '../css/home.css', logoHref: '../index.html', assetPrefix: '..', downloadHref: '../index.html#app-downloads' },
-  { file: 'ai-holiday-planner/index.html', homeCssHref: '../css/home.css', logoHref: '../index.html', assetPrefix: '..', downloadHref: '../index.html#app-downloads' },
-  { file: 'compare/alfred-vs-mindtrip.html', homeCssHref: '../css/home.css', logoHref: '../index.html', assetPrefix: '..', downloadHref: '../index.html#app-downloads' },
 ];
 
 function walk(dir, files = []) {

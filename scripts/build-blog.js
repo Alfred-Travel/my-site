@@ -62,7 +62,7 @@ const INDEX_FOOTER = `
         <div class="footer-content">
             <div class="footer-column"><h3>Company</h3><ul class="footer-links"><li><a href="../about.html">Company</a></li><li><a href="../about.html#mission">Our Mission</a></li><li><a href="../about.html#press">In the Press</a></li><li><a href="../about.html#team">Our Team</a></li></ul></div>
             <div class="footer-column"><h3>Features</h3><ul class="footer-links"><li><a href="../products.html">Our Features</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="../compare/index.html">Compare</a></li><li><a href="index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
-            <div class="footer-column"><h3>Solutions</h3><ul class="footer-links"><li><a href="../ai-trip-planner/index.html">AI Trip Planner</a></li><li><a href="../ai-travel-planner/index.html">AI Travel Planner</a></li><li><a href="../ai-holiday-planner/index.html">AI Holiday Planner</a></li></ul></div>
+            <div class="footer-column"><h3>Explore</h3><ul class="footer-links"><li><a href="../compare/index.html">Compare</a></li><li><a href="../itineraries/index.html">Itineraries</a></li><li><a href="index.html">Blog</a></li></ul></div>
             <div class="footer-column"><h3>Support</h3><ul class="footer-links"><li><a href="../delete-account.html">Support Center</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../faq.html">Help & FAQ</a></li></ul></div>
             <div class="footer-column"><h3>Legal</h3><ul class="footer-links"><li><a href="../terms.html">Terms & Conditions</a></li><li><a href="../terms.html#privacy">Privacy Policy</a></li><li><a href="../prize-tc.html">Prize Terms</a></li></ul></div>
         </div>
@@ -348,9 +348,6 @@ console.log('Wrote blog/index.html');
 // Build sitemap.xml
 const staticUrls = [
   { loc: BASE_URL + '/', changefreq: 'weekly', priority: '1.0' },
-  { loc: BASE_URL + '/ai-trip-planner/', changefreq: 'weekly', priority: '0.9' },
-  { loc: BASE_URL + '/ai-travel-planner/', changefreq: 'weekly', priority: '0.9' },
-  { loc: BASE_URL + '/ai-holiday-planner/', changefreq: 'weekly', priority: '0.9' },
   { loc: BASE_URL + '/about.html', changefreq: 'monthly', priority: '0.9' },
   { loc: BASE_URL + '/products.html', changefreq: 'monthly', priority: '0.9' },
   { loc: BASE_URL + '/road-trip.html', changefreq: 'monthly', priority: '0.9' },
@@ -381,7 +378,6 @@ const itineraryUrls = destinations.map(name => ({
 }));
 const compareUrls = [
   { loc: BASE_URL + '/compare/', changefreq: 'weekly', priority: '0.7' },
-  { loc: BASE_URL + '/compare/alfred-vs-mindtrip.html', changefreq: 'weekly', priority: '0.75' },
   { loc: BASE_URL + '/compare/alfred-vs-layla.html', changefreq: 'weekly', priority: '0.75' },
   { loc: BASE_URL + '/compare/alfred-vs-guidegeek.html', changefreq: 'weekly', priority: '0.75' },
 ];
@@ -396,9 +392,7 @@ const extraItineraryUrls = [
   { loc: BASE_URL + '/itineraries/rome-family.html', changefreq: 'weekly', priority: '0.8' },
   { loc: BASE_URL + '/itineraries/honolulu-family.html', changefreq: 'weekly', priority: '0.8' },
 ];
-const nextAppUrls = [
-  { loc: BASE_URL + '/mindtrip-alternative', changefreq: 'weekly', priority: '0.84' },
-];
+const nextAppUrls = [];
 const sitemapLines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

@@ -11,22 +11,12 @@ const footerGroups = [
     ],
   },
   {
-    title: "Features",
-      links: [
-      { href: "/products.html", label: "Our Features" },
+    title: "Explore",
+    links: [
+      { href: "/compare/", label: "Compare" },
       { href: "/itineraries/index.html", label: "Itineraries" },
-      { href: "/mindtrip-alternative", label: "Mindtrip alternative" },
-      { href: "/vs/alfred-vs-wonderplan-vs-tripadvisor", label: "Compare" },
       { href: "/blog/index.html", label: "Blog" },
       { href: "/faq.html", label: "FAQ" },
-    ],
-  },
-  {
-    title: "Solutions",
-    links: [
-      { href: "/ai-trip-planner", label: "AI Trip Planner" },
-      { href: "/ai-travel-planner", label: "AI Travel Planner" },
-      { href: "/ai-holiday-planner", label: "AI Holiday Planner" },
     ],
   },
   {

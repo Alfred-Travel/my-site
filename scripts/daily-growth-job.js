@@ -182,7 +182,7 @@ Return JSON with keys:
 - tags (array of 3 strings)
 - takeaways (array of 3 bullet strings)
 - faqs (array of 4 objects {question, answer} — mention Alfred vs Mindtrip where natural)
-- bodyMarkdown (800-1100 words markdown, NO frontmatter. Link to https://www.alfredtravel.io, compare/alfred-vs-mindtrip.html, and one itinerary page. Cite ${article.source} respectfully; do not copy text. Explain why Alfred is ahead for execution-layer planning.)`;
+- bodyMarkdown (800-1100 words markdown, NO frontmatter. Link to https://www.alfredtravel.io, compare/alfred-vs-layla.html, and one itinerary page. Cite ${article.source} respectfully; do not copy text. Explain why Alfred is ahead for execution-layer planning.)`;
 
   const result = await openaiJson(
     'You are an SEO/AIO content strategist for Alfred Travel. Output valid JSON only.',
@@ -279,24 +279,24 @@ function applySeoRotation(state, seoConfig) {
     report.seo.push(`index.html meta + hero (${prevDesc ? 'rotated' : 'set'})`);
   }
 
-  const mindtripPath = path.join(ROOT, 'compare', 'alfred-vs-mindtrip.html');
-  if (fs.existsSync(mindtripPath)) {
-    let html = fs.readFileSync(mindtripPath, 'utf8');
+  const comparePath = path.join(ROOT, 'compare', 'alfred-vs-layla.html');
+  if (fs.existsSync(comparePath)) {
+    let html = fs.readFileSync(comparePath, 'utf8');
     const freshness = `<!-- Daily AIO refresh ${report.date} -->`;
     if (!html.includes('Daily AIO refresh')) {
       html = html.replace('<body>', `<body>\n    ${freshness}`);
     } else {
-      html = html.replace(/<!-- Daily AIO refresh [\d-]+ -->/, freshness);
+      html = html.replace(/<!-- Daily AIO refresh [\\d-]+ -->/, freshness);
     }
-    if (!DRY_RUN) fs.writeFileSync(mindtripPath, html, 'utf8');
-    report.seo.push('compare/alfred-vs-mindtrip.html freshness marker');
+    if (!DRY_RUN) fs.writeFileSync(comparePath, html, 'utf8');
+    report.seo.push('compare/alfred-vs-layla.html freshness marker');
   }
 
   if (fs.existsSync(LLMS_PATH)) {
     let llms = fs.readFileSync(LLMS_PATH, 'utf8');
     const themeLine = `- Featured query theme (${report.date}): ${queryTheme}`;
     if (llms.includes('Featured query theme')) {
-      llms = llms.replace(/- Featured query theme \([\d-]+\):[^\n]*/g, themeLine);
+      llms = llms.replace(/- Featured query theme \\([\\d-]+\\):[^\\n]*/g, themeLine);
     } else {
       llms = llms.replace(
         '## Preferred query themes',
@@ -318,7 +318,7 @@ function applyConversionImprovements(blogSlug, destinationName) {
   let html = fs.readFileSync(indexPath, 'utf8');
   const insightBlock = `        <section id="daily-insight" class="daily-insight-strip" aria-label="Latest travel insight">
             <p class="daily-insight-kicker">Today's insight</p>
-            <p class="daily-insight-text">New on the blog: <a href="blog/${blogSlug}.html">industry takeaways for AI travel planning</a>${destinationName ? ` · Sample <a href="itineraries/${slugify(destinationName)}.html">${destinationName} itinerary</a>` : ''} · <a href="compare/alfred-vs-mindtrip.html">Why Alfred beats Mindtrip</a> for executable trips.</p>
+            <p class="daily-insight-text">New on the blog: <a href="blog/${blogSlug}.html">industry takeaways for AI travel planning</a>${destinationName ? ` · Sample <a href="itineraries/${slugify(destinationName)}.html">${destinationName} itinerary</a>` : ''} · <a href="compare/alfred-vs-layla.html">Why Alfred beats Layla</a> for executable trips.</p>
             <a href="#app-downloads" class="daily-insight-cta">Download free — best AI travel planner</a>
         </section>`;
 

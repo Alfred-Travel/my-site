@@ -15,14 +15,6 @@ function readMarkdownSlugs(dirPath: string): string[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   const coreRoutes = [
     "",
-    "/ai-trip-planner",
-    "/ai-travel-planner",
-    "/ai-holiday-planner",
-    "/mindtrip-alternative",
-    "/vs/alfred-vs-wonderplan-vs-tripadvisor",
-    "/compare/alfred-vs-mindtrip",
-    "/compare/alfred-vs-wanderlog",
-    "/compare/alfred-vs-trip-planner-ai",
     "/blog/index.html",
     "/compare/index.html",
     "/itineraries/index.html",
@@ -37,11 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const cityEntries = majorCities.map((city) => ({
-    url: `${siteUrl}/ai-trip-planner/${slugifyCity(city)}`,
-    lastModified: new Date(),
-  }));
-
   const itineraryEntries = majorCities.map((city) => ({
     url: `${siteUrl}/itineraries/${slugifyCity(city)}.html`,
     lastModified: new Date(),
@@ -52,5 +39,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...coreEntries, ...cityEntries, ...itineraryEntries, ...blogEntries];
+  return [...coreEntries, ...itineraryEntries, ...blogEntries];
 }

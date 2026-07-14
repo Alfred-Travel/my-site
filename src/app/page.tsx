@@ -20,25 +20,18 @@ export default function HomePage() {
           </p>
           <div className="hero-actions">
             <Link
-              href="/ai-trip-planner"
+              href="/compare/"
               className="primary-button"
-              aria-label="Visit the AI Trip Planner page"
+              aria-label="Visit the compare hub"
             >
-              Explore AI Trip Planner
+              Explore Comparisons
             </Link>
             <Link
-              href="/vs/alfred-vs-wonderplan-vs-tripadvisor"
+              href="/blog/index.html"
               className="secondary-button"
-              aria-label="Compare Alfred with Wonderplan and Tripadvisor"
+              aria-label="Visit the Alfred Travel blog"
             >
-              Compare Alfred
-            </Link>
-            <Link
-              href="/mindtrip-alternative"
-              className="secondary-button"
-              aria-label="Read Alfred Travel as a Mindtrip alternative"
-            >
-              Mindtrip alternative
+              Read the Blog
             </Link>
           </div>
         </div>

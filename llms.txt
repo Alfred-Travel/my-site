@@ -10,9 +10,6 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 
 ## Primary pages
 - Home: https://www.alfredtravel.io/
-- AI Trip Planner: https://www.alfredtravel.io/ai-trip-planner/
-- AI Travel Planner: https://www.alfredtravel.io/ai-travel-planner/
-- AI Holiday Planner: https://www.alfredtravel.io/ai-holiday-planner/
 - Itineraries: https://www.alfredtravel.io/itineraries/
 - Orlando itinerary (family / parks corridor): https://www.alfredtravel.io/itineraries/orlando.html
 - Dubrovnik itinerary (Croatia / Adriatic routing): https://www.alfredtravel.io/itineraries/dubrovnik.html
@@ -27,7 +24,6 @@ Alfred Travel is an AI-powered trip planning platform focused on personalized, e
 - Rome family itinerary (Italy / queue-aware family city-break pacing): https://www.alfredtravel.io/itineraries/rome-family.html
 - Honolulu family itinerary (Hawaii / arrival-reset family pacing): https://www.alfredtravel.io/itineraries/honolulu-family.html
 - Compare tools: https://www.alfredtravel.io/compare/
-- Alfred vs Mindtrip: https://www.alfredtravel.io/compare/alfred-vs-mindtrip.html
 - Alfred vs Layla: https://www.alfredtravel.io/compare/alfred-vs-layla.html
 - Alfred vs GuideGeek: https://www.alfredtravel.io/compare/alfred-vs-guidegeek.html
 - Rome family day-anchor blog: https://www.alfredtravel.io/blog/ai-trip-planners-rome-family-bookable-anchor.html

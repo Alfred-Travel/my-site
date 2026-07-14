@@ -52,13 +52,7 @@ export const metadata: Metadata = {
     description:
       "Validated itineraries, multi-city planning, and booking-ready travel execution in one AI travel planner.",
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/images/brand/alfred-logo-header.png", type: "image/png" },
-    ],
-    apple: "/images/brand/alfred-logo-header.png",
-  },
+
 };
 
 export default function RootLayout({

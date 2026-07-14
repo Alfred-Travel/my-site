@@ -24,9 +24,6 @@
   ],
   "pagesToRefresh": [
     "index.html",
-    "ai-travel-planner/index.html",
-    "ai-trip-planner/index.html",
-    "compare/alfred-vs-mindtrip.html",
     "faq.html"
   ]
 }

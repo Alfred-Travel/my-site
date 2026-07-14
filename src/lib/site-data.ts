@@ -67,11 +67,6 @@ export const websiteSchema = {
   description:
     "AI trip planner with validated itineraries, multi-city travel logic, and booking-ready destination planning.",
   inLanguage: "en",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${siteUrl}/ai-trip-planner/{search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export const homepageFaqs: FAQItem[] = [
