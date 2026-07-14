@@ -29,7 +29,6 @@ const footerGroups = [
     title: "Support",
     links: [
       { href: "/delete-account.html", label: "Support Center" },
-      { href: "/index.html#contact", label: "Contact Us" },
       { href: "/faq.html", label: "Help & FAQ" },
     ],
   },
