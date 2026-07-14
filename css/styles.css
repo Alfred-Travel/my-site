@@ -500,8 +500,8 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(2rem, 4vw, 4rem);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(1.5rem, 2.5vw, 3rem);
     align-items: start;
     justify-content: space-between;
     margin-bottom: 2rem;

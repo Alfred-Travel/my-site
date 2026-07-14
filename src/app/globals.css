@@ -424,7 +424,7 @@ label,
   margin: 0 auto 2rem;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .footer-column h3 {
