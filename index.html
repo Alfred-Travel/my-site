@@ -210,7 +210,15 @@
       .desktop-nav a:hover { background: rgba(255,255,255,.05); }
       .menu-button { display: block; }
       .hero { padding-top: 38px; }
-      h1 { max-width: 100%; font-size: clamp(3.1rem, 16vw, 5.4rem); }
+      body { overflow-x: hidden; }
+      .hero-grid > *, .app-preview, .preview-shell, .preview-content, .app-screen, .decision-panel { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
+      .hero-grid > * { min-width: 0; }
+      .hero-lead { width: 100%; max-width: 100%; overflow-wrap: anywhere; white-space: normal; }
+      .hero-notes { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .preview-top { display: grid; grid-template-columns: 1fr; align-items: start; gap: 6px; }
+      .preview-caption { flex-wrap: wrap; }
+      .preview-status { white-space: normal; width: 100%; }
+      h1 { max-width: 100%; font-size: clamp(2.8rem, 14vw, 4.6rem); }
       .preview-content { grid-template-columns: 1fr; }
       .decision-panel { order: -1; }
       .app-screen img { height: 360px; }
