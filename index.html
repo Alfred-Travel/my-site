@@ -6,6 +6,7 @@
   <meta name="description" content="Alfred helps families and multi-city travellers turn their preferences, destinations, dates, and pace into a clear, editable trip plan.">
   <meta name="theme-color" content="#08131f">
   <title>Alfred Travel | Plan your trip your way</title>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicon-48.png">
   <style>
     :root {
       --ink: #07111c;
@@ -130,6 +131,15 @@
     .product-card p { margin: 0; color: var(--muted); }
     .product-card--large { min-height: 340px; display: grid; align-content: space-between; overflow: hidden; position: relative; }
     .product-card--large::after { content: ""; position: absolute; width: 300px; height: 300px; right: -110px; bottom: -110px; border-radius: 50%; background: rgba(245,201,117,.10); filter: blur(5px); }
+    .product-card--large > * { position: relative; z-index: 1; }
+    .bucket-demo { margin-top: 22px; }
+    .bucket-demo-label { margin-bottom: 7px; color: var(--gold); font-size: 10px; font-weight: 820; letter-spacing: .15em; text-transform: uppercase; }
+    .bucket-demo-input { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; min-height: 48px; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 14px; background: rgba(4,12,20,.32); }
+    .bucket-demo-token { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; color: var(--cream); background: rgba(255,255,255,.08); font-size: 12px; line-height: 1; }
+    .bucket-demo-token b { color: var(--teal); font-size: 13px; font-weight: 500; }
+    .bucket-demo-typing { display: inline-flex; align-items: center; min-height: 24px; color: var(--muted); font-size: 13px; }
+    .bucket-demo-caret { width: 1px; height: 16px; margin-left: 2px; background: var(--teal); animation: bucket-caret-blink 1s steps(1,end) infinite; }
+    @keyframes bucket-caret-blink { 50% { opacity: 0; } }
     .preference-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
     .preference { padding: 8px 11px; color: var(--cream); border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); font-size: 12px; }
     .product-card--stack { display: grid; gap: 12px; background: transparent; border: 0; padding: 0; }
@@ -282,7 +292,7 @@
                 <div class="panel-label">Trip setup</div>
                 <div class="panel-title">Make it yours.</div>
                 <div class="selector"><span><small>Travellers</small><b>Family</b></span><span>⌄</span></div>
-                <div class="selector"><span><small>Pace</small><b>Mid Range</b></span><span>⌄</span></div>
+                <div class="selector"><span><small>Budget</small><b>Mid Range</b></span><span>⌄</span></div>
                 <div class="selector"><span><small>Dates</small><b>Select travel dates</b></span><span>⌄</span></div>
                 <div class="panel-label" style="margin-top:6px">Interests</div>
                 <div class="pill-wrap"><span class="pill">Food</span><span class="pill">Kids Friendly</span><span class="pill">Beach</span><span class="pill">Shopping</span></div>
@@ -318,7 +328,7 @@
         </div>
         <div class="product-grid">
           <article class="product-card product-card--large">
-            <div><h3>Your trip starts with your choices.</h3><p>Tell Alfred who is travelling, how you want the trip to feel, and what you want to do. Your preferences become the shape of the plan.</p></div>
+            <div><h3>Your trip starts with your choices.</h3><p>Tell Alfred who is travelling, how you want the trip to feel, and what you want to do. Your preferences become the shape of the plan.</p><div class="bucket-demo" aria-hidden="true"><div class="bucket-demo-label">Bucket list</div><div class="bucket-demo-input"><span class="bucket-demo-token">fashion <b>×</b></span><span class="bucket-demo-token">gundam museum <b>×</b></span><span class="bucket-demo-typing"><span id="bucket-demo-text"></span><span class="bucket-demo-caret"></span></span></div></div></div>
             <div class="preference-row" aria-label="Trip preferences"><span class="preference">Family</span><span class="preference">Mid Range</span><span class="preference">Kids Friendly</span><span class="preference">Food</span><span class="preference">Beach</span></div>
           </article>
           <div class="product-card product-card--stack">
@@ -396,6 +406,35 @@
       menuButton?.setAttribute('aria-expanded', 'false');
       menuButton?.setAttribute('aria-label', 'Open navigation');
     }));
+
+    const bucketDemoText = document.querySelector('#bucket-demo-text');
+    if (bucketDemoText) {
+      const bucketWords = ['studio ghibli', 'jordan museum', 'gundam museum'];
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reducedMotion) {
+        bucketDemoText.textContent = bucketWords[0];
+      } else {
+        let wordIndex = 0;
+        let characterIndex = 0;
+        let deleting = false;
+        const typeBucketWord = () => {
+          const word = bucketWords[wordIndex];
+          characterIndex += deleting ? -1 : 1;
+          bucketDemoText.textContent = word.slice(0, characterIndex);
+          let delay = deleting ? 42 : 78;
+          if (!deleting && characterIndex === word.length) delay = 1250;
+          if (deleting && characterIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % bucketWords.length;
+            delay = 420;
+          } else if (!deleting && characterIndex === word.length) {
+            deleting = true;
+          }
+          window.setTimeout(typeBucketWord, delay);
+        };
+        window.setTimeout(typeBucketWord, 700);
+      }
+    }
   </script>
 </body>
 </html>
