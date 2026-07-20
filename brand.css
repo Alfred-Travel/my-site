@@ -1,0 +1,76 @@
+:root{
+  --alfred-charcoal:#101111;
+  --alfred-charcoal-2:#171c1c;
+  --alfred-charcoal-3:#202727;
+  --alfred-ivory:#ffffd9;
+  --alfred-mint:#39cdbb;
+  --alfred-mint-soft:#68d7c0;
+  --alfred-teal:#2f8572;
+  --alfred-muted:#9db4c6;
+  --alfred-border:rgba(57,205,187,.22);
+}
+
+/* Brand-board alignment for dark Website V2 surfaces. */
+body:not(.itinerary-pdf-style){
+  background:var(--alfred-charcoal)!important;
+  color:var(--alfred-ivory);
+}
+body:not(.itinerary-pdf-style) .site-header{
+  background:rgba(16,17,17,.96)!important;
+  border-bottom-color:var(--alfred-border)!important;
+}
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  line-height:1;
+  text-decoration:none;
+  color:var(--alfred-ivory);
+  flex:0 0 auto;
+  min-width:0;
+}
+.brand-logo-mark{
+  display:block;
+  flex:none;
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  object-position:center;
+}
+.brand-logo-text{
+  font:700 1.375rem/1 var(--v2-sans);
+  letter-spacing:-.02em;
+  color:var(--alfred-ivory);
+}
+.brand:hover .brand-logo-mark{filter:brightness(1.06)}
+.desktop-nav a:hover,.desktop-nav a:focus-visible{color:var(--alfred-mint-soft)!important}
+.desktop-nav .nav-cta{
+  color:var(--alfred-charcoal)!important;
+  background:var(--alfred-ivory)!important;
+}
+body:not(.itinerary-pdf-style) .v2-hero{
+  background:radial-gradient(760px 420px at 12% 0%,rgba(57,205,187,.13),transparent 62%),linear-gradient(180deg,var(--alfred-charcoal),#171c1c)!important;
+}
+.v2-source-content{
+  background:var(--alfred-charcoal-2)!important;
+  border-color:var(--alfred-border)!important;
+}
+.v2-source-content h2,.v2-source-content h3,.v2-source-content h4{color:var(--alfred-ivory)!important}
+.v2-source-content a{color:var(--alfred-mint-soft)!important}
+body:not(.itinerary-pdf-style) .v2-button-primary{background:linear-gradient(135deg,var(--alfred-ivory),var(--alfred-mint-soft))!important;border-color:transparent!important;color:var(--alfred-charcoal)!important}
+body:not(.itinerary-pdf-style) .v2-button-secondary{border-color:var(--alfred-border)!important;color:var(--alfred-ivory)!important}
+.v2-footer{background:var(--alfred-charcoal)!important;color:var(--alfred-muted)!important}
+.v2-footer-brand h2,.v2-footer-block h3,.v2-footer-support h3{color:var(--alfred-ivory)!important}
+.v2-footer-links a,.v2-footer-support a{color:var(--alfred-muted)!important}
+.v2-footer-links a:hover,.v2-footer-links a:focus-visible,.v2-footer-support a:hover,.v2-footer-support a:focus-visible{color:var(--alfred-mint-soft)!important}
+.v2-footer-divider{background:rgba(57,205,187,.24)!important}
+.v2-footer-bottom{color:var(--alfred-muted)!important}
+
+/* Keep the light, printable itinerary/PDF product mode intact. */
+.itinerary-pdf-style .site-header{background:rgba(16,17,17,.96)!important;border-bottom-color:rgba(57,205,187,.24)!important}
+.itinerary-pdf-style .desktop-nav a:hover,.itinerary-pdf-style .desktop-nav a:focus-visible{color:var(--alfred-mint-soft)!important}
+
+@media(max-width:720px){
+  .brand-logo-mark{width:32px;height:32px}
+  .brand-logo-text{font-size:1.2rem}
+}

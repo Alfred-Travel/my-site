@@ -1,0 +1,44 @@
+/* PDF-inspired itinerary detail cards */
+.itinerary-pdf-style{--pdf-paper:#fbfaf6;--pdf-card:#ffffff;--pdf-row:#f1f6f7;--pdf-navy:#10253a;--pdf-teal:#1e7778;--pdf-muted:#6d8190;--pdf-line:#c9e2df;--pdf-row-line:#d9e5e8;background:var(--pdf-paper);color:var(--pdf-navy)}
+.itinerary-pdf-style .v2-main{background:var(--pdf-paper)!important;padding-bottom:52px}
+.itinerary-pdf-style .v2-content{background:var(--pdf-paper)!important}
+.itinerary-pdf-style .v2-source-content{padding:0;border:0;border-radius:0;background:var(--pdf-paper)!important}
+.itinerary-pdf-style .v2-hero{width:min(960px,calc(100% - 48px));margin:42px auto 24px;padding:40px;border:1px solid var(--pdf-line);border-radius:28px;background:linear-gradient(110deg,#fff4df 0%,#f4f8e9 52%,#d9f3ec 100%)}
+.itinerary-pdf-style .v2-hero-inner{width:100%}
+.itinerary-pdf-style .v2-kicker{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.82);color:var(--pdf-teal);font-size:11px;letter-spacing:.14em}
+.itinerary-pdf-style .v2-hero h1{max-width:780px;margin:20px 0 14px;color:var(--pdf-navy);font:800 clamp(2.2rem,5vw,4.8rem)/.98 var(--v2-sans);letter-spacing:-.055em;text-transform:uppercase}
+.itinerary-pdf-style .v2-hero p{max-width:760px;color:var(--pdf-muted);font-size:16px}
+.itinerary-pdf-style .v2-actions{margin-top:24px}
+.itinerary-pdf-style .v2-button-primary{color:#fff;background:var(--pdf-teal);border-color:var(--pdf-teal)}
+.itinerary-pdf-style .v2-button-secondary{color:var(--pdf-teal);border-color:var(--pdf-line);background:rgba(255,255,255,.65)}
+.itinerary-pdf-style .v2-content{width:min(960px,calc(100% - 48px));padding-top:0;border-top:0}
+.itinerary-pdf-style .v2-breadcrumb{color:var(--pdf-muted);margin:0 0 18px}
+.itinerary-pdf-style .v2-breadcrumb a{color:var(--pdf-teal)}
+.itinerary-pdf-style .v2-source-content{padding:0;border:0;border-radius:0;background:transparent}
+.itinerary-pdf-style .v2-source-content>section{margin:0 0 20px;padding:27px;border:1px solid var(--pdf-line);border-radius:24px;background:var(--pdf-card);color:var(--pdf-navy)}
+.itinerary-pdf-style .v2-source-content .tai-agn-section,.itinerary-pdf-style .v2-source-content .tai-dark-section,.itinerary-pdf-style .v2-source-content .tai-join-section{background:var(--pdf-paper)!important}
+.itinerary-pdf-style .v2-source-content .tai-agn-inner,.itinerary-pdf-style .v2-source-content .tai-dark-inner,.itinerary-pdf-style .v2-source-content .tai-join-inner{padding:0;background:transparent}
+.itinerary-pdf-style .v2-source-content .tai-agn-container,.itinerary-pdf-style .v2-source-content .tai-dark-inner,.itinerary-pdf-style .v2-source-content .tai-join-inner{max-width:none}
+.itinerary-pdf-style .v2-source-content .tai-agn-badge,.itinerary-pdf-style .v2-source-content .tai-section-kicker{display:block;margin:0 0 8px;color:var(--pdf-teal);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.itinerary-pdf-style .v2-source-content h2{margin:0 0 8px;color:#153247;font:800 clamp(1.45rem,2.4vw,2rem)/1.1 var(--v2-sans);letter-spacing:-.035em}
+.itinerary-pdf-style .v2-source-content h3{color:#153247;font-size:1.02rem}
+.itinerary-pdf-style .v2-source-content p,.itinerary-pdf-style .v2-source-content li{color:#586e7e;font-size:15px}
+.itinerary-pdf-style .v2-source-content a{color:#1e7778}
+.itinerary-pdf-style .v2-source-content .tai-agn-desc,.itinerary-pdf-style .v2-source-content .tai-dark-lead{max-width:760px;margin:0 0 20px;color:#586e7e}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-validation-grid,.itinerary-pdf-style .v2-source-content .tai-dark-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-validation-item,.itinerary-pdf-style .v2-source-content .tai-dark-card{padding:17px;border:1px solid var(--pdf-row-line);border-radius:17px;background:var(--pdf-row);color:#586e7e}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-validation-item strong,.itinerary-pdf-style .v2-source-content .tai-dark-card h3{display:block;margin:0 0 7px;color:#10253a;font-weight:800}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-sample-wrap{display:grid;gap:15px}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-cover{width:100%;height:230px;object-fit:cover;border:0;border-radius:16px;margin:0}
+.itinerary-pdf-style .v2-source-content pre.itinerary-sample{margin:0;padding:22px;border:1px solid var(--pdf-row-line);border-radius:17px;background:var(--pdf-row);color:var(--pdf-navy);font:600 13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-faq{background:var(--pdf-card)!important}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-cta{background:linear-gradient(110deg,#fff4df 0%,#f4f8e9 52%,#d9f3ec 100%)!important}
+.itinerary-pdf-style .v2-source-content .tai-itinerary-cta h2{color:var(--pdf-navy)}
+.itinerary-pdf-style .v2-source-content .tai-btn-primary{display:inline-flex;padding:12px 17px;border-radius:999px;background:var(--pdf-teal);color:#fff;text-decoration:none;font-weight:800}
+.itinerary-pdf-style .v2-source-content .tai-hero{display:none!important}
+@media(max-width:720px){.itinerary-pdf-style .v2-hero{width:calc(100% - 24px);margin-top:24px;padding:26px 21px;border-radius:22px}.itinerary-pdf-style .v2-hero h1{font-size:2.35rem}.itinerary-pdf-style .v2-content{width:calc(100% - 24px)}.itinerary-pdf-style .v2-source-content>section{padding:21px;border-radius:20px}.itinerary-pdf-style .v2-source-content .tai-itinerary-validation-grid,.itinerary-pdf-style .v2-source-content .tai-dark-grid{grid-template-columns:1fr}.itinerary-pdf-style .v2-source-content .tai-itinerary-cover{height:190px}}
+
+.itinerary-pdf-style .pdf-schedule{display:grid;gap:14px}.itinerary-pdf-style .pdf-day-card{padding:18px;border:1px solid var(--pdf-line);border-radius:20px;background:#fff}.itinerary-pdf-style .pdf-day-heading{margin:0 0 14px!important;padding-bottom:11px;border-bottom:1px solid var(--pdf-line);color:var(--pdf-teal)!important;font-size:1.12rem!important}.itinerary-pdf-style .pdf-day-rows{display:grid;gap:10px}.itinerary-pdf-style .pdf-plan-row{padding:13px 15px;border:1px solid var(--pdf-row-line);border-radius:15px;background:var(--pdf-row);color:var(--pdf-navy);font-size:14px;line-height:1.5}.itinerary-pdf-style .pdf-schedule-note{margin:0!important;color:var(--pdf-muted)!important;font-size:14px!important}
+
+.itinerary-pdf-style .v2-source-content h2{color:#1e7778!important}.itinerary-pdf-style .v2-source-content h3{color:#10253a!important}.itinerary-pdf-style .v2-source-content .tai-section-kicker,.itinerary-pdf-style .v2-source-content .tai-agn-badge{color:#1e7778!important}.itinerary-pdf-style .v2-source-content p,.itinerary-pdf-style .v2-source-content li{color:#526a79;font-size:16px}.itinerary-pdf-style .pdf-day-rows{gap:10px}.itinerary-pdf-style .pdf-plan-row{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;padding:15px 16px;background:#f1f6f7;border:1px solid #d0e2e5;border-radius:15px;color:#10253a}.itinerary-pdf-style .pdf-plan-index{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#d8eeeb;color:#1e7778;font-size:12px;font-weight:800}.itinerary-pdf-style .pdf-plan-content{min-width:0}.itinerary-pdf-style .pdf-plan-label{display:block;margin:1px 0 4px;color:#1e7778;font-size:11px;font-weight:850;letter-spacing:.1em;line-height:1.2;text-transform:uppercase}.itinerary-pdf-style .pdf-plan-content p{margin:0!important;color:#263d4f!important;font-size:16px!important;line-height:1.5}.itinerary-pdf-style .pdf-day-heading{color:#1e7778!important}.itinerary-pdf-style .tai-dark-card h3{color:#10253a!important}.itinerary-pdf-style .tai-dark-card p{color:#526a79!important}
+@media(max-width:720px){.itinerary-pdf-style .v2-source-content p,.itinerary-pdf-style .v2-source-content li{font-size:15px}.itinerary-pdf-style .pdf-plan-content p{font-size:15px!important}.itinerary-pdf-style .pdf-plan-row{grid-template-columns:30px minmax(0,1fr);gap:10px;padding:13px}.itinerary-pdf-style .pdf-plan-index{width:26px;height:26px}}
