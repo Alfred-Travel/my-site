@@ -29,11 +29,17 @@
     const url = new URL(link.href, window.location.href);
     if (url.hostname !== 'web.alfredtravel.io') return;
 
-    window.gtag('event', 'cta_click', {
+    const eventParams = {
       cta_name: 'plan_a_trip',
       cta_text: link.textContent.trim(),
       link_url: url.href,
       page_path: window.location.pathname,
-    });
+      cta_location: link.closest('header, main, footer')?.tagName.toLowerCase() || 'unknown',
+      campaign_source: new URLSearchParams(window.location.search).get('utm_source') || undefined,
+      campaign_medium: new URLSearchParams(window.location.search).get('utm_medium') || undefined,
+      campaign_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || undefined,
+    };
+    window.gtag('event', 'cta_click', eventParams);
+    window.gtag('event', 'openwebapp', eventParams);
   });
 })();
