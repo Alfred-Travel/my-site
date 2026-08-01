@@ -78,6 +78,7 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Krakow | `curated Commons: File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg` | [File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg](https://commons.wikimedia.org/wiki/File:20200826_Wawel_i_Wis%C5%82a_w_Krakowie_1752_1334.jpg) |
 
 | Santorini | `curated Commons: File:Santorini Oia.jpg` | [File:Santorini Oia.jpg](https://commons.wikimedia.org/wiki/File:Santorini_Oia.jpg) |
+| Hobart | `Hobart Tasmania skyline` | [File:Sullivans Cove, Hobart, 2013 (03).jpg](https://commons.wikimedia.org/wiki/File:Sullivans_Cove,_Hobart,_2013_(03).jpg) |
 
 
 | Cairo | `curated Commons: File:All Gizah Pyramids.jpg` | [File:All Gizah Pyramids.jpg](https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg) |
