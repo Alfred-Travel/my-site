@@ -79,6 +79,7 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 
 | Santorini | `curated Commons: File:Santorini Oia.jpg` | [File:Santorini Oia.jpg](https://commons.wikimedia.org/wiki/File:Santorini_Oia.jpg) |
 | Hobart | `Hobart Tasmania skyline` | [File:Sullivans Cove, Hobart, 2013 (03).jpg](https://commons.wikimedia.org/wiki/File:Sullivans_Cove,_Hobart,_2013_(03).jpg) |
+| Darwin | `Darwin Northern Territory waterfront` | [File:Darwin (AU), Darwin Waterfront -- 2019 -- 4423-5.jpg](https://commons.wikimedia.org/wiki/File:Darwin_(AU),_Darwin_Waterfront_--_2019_--_4423-5.jpg) |
 
 
 | Cairo | `curated Commons: File:All Gizah Pyramids.jpg` | [File:All Gizah Pyramids.jpg](https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg) |
