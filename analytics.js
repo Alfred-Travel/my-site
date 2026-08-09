@@ -40,6 +40,6 @@
       campaign_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || undefined,
     };
     window.gtag('event', 'cta_click', eventParams);
-    window.gtag('event', 'openwebapp', eventParams);
+    window.gtag('event', 'webapp_screen_view', eventParams);
   });
 })();
