@@ -59,7 +59,7 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Las Vegas | `Las Vegas Strip night` | [File:Las Vegas (Nevada, USA), The Strip -- 2012 -- 6215.jpg](https://commons.wikimedia.org/wiki/File:Las_Vegas_(Nevada,_USA),_The_Strip_--_2012_--_6215.jpg) |
 | Zurich | `Grossmunster Zurich Limmat` | [File:Zürich view Quaibrücke 20200702.jpg](https://commons.wikimedia.org/wiki/File:Z%C3%BCrich_view_Quaibr%C3%BCcke_20200702.jpg) |
 
-| Montreal | `Old Montreal Notre-Dame Basilica` | [File:1865-1895 Interior of Notre-Dame Church (Montreal) 01.jpg](https://commons.wikimedia.org/wiki/File:1865-1895_Interior_of_Notre-Dame_Church_(Montreal)_01.jpg) |
+| Montreal | `Montreal skyline city landscape` | [File:Sunrise Over Montréal (250731329).jpeg](https://commons.wikimedia.org/wiki/File:Sunrise_Over_Montr%C3%A9al_(250731329).jpeg) |
 
 | Milan | `Milan Cathedral Duomo exterior` | [File:Duomo (Milan) 29-07-29.jpg](https://commons.wikimedia.org/wiki/File:Duomo_(Milan)_29-07-29.jpg) |
 
