@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.alfredtravel.io/about.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-family-trip-quiet-day.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-first-crowdsourcing.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-fragmentation-travel-distribution-alfred.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-hotel-vs-airbnb-logic.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -137,6 +138,7 @@
   <url><loc>https://www.alfredtravel.io/itineraries/mexico-city.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/miami.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/milan.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/montreal-quebec-city-family-itinerary-7-days.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/montreal.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/munich.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/itineraries/new-york.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -174,24 +176,31 @@
   <url><loc>https://www.alfredtravel.io/terms.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-agent-travel-handoff-checklist.html</loc><lastmod>2026-07-22</lastmod></url>
   <url><loc>https://www.alfredtravel.io/itineraries/copenhagen-stockholm-family-rail.html</loc><lastmod>2026-07-22</lastmod></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-search-visibility-execution-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/paris-london-family-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-operations-control-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-trip-planning-voice-to-execution.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/search-trust-structured-trip-pages.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-visibility-proof-structured-itineraries.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/edinburgh-family-7-day-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/singapore-kuala-lumpur-family-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/japan-family-itinerary-tokyo-kyoto-osaka.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/portugal-family-itinerary-lisbon-porto.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-visibility-outcomes-usable-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/new-zealand-family-itinerary-auckland-rotorua.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-search-ranking-trustworthy-trip-plans.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/hobart-southern-tasmania-family-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-booking-execution-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/melbourne-adelaide-family-road-trip-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-connected-trip-execution-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/vienna-budapest-family-rail-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/edinburgh-london-family-rail-itinerary.html</loc><lastmod>2026-07-31</lastmod></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-trip-planning-rules-before-booking.html</loc><lastmod>2026-08-01</lastmod></url>
-<url><loc>https://www.alfredtravel.io/itineraries/darwin-family-itinerary-5-days.html</loc><lastmod>2026-08-01</lastmod></url>
-<url><loc>https://www.alfredtravel.io/itineraries/athens-istanbul-family-itinerary.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/cairns-family-itinerary-6-days.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/perth-family-itinerary-7-days.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/rome-florence-family-itinerary.html</loc></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-execution-layer.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/sydney-gold-coast-family-itinerary-7-days.html</loc></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-ai-visibility-booking-trust.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/queenstown-wanaka-family-itinerary-6-days.html</loc></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-travel-planning-decision-screen-not-chat.html</loc></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-hotel-agent-booking-traveller-handoff.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/vancouver-victoria-family-itinerary-6-days.html</loc></url>
-<url><loc>https://www.alfredtravel.io/blog/skift-ask-maps-hotel-search-trip-plan.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/seoul-busan-family-itinerary-7-days.html</loc></url>
-<url><loc>https://www.alfredtravel.io/blog/ai-hotel-shortlist-arrival-day-test.html</loc></url>
-<url><loc>https://www.alfredtravel.io/itineraries/kyoto-osaka-family-itinerary-6-days-arrival-buffer.html</loc></url>
+<url><loc>https://www.alfredtravel.io/blog/ai-search-visibility-execution-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/paris-london-family-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-operations-control-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-trip-planning-voice-to-execution.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/search-trust-structured-trip-pages.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-visibility-proof-structured-itineraries.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/edinburgh-family-7-day-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/singapore-kuala-lumpur-family-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/japan-family-itinerary-tokyo-kyoto-osaka.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/portugal-family-itinerary-lisbon-porto.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-visibility-outcomes-usable-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/new-zealand-family-itinerary-auckland-rotorua.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-search-ranking-trustworthy-trip-plans.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/hobart-southern-tasmania-family-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-travel-booking-execution-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/melbourne-adelaide-family-road-trip-itinerary.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/blog/ai-connected-trip-execution-layer.html</loc><changefreq>monthly</changefreq></url><url><loc>https://www.alfredtravel.io/itineraries/vienna-budapest-family-rail-itinerary.html</loc><changefreq>monthly</changefreq></url>  <url><loc>https://www.alfredtravel.io/blog/google-ai-travel-discovery-planning.html</loc><lastmod>2026-07-30</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/athens-istanbul-family-itinerary.html</loc><lastmod>2026-07-30</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/verified-identity-travel-planning-handoff.html</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/edinburgh-london-family-rail-itinerary.html</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-hotel-consideration-family-base.html</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/rome-florence-family-itinerary.html</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-road-trip-planner-family-route.html</loc><lastmod>2026-08-02</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/perth-family-itinerary-7-days.html</loc><lastmod>2026-08-02</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-planning-rules-before-booking.html</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/darwin-family-itinerary-5-days.html</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-planning-hipmunk-lessons.html</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/cairns-family-itinerary-6-days.html</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-execution-layer.html</loc><lastmod>2026-08-05</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/sydney-gold-coast-family-itinerary-7-days.html</loc><lastmod>2026-08-05</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-ai-visibility-booking-trust.html</loc><lastmod>2026-08-06</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/queenstown-wanaka-family-itinerary-6-days.html</loc><lastmod>2026-08-06</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-travel-planning-decision-screen-not-chat.html</loc><lastmod>2026-08-07</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-hotel-agent-booking-traveller-handoff.html</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/vancouver-victoria-family-itinerary-6-days.html</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/seoul-busan-family-itinerary-7-days.html</loc><lastmod>2026-08-07</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/skift-ask-maps-hotel-search-trip-plan.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-hotel-shortlist-arrival-day-test.html</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/kyoto-osaka-family-itinerary-6-days-arrival-buffer.html</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-booking-boundary.html</loc></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/taipei-family-itinerary-6-days-soft-landing.html</loc></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-red-pen-route-test.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/kyoto-osaka-family-itinerary-6-days-red-pen.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
-<url><loc>https://www.alfredtravel.io/blog/ai-trip-planner-red-pen-route-test.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.alfredtravel.io/itineraries/kyoto-osaka-family-itinerary-6-days-red-pen.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
