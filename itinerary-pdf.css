@@ -34,7 +34,7 @@
 .itinerary-pdf-style .v2-source-content .tai-itinerary-faq{background:var(--pdf-card)!important}
 .itinerary-pdf-style .v2-source-content .tai-itinerary-cta{background:linear-gradient(110deg,#fff4df 0%,#f4f8e9 52%,#d9f3ec 100%)!important}
 .itinerary-pdf-style .v2-source-content .tai-itinerary-cta h2{color:var(--pdf-navy)}
-.itinerary-pdf-style .v2-source-content .tai-btn-primary{display:inline-flex;padding:12px 17px;border-radius:999px;background:linear-gradient(135deg,#68d7c0,#39cdbb);color:#101111;text-decoration:none;font-weight:800}
+.itinerary-pdf-style .v2-source-content .tai-btn-primary{display:inline-flex!important;align-items:center;justify-content:center;padding:12px 17px;border-radius:999px;background:linear-gradient(135deg,#68d7c0,#39cdbb)!important;color:#101111!important;text-decoration:none!important;font-weight:800;opacity:1!important;box-shadow:0 10px 24px rgba(57,205,187,.22)}
 .itinerary-pdf-style .v2-source-content .tai-hero{display:none!important}
 @media(max-width:720px){.itinerary-pdf-style .v2-hero{width:calc(100% - 24px);margin-top:24px;padding:26px 21px;border-radius:22px}.itinerary-pdf-style .v2-hero h1{font-size:2.35rem}.itinerary-pdf-style .v2-content{width:calc(100% - 24px)}.itinerary-pdf-style .v2-source-content>section{padding:21px;border-radius:20px}.itinerary-pdf-style .v2-source-content .tai-itinerary-validation-grid,.itinerary-pdf-style .v2-source-content .tai-dark-grid{grid-template-columns:1fr}.itinerary-pdf-style .v2-source-content .tai-itinerary-cover{height:190px}}
 
