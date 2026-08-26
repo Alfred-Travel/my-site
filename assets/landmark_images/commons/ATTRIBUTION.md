@@ -89,3 +89,11 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Tel Aviv | `curated Commons: File:Tel Aviv beach Jaffa.jpg` | [File:Tel Aviv beach Jaffa.jpg](https://commons.wikimedia.org/wiki/File:Tel_Aviv_beach_Jaffa.jpg) |
 
 | Taipei | `Taipei 101 skyline Taiwan` | [File:Taipei Skyline April 2019.jpg](https://commons.wikimedia.org/wiki/File:Taipei_Skyline_April_2019.jpg) |
+
+
+## Official tourism image assets
+
+| Destination | Asset | Source |
+| --- | --- | --- |
+| Gold Coast | `../gold-coast-skypoint.jpg` | Experience Gold Coast, official destination site: https://experiencegoldcoast.com/ (SkyPoint Observation Deck image asset) |
+| Sunshine Coast | `../sunshine-coast-mooloolaba.webp` | Visit Sunshine Coast, official destination site: https://www.visitsunshinecoast.com/ (Mooloolaba image asset) |
