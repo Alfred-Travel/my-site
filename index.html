@@ -103,8 +103,8 @@
     .preview-status { color: var(--teal); font-size: 12px; font-weight: 720; }
     .preview-status::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--teal); }
     .preview-content { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(170px, .82fr); gap: 12px; }
-    .app-screen { min-height: 430px; overflow: hidden; border-radius: 24px; background: #eaf1f3; border: 1px solid rgba(0,0,0,.18); }
-    .app-screen img { width: 100%; height: 430px; object-fit: cover; object-position: center top; }
+    .app-screen { min-height: 430px; height: 430px; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; border-radius: 24px; background: #050b12; border: 1px solid rgba(0,0,0,.18); }
+    .app-screen img { width: 100%; height: 100%; object-fit: contain; object-position: center top; }
     .decision-panel { display: grid; align-content: start; gap: 10px; padding: 15px; border-radius: 22px; background: #0e2234; border: 1px solid rgba(255,255,255,.10); }
     .panel-label { color: var(--quiet); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     .panel-title { font-size: 18px; line-height: 1.1; font-weight: 780; }
