@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.alfredtravel.io/blog/ai-trip-plans-decision-spine-family.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/sydney-blue-mountains-family-itinerary-6-days.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/about.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-family-trip-quiet-day.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.alfredtravel.io/blog/ai-first-crowdsourcing.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -232,4 +234,10 @@
   <url><loc>https://www.alfredtravel.io/itineraries/melbourne-great-ocean-road-family-itinerary-5-days.html</loc><lastmod>2026-08-28</lastmod></url>
 <url><loc>https://www.alfredtravel.io/blog/ai-travel-personalisation-family-booking-handoff.html</loc><lastmod>2026-08-29</lastmod></url><url><loc>https://www.alfredtravel.io/itineraries/munich-salzburg-family-itinerary-7-days.html</loc><lastmod>2026-08-29</lastmod></url>  <url><loc>https://www.alfredtravel.io/blog/travel-ai-growth-without-copying-itself.html</loc><lastmod>2026-08-30</lastmod></url>
   <url><loc>https://www.alfredtravel.io/itineraries/kyoto-osaka-family-itinerary-6-days.html</loc><lastmod>2026-08-30</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/ai-travel-facts-need-a-visible-confirmation-boundary.html</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/auckland-rotorua-family-itinerary-7-days.html</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/family-itinerary-one-anchor-protected-transfer.html</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/wellington-wairarapa-family-itinerary-6-days.html</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/blog/family-trip-buffer-day-nzta.html</loc><lastmod>2026-09-03</lastmod></url>
+  <url><loc>https://www.alfredtravel.io/itineraries/christchurch-arthurs-pass-family-itinerary-6-days.html</loc><lastmod>2026-09-03</lastmod></url>
 </urlset>
