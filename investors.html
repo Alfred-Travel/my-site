@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Investors | Alfred Travel</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="brand.css">
+  <style>
+    .investor-gate{min-height:calc(100vh - 74px);display:grid;place-items:center;padding:72px 24px;background:radial-gradient(720px 420px at 15% 0%,rgba(85,213,201,.14),transparent 62%),linear-gradient(180deg,#101111,#171c1c)}
+    .investor-card{width:min(620px,100%);padding:clamp(28px,5vw,56px);border:1px solid rgba(57,205,187,.3);border-radius:28px;background:rgba(23,28,28,.92);box-shadow:0 24px 80px rgba(0,0,0,.28)}
+    .investor-kicker{margin:0 0 16px;color:#68d7c0;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .investor-card h1{margin:0;color:#ffffd9;font:500 clamp(2.5rem,6vw,4.8rem)/.98 Georgia,Cambria,"Times New Roman",serif;letter-spacing:-.045em}
+    .investor-card .lead{margin:22px 0 30px;color:#b7c7ce;font-size:17px;line-height:1.65}
+    .investor-form{display:grid;gap:12px}.investor-form label{color:#ffffd9;font-size:13px;font-weight:750}.investor-form input{width:100%;min-height:52px;padding:0 16px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:#0d1718;color:#ffffd9;font:inherit}.investor-form input:focus{outline:3px solid rgba(104,215,192,.25);border-color:#68d7c0}.investor-form button{min-height:52px;border:0;border-radius:12px;background:linear-gradient(135deg,#68d7c0,#39cdbb);color:#101111;font-weight:800;font-size:15px;cursor:pointer}.investor-form button:hover{filter:brightness(1.05)}.investor-note{margin:16px 0 0;color:#849da5;font-size:12px;line-height:1.55}.investor-error{min-height:20px;margin:0;color:#ffb5a8;font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Alfred Travel home"><img class="brand-logo-mark" src="assets/brand/alfred-header-mark.png" srcset="assets/brand/alfred-header-mark@2x.png 2x" alt="" aria-hidden="true"><span class="brand-logo-text">Alfred</span></a><button class="menu-button" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button><nav class="desktop-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html#product">Product</a><a href="itineraries/index.html">Trips</a><a href="index.html#different">Why Alfred</a><a href="about.html">About</a><a href="compare/index.html">Compare</a><a href="blog/index.html">Blog</a><a href="faq.html">Support</a><a href="investors.html" aria-current="page">Investors</a><a class="nav-cta" href="https://web.alfredtravel.io/app/home">Plan a trip</a></nav></div></header>
+  <main class="investor-gate"><section class="investor-card" aria-labelledby="investor-title"><p class="investor-kicker">Alfred Travel · Investor access</p><h1 id="investor-title">The next chapter of travel planning.</h1><p class="lead">Enter the access code provided by Alfred Travel to open the September investor materials.</p><form class="investor-form" id="investor-gate-form"><label for="investor-code">Access code</label><input id="investor-code" name="code" type="password" autocomplete="off" required placeholder="Enter access code"><p class="investor-error" id="investor-error" role="alert" aria-live="polite"></p><button type="submit">Open investor materials <span aria-hidden="true">→</span></button></form><p class="investor-note">This is a lightweight access gate. Do not use it for confidential material that requires strong authentication.</p></section></main>
+  <script>
+    const form=document.querySelector('#investor-gate-form');
+    const input=document.querySelector('#investor-code');
+    const error=document.querySelector('#investor-error');
+    form.addEventListener('submit',(event)=>{event.preventDefault();error.textContent='';const code=input.value.trim().toUpperCase();if(code!=='ALFREDINVESTORSEPTEMBERRAISE'){error.textContent='That access code is not recognised.';input.focus();return;}window.location.href='investors/materials/index.html';});
+    const menuButton=document.querySelector('.menu-button');const nav=document.querySelector('#primary-nav');menuButton?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation')});nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Open navigation')}));
+  </script>
+</body>
+</html>

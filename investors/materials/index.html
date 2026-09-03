@@ -1,0 +1,1842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>September Pitches USD — Alfred Travel</title>
+    <style>
+      :root {
+        --cream: #f5f3ee;
+        --ink: #111827;
+        --muted: #aab4c4;
+        --mint: #68d7c0;
+        --mint-strong: #3d9f8a;
+        --coral: #f07167;
+        --scrim: #0b1020;
+        --white: #ffffff;
+        --space-1: 8px;
+        --space-2: 16px;
+        --space-3: 24px;
+        --space-4: 32px;
+        --space-5: 48px;
+        --space-6: 64px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body { margin: 0; min-height: 100%; }
+
+      body {
+        background: #dfe4e8;
+        color: var(--cream);
+        font-family: Satoshi, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .toolbar {
+        align-items: center;
+        display: flex;
+        gap: var(--space-2);
+        justify-content: center;
+        padding: var(--space-2);
+      }
+
+      .toolbar a {
+        border: 1px solid rgba(17, 24, 39, 0.18);
+        border-radius: 999px;
+        color: var(--ink);
+        font-size: 0.8125rem;
+        padding: 8px 14px;
+        text-decoration: none;
+      }
+
+      .deck {
+        margin: 0 auto;
+        max-width: 1600px;
+        padding: var(--space-4);
+      }
+
+      .page {
+        align-items: stretch;
+        aspect-ratio: 16 / 9;
+        background: var(--scrim);
+        border-radius: 34px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+        min-height: 620px;
+        overflow: hidden;
+        padding: clamp(40px, 6vw, 96px);
+        position: relative;
+      }
+
+      .page::before {
+        background: radial-gradient(circle at 76% 38%, rgba(104, 215, 192, 0.16), transparent 30%), radial-gradient(circle at 18% 90%, rgba(240, 113, 103, 0.09), transparent 28%);
+        content: "";
+        inset: 0;
+        pointer-events: none;
+        position: absolute;
+      }
+
+      .content {
+        align-self: center;
+        max-width: 780px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .eyebrow {
+        align-items: center;
+        color: var(--mint);
+        display: flex;
+        font-size: 0.75rem;
+        font-weight: 700;
+        gap: 12px;
+        letter-spacing: 0.08em;
+        margin-bottom: var(--space-5);
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        background: var(--coral);
+        border-radius: 999px;
+        content: "";
+        height: 8px;
+        width: 8px;
+      }
+
+      h1 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3rem, 5.4vw, 6.5rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        margin: 0;
+        max-width: 800px;
+      }
+
+      .rule {
+        background: var(--mint);
+        height: 4px;
+        margin: var(--space-5) 0 var(--space-3);
+        width: 72px;
+      }
+
+      .subtitle {
+        color: rgba(245, 243, 238, 0.78);
+        font-size: clamp(1.05rem, 1.55vw, 1.45rem);
+        line-height: 1.45;
+        margin: 0;
+        max-width: 650px;
+      }
+
+      .metrics {
+        border-left: 2px solid var(--coral);
+        color: var(--cream);
+        font-size: clamp(0.85rem, 1.05vw, 1rem);
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.5;
+        margin: var(--space-6) 0 0;
+        max-width: 620px;
+        padding-left: var(--space-3);
+      }
+
+      .brand-stage {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-width: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .brand-stage::after {
+        border: 1px solid rgba(104, 215, 192, 0.28);
+        border-radius: 50%;
+        content: "";
+        height: min(31vw, 430px);
+        position: absolute;
+        width: min(31vw, 430px);
+      }
+
+      .logo {
+        border-radius: 28px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+        display: block;
+        max-width: min(82%, 430px);
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+
+      body[data-orientation="portrait"] {
+        background: var(--scrim);
+      }
+
+      body[data-orientation="portrait"] .toolbar {
+        display: flex;
+      }
+      body[data-orientation="portrait"] .toolbar a {
+        border-color: rgba(245, 243, 238, 0.28);
+        color: var(--cream);
+      }
+      body[data-orientation="portrait"] .deck { max-width: 720px; padding: 0; }
+      body[data-orientation="portrait"] .page {
+        aspect-ratio: auto;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+        min-height: 100svh;
+        padding: 48px 28px 36px;
+        width: 100%;
+      }
+      body[data-orientation="portrait"] .content { order: 2; }
+      body[data-orientation="portrait"] .brand-stage { order: 1; min-height: 34svh; }
+      body[data-orientation="portrait"] .brand-stage::after { height: 66vw; width: 66vw; }
+      body[data-orientation="portrait"] .logo { max-width: min(68vw, 320px); }
+      body[data-orientation="portrait"] .eyebrow { margin-bottom: var(--space-3); }
+      body[data-orientation="portrait"] h1 { font-size: clamp(3rem, 13vw, 5rem); line-height: 0.96; }
+      body[data-orientation="portrait"] .rule { margin: var(--space-4) 0 var(--space-3); }
+      body[data-orientation="portrait"] .metrics { margin-top: var(--space-5); }
+
+      .page--light {
+        background: var(--cream);
+        color: var(--ink);
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 620px;
+        padding: clamp(40px, 4vw, 64px);
+      }
+
+      .page--light::before {
+        background: radial-gradient(circle at 88% 8%, rgba(104, 215, 192, 0.22), transparent 26%), radial-gradient(circle at 5% 92%, rgba(240, 113, 103, 0.12), transparent 24%);
+      }
+
+      .page--light .content { max-width: none; width: 100%; }
+
+      .page-kicker {
+        color: var(--mint-strong);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin-bottom: var(--space-3);
+        text-transform: uppercase;
+      }
+
+      .page--light h2 {
+        color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3rem, 5.2vw, 6rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        margin: 0;
+        max-width: 1180px;
+      }
+
+      .page-lede {
+        color: var(--muted-strong, #4b5563);
+        font-size: clamp(1rem, 1.4vw, 1.25rem);
+        line-height: 1.45;
+        margin: var(--space-4) 0 0;
+        max-width: 1040px;
+      }
+
+      .comparison {
+        display: grid;
+        gap: var(--space-3);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: var(--space-4);
+      }
+
+      .comparison-card {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        border-radius: 20px;
+        min-height: 178px;
+        padding: var(--space-4);
+      }
+
+      .comparison-card--accent {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: var(--cream);
+      }
+
+      .comparison-label {
+        color: var(--coral);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin-bottom: var(--space-2);
+        text-transform: uppercase;
+      }
+
+      .comparison-card--accent .comparison-label { color: var(--mint); }
+
+      .comparison-card h3 {
+        color: var(--ink);
+        font-size: 1.15rem;
+        line-height: 1.25;
+        margin: 0 0 var(--space-2);
+      }
+
+      .comparison-card--accent h3 { color: var(--cream); }
+
+      .comparison-card p {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.9rem;
+        line-height: 1.45;
+        margin: 0;
+      }
+
+      .comparison-card--accent p { color: rgba(245, 243, 238, 0.78); }
+
+      .page-footer {
+        align-items: center;
+        display: flex;
+        gap: var(--space-2);
+        margin-top: var(--space-2);
+      }
+
+      .page-footer::before {
+        background: var(--mint-strong);
+        border-radius: 999px;
+        content: "";
+        height: 8px;
+        width: 8px;
+      }
+
+      .page-footer p {
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      body[data-orientation="portrait"] .page--light {
+        min-height: 100svh;
+      }
+
+      body[data-orientation="portrait"] .comparison {
+        grid-template-columns: 1fr;
+        margin-top: var(--space-5);
+      }
+
+      body[data-orientation="portrait"] .comparison-card {
+        min-height: 0;
+      }
+
+      .page--solution {
+        background: var(--scrim);
+        grid-template-columns: minmax(340px, 0.78fr) minmax(0, 1.22fr);
+        padding: clamp(32px, 3.5vw, 56px);
+      }
+
+      .page--solution::before {
+        background: radial-gradient(circle at 92% 14%, rgba(104, 215, 192, 0.18), transparent 28%), radial-gradient(circle at 8% 94%, rgba(240, 113, 103, 0.1), transparent 24%);
+      }
+
+      .solution-copy {
+        align-self: center;
+        max-width: 560px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .solution-copy h2 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3rem, 4.2vw, 5.2rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        margin: 0;
+      }
+
+      .solution-copy .page-lede { color: rgba(245, 243, 238, 0.78); }
+
+      .solution-pillars {
+        display: grid;
+        gap: var(--space-2);
+        margin-top: var(--space-5);
+      }
+
+      .solution-pillar {
+        border-left: 2px solid var(--mint);
+        padding-left: var(--space-2);
+      }
+
+      .solution-pillar strong {
+        color: var(--cream);
+        display: block;
+        font-size: 1rem;
+        line-height: 1.25;
+      }
+
+      .solution-pillar span {
+        color: var(--muted);
+        display: block;
+        font-size: 0.82rem;
+        line-height: 1.35;
+        margin-top: 4px;
+      }
+
+      .service-flow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: var(--space-4);
+      }
+
+      .service-step {
+        align-items: center;
+        border: 1px solid rgba(104, 215, 192, 0.3);
+        border-radius: 999px;
+        color: var(--cream);
+        display: inline-flex;
+        font-size: 0.78rem;
+        font-weight: 700;
+        gap: 8px;
+        padding: 8px 12px;
+      }
+
+      .service-step::before {
+        align-items: center;
+        background: var(--mint);
+        border-radius: 50%;
+        color: var(--ink);
+        content: attr(data-step);
+        display: inline-flex;
+        font-size: 0.68rem;
+        height: 20px;
+        justify-content: center;
+        width: 20px;
+      }
+
+      .product-collage {
+        align-self: center;
+        display: block;
+        height: auto;
+        min-width: 0;
+        position: relative;
+        transform: translateX(24px);
+        z-index: 1;
+      }
+
+      .product-frame {
+        background: var(--white);
+        border: 3px solid var(--white);
+        border-radius: 20px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .product-frame img {
+        display: block;
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      .product-frame--desktop {
+        min-height: 0;
+        width: 100%;
+      }
+
+      .product-frame--desktop img { object-position: center; }
+
+      .mobile-strip {
+        align-items: start;
+        display: flex;
+        justify-content: space-between;
+        margin-top: var(--space-2);
+      }
+
+      .mobile-strip .product-frame img {
+        height: 329px;
+        object-fit: contain;
+        width: auto;
+      }
+
+      .mobile-strip .product-frame {
+        border-left-width: 1px;
+        border-right-width: 1px;
+        justify-self: center;
+        width: auto;
+      }
+
+      body[data-orientation="portrait"] .page--solution {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-5);
+      }
+
+      body[data-orientation="portrait"] .solution-copy { order: 1; }
+      body[data-orientation="portrait"] .service-flow { flex-wrap: wrap; }
+      body[data-orientation="portrait"] .product-collage {
+        height: auto;
+        order: 2;
+        transform: none;
+      }
+      body[data-orientation="portrait"] .mobile-strip {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      body[data-orientation="portrait"] .mobile-strip .product-frame img {
+        height: 220px;
+      }
+      body[data-orientation="portrait"] .mobile-strip .product-frame { justify-self: center; }
+      body[data-orientation="portrait"] .product-frame--desktop {
+        min-height: 220px;
+      }
+
+      .page--solution .product-collage {
+        transform: none;
+      }
+
+      .page--competitors {
+        background: var(--cream);
+        color: var(--ink);
+        display: block;
+        padding: clamp(40px, 4vw, 64px);
+      }
+
+      .page--competitors .content {
+        max-width: none;
+        width: 100%;
+      }
+
+      .page--competitors h2 {
+        color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3rem, 4.8vw, 5.4rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        margin: 0;
+      }
+
+      .competitor-lede {
+        color: var(--muted-strong, #4b5563);
+        font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+        line-height: 1.4;
+        margin: var(--space-3) 0 0;
+        max-width: 920px;
+      }
+
+      .competitor-table-wrap {
+        margin-top: var(--space-4);
+        overflow: hidden;
+      }
+
+      .competitor-table {
+        border-collapse: separate;
+        border-spacing: 0 6px;
+        font-size: clamp(0.68rem, 0.85vw, 0.86rem);
+        table-layout: fixed;
+        width: 100%;
+      }
+
+      .competitor-table th {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 0 10px 6px;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      .competitor-table th:first-child,
+      .competitor-table td:first-child { width: 13%; }
+      .competitor-table th:nth-child(2),
+      .competitor-table td:nth-child(2) { width: 8%; }
+      .competitor-table th:nth-child(3),
+      .competitor-table td:nth-child(3) { width: 17%; }
+      .competitor-table th:nth-child(4),
+      .competitor-table td:nth-child(4) { width: 14%; }
+      .competitor-table th:nth-child(5),
+      .competitor-table td:nth-child(5) { width: 8%; }
+      .competitor-table th:nth-child(n+6),
+      .competitor-table td:nth-child(n+6) { text-align: center; width: 10%; }
+
+      .competitor-table td {
+        background: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+        border-top: 1px solid rgba(17, 24, 39, 0.06);
+        color: var(--ink-soft);
+        line-height: 1.25;
+        padding: 12px 10px;
+        vertical-align: middle;
+        word-break: normal;
+      }
+
+      .competitor-table td:first-child {
+        border-left: 4px solid transparent;
+        border-radius: 12px 0 0 12px;
+        font-weight: 700;
+      }
+
+      .competitor-table td:last-child { border-radius: 0 12px 12px 0; }
+
+      .competitor-table tr.is-alfred td {
+        background: var(--ink);
+        border-bottom-color: var(--ink);
+        border-top-color: var(--ink);
+        color: var(--cream);
+      }
+
+      .competitor-table tr.is-alfred td:first-child {
+        border-left-color: var(--mint);
+        color: var(--mint);
+      }
+
+      .competitor-table .positive { color: var(--mint-strong); font-weight: 700; }
+      .competitor-table .is-alfred .positive { color: var(--mint); }
+      .competitor-table .negative { color: var(--muted); }
+      .competitor-table .limited { color: var(--coral); font-weight: 700; }
+
+      .competitor-footnote {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.75rem;
+        line-height: 1.4;
+        margin: var(--space-3) 0 0;
+      }
+
+      body[data-orientation="portrait"] .page--competitors {
+        min-height: 100svh;
+        padding: 40px 28px 36px;
+      }
+
+      body[data-orientation="portrait"] .competitor-table {
+        font-size: 0.64rem;
+      }
+
+      body[data-orientation="portrait"] .competitor-table th {
+        font-size: 0.55rem;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      body[data-orientation="portrait"] .competitor-table td {
+        padding: 10px 4px;
+      }
+
+      .page--advantage {
+        background: var(--scrim);
+        color: var(--cream);
+        display: block;
+        padding: clamp(40px, 4vw, 56px);
+      }
+
+      .page--advantage .content {
+        max-width: none;
+        width: 100%;
+      }
+
+      .page--advantage h2 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(2.8rem, 4vw, 4.8rem);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 0.94;
+        margin: 0;
+        max-width: 1200px;
+      }
+
+      .advantage-lede {
+        color: rgba(245, 243, 238, 0.72);
+        font-size: clamp(1rem, 1.3vw, 1.2rem);
+        line-height: 1.45;
+        margin: var(--space-4) 0 0;
+        max-width: 820px;
+      }
+
+      .advantage-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: clamp(28px, 3vw, 40px);
+      }
+
+      .advantage-card {
+        background: rgba(255, 255, 255, 0.055);
+        border: 1px solid rgba(104, 215, 192, 0.28);
+        border-radius: 20px;
+        min-height: 260px;
+        padding: clamp(22px, 2vw, 30px);
+        position: relative;
+      }
+
+      .advantage-card::after {
+        color: var(--mint);
+        content: "↗";
+        font-size: 1.4rem;
+        position: absolute;
+        right: 28px;
+        top: 24px;
+      }
+
+      .advantage-card:nth-child(2) { border-color: rgba(104, 215, 192, 0.45); }
+      .advantage-card:nth-child(2)::after { color: var(--mint); }
+
+      .advantage-number {
+        color: var(--mint);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .advantage-card:nth-child(2) .advantage-number { color: var(--mint); }
+
+      .advantage-card h3 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(2rem, 2.8vw, 3.2rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        margin: 40px 0 14px;
+      }
+
+      .advantage-card p {
+        color: rgba(245, 243, 238, 0.7);
+        font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+        line-height: 1.45;
+        margin: 0;
+      }
+
+      .advantage-takeaway {
+        border-top: 1px solid rgba(245, 243, 238, 0.18);
+        color: var(--mint);
+        font-size: clamp(0.9rem, 1.15vw, 1.1rem);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        margin: 32px 0 0;
+        padding-top: 20px;
+      }
+
+      body[data-orientation="portrait"] .page--advantage {
+        min-height: 100svh;
+        padding: 48px 28px;
+      }
+
+      body[data-orientation="portrait"] .advantage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      body[data-orientation="portrait"] .advantage-card {
+        min-height: 0;
+      }
+
+      .page--traction {
+        background: var(--cream);
+        color: var(--ink);
+        display: block;
+        padding: clamp(48px, 5vw, 80px);
+      }
+
+      .page--traction .content {
+        max-width: none;
+        width: 100%;
+      }
+
+      .page--traction h2 {
+        color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3.4rem, 5.4vw, 6.2rem);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 0.94;
+        margin: 0;
+      }
+
+      .traction-date {
+        color: var(--muted-strong, #4b5563);
+        font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+        line-height: 1.4;
+        margin: var(--space-3) 0 0;
+      }
+
+      .traction-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: clamp(40px, 5vw, 64px);
+      }
+
+      .traction-card {
+        background: var(--white);
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        border-radius: 20px;
+        min-height: 265px;
+        padding: clamp(24px, 2.5vw, 36px);
+      }
+
+      .traction-card:nth-child(2) { border-top: 4px solid var(--mint); }
+      .traction-card:nth-child(3) { border-top: 4px solid var(--mint); }
+      .traction-card:nth-child(4) { border-top: 4px solid var(--mint); }
+
+      .traction-value {
+        color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3.3rem, 4.7vw, 5.4rem);
+        font-weight: 600;
+        letter-spacing: -0.05em;
+        line-height: 0.9;
+        margin: 24px 0 18px;
+      }
+
+      .traction-card:nth-child(3) .traction-value { color: var(--ink); }
+      .traction-card:nth-child(3) .traction-value {
+        font-size: clamp(2.6rem, 3.8vw, 4.4rem);
+        white-space: nowrap;
+      }
+      .traction-card:nth-child(4) .traction-value { color: var(--mint-strong); }
+
+      .traction-label {
+        color: var(--ink-soft);
+        font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      .traction-detail {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.8rem;
+        line-height: 1.35;
+        margin: 10px 0 0;
+      }
+
+      .traction-footer {
+        border-top: 1px solid rgba(17, 24, 39, 0.12);
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.78rem;
+        line-height: 1.4;
+        margin: 32px 0 0;
+        padding-top: 18px;
+      }
+
+      body[data-orientation="portrait"] .page--traction {
+        min-height: 100svh;
+        padding: 48px 28px;
+      }
+
+      body[data-orientation="portrait"] .traction-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body[data-orientation="portrait"] .traction-card {
+        min-height: 220px;
+        padding: 20px;
+      }
+
+      .page--financial {
+        background: var(--cream);
+        color: var(--ink);
+        display: block;
+        padding: clamp(40px, 4vw, 64px);
+      }
+
+      .page--financial .content {
+        max-width: none;
+        width: 100%;
+      }
+
+      .page--financial h2 {
+        color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3rem, 4.6vw, 5.4rem);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 0.95;
+        margin: 0;
+      }
+
+      .financial-lede {
+        color: var(--muted-strong, #4b5563);
+        font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+        line-height: 1.4;
+        margin: var(--space-3) 0 0;
+        max-width: 900px;
+      }
+
+      .commission-grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: var(--space-4);
+      }
+
+      .commission-card {
+        background: var(--white);
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        border-radius: 16px;
+        padding: 16px 18px;
+      }
+
+      .commission-card:nth-child(1),
+      .commission-card:nth-child(2) { border-top: 3px solid var(--mint); }
+      .commission-card:nth-child(3) { border-top: 3px solid var(--mint); }
+      .commission-card:nth-child(4) { border-top: 3px solid var(--mint); }
+
+      .commission-card p {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.78rem;
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      .commission-rate {
+        color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 0.9;
+        margin-bottom: 10px;
+      }
+
+      .commission-card:nth-child(3) .commission-rate { color: var(--mint-strong); }
+      .commission-card:nth-child(1) .commission-rate,
+      .commission-card:nth-child(2) .commission-rate,
+      .commission-card:nth-child(4) .commission-rate { color: var(--mint-strong); }
+
+      .spend-callout {
+        align-items: center;
+        background: var(--ink);
+        border-radius: 16px;
+        color: var(--cream);
+        display: flex;
+        gap: 32px;
+        justify-content: space-between;
+        margin-top: 16px;
+        padding: 16px 22px;
+      }
+
+      .spend-callout strong {
+        color: var(--mint);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 2.1rem;
+        letter-spacing: -0.03em;
+        margin-left: 6px;
+      }
+
+      .spend-callout span {
+        color: rgba(245, 243, 238, 0.72);
+        font-size: 0.78rem;
+      }
+
+      .forecast-table-wrap {
+        margin-top: 24px;
+        overflow: hidden;
+      }
+
+      .forecast-table {
+        border-collapse: separate;
+        border-spacing: 0 5px;
+        font-size: clamp(0.65rem, 0.8vw, 0.8rem);
+        table-layout: fixed;
+        width: 100%;
+      }
+
+      .forecast-table th {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.64rem;
+        font-weight: 700;
+        padding: 0 8px 5px;
+        text-align: right;
+        text-transform: uppercase;
+      }
+
+      .forecast-table th:first-child,
+      .forecast-table td:first-child { text-align: left; width: 11%; }
+      .forecast-table th:nth-child(2),
+      .forecast-table td:nth-child(2) { width: 18%; }
+      .forecast-table th:nth-child(3),
+      .forecast-table td:nth-child(3) { width: 17%; }
+      .forecast-table th:nth-child(4),
+      .forecast-table td:nth-child(4) { width: 20%; }
+      .forecast-table th:nth-child(5),
+      .forecast-table td:nth-child(5) { width: 16%; }
+      .forecast-table th:nth-child(6),
+      .forecast-table td:nth-child(6) { width: 18%; }
+
+      .forecast-table td {
+        background: rgba(255, 255, 255, 0.84);
+        border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+        border-top: 1px solid rgba(17, 24, 39, 0.06);
+        color: var(--ink-soft);
+        padding: 10px 8px;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .forecast-table td:first-child {
+        border-left: 4px solid transparent;
+        border-radius: 10px 0 0 10px;
+        font-weight: 700;
+      }
+
+      .forecast-table td:last-child { border-radius: 0 10px 10px 0; }
+      .forecast-table tr:last-child td { background: rgba(104, 215, 192, 0.14); }
+      .forecast-table tr:last-child td:first-child { border-left-color: var(--mint); }
+      .forecast-table tr:last-child td:last-child { color: var(--mint-strong); font-weight: 700; }
+
+      .financial-footnote {
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.72rem;
+        line-height: 1.35;
+        margin: 16px 0 0;
+      }
+
+      body[data-orientation="portrait"] .page--financial {
+        min-height: 100svh;
+        padding: 40px 24px 36px;
+      }
+
+      body[data-orientation="portrait"] .commission-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body[data-orientation="portrait"] .spend-callout {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      body[data-orientation="portrait"] .forecast-table {
+        font-size: 0.54rem;
+      }
+
+      body[data-orientation="portrait"] .forecast-table th {
+        font-size: 0.48rem;
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+
+      body[data-orientation="portrait"] .forecast-table td {
+        padding: 8px 3px;
+      }
+
+      .page--founders {
+        align-items: center;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .founders-slide-image {
+        display: block;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      body[data-orientation="portrait"] .page--founders {
+        min-height: 100svh;
+      }
+
+      .page--founders {
+        background: var(--scrim);
+        color: var(--cream);
+        display: block;
+        padding: clamp(48px, 5vw, 72px);
+      }
+
+      .founders-content {
+        max-width: none;
+        position: relative;
+        width: 100%;
+      }
+
+      .founders-accent {
+        background: var(--mint);
+        height: calc(100% - 48px);
+        left: -20px;
+        position: absolute;
+        top: 48px;
+        width: 5px;
+      }
+
+      .founders-content h2 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3.6rem, 5.4vw, 6.2rem);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 0.9;
+        margin: 0;
+      }
+
+      .founders-grid {
+        display: grid;
+        gap: clamp(32px, 5vw, 72px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: clamp(32px, 4vw, 52px) auto 0;
+        max-width: 1120px;
+      }
+
+      .founder-profile { text-align: center; }
+
+      .founder-portrait {
+        border-radius: 20px;
+        display: block;
+        height: clamp(190px, 19vw, 250px);
+        margin: 0 auto;
+        object-fit: cover;
+        width: clamp(190px, 19vw, 250px);
+      }
+
+      .founder-profile h3 {
+        color: var(--cream);
+        font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+        line-height: 1.2;
+        margin: 22px 0 0;
+      }
+
+      .founder-role {
+        color: var(--mint);
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin: 5px 0 0;
+      }
+
+      .founder-bio {
+        color: rgba(245, 243, 238, 0.7);
+        font-size: clamp(0.88rem, 1vw, 1rem);
+        font-style: italic;
+        line-height: 1.45;
+        margin: 22px auto 0;
+        max-width: 450px;
+      }
+
+      .founder-link {
+        color: var(--mint);
+        display: block;
+        font-size: 0.72rem;
+        margin-top: 24px;
+        overflow-wrap: anywhere;
+        text-decoration: underline;
+      }
+
+      body[data-orientation="portrait"] .page--founders { padding: 48px 28px; }
+      body[data-orientation="portrait"] .founders-accent { left: -12px; }
+      body[data-orientation="portrait"] .founders-grid { grid-template-columns: 1fr; }
+
+      .page--funding {
+        background: var(--scrim);
+        color: var(--cream);
+        display: block;
+        padding: clamp(40px, 4vw, 56px);
+      }
+
+      .page--funding .content {
+        max-width: none;
+        width: 100%;
+      }
+
+      .page--funding h2 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(2.8rem, 4vw, 4.8rem);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 0.94;
+        margin: 0;
+        max-width: 1200px;
+      }
+
+      .funding-lede {
+        color: rgba(245, 243, 238, 0.72);
+        font-size: clamp(1rem, 1.3vw, 1.2rem);
+        line-height: 1.4;
+        margin: var(--space-3) 0 0;
+        max-width: 760px;
+      }
+
+      .funding-milestone {
+        background: rgba(104, 215, 192, 0.08);
+        border-left: 4px solid var(--mint);
+        border-radius: 0 12px 12px 0;
+        color: rgba(245, 243, 238, 0.82);
+        font-size: 0.84rem;
+        line-height: 1.4;
+        margin: 18px 0 0;
+        max-width: 1040px;
+        padding: 12px 16px;
+      }
+
+      .funding-milestone strong { color: var(--mint); }
+
+      .funding-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
+        margin-top: clamp(28px, 3vw, 40px);
+      }
+
+      .funding-ask,
+      .funding-panel {
+        background: rgba(255, 255, 255, 0.055);
+        border: 1px solid rgba(104, 215, 192, 0.28);
+        border-radius: 20px;
+      }
+
+      .funding-ask {
+        padding: clamp(22px, 2vw, 30px);
+      }
+
+      .funding-ask .page-kicker { color: var(--mint); }
+
+      .funding-ask-value {
+        color: var(--mint);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(3.8rem, 4.2vw, 4.8rem);
+        font-weight: 600;
+        letter-spacing: -0.06em;
+        line-height: 0.85;
+        margin: 28px 0 16px;
+      }
+
+      .funding-ask p {
+        color: rgba(245, 243, 238, 0.72);
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .funding-panel {
+        padding: clamp(22px, 2vw, 30px);
+      }
+
+      .funding-panel h3 {
+        color: var(--cream);
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+      }
+
+      .funding-line {
+        align-items: center;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 42px minmax(140px, 1fr) 235px;
+        margin-top: 9px;
+      }
+
+      .funding-line strong {
+        color: var(--mint);
+        font-size: 1.1rem;
+      }
+
+      .funding-line span {
+        color: var(--cream);
+        font-size: 0.82rem;
+      }
+
+      .funding-bar {
+        background: rgba(245, 243, 238, 0.12);
+        border-radius: 99px;
+        height: 8px;
+        overflow: hidden;
+      }
+
+      .funding-bar::before {
+        background: var(--mint);
+        border-radius: inherit;
+        content: "";
+        display: block;
+        height: 100%;
+        width: var(--share);
+      }
+
+      .funding-line:nth-child(2) { --share: 45%; }
+      .funding-line:nth-child(3) { --share: 35%; }
+      .funding-line:nth-child(4) { --share: 15%; }
+      .funding-line:nth-child(5) { --share: 5%; }
+      .funding-line:nth-child(5) .funding-bar::before { background: var(--coral); }
+
+      .outcomes {
+        border-top: 1px solid rgba(245, 243, 238, 0.18);
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 14px;
+        padding-top: 16px;
+      }
+
+      .outcome strong {
+        color: var(--cream);
+        display: block;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        letter-spacing: -0.04em;
+        line-height: 0.9;
+      }
+
+      .outcome:first-child strong,
+      .outcome:last-child strong { color: var(--mint); }
+
+      .outcome span {
+        color: rgba(245, 243, 238, 0.64);
+        display: block;
+        font-size: 0.72rem;
+        line-height: 1.3;
+        margin-top: 8px;
+      }
+
+      .funding-footnote {
+        color: rgba(245, 243, 238, 0.58);
+        font-size: 0.72rem;
+        line-height: 1.35;
+        margin: 16px 0 0;
+      }
+
+      body[data-orientation="portrait"] .page--funding {
+        min-height: 100svh;
+        padding: 48px 28px;
+      }
+
+      body[data-orientation="portrait"] .funding-grid {
+        grid-template-columns: 1fr;
+      }
+
+      body[data-orientation="portrait"] .funding-line {
+        grid-template-columns: 38px minmax(0, 1fr);
+      }
+
+      body[data-orientation="portrait"] .funding-line span { grid-column: 2; }
+      body[data-orientation="portrait"] .funding-line .funding-bar { grid-column: 2; grid-row: 2; }
+      body[data-orientation="portrait"] .outcomes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .page--closing {
+        align-items: center;
+        background: var(--scrim);
+        color: var(--cream);
+        display: flex;
+        justify-content: center;
+        padding: clamp(48px, 6vw, 96px);
+        text-align: center;
+      }
+
+      .closing-content {
+        max-width: 980px;
+        width: 100%;
+      }
+
+      .closing-content h2 {
+        color: var(--cream);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(5rem, 10vw, 11rem);
+        font-weight: 600;
+        letter-spacing: -0.06em;
+        line-height: 0.82;
+        margin: 0;
+      }
+
+      .closing-rule {
+        background: var(--mint);
+        height: 5px;
+        margin: 40px auto 32px;
+        width: 72px;
+      }
+
+      .closing-name {
+        color: var(--cream);
+        font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .closing-role {
+        color: var(--mint);
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin: 6px 0 0;
+      }
+
+      .closing-email {
+        color: rgba(245, 243, 238, 0.72);
+        display: block;
+        font-size: 0.95rem;
+        margin-top: 16px;
+      }
+
+      .closing-link {
+        appearance: none;
+        background: transparent;
+        border: 1px solid var(--mint);
+        border-radius: 99px;
+        color: var(--mint);
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 0.85rem;
+        font-family: inherit;
+        font-weight: 700;
+        gap: 12px;
+        letter-spacing: 0.05em;
+        margin-top: 48px;
+        padding: 15px 22px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .closing-link span { font-size: 1.1rem; line-height: 0.8; }
+
+      body[data-orientation="portrait"] .page--closing {
+        min-height: 100svh;
+        padding: 48px 28px;
+      }
+
+      .video-modal {
+        background: rgba(11, 16, 32, 0.92);
+        border: 1px solid rgba(104, 215, 192, 0.35);
+        border-radius: 20px;
+        color: var(--cream);
+        max-height: 90vh;
+        max-width: min(1100px, 92vw);
+        padding: 20px;
+        width: 90vw;
+      }
+
+      .video-modal::backdrop { background: rgba(11, 16, 32, 0.78); }
+
+      .video-modal video {
+        border-radius: 12px;
+        display: block;
+        max-height: 78vh;
+        width: 100%;
+      }
+
+      .video-modal-close {
+        background: transparent;
+        border: 1px solid rgba(245, 243, 238, 0.36);
+        border-radius: 99px;
+        color: var(--cream);
+        cursor: pointer;
+        display: block;
+        font: inherit;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 14px 0 0 auto;
+        padding: 9px 15px;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 760px) and (orientation: landscape) {
+        .toolbar { display: none; }
+        .page {
+          min-height: 460px;
+        }
+      }
+
+      @media print {
+        @page { margin: 0; size: A4 landscape; }
+        body { background: var(--scrim); }
+        .toolbar { display: none; }
+        .deck { max-width: none; padding: 0; }
+        .page { aspect-ratio: auto; border-radius: 0; height: calc(100vh + 1px); min-height: 0; page-break-after: always; width: 100vw; }
+        .page:last-child { page-break-after: auto; }
+        .page--traction { padding: 36px 48px; }
+        .page--traction h2 { font-size: 3.8rem; }
+        .page--traction .traction-grid { margin-top: 28px; }
+        .page--traction .traction-card { min-height: 190px; padding: 20px; }
+        .page--traction .traction-value { font-size: 3.8rem; margin: 18px 0 14px; }
+        .page--traction .traction-footer { margin-top: 20px; }
+      }
+
+      @media print and (orientation: portrait) {
+        @page { size: A4 portrait; }
+        .page {
+          aspect-ratio: auto;
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-6);
+          height: 100vh;
+          min-height: 0;
+          padding: 9vh 9vw;
+        }
+        .content { order: 2; }
+        .brand-stage { order: 1; min-height: 38vh; }
+        .brand-stage::after { height: 62vw; width: 62vw; }
+        .logo { max-width: 58vw; }
+        h1 { font-size: clamp(3.4rem, 10vw, 5.8rem); }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="toolbar" aria-label="Preview orientation">
+      <a href="?orientation=landscape#landscape">Landscape preview</a>
+      <a href="?orientation=portrait#portrait">Portrait preview</a>
+    </nav>
+    <main class="deck" id="landscape">
+      <section class="page" aria-label="Alfred Travel investor deck hero page">
+        <div class="content">
+          <div class="eyebrow">September pitches · USD</div>
+          <h1>Alfred Travel is the trusted AI Travel Assistant.</h1>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="subtitle">Turn Fragmented research, family constraints and booking decisions into one coherent trip.</p>
+          <p class="metrics">5,000+ downloads | 5000+ itineraries | $4 CAC | Raising USD $500K</p>
+        </div>
+        <div class="brand-stage">
+          <img class="logo" src="assets/175831175_padded_logo.png" alt="Alfred Travel — your personal travel assistant" />
+        </div>
+      </section>
+      <section class="page page--light" id="page-2" aria-label="Why travel concierges still exist">
+        <div class="content">
+          <div class="page-kicker">The problem · travel remains personal</div>
+          <h2>The internet made travel searchable. It didn’t make it simple.</h2>
+          <p class="page-lede">OTAs made booking self-serve, but the hardest part of travel is still understanding the person, coordinating the whole trip, and being there when plans change.</p>
+          <div class="comparison">
+            <article class="comparison-card">
+              <div class="comparison-label">Self-serve reality</div>
+              <h3>15+ hours of research over 2 months</h3>
+              <p>Families compare flights, hotels, activities, restaurants, policies, locations, and trade-offs across a fragmented search journey.</p>
+            </article>
+            <article class="comparison-card">
+              <div class="comparison-label">The hidden work</div>
+              <h3>One trip, multiple avenues</h3>
+              <p>Travellers must make the bookings themselves, keep the details aligned, and call upon different providers when something changes.</p>
+            </article>
+            <article class="comparison-card comparison-card--accent">
+              <div class="comparison-label">Why concierges endure</div>
+              <h3>Personalisation plus service</h3>
+              <p>A trusted assistant understands the client’s needs, makes the necessary bookings, and provides the human support required when things go wrong.</p>
+            </article>
+          </div>
+          <div class="page-footer"><p>Alfred brings the concierge layer to the self-serve era.</p></div>
+        </div>
+      </section>
+      <section class="page page--solution" id="page-3" aria-label="The Alfred Travel solution">
+        <div class="solution-copy">
+          <div class="page-kicker">The solution · one coherent trip</div>
+          <h2>The benefits of an OTA. The care of a concierge.</h2>
+          <p class="page-lede">Alfred combines self-serve flexibility with true personalisation, one touchpoint for the whole journey, and the servicing travellers need when plans change.</p>
+          <div class="solution-pillars">
+            <div class="solution-pillar"><strong>Personalised by context</strong><span>Plans reflect the family, not just the destination.</span></div>
+            <div class="solution-pillar"><strong>One touchpoint</strong><span>Flights, stays, activities, dining, and details in one place.</span></div>
+            <div class="solution-pillar"><strong>Serviced end-to-end</strong><span>Book, adapt, and recover without starting the research again.</span></div>
+          </div>
+          <div class="service-flow" aria-label="Alfred Travel journey flow">
+            <span class="service-step" data-step="1">Planning</span>
+            <span class="service-step" data-step="2">Booking</span>
+            <span class="service-step" data-step="3">Editing</span>
+            <span class="service-step" data-step="4">Servicing</span>
+          </div>
+        </div>
+        <div class="product-collage" aria-label="Alfred Travel product views">
+          <figure class="product-frame product-frame--desktop"><img src="assets/alfred-phuket-desktop-itinerary.png" alt="Alfred desktop itinerary for Melbourne to Phuket with map and bookable activities" /></figure>
+          <div class="mobile-strip" aria-label="Alfred Travel mobile product views">
+            <figure class="product-frame"><img src="assets/alfred-mobile-itineraries.jpeg" alt="Alfred mobile saved itineraries view" /></figure>
+            <figure class="product-frame"><img src="assets/alfred-mobile-wat-chalong.jpeg" alt="Alfred mobile Wat Chalong destination details" /></figure>
+            <figure class="product-frame"><img src="assets/alfred-mobile-copilot.jpeg" alt="Alfred mobile itinerary copilot dialog" /></figure>
+            <figure class="product-frame"><img src="assets/alfred-mobile-booking.jpeg" alt="Alfred mobile booking flow" /></figure>
+          </div>
+        </div>
+      </section>
+      <section class="page page--competitors" id="page-4" aria-label="Alfred Travel competitor analysis">
+        <div class="content">
+          <div class="page-kicker">Competitive landscape · the concierge gap</div>
+          <h2>Self-serve is table stakes. Personalised service is the edge.</h2>
+          <p class="competitor-lede">Alfred is the only option in this set combining family-specific planning, multi-profile context, booking, and one coherent trip experience.</p>
+          <div class="competitor-table-wrap">
+            <table class="competitor-table">
+              <thead>
+                <tr>
+                  <th scope="col">Competitor</th>
+                  <th scope="col">Mobile</th>
+                  <th scope="col">Family-Specific Planning</th>
+                  <th scope="col">Time to Create</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col">Plan</th>
+                  <th scope="col">Book</th>
+                  <th scope="col">Editing</th>
+                  <th scope="col">Service</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="is-alfred">
+                  <td>ALFRED TRAVEL</td>
+                  <td class="positive">✅</td>
+                  <td><span class="positive">✅</span> multi-profile</td>
+                  <td>8–10 minutes</td>
+                  <td>Free</td>
+                  <td class="positive">✅</td>
+                  <td class="positive">✅</td>
+                  <td class="positive">✅</td>
+                  <td class="positive">✅</td>
+                </tr>
+                <tr>
+                  <td>ChatGPT</td>
+                  <td class="positive">✅</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>18–21 minutes</td>
+                  <td>Free</td>
+                  <td class="positive">✅</td>
+                  <td class="negative">❌</td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
+                </tr>
+                <tr>
+                  <td>MINDTRIP</td>
+                  <td class="limited">🟡 <small>(iOS)</small></td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>16–20 minutes</td>
+                  <td>Free</td>
+                  <td class="positive">✅</td>
+                  <td class="positive">✅</td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
+                </tr>
+                <tr>
+                  <td>ODESSIA</td>
+                  <td class="negative">❌</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>16–18 minutes</td>
+                  <td>Free</td>
+                  <td class="positive">✅</td>
+                  <td class="negative">❌</td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
+                </tr>
+                <tr>
+                  <td>LAYLA</td>
+                  <td class="limited">🟡 <small>(iOS)</small></td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>28–33 minutes</td>
+                  <td>Free</td>
+                  <td class="positive">✅</td>
+                  <td class="positive">✅</td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
+                </tr>
+                <tr>
+                  <td>WONDERLOG</td>
+                  <td class="positive">✅</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>NA</td>
+                  <td>$50 p/a</td>
+                  <td class="positive">✅</td>
+                  <td class="negative">❌</td>
+                  <td class="positive">✅</td>
+                  <td class="negative">❌</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="competitor-footnote">Source: supplied competitor benchmark. “Mobile” indicates mobile availability; 🟡 indicates a limited or platform-specific experience.</p>
+        </div>
+      </section>
+      <section class="page page--advantage" id="page-5" aria-label="Wedge, moat and compounding advantage">
+        <div class="content">
+          <div class="page-kicker">The advantage · a learning flywheel</div>
+          <h2>The wedge gets us in. The moat gets stronger with every trip.</h2>
+          <p class="advantage-lede">Alfred starts with a better way to plan, then compounds the advantage by learning the traveller across the full journey.</p>
+          <div class="advantage-grid">
+            <article class="advantage-card">
+              <div class="advantage-number">01 · WEDGE</div>
+              <h3>One platform for the whole trip.</h3>
+              <p>Research, planning, editing, booking, and servicing come together in one interface instead of a stack of fragmented tools.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-number">02 · MOAT</div>
+              <h3>An end-to-end traveller graph.</h3>
+              <p>Other platforms capture one facet of the journey. Alfred tracks behaviour across the full journey, from first idea to post-booking support.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-number">03 · COMPOUNDING ADVANTAGE</div>
+              <h3>Every trip makes Alfred more personal.</h3>
+              <p>True personalisation and continuous learning turn observed traveller behaviour into better recommendations, faster decisions, and stronger retention.</p>
+            </article>
+          </div>
+          <p class="advantage-takeaway">More journeys → more understanding → more personal trips</p>
+        </div>
+      </section>
+      <section class="page page--traction" id="page-6" aria-label="Alfred Travel traction">
+        <div class="content">
+          <div class="page-kicker">Traction · early proof of pull</div>
+          <h2>Usage is building around one coherent trip.</h2>
+          <p class="traction-date">September 1st 2026 numbers</p>
+          <div class="traction-grid">
+            <article class="traction-card">
+              <div class="page-kicker">Users</div>
+              <div class="traction-value">5,000</div>
+              <p class="traction-label">Users downloaded</p>
+            </article>
+            <article class="traction-card">
+              <div class="page-kicker">Itineraries Created</div>
+              <div class="traction-value">5,200</div>
+              <p class="traction-label">Itineraries created</p>
+            </article>
+            <article class="traction-card">
+              <div class="page-kicker">CAC</div>
+              <div class="traction-value">USD $4</div>
+              <p class="traction-label">Customer acquisition cost</p>
+            </article>
+            <article class="traction-card">
+              <div class="page-kicker">Customer Retention</div>
+              <div class="traction-value">27%</div>
+              <p class="traction-label">Users who created &gt;1 itinerary</p>
+            </article>
+          </div>
+          <p class="traction-footer">Retention = percentage of users that have created more than one itinerary.</p>
+        </div>
+      </section>
+      <section class="page page--financial" id="page-7" aria-label="Alfred Travel business model and financial projection">
+        <div class="content">
+          <div class="page-kicker">Business model · monetising the trip</div>
+          <h2>Every booked itinerary creates multiple revenue streams.</h2>
+          <p class="financial-lede">Alfred earns commission across the trip, with an average itinerary spend of USD $4,500 and an approximately $300 blended commission per fully booked itinerary.</p>
+          <div class="commission-grid">
+            <article class="commission-card">
+              <div class="commission-rate">6.5–7%</div>
+              <p>Flight and Hotel Packages</p>
+            </article>
+            <article class="commission-card">
+              <div class="commission-rate">10%</div>
+              <p>Activity and Tour packages</p>
+            </article>
+            <article class="commission-card">
+              <div class="commission-rate">10%</div>
+              <p>E-Sims</p>
+            </article>
+            <article class="commission-card">
+              <div class="commission-rate">10%</div>
+              <p>Travel Insurance</p>
+            </article>
+          </div>
+          <div class="spend-callout">
+            <span>Average spend on one itinerary <strong>USD $4,500</strong></span>
+            <span>Blended commission per fully booked itinerary <strong>≈ $300</strong></span>
+          </div>
+          <div class="forecast-table-wrap">
+            <table class="forecast-table">
+              <thead>
+                <tr>
+                  <th scope="col">Milestone</th>
+                  <th scope="col">Itineraries Generated</th>
+                  <th scope="col">Bookings Generated</th>
+                  <th scope="col">Average Spend Airfare &amp; Hotel</th>
+                  <th scope="col">Others Spend</th>
+                  <th scope="col">Total Revenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>15,000</td><td>750</td><td>$3,640.00</td><td>$910.00</td><td>$245,700.00</td></tr>
+                <tr><td>2</td><td>50,000</td><td>2,500</td><td>$3,785.60</td><td>$946.40</td><td>$851,760.00</td></tr>
+                <tr><td>3</td><td>250,000</td><td>12,500</td><td>$3,937.02</td><td>$984.26</td><td>$4,429,152.00</td></tr>
+                <tr><td>4</td><td>1,250,000</td><td>62,500</td><td>$4,094.50</td><td>$1,023.63</td><td>$23,031,590.40</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="financial-footnote">Forecast supplied by Alfred Travel. Milestones represent increasing itinerary and booking volume.</p>
+        </div>
+      </section>
+      <section class="page page--founders" id="page-8" aria-label="Our founders">
+        <div class="content founders-content">
+          <div class="founders-accent" aria-hidden="true"></div>
+          <div class="page-kicker">The team · built for the full journey</div>
+          <h2>Our Founders</h2>
+          <div class="founders-grid">
+            <article class="founder-profile">
+              <img class="founder-portrait" src="assets/billy-portrait.png" alt="Billy Ka Keung Chan" />
+              <h3>Billy Ka Keung Chan</h3>
+              <p class="founder-role">Co-founder and CEO</p>
+              <p class="founder-bio">20 years across travel and payments; led commercial distribution across Expedia and Travelport; owns product-market strategy, partnerships and monetisation.</p>
+              <a class="founder-link" href="https://www.linkedin.com/in/billy-chan-4527818b/">linkedin.com/in/billy-chan-4527818b/</a>
+            </article>
+            <article class="founder-profile">
+              <img class="founder-portrait" src="assets/andy-portrait.png" alt="Andy Kwong Ching Tsang" />
+              <h3>Andy Kwong Ching Tsang</h3>
+              <p class="founder-role">Co-founder and CTO</p>
+              <p class="founder-bio">30 years engineering leadership; scaled platforms to millions of users; owns architecture, AI workflow and platform execution.</p>
+              <a class="founder-link" href="https://www.linkedin.com/in/andy-tsang-383a70145/">linkedin.com/in/andy-tsang-383a70145/</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="page page--funding" id="page-9" aria-label="Funding ask and use of funds">
+        <div class="content">
+          <div class="page-kicker">The raise · scaling the coherent trip</div>
+          <h2>Capital to turn early pull into repeatable growth.</h2>
+          <p class="funding-lede">Raising USD$500K at a 10M pre-money priced valuation.</p>
+          <p class="funding-milestone"><strong>Pre-seed milestone:</strong> A $175K pre-seed raise closed in April 2026, with the outcome of driving 15,000 qualified itineraries. Alfred is on track to complete that milestone by January 2027.</p>
+          <div class="funding-grid">
+            <article class="funding-ask">
+              <div class="page-kicker">Funding Ask</div>
+              <div class="funding-ask-value">USD$500K</div>
+              <p>10M pre-money priced valuation</p>
+            </article>
+            <section class="funding-panel" aria-label="Use of funds and outcomes">
+              <h3>Use of Funds</h3>
+              <div class="funding-line"><strong>45%</strong><span>Creator and user acquisition</span><div class="funding-bar"></div></div>
+              <div class="funding-line"><strong>35%</strong><span>Product and engineering</span><div class="funding-bar"></div></div>
+              <div class="funding-line"><strong>15%</strong><span>Supplier and inventory partnerships</span><div class="funding-bar"></div></div>
+              <div class="funding-line"><strong>5%</strong><span>Legal, infrastructure and contingency</span><div class="funding-bar"></div></div>
+              <div class="outcomes">
+                <div class="outcome"><strong>50K</strong><span>qualified Itineraries</span></div>
+                <div class="outcome"><strong>2,500</strong><span>bookings</span></div>
+                <div class="outcome"><strong>USD $850K</strong><span>revenue</span></div>
+                <div class="outcome"><strong>Break-Even</strong><span>operational break-even</span></div>
+              </div>
+            </section>
+          </div>
+          <p class="funding-footnote">Use of funds and outcomes reflect the supplied funding plan.</p>
+        </div>
+      </section>
+      <section class="page page--closing" id="page-10" aria-label="Thank you">
+        <div class="closing-content">
+          <div class="page-kicker">Alfred Travel · Your Personal Travel Assistant</div>
+          <h2>Thank you.</h2>
+          <div class="closing-rule" aria-hidden="true"></div>
+          <p class="closing-name">Billy Ka Keung Chan</p>
+          <p class="closing-role">Founder &amp; CEO</p>
+          <a class="closing-email" href="mailto:admin@alfredtravel.io">admin@alfredtravel.io</a>
+          <button class="closing-link" id="open-video" type="button">See Alfred in Action <span aria-hidden="true">↗</span></button>
+        </div>
+        <dialog class="video-modal" id="video-modal" aria-label="See Alfred in Action">
+          <video id="action-video" controls preload="metadata">
+            <source src="assets/See_Alfred_In_Action.mp4" type="video/mp4" />
+          </video>
+          <button class="video-modal-close" id="close-video" type="button">Close</button>
+        </dialog>
+      </section>
+    </main>
+    <script>
+      const requestedOrientation = new URLSearchParams(window.location.search).get("orientation");
+      document.body.dataset.orientation = requestedOrientation === "portrait" ? "portrait" : "landscape";
+
+      const videoModal = document.querySelector("#video-modal");
+      const actionVideo = document.querySelector("#action-video");
+      document.querySelector("#open-video").addEventListener("click", () => {
+        videoModal.showModal();
+        actionVideo.play();
+      });
+      document.querySelector("#close-video").addEventListener("click", () => {
+        actionVideo.pause();
+        actionVideo.currentTime = 0;
+        videoModal.close();
+      });
+      videoModal.addEventListener("click", (event) => {
+        if (event.target === videoModal) {
+          actionVideo.pause();
+          actionVideo.currentTime = 0;
+          videoModal.close();
+        }
+      });
+    </script>
+  </body>
+</html>
