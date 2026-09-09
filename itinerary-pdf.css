@@ -75,7 +75,9 @@
 /* Contrast override for legacy itinerary-pdf selectors. */
 .v2-main .tai-itinerary-cta .tai-btn-primary,.v2-main .tai-itinerary-cta .tai-btn-primary:hover,.v2-main .tai-itinerary-cta .tai-btn-primary:focus-visible{color:#111827!important;background:linear-gradient(135deg,#68D7C0,#39CDBB)!important;border:0!important;}
 
-/* Final contrast and page-shell overrides for all trip templates. */
+.itinerary-pdf-style .tai-itinerary-cta{background:linear-gradient(110deg,#fff4df 0%,#f4f8e9 52%,#d9f3ec 100%)!important;border:1px solid #c9e2df!important;}
+.itinerary-pdf-style .tai-itinerary-cta h2{color:#111827!important;}
+.itinerary-pdf-style .tai-itinerary-cta p{color:#526A79!important;}
 body{background:#F5F3EE!important;color:#111827!important;}
 .v2-main .pdf-day-heading,.v2-main .tai-itinerary-faq h2,.v2-main .tai-agn-heading,.v2-main .tai-itinerary-cta h2{color:#111827!important;}
 .v2-main .pdf-plan-content,.v2-main .pdf-plan-content p,.v2-main .tai-agn-desc,.v2-main .tai-itinerary-faq p,.v2-main .tai-itinerary-faq article p{color:#4B5563!important;}
