@@ -97,3 +97,4 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | --- | --- | --- |
 | Gold Coast | `../gold-coast-skypoint.jpg` | Experience Gold Coast, official destination site: https://experiencegoldcoast.com/ (SkyPoint Observation Deck image asset) |
 | Sunshine Coast | `../sunshine-coast-mooloolaba.webp` | Visit Sunshine Coast, official destination site: https://www.visitsunshinecoast.com/ (Mooloolaba image asset) |
+| Wellington → Wairarapa | `../wellington-wairarapa-martinborough.jpg` | WellingtonNZ, official destination site: https://www.wellingtonnz.com/ (Martinborough vineyard image asset) |

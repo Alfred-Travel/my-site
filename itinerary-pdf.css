@@ -45,3 +45,46 @@
 .itinerary-pdf-style .tai-itinerary-trust-note{margin:20px 0 0;padding:14px 16px;border:1px solid rgba(30,119,120,.24);border-radius:14px;color:#27465c;background:rgba(104,215,192,.10);font-size:14px;line-height:1.55}.itinerary-pdf-style .tai-itinerary-trust-note strong{color:#1e7778}.itinerary-pdf-style .v2-source-content strong{color:#10253a!important}
 .itinerary-jump-nav{position:sticky;top:74px;z-index:10;display:flex;gap:7px;overflow-x:auto;margin:0 0 20px;padding:10px;border:1px solid var(--pdf-line);border-radius:16px;background:rgba(255,255,255,.92);box-shadow:0 8px 24px rgba(16,37,58,.08)}.itinerary-jump-nav a{flex:0 0 auto;padding:8px 11px;border-radius:999px;color:var(--pdf-teal);font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}.itinerary-jump-nav a:hover,.itinerary-jump-nav a:focus-visible{color:#fff;background:var(--pdf-teal)}
 @media(max-width:720px){.itinerary-jump-nav{top:58px;margin-bottom:14px;padding:8px}.itinerary-jump-nav a{padding:8px 10px;font-size:11px}}
+
+/* Website V2 trip-design component baseline: shared by every itinerary page. */
+.v2-main{background:#F5F3EE;color:#111827;}
+.itinerary-page{max-width:1180px;margin:0 auto;padding:0 24px 64px;}
+.itinerary-hero-image{display:block;width:100%;max-height:320px;object-fit:cover;border-radius:22px;margin-top:24px;}
+.itinerary-jump-nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0;padding:12px;border-radius:20px;background:#fff;box-shadow:0 16px 44px rgba(17,24,39,.06);}
+.itinerary-jump-nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:999px;color:#111827;text-decoration:none;font:700 .875rem/1.35 system-ui,sans-serif;}
+.itinerary-jump-nav a:hover,.itinerary-jump-nav a:focus-visible{background:rgba(104,215,192,.14);outline:2px solid #3D9F8A;outline-offset:2px;}
+.tai-agn-section,.tai-itinerary-faq,.tai-itinerary-cta{border-radius:28px;margin:32px 0;padding:32px;background:#fff;box-shadow:0 16px 44px rgba(17,24,39,.06);}
+.tai-agn-badge,.tai-section-kicker,.v2-kicker{font:700 .75rem/1.35 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#3D9F8A;}
+.tai-agn-heading,.tai-dark-header h2,.tai-itinerary-cta h2,.itinerary-day-list>h2{font-family:Georgia,'Times New Roman',serif;color:#111827;letter-spacing:-.02em;}
+.tai-agn-grid,.tai-faq-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px;}
+.tai-agn-grid>div,.tai-faq-grid article{padding:20px;border-radius:20px;background:#F6F8FB;color:#4B5563;line-height:1.6;}
+.itinerary-day-list{margin:40px 0;}
+.pdf-day-card{display:block;margin:20px 0;padding:28px;border-radius:28px;background:#fff;border:1px solid rgba(17,24,39,.08);box-shadow:0 24px 60px rgba(17,24,39,.08);scroll-margin-top:110px;}
+.pdf-day-heading{margin:0 0 18px;font-family:Georgia,'Times New Roman',serif;font-size:1.8rem;line-height:1.15;color:#111827;}
+.pdf-day-rows{display:block;}
+.pdf-plan-row{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;}
+.pdf-plan-index{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;background:rgba(104,215,192,.14);color:#111827;font:700 .8rem system-ui,sans-serif;}
+.pdf-plan-content{font:400 1rem/1.6 system-ui,sans-serif;color:#4B5563;}
+.pdf-plan-content p{margin:0 0 12px;}
+.tai-join-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.tai-btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:999px;background:#68D7C0;color:#111827!important;text-decoration:none!important;font:700 .9375rem/1.45 system-ui,sans-serif;box-shadow:none;}
+.tai-btn-primary:hover{background:#56C4AD;color:#111827!important;}
+.tai-btn-primary:focus-visible{outline:3px solid #3D9F8A;outline-offset:3px;}
+@media(max-width:760px){.itinerary-page{padding:0 16px 48px}.tai-agn-grid,.tai-faq-grid{grid-template-columns:1fr}.tai-join-inner{align-items:flex-start;flex-direction:column}.pdf-day-card{padding:22px}.itinerary-jump-nav{gap:4px;padding:8px}.itinerary-jump-nav a{padding:8px 12px;min-height:40px;}}
+
+/* Contrast override for legacy itinerary-pdf selectors. */
+.v2-main .tai-itinerary-cta .tai-btn-primary,.v2-main .tai-itinerary-cta .tai-btn-primary:hover,.v2-main .tai-itinerary-cta .tai-btn-primary:focus-visible{color:#111827!important;background:#68D7C0!important;}
+
+/* Final contrast and page-shell overrides for all trip templates. */
+body{background:#F5F3EE!important;color:#111827!important;}
+.v2-main .pdf-day-heading,.v2-main .tai-itinerary-faq h2,.v2-main .tai-agn-heading,.v2-main .tai-itinerary-cta h2{color:#111827!important;}
+.v2-main .pdf-plan-content,.v2-main .pdf-plan-content p,.v2-main .tai-agn-desc,.v2-main .tai-itinerary-faq p,.v2-main .tai-itinerary-faq article p{color:#4B5563!important;}
+.v2-main .pdf-plan-content strong,.v2-main .tai-itinerary-faq article h3{color:#111827!important;}
+.v2-footer{background:#0B1020;color:#fff;}
+
+/* Shortcut focus/selection contrast and centered destination hero. */
+.v2-main .itinerary-jump-nav a:hover,.v2-main .itinerary-jump-nav a:focus,.v2-main .itinerary-jump-nav a:focus-visible,.v2-main .itinerary-jump-nav a:active{color:#111827!important;background:rgba(104,215,192,.18)!important;}
+.v2-hero-inner .itinerary-hero-image{display:block;width:100%;max-width:1100px;margin:24px auto 0!important;object-fit:cover;object-position:center center;}
+
+.v2-hero-inner .itinerary-hero-image{width:calc(100% - 160px);max-width:1100px;margin:24px auto 0!important;}
+@media(max-width:760px){.v2-hero-inner .itinerary-hero-image{width:calc(100% - 32px);}}
