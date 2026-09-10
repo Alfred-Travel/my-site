@@ -29,7 +29,7 @@ body.blog-v2-style .site-header .desktop-nav .nav-cta:hover,body.blog-v2-style .
 @media(min-width:761px){body.blog-v2-style .menu-button{display:none!important;}body.blog-v2-style .site-header .desktop-nav a{white-space:nowrap!important;flex-shrink:0!important;}}
 body.blog-v2-style .tai-itinerary-cta{max-width:880px!important;margin-left:auto!important;margin-right:auto!important;padding:32px!important;}
 body.blog-v2-style .tai-itinerary-cta .tai-join-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;width:100%!important;}
-body.blog-v2-style .tai-itinerary-cta .tai-btn-primary{height:68px!important;min-height:68px!important;padding:12px 20px!important;}
+body.blog-v2-style .tai-itinerary-cta .tai-btn-primary{height:68px!important;min-height:68px!important;padding:12px 20px!important;flex-shrink:0!important;white-space:nowrap!important;}
 @media(max-width:760px){body.blog-v2-style .v2-hero-inner{padding:48px 20px 32px;}}
 
 body.blog-v2-style .v2-content,body.blog-v2-style article.v2-content,body.blog-v2-style .v2-source-content{background:#FFFFFF!important;color:#111827!important;border-radius:28px;padding:40px!important;box-shadow:0 16px 44px rgba(17,24,39,.06);}
