@@ -6,10 +6,11 @@
 .itinerary-pdf-style .v2-hero{width:min(960px,calc(100% - 48px));margin:42px auto 24px;padding:40px;border:1px solid var(--pdf-line);border-radius:28px;background:linear-gradient(110deg,#fff4df 0%,#f4f8e9 52%,#d9f3ec 100%)}
 .itinerary-pdf-style .v2-hero-inner{width:100%}
 .itinerary-pdf-style .v2-kicker{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.82);color:var(--pdf-teal);font-size:11px;letter-spacing:.14em}
-.itinerary-pdf-style .v2-hero h1{max-width:780px;margin:20px 0 14px;color:var(--pdf-navy);font:800 clamp(2.2rem,5vw,4.8rem)/.98 var(--v2-sans);letter-spacing:-.055em;text-transform:uppercase}
+.itinerary-pdf-style .v2-hero h1{max-width:780px;margin:20px 0 14px;color:var(--pdf-navy);font:600 clamp(2.2rem,5vw,2.75rem)/1.12 Georgia,Cambria,"Times New Roman",serif;letter-spacing:-.03em;text-transform:none}
 .itinerary-pdf-style .v2-hero p{max-width:760px;color:var(--pdf-muted);font-size:16px}
 .itinerary-pdf-style .v2-actions{margin-top:24px}
-.itinerary-pdf-style .v2-button-primary{color:#101111;background:linear-gradient(135deg,#68d7c0,#39cdbb);border-color:transparent}
+.itinerary-pdf-style .v2-button-primary,.itinerary-pdf-style .v2-hero .v2-actions .v2-button-primary{color:#101111!important;background:#68D7C0!important;border-color:transparent!important;min-height:44px}
+.itinerary-pdf-style .v2-button-primary:hover,.itinerary-pdf-style .v2-button-primary:focus-visible,.itinerary-pdf-style .v2-hero .v2-actions .v2-button-primary:hover,.itinerary-pdf-style .v2-hero .v2-actions .v2-button-primary:focus-visible{background:#56C4AD!important;color:#101111!important}
 .itinerary-pdf-style .v2-button-secondary{color:var(--pdf-teal);border-color:var(--pdf-line);background:rgba(255,255,255,.65)}
 .itinerary-pdf-style .v2-content{width:min(960px,calc(100% - 48px));padding-top:0;border-top:0}
 .itinerary-pdf-style .v2-breadcrumb{color:var(--pdf-muted);margin:0 0 18px}
