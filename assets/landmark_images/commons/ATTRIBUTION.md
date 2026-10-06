@@ -89,6 +89,7 @@ Images below are fetched from [Wikimedia Commons](https://commons.wikimedia.org/
 | Tel Aviv | `curated Commons: File:Tel Aviv beach Jaffa.jpg` | [File:Tel Aviv beach Jaffa.jpg](https://commons.wikimedia.org/wiki/File:Tel_Aviv_beach_Jaffa.jpg) |
 
 | Taipei | `Taipei 101 skyline Taiwan` | [File:Taipei Skyline April 2019.jpg](https://commons.wikimedia.org/wiki/File:Taipei_Skyline_April_2019.jpg) |
+| Christchurch | `Avon River punting Christchurch` | [File:Punting on the Avon. Christchurch.NZ (31074530243).jpg](https://commons.wikimedia.org/wiki/File:Punting_on_the_Avon._Christchurch.NZ_(31074530243).jpg) by Bernard Spragg. NZ, CC0 1.0 (public domain dedication), originally from Flickr https://www.flickr.com/photos/volvob12b/31074530243/; saved as `christchurch.jpg`, Wikimedia’s 1280 × 808 rendition, downloaded 2026-10-07, not otherwise modified. Punting on the Avon River beside the Christchurch Botanic Gardens. |
 
 
 ## Official tourism image assets
