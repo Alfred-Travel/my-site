@@ -56,5 +56,5 @@
   </section>
 </main>
 <footer class="site-footer"><div class="wrap footer-bottom"><span>© Alfred Travel</span><span>Planning with clearer assumptions.</span></div></footer>
-</body>
+<script>const menuButton=document.querySelector('.menu-button');const nav=document.querySelector('#primary-nav');menuButton?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation')});nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Open navigation')}));</script></body>
 </html>
