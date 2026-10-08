@@ -31,6 +31,7 @@ body.blog-v2-style .tai-itinerary-cta{max-width:880px!important;margin-left:auto
 body.blog-v2-style .tai-itinerary-cta .tai-join-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;width:100%!important;}
 body.blog-v2-style .tai-itinerary-cta .tai-btn-primary{height:68px!important;min-height:68px!important;padding:12px 20px!important;flex-shrink:0!important;white-space:nowrap!important;}
 @media(max-width:760px){body.blog-v2-style .v2-hero-inner{padding:48px 20px 32px;}}
+@media(max-width:760px){body.blog-v2-style .tai-itinerary-cta .tai-join-inner{flex-wrap:wrap!important;}body.blog-v2-style .tai-itinerary-cta .tai-btn-primary{white-space:normal!important;flex-shrink:1!important;}}
 
 body.blog-v2-style .v2-content,body.blog-v2-style article.v2-content,body.blog-v2-style .v2-source-content{background:#FFFFFF!important;color:#111827!important;border-radius:28px;padding:40px!important;box-shadow:0 16px 44px rgba(17,24,39,.06);}
 body.blog-v2-style .v2-content a,body.blog-v2-style article a{color:#2B7F71;}
