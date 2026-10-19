@@ -136,3 +136,6 @@
 }
 
 .v2-legal-authority p { margin: 0; }
+
+/* Footer links: no underline (browser default showed on blog/itinerary pages, which lack the homepage inline reset). 2026-10-19 */
+.v2-footer-links a{text-decoration:none}
