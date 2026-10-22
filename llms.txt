@@ -29,6 +29,8 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - Do not infer product capabilities beyond the claims made on the canonical pages.
 
 ## Recent itineraries and articles
+- [Cinque Terre from La Spezia · 5-day family itinerary](https://www.alfredtravel.io/itineraries/cinque-terre-family-itinerary-5-days.html) (Itinerary, 2026-10-23)
+- [Check the section, not the path](https://www.alfredtravel.io/blog/check-the-section-not-the-path.html) (Article, 2026-10-23)
 - [Maui from Kīhei · 5-day family itinerary](https://www.alfredtravel.io/itineraries/maui-family-itinerary-5-days.html) (Itinerary, 2026-10-22)
 - [The summit has its own forecast](https://www.alfredtravel.io/blog/the-summit-has-its-own-forecast.html) (Article, 2026-10-22)
 - [Hakone from Tokyo · 5-day family itinerary](https://www.alfredtravel.io/itineraries/hakone-family-itinerary-5-days.html) (Itinerary, 2026-10-21)
@@ -57,5 +59,3 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - [Low tide is not a walking window](https://www.alfredtravel.io/blog/low-tide-is-not-a-walking-window.html) (Article, 2026-10-06)
 - [Valencia · 5-day family itinerary](https://www.alfredtravel.io/itineraries/valencia-family-itinerary-5-days.html) (Itinerary, 2026-10-05)
 - [A combined ticket is not a combined day](https://www.alfredtravel.io/blog/a-combined-ticket-is-not-a-combined-day.html) (Article, 2026-10-05)
-- [Yellowstone family loop · 5-day itinerary](https://www.alfredtravel.io/itineraries/yellowstone-family-itinerary-5-days.html) (Itinerary, 2026-10-02)
-- [Ljubljana and Lake Bled · 5-day family itinerary](https://www.alfredtravel.io/itineraries/ljubljana-lake-bled-family-itinerary-5-days.html) (Itinerary, 2026-10-02)
