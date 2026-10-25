@@ -1319,6 +1319,15 @@
         margin-top: 8px;
       }
 
+      /* Slide 10 outcomes: scale stats to the Use of Funds card, 2x2 when the card is narrow */
+      .funding-panel { container-type: inline-size; min-width: 0; }
+      .outcome { min-width: 0; }
+      .outcome strong { font-size: clamp(1.25rem, 4.4cqi, 3.2rem); }
+      @container (max-width: 420px) {
+        .outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+        .outcome strong { font-size: clamp(1.6rem, 9cqi, 3rem); }
+      }
+
       .funding-footnote {
         color: rgba(245, 243, 238, 0.58);
         font-size: 0.72rem;
