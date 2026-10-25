@@ -11,6 +11,10 @@
 - Blog index: https://www.alfredtravel.io/blog/
 - Comparison hub: https://www.alfredtravel.io/compare/
 
+## Mobile apps
+- App Store (iPhone): https://apps.apple.com/au/app/alfred-ai-travel-planner/id6745240301
+- Google Play (Android): https://play.google.com/store/apps/details?id=io.alfredtravel.app
+
 ## What Alfred does
 - Builds structured day-by-day travel plans from traveller preferences, destinations, dates, and pace.
 - Supports family, group, road-trip, single-country, and multi-city planning.
