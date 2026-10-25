@@ -733,6 +733,16 @@
         min-height: 0;
       }
 
+      /* Revenue streams slide */
+      .page--streams .advantage-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .page--streams .advantage-card { min-height: 300px; }
+      .page--streams .advantage-card h3 { font-size: clamp(1.7rem, 2.2vw, 2.6rem); margin-top: 32px; }
+      .stream-tiers { list-style: none; margin: 14px 0 0; padding: 0; }
+      .stream-tiers li { border-top: 1px solid rgba(245, 243, 238, 0.14); color: rgba(245, 243, 238, 0.78); font-size: clamp(0.85rem, 1vw, 0.98rem); line-height: 1.35; padding: 8px 0; }
+      .stream-tiers strong { color: var(--mint); }
+      body[data-orientation="portrait"] .page--streams .advantage-grid { grid-template-columns: 1fr; }
+      body[data-orientation="portrait"] .page--streams .advantage-card { min-height: 0; }
+
       .page--traction {
         background: var(--cream);
         color: var(--ink);
@@ -1489,7 +1499,7 @@
           <h1>Alfred Travel is the trusted AI Travel Assistant.</h1>
           <div class="rule" aria-hidden="true"></div>
           <p class="subtitle">Turn Fragmented research, family constraints and booking decisions into one coherent trip.</p>
-          <p class="metrics">5,000+ downloads | 5000+ itineraries | $4 CAC | Raising USD $500K</p>
+          <p class="metrics">5,900+ active accounts | 4,700+ itineraries | US$4 CAC | Raising US$500K</p>
         </div>
         <div class="brand-stage">
           <img class="logo" src="assets/175831175_padded_logo.png" alt="Alfred Travel — your personal travel assistant" />
@@ -1628,7 +1638,7 @@
                   <td class="positive">✅</td>
                   <td><span class="negative">❌</span> single profile</td>
                   <td>NA</td>
-                  <td>$50 p/a</td>
+                  <td>US$50 p/a</td>
                   <td class="positive">✅</td>
                   <td class="negative">❌</td>
                   <td class="positive">✅</td>
@@ -1673,8 +1683,8 @@
           <div class="traction-grid">
             <article class="traction-card">
               <div class="page-kicker">Users</div>
-              <div class="traction-value">5,000</div>
-              <p class="traction-label">Users downloaded</p>
+              <div class="traction-value">5,900</div>
+              <p class="traction-label">Active accounts</p>
             </article>
             <article class="traction-card">
               <div class="page-kicker">Itineraries Created</div>
@@ -1683,7 +1693,7 @@
             </article>
             <article class="traction-card">
               <div class="page-kicker">CAC</div>
-              <div class="traction-value">USD $4</div>
+              <div class="traction-value">US$4</div>
               <p class="traction-label">Customer acquisition cost</p>
             </article>
             <article class="traction-card">
@@ -1695,11 +1705,45 @@
           <p class="traction-footer">Retention = percentage of users that have created more than one itinerary.</p>
         </div>
       </section>
+      <section class="page page--advantage page--streams" id="page-7-revenue" aria-label="Alfred Travel revenue model">
+        <div class="content">
+          <div class="page-kicker">Revenue model · four streams</div>
+          <h2>One trip platform. Four ways to earn.</h2>
+          <p class="advantage-lede">Alfred is pre-revenue. This is the revenue model we are building towards, starting with booking commissions.</p>
+          <div class="advantage-grid">
+            <article class="advantage-card">
+              <div class="advantage-number">01 · BOOKING COMMISSIONS</div>
+              <h3>Commission on every booking.</h3>
+              <p>Families book flights, hotels, activities, eSIMs and insurance through our travel partners, and Alfred earns commission on each booking.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-number">02 · PAYWALL &amp; SUBSCRIPTIONS</div>
+              <h3>Flexible access to plan.</h3>
+              <ul class="stream-tiers">
+                <li><strong>1 booking</strong> unlocks a 12-month subscription</li>
+                <li><strong>A$15</strong> per saved trip</li>
+                <li><strong>A$60</strong> for 12 months of unlimited access</li>
+              </ul>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-number">03 · PARTNER MARKETING</div>
+              <h3>Targeted promotion for local partners.</h3>
+              <p>With traveller behaviour mapped across the full journey, new activities and restaurants can reach the families most likely to love them, through targeted promotion and placement.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-number">04 · TOURISM BOARD FUNDING</div>
+              <h3>Destination partnerships.</h3>
+              <p>Destination marketing partnerships and grants from government tourism boards that want to attract more family travellers.</p>
+            </article>
+          </div>
+          <p class="advantage-takeaway">Bookings → subscriptions → partner marketing → destination partnerships</p>
+        </div>
+      </section>
       <section class="page page--financial" id="page-7" aria-label="Alfred Travel business model and financial projection">
         <div class="content">
-          <div class="page-kicker">Business model · monetising the trip</div>
-          <h2>Every booked itinerary creates multiple revenue streams.</h2>
-          <p class="financial-lede">Alfred earns commission across the trip, with an average itinerary spend of USD $4,500 and an approximately $300 blended commission per fully booked itinerary.</p>
+          <div class="page-kicker">Revenue stream 01 · booking commissions</div>
+          <h2>Every booked itinerary earns commission across the trip.</h2>
+          <p class="financial-lede">Alfred earns commission across the trip, with an average itinerary spend of US$4,500 and an approximately US$300 blended commission per fully booked itinerary.</p>
           <div class="commission-grid">
             <article class="commission-card">
               <div class="commission-rate">6.5–7%</div>
@@ -1719,8 +1763,8 @@
             </article>
           </div>
           <div class="spend-callout">
-            <span>Average spend on one itinerary <strong>USD $4,500</strong></span>
-            <span>Blended commission per fully booked itinerary <strong>≈ $300</strong></span>
+            <span>Average spend on one itinerary <strong>US$4,500</strong></span>
+            <span>Blended commission per fully booked itinerary <strong>≈ US$300</strong></span>
           </div>
           <div class="forecast-table-wrap">
             <table class="forecast-table">
@@ -1735,14 +1779,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>15,000</td><td>750</td><td>$3,640.00</td><td>$910.00</td><td>$245,700.00</td></tr>
-                <tr><td>2</td><td>50,000</td><td>2,500</td><td>$3,785.60</td><td>$946.40</td><td>$851,760.00</td></tr>
-                <tr><td>3</td><td>250,000</td><td>12,500</td><td>$3,937.02</td><td>$984.26</td><td>$4,429,152.00</td></tr>
-                <tr><td>4</td><td>1,250,000</td><td>62,500</td><td>$4,094.50</td><td>$1,023.63</td><td>$23,031,590.40</td></tr>
+                <tr><td>1</td><td>15,000</td><td>750</td><td>US$3,640.00</td><td>US$910.00</td><td>US$245,700.00</td></tr>
+                <tr><td>2</td><td>50,000</td><td>2,500</td><td>US$3,785.60</td><td>US$946.40</td><td>US$851,760.00</td></tr>
+                <tr><td>3</td><td>250,000</td><td>12,500</td><td>US$3,937.02</td><td>US$984.26</td><td>US$4,429,152.00</td></tr>
+                <tr><td>4</td><td>1,250,000</td><td>62,500</td><td>US$4,094.50</td><td>US$1,023.63</td><td>US$23,031,590.40</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="financial-footnote">Forecast supplied by Alfred Travel. Milestones represent increasing itinerary and booking volume.</p>
+          <p class="financial-footnote">Forecast supplied by Alfred Travel. Milestones represent increasing itinerary and booking volume. Forecast covers booking commissions only; subscriptions, partner marketing and tourism board funding are not included.</p>
         </div>
       </section>
       <section class="page page--founders" id="page-8" aria-label="Our founders">
@@ -1772,12 +1816,12 @@
         <div class="content">
           <div class="page-kicker">The raise · scaling the coherent trip</div>
           <h2>Capital to turn early pull into repeatable growth.</h2>
-          <p class="funding-lede">Raising USD$500K at a 10M pre-money priced valuation.</p>
-          <p class="funding-milestone"><strong>Pre-seed milestone:</strong> A $175K pre-seed raise closed in April 2026, with the outcome of driving 15,000 qualified itineraries. Alfred is on track to complete that milestone by January 2027.</p>
+          <p class="funding-lede">Raising US$500K at a 10M pre-money priced valuation.</p>
+          <p class="funding-milestone"><strong>Pre-seed milestone:</strong> A US$175K pre-seed raise closed in April 2026, with the outcome of driving 15,000 qualified itineraries. Alfred is on track to complete that milestone by January 2027.</p>
           <div class="funding-grid">
             <article class="funding-ask">
               <div class="page-kicker">Funding Ask</div>
-              <div class="funding-ask-value">USD$500K</div>
+              <div class="funding-ask-value">US$500K</div>
               <p>10M pre-money priced valuation</p>
             </article>
             <section class="funding-panel" aria-label="Use of funds and outcomes">
@@ -1789,7 +1833,7 @@
               <div class="outcomes">
                 <div class="outcome"><strong>50K</strong><span>qualified Itineraries</span></div>
                 <div class="outcome"><strong>2,500</strong><span>bookings</span></div>
-                <div class="outcome"><strong>USD $850K</strong><span>revenue</span></div>
+                <div class="outcome"><strong>US$850K</strong><span>revenue</span></div>
                 <div class="outcome"><strong>Break-Even</strong><span>operational break-even</span></div>
               </div>
             </section>
