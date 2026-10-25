@@ -1516,7 +1516,32 @@
         .logo { max-width: 58vw; }
         h1 { font-size: clamp(3.4rem, 10vw, 5.8rem); }
       }
-    </style>
+          body[data-orientation="portrait"] .competitor-table-wrap {
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+      }
+      body[data-orientation="portrait"] .competitor-table-wrap::before {
+        content: "Scroll sideways for all columns →";
+        display: block;
+        color: var(--muted-strong, #4b5563);
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+      }
+      body[data-orientation="portrait"] .competitor-table {
+        min-width: 700px;
+        font-size: 0.72rem;
+      }
+      body[data-orientation="portrait"] .competitor-table th { font-size: 0.6rem; }
+      body[data-orientation="portrait"] .competitor-table th:first-child,
+      body[data-orientation="portrait"] .competitor-table td:first-child {
+        position: sticky; left: 0; z-index: 1; width: 96px;
+      }
+      body[data-orientation="portrait"] .competitor-table th:first-child { background: var(--cream); }
+      body[data-orientation="portrait"] .competitor-table td:first-child { background: #fbf8f2; }
+      body[data-orientation="portrait"] .competitor-table tr.is-alfred td:first-child { background: var(--ink); }
+</style>
   </head>
   <body>
     <nav class="toolbar" aria-label="Preview orientation">
@@ -1617,9 +1642,9 @@
                   <td>8–10 minutes</td>
                   <td>Free</td>
                   <td class="positive">✅</td>
+                  <td class="positive">✅ <small>(partners)</small></td>
                   <td class="positive">✅</td>
-                  <td class="positive">✅</td>
-                  <td class="positive">✅</td>
+                  <td class="limited">🟡 <small>(AI copilot)</small></td>
                 </tr>
                 <tr>
                   <td>ChatGPT</td>
@@ -1628,7 +1653,7 @@
                   <td class="na">—</td>
                   <td>Free</td>
                   <td class="positive">✅</td>
-                  <td class="limited">🟡 <small>(partners)</small></td>
+                  <td class="positive">✅ <small>(partners)</small></td>
                   <td class="na">—</td>
                   <td class="na">—</td>
                 </tr>
@@ -1641,7 +1666,7 @@
                   <td class="positive">✅</td>
                   <td class="positive">✅</td>
                   <td class="positive">✅</td>
-                  <td class="na">—</td>
+                  <td class="limited">🟡 <small>(AI assistant)</small></td>
                 </tr>
                 <tr>
                   <td>ODESSIA</td>
@@ -1652,7 +1677,7 @@
                   <td class="positive">✅</td>
                   <td class="positive">✅</td>
                   <td class="na">—</td>
-                  <td class="na">—</td>
+                  <td class="limited">🟡 <small>(AI assistant)</small></td>
                 </tr>
                 <tr>
                   <td>LAYLA</td>
