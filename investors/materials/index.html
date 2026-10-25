@@ -564,7 +564,6 @@
         text-transform: uppercase;
       }
 
-      .competitor-table .na { color: #9ca3af; }
       .competitor-table th:first-child,
       .competitor-table td:first-child { width: 13%; }
       .competitor-table th:nth-child(2),
@@ -1536,11 +1535,11 @@
       body[data-orientation="portrait"] .competitor-table th { font-size: 0.6rem; }
       body[data-orientation="portrait"] .competitor-table th:first-child,
       body[data-orientation="portrait"] .competitor-table td:first-child {
-        position: sticky; left: 0; z-index: 1; width: 96px;
+        position: sticky; left: 0; z-index: 2; width: 96px; background-clip: padding-box;
       }
       body[data-orientation="portrait"] .competitor-table th:first-child { background: var(--cream); }
-      body[data-orientation="portrait"] .competitor-table td:first-child { background: #fbf8f2; }
-      body[data-orientation="portrait"] .competitor-table tr.is-alfred td:first-child { background: var(--ink); }
+      body[data-orientation="portrait"] .competitor-table td:first-child { background: #fbf8f2; box-shadow: 6px 0 0 #fbf8f2; }
+      body[data-orientation="portrait"] .competitor-table tr.is-alfred td:first-child { background: var(--ink); box-shadow: 6px 0 0 var(--ink); }
 </style>
   </head>
   <body>
@@ -1649,62 +1648,62 @@
                 <tr>
                   <td>ChatGPT</td>
                   <td class="positive">✅</td>
-                  <td class="na">—</td>
-                  <td class="na">—</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>18–21 minutes</td>
                   <td>Free</td>
                   <td class="positive">✅</td>
-                  <td class="positive">✅ <small>(partners)</small></td>
-                  <td class="na">—</td>
-                  <td class="na">—</td>
+                  <td class="negative">❌</td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
                 </tr>
                 <tr>
                   <td>MINDTRIP</td>
                   <td class="limited">🟡 <small>(iOS)</small></td>
-                  <td class="na">—</td>
-                  <td class="na">—</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>16–20 minutes</td>
                   <td>Free</td>
                   <td class="positive">✅</td>
                   <td class="positive">✅</td>
-                  <td class="positive">✅</td>
-                  <td class="limited">🟡 <small>(AI assistant)</small></td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
                 </tr>
                 <tr>
                   <td>ODESSIA</td>
-                  <td class="limited">🟡 <small>(iOS soon)</small></td>
-                  <td class="na">—</td>
-                  <td class="na">—</td>
+                  <td class="negative">❌</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>16–18 minutes</td>
                   <td>Free</td>
                   <td class="positive">✅</td>
-                  <td class="positive">✅</td>
-                  <td class="na">—</td>
-                  <td class="limited">🟡 <small>(AI assistant)</small></td>
+                  <td class="negative">❌</td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
                 </tr>
                 <tr>
                   <td>LAYLA</td>
+                  <td class="limited">🟡 <small>(iOS)</small></td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>28–33 minutes</td>
+                  <td>Free / Pro</td>
                   <td class="positive">✅</td>
-                  <td class="na">—</td>
-                  <td class="na">—</td>
-                  <td>Free</td>
                   <td class="positive">✅</td>
-                  <td class="positive">✅</td>
-                  <td class="positive">✅</td>
-                  <td class="positive">✅ <small>(advisors)</small></td>
+                  <td class="limited">🟡</td>
+                  <td class="negative">❌</td>
                 </tr>
                 <tr>
                   <td>WANDERLOG</td>
                   <td class="positive">✅</td>
-                  <td class="na">—</td>
-                  <td class="na">—</td>
-                  <td>Free / Pro</td>
+                  <td><span class="negative">❌</span> single profile</td>
+                  <td>NA</td>
+                  <td>US$50 p/a</td>
                   <td class="positive">✅</td>
-                  <td class="na">—</td>
+                  <td class="negative">❌</td>
                   <td class="positive">✅</td>
-                  <td class="na">—</td>
+                  <td class="negative">❌</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="competitor-footnote">Competitor features from each product’s own site or app listing, checked 26 Oct 2026. 🟡 = limited; — = not stated publicly. Creation time is Alfred’s own figure.</p>
+          <p class="competitor-footnote">Source: supplied competitor benchmark. “Mobile” indicates mobile availability; 🟡 indicates a limited or platform-specific experience.</p>
         </div>
       </section>
       <section class="page page--advantage" id="page-5" aria-label="Wedge, moat and compounding advantage">
