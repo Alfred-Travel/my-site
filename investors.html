@@ -28,5 +28,5 @@
     form.addEventListener('submit',(event)=>{event.preventDefault();error.textContent='';const code=input.value.trim().toUpperCase();if(code!=='ALFREDINVESTORSEPTEMBERRAISE'){error.textContent='That access code is not recognised.';input.focus();return;}window.location.href='investors/materials/index.html';});
     const menuButton=document.querySelector('.menu-button');const nav=document.querySelector('#primary-nav');menuButton?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation')});nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Open navigation')}));
   </script>
-</body>
+<script src="consent.js" defer></script></body>
 </html>

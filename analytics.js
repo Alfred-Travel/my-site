@@ -3,24 +3,56 @@
   const productionHosts = new Set(['alfredtravel.io', 'www.alfredtravel.io']);
 
   // Do not send analytics while reviewing local file:// pages or localhost previews.
-  if (!productionHosts.has(window.location.hostname)) return;
+  // (__AT_ANALYTICS_TEST_HOST is only set by the local headless consent tests.)
+  if (!productionHosts.has(window.location.hostname) && window.__AT_ANALYTICS_TEST_HOST !== true) return;
 
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function gtag() {
-    window.dataLayer.push(arguments);
-  };
-
-  window.gtag('js', new Date());
-  window.gtag('config', measurementId, {
-    send_page_view: true,
-  });
-
-  if (!document.querySelector(`script[src^="https://www.googletagmanager.com/gtag/js?id=${measurementId}"]`)) {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
+  // AB-347: Google Analytics is only loaded after the visitor accepts via consent.js
+  // (shared at_consent cookie). Nothing below runs, and gtag is never defined, until then.
+  function hasConsent() {
+    return /(?:^|;\s*)at_consent=granted(?:;|$)/.test(document.cookie);
   }
+
+  let started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    window['ga-disable-' + measurementId] = false;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, {
+      send_page_view: true,
+    });
+
+    if (!document.querySelector(`script[src^="https://www.googletagmanager.com/gtag/js?id=${measurementId}"]`)) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+      document.head.appendChild(script);
+    }
+  }
+
+  function stopAnalytics() {
+    // Once loaded, gtag cannot be unloaded; disable it and clear its cookies.
+    window['ga-disable-' + measurementId] = true;
+    for (const name of document.cookie.split(/;\s*/).map((c) => c.split('=')[0])) {
+      if (name === '_ga' || name.startsWith('_ga_')) {
+        for (const domain of ['', '; Domain=.alfredtravel.io', '; Domain=' + window.location.hostname]) {
+          document.cookie = `${name}=; Path=/; Max-Age=0${domain}`;
+        }
+      }
+    }
+  }
+
+  if (hasConsent()) startAnalytics();
+  window.addEventListener('at-consent-change', (event) => {
+    if (event.detail === 'granted') startAnalytics();
+    else stopAnalytics();
+  });
 
   function createHandoffId() {
     if (window.crypto && typeof window.crypto.randomUUID === 'function') {
@@ -32,7 +64,7 @@
 
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href]');
-    if (!link || typeof window.gtag !== 'function') return;
+    if (!link || !started || !hasConsent() || typeof window.gtag !== 'function') return;
 
     const url = new URL(link.href, window.location.href);
     if (url.hostname !== 'web.alfredtravel.io') return;
