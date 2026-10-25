@@ -1929,6 +1929,18 @@
       const narrowScreen = window.matchMedia("(max-width: 760px)").matches;
       document.body.dataset.orientation = requestedOrientation === "portrait" || (requestedOrientation !== "landscape" && narrowScreen) ? "portrait" : "landscape";
 
+      // Landscape slides have a fixed minimum size; on mid-width windows scale the deck down to fit instead of scrolling sideways.
+      const deckEl = document.querySelector(".deck");
+      const fitDeck = () => {
+        deckEl.style.zoom = "";
+        if (document.body.dataset.orientation !== "landscape") return;
+        const natural = document.documentElement.scrollWidth;
+        const available = document.documentElement.clientWidth;
+        if (natural > available + 1) deckEl.style.zoom = (available / natural).toFixed(4);
+      };
+      fitDeck();
+      window.addEventListener("resize", fitDeck);
+
       const videoModal = document.querySelector("#video-modal");
       const actionVideo = document.querySelector("#action-video");
       document.querySelector("#open-video").addEventListener("click", () => {
