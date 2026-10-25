@@ -780,7 +780,7 @@
       .traction-grid {
         display: grid;
         gap: 16px;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         margin-top: clamp(40px, 5vw, 64px);
       }
 
@@ -843,6 +843,11 @@
 
       body[data-orientation="portrait"] .traction-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body[data-orientation="portrait"] .traction-card:first-child {
+        grid-column: 1 / -1;
+        min-height: 0;
       }
 
       body[data-orientation="portrait"] .traction-card {
@@ -1524,7 +1529,7 @@
           <h1>Alfred Travel is an AI travel assistant.</h1>
           <div class="rule" aria-hidden="true"></div>
           <p class="subtitle">It takes hours of trip research, family constraints and booking decisions off your hands and turns them into one coherent trip. Plan A-to-B, multicity and road trips on iOS and Android.</p>
-          <p class="metrics">6,228 sign-ups | 5,900+ active accounts | 4,784 itineraries | US$4 CAC | <span class="nowrap">Raising US$500K</span><br /><span class="metrics-note">Live on iOS and Android · Stats as at 25 Oct 2026</span></p>
+          <p class="metrics">6,228 sign-ups | 5,900+ active accounts | 4,784 itineraries | <span class="nowrap">≈US$3.50 blended CAC</span> | <span class="nowrap">Raising US$500K</span><br /><span class="metrics-note">Live on iOS and Android · Stats as at 25 Oct 2026</span></p>
         </div>
         <div class="brand-stage">
           <img class="logo" src="assets/175831175_padded_logo.png" alt="Alfred Travel — your personal travel assistant" />
@@ -1719,17 +1724,12 @@
               <p class="traction-label">Itineraries created</p>
             </article>
             <article class="traction-card">
-              <div class="page-kicker">CAC</div>
-              <div class="traction-value">US$4</div>
-              <p class="traction-label">Customer acquisition cost</p>
-            </article>
-            <article class="traction-card">
-              <div class="page-kicker">Customer retention</div>
-              <div class="traction-value">27%</div>
-              <p class="traction-label">Users who created &gt;1 itinerary</p>
+              <div class="page-kicker">Blended CAC</div>
+              <div class="traction-value">≈US$3.50</div>
+              <p class="traction-label">Blended customer acquisition cost</p>
             </article>
           </div>
-          <p class="traction-footer">Retention = percentage of users that have created more than one itinerary.</p>
+          <p class="traction-footer">Blended CAC: Meta spend A$6,698.90, 1 Sep–25 Oct 2026, ÷ 1,338 new users, at AUD→USD 0.7027.</p>
         </div>
       </section>
       <section class="page page--advantage page--streams" id="page-7-revenue" aria-label="Alfred Travel revenue model">
