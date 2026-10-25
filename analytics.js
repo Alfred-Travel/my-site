@@ -3,8 +3,7 @@
   const productionHosts = new Set(['alfredtravel.io', 'www.alfredtravel.io']);
 
   // Do not send analytics while reviewing local file:// pages or localhost previews.
-  // (__AT_ANALYTICS_TEST_HOST is only set by the local headless consent tests.)
-  if (!productionHosts.has(window.location.hostname) && window.__AT_ANALYTICS_TEST_HOST !== true) return;
+  if (!productionHosts.has(window.location.hostname)) return;
 
   // AB-347: Google Analytics is only loaded after the visitor accepts via consent.js
   // (shared at_consent cookie). Nothing below runs, and gtag is never defined, until then.
