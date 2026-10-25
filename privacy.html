@@ -57,7 +57,7 @@
 </ul>
 <p><strong>Alfred Tokens and wallet</strong></p>
 <ul>
-<li>Each user is allocated an Alfred-owned custodial Solana wallet address for Alfred Tokens. We record token transfers to and from it, including the addresses, network and transaction ID. Transactions on the Solana blockchain are public and cannot be erased.</li>
+<li>Each user is allocated a custodial Solana wallet address for Alfred Tokens. The address is owned and controlled by Alfred, not by you. Withdrawals from it are not available. We record token transfers to and from it, including the addresses, network and transaction ID. Transactions on the Solana blockchain are public and cannot be erased.</li>
 </ul>
 <p><strong>Device, usage and technical data</strong></p>
 <ul>
@@ -98,8 +98,13 @@
 <tbody>
 <tr>
 <td>Amazon Web Services</td>
-<td>Hosting and database</td>
-<td>Singapore</td>
+<td>Main hosting, databases, caches and file storage</td>
+<td>Singapore (AWS ap-southeast-1)</td>
+</tr>
+<tr>
+<td>Cloudflare</td>
+<td>Carries our web traffic (content delivery and network security)</td>
+<td>United States and global network</td>
 </tr>
 <tr>
 <td>Google (Firebase Auth, Analytics, Crashlytics, messaging, Remote Config; Gemini AI; Maps/Places; Google Analytics)</td>
@@ -118,8 +123,8 @@
 </tr>
 <tr>
 <td>Datadog</td>
-<td>System logs and monitoring</td>
-<td>Japan</td>
+<td>Production system logs and monitoring</td>
+<td>Australia (Sydney)</td>
 </tr>
 <tr>
 <td>AppsFlyer</td>
@@ -160,9 +165,9 @@
 </table>
 <p>We may also disclose information where the law requires it, to protect people or our rights, or to a buyer as part of a business sale.</p>
 <h2>6. Overseas disclosure</h2>
-<p>Your information is mainly stored in Singapore. It is also sent to the United States, Japan, the European Union (including France, Germany and the Netherlands), the United Kingdom and India, and to other overseas locations where some service providers' regions are not published. We take reasonable steps to make sure overseas recipients handle it in line with the APPs.</p>
+<p>Our main hosting is Amazon Web Services in Singapore (AWS region ap-southeast-1), so your information is mainly stored in Singapore, not Australia. It is also sent to the United States (including through Cloudflare's global network), the European Union (including France, Germany and the Netherlands), the United Kingdom and India, and to other overseas locations where some service providers' regions are not published. We take reasonable steps to make sure overseas recipients handle it in line with the APPs.</p>
 <h2>7. Security</h2>
-<p>We protect your information with access controls (including authenticated, rate-limited access to our systems), encryption of data sent between your device and our services using HTTPS/TLS, and security audit logging. We are continuing to strengthen our security, including how we protect wallet credentials and internal service traffic. No system is completely secure. If a data breach is likely to cause serious harm, we will notify you and the OAIC as the Notifiable Data Breaches scheme requires.</p>
+<p>We protect your information with access controls (including authenticated, rate-limited access to our systems) and security audit logging. Data in our databases, caches and file storage is encrypted at rest. Data is encrypted in transit using HTTPS/TLS between you and Alfred Travel, and between our services and our databases. We are continuing to strengthen our security. No system is completely secure. If a data breach is likely to cause serious harm, we will notify you and the OAIC as the Notifiable Data Breaches scheme requires.</p>
 <h2>8. How long we keep it</h2>
 <p>We keep your personal information while your account exists and for as long as we need it for the purposes in this policy, including legal, security and dispute purposes. Database backups are kept for 35 days. Blockchain records are permanent.</p>
 <h2>9. Deleting your account</h2>
