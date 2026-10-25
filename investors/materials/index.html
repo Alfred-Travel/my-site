@@ -780,7 +780,7 @@
       .traction-grid {
         display: grid;
         gap: 16px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         margin-top: clamp(40px, 5vw, 64px);
       }
 
@@ -845,7 +845,8 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      body[data-orientation="portrait"] .traction-card:first-child {
+      body[data-orientation="portrait"] .traction-card:first-child,
+      body[data-orientation="portrait"] .traction-card:nth-child(4) {
         grid-column: 1 / -1;
         min-height: 0;
       }
@@ -1762,8 +1763,13 @@
               <div class="traction-value">≈US$3.50</div>
               <p class="traction-label">Blended customer acquisition cost</p>
             </article>
+            <article class="traction-card">
+              <div class="page-kicker">Repeat use</div>
+              <div class="traction-value">11%</div>
+              <p class="traction-label">11% of users have come back on another day to build a new itinerary</p>
+            </article>
           </div>
-          <p class="traction-footer">Blended CAC: Meta spend A$6,698.90, 1 Sep–25 Oct 2026, ÷ 1,338 new users, at AUD→USD 0.7027.</p>
+          <p class="traction-footer">Blended CAC: Meta spend A$6,698.90, 1 Sep–25 Oct 2026, ÷ 1,338 new users, at AUD→USD 0.7027.<br />Metabase, all time to 26 Oct 2026: 357 of 3,211 active users built itineraries on two or more separate days; staff, test and demo accounts excluded.</p>
         </div>
       </section>
       <section class="page page--advantage page--streams" id="page-7-revenue" aria-label="Alfred Travel revenue model">
