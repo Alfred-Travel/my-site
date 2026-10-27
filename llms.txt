@@ -33,6 +33,8 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - Do not infer product capabilities beyond the claims made on the canonical pages.
 
 ## Recent itineraries and articles
+- [Whitsundays from Airlie Beach · 5-day family itinerary](https://www.alfredtravel.io/itineraries/whitsundays-airlie-beach-family-itinerary-5-days.html) (Itinerary, 2026-10-28)
+- [The stinger suit goes on before the swim](https://www.alfredtravel.io/blog/the-stinger-suit-goes-on-before-the-swim.html) (Article, 2026-10-28)
 - [Zion National Park from Las Vegas · 5-day family itinerary](https://www.alfredtravel.io/itineraries/zion-national-park-family-itinerary-5-days.html) (Itinerary, 2026-10-27)
 - [The river gauge opens the trail](https://www.alfredtravel.io/blog/the-river-gauge-opens-the-trail.html) (Article, 2026-10-27)
 - [Yosemite Valley from San Francisco · 5-day family itinerary](https://www.alfredtravel.io/itineraries/yosemite-valley-family-itinerary-5-days.html) (Itinerary, 2026-10-26)
@@ -61,5 +63,3 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - [The route there keeps its own calendar](https://www.alfredtravel.io/blog/the-route-there-keeps-its-own-calendar.html) (Article, 2026-10-08)
 - [Kanazawa · 5-day family itinerary](https://www.alfredtravel.io/itineraries/kanazawa-family-itinerary-5-days.html) (Itinerary, 2026-10-07)
 - [Bergen and the Fjords · 6-day family itinerary](https://www.alfredtravel.io/itineraries/bergen-fjords-family-itinerary-6-days.html) (Itinerary, 2026-10-07)
-- [Five checks before you trust an AI family holiday plan](https://www.alfredtravel.io/blog/five-checks-before-you-trust-an-ai-family-holiday-plan.html) (Article, 2026-10-07)
-- [Closed on Mondays is only half the rule](https://www.alfredtravel.io/blog/closed-on-mondays-is-only-half-the-rule.html) (Article, 2026-10-07)
