@@ -80,3 +80,6 @@ body:not(.itinerary-pdf-style) .v2-button-secondary{border-color:var(--alfred-bo
 @media(min-width:721px) and (max-width:1000px){body .site-header #primary-nav{gap:10px!important}body .site-header #primary-nav a{font-size:13px!important}body .site-header #primary-nav .nav-cta{padding:11px 12px!important}}
 @media(min-width:721px) and (max-width:800px){body .site-header #primary-nav{gap:6px!important}}
 @media(min-width:721px) and (max-width:760px){body .site-header #primary-nav a{font-size:12px!important}body .site-header #primary-nav .nav-cta{padding:10px 10px!important}}
+
+/* Let the comparison table scroll inside its container instead of widening the page */
+.compare-matrix-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}

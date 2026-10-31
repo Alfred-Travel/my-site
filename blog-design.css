@@ -59,3 +59,6 @@ body.blog-v2-style article{background:#FFFFFF!important;color:#111827!important;
 .blog-v2-style .v2-hero .v2-actions .v2-button-secondary{background:#FFFFFF!important;color:#111827!important;border:1px solid rgba(17,24,39,.14)!important;}
 .blog-v2-style .v2-hero .v2-actions .v2-button-primary:hover,.blog-v2-style .v2-hero .v2-actions .v2-button-primary:focus-visible{background:#56C4AD!important;color:#111827!important;}
 .blog-v2-style .v2-hero .v2-actions .v2-button-secondary:hover,.blog-v2-style .v2-hero .v2-actions .v2-button-secondary:focus-visible{background:#F6F8FB!important;color:#111827!important;}
+
+/* Narrow desktop and tablet widths: let the article column shrink to the viewport instead of forcing 1080px */
+@media(min-width:761px) and (max-width:1199px){body.blog-v2-style section.v2-content{width:auto!important;max-width:1080px!important;box-sizing:border-box!important}body.blog-v2-style section.v2-content>.wrap,body.blog-v2-style section.v2-content .content-grid,body.blog-v2-style section.v2-content article{width:auto!important;max-width:960px!important}}
