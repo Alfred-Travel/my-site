@@ -33,6 +33,7 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - Do not infer product capabilities beyond the claims made on the canonical pages.
 
 ## Recent itineraries and articles
+- [Create and share your trips](https://www.alfredtravel.io/competition/) (Competition, 2026-11-01)
 - [K’gari from Hervey Bay · 5-day family itinerary](https://www.alfredtravel.io/itineraries/kgari-hervey-bay-family-itinerary-5-days.html) (Itinerary, 2026-10-30): a five-day family route with one night in Hervey Bay, the ferry from River Heads, three nights at Kingfisher Bay Resort and one guided 4WD day. Ferry times, tour prices and park alerts were read on 30 October 2026 and are not a quote. Alfred plans the days; Book opens a partner checkout.
 - [A dingo fence still has a gate](https://www.alfredtravel.io/blog/a-dingo-fence-still-has-a-gate.html) (Article, 2026-10-30): four checks for families with young children on K’gari (shut the gate, keep children within arm’s reach, keep food off the lakeshore, practise the response), based on Queensland Parks pages. These are Alfred’s recommendations, not a Queensland Parks list.
 - [Whitsundays from Airlie Beach · 5-day family itinerary](https://www.alfredtravel.io/itineraries/whitsundays-airlie-beach-family-itinerary-5-days.html) (Itinerary, 2026-10-28): a five-day family route with four nights in Airlie Beach, swims in the Airlie Beach lagoon (which the council says is safe from stingers), one boat day to Whitehaven Beach and the Hill Inlet lookout with stinger suits on, short walks, and a spare day if the boat has to move. Boat operators, fares and rooms were not checked; Queensland Parks, council and stinger-advice pages were read on 28 October 2026, so recheck alerts before you go. Alfred plans the days; Book opens a partner checkout.
@@ -62,4 +63,3 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - [Bilbao · 5-day family itinerary](https://www.alfredtravel.io/itineraries/bilbao-family-itinerary-5-days.html) (Itinerary, 2026-10-09)
 - [A free under-eighteen ticket is still a ticket](https://www.alfredtravel.io/blog/a-free-under-eighteen-ticket-is-still-a-ticket.html) (Article, 2026-10-09)
 - [Interlaken and the Jungfrau Region · 5-day family itinerary](https://www.alfredtravel.io/itineraries/interlaken-jungfrau-family-itinerary-5-days.html) (Itinerary, 2026-10-08)
-- [The route there keeps its own calendar](https://www.alfredtravel.io/blog/the-route-there-keeps-its-own-calendar.html) (Article, 2026-10-08)
