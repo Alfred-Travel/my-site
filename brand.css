@@ -74,3 +74,9 @@ body:not(.itinerary-pdf-style) .v2-button-secondary{border-color:var(--alfred-bo
   .brand-logo-mark{width:32px;height:32px}
   .brand-logo-text{font-size:1.2rem}
 }
+
+/* Competition nav link: keep the primary nav inside the viewport (721px and up) */
+@media(min-width:721px){body .site-header #primary-nav{width:auto!important}body .site-header #primary-nav a{white-space:nowrap!important;flex-shrink:0!important}}
+@media(min-width:721px) and (max-width:1000px){body .site-header #primary-nav{gap:10px!important}body .site-header #primary-nav a{font-size:13px!important}body .site-header #primary-nav .nav-cta{padding:11px 12px!important}}
+@media(min-width:721px) and (max-width:800px){body .site-header #primary-nav{gap:6px!important}}
+@media(min-width:721px) and (max-width:760px){body .site-header #primary-nav a{font-size:12px!important}body .site-header #primary-nav .nav-cta{padding:10px 10px!important}}
