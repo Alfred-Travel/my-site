@@ -33,6 +33,8 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - Do not infer product capabilities beyond the claims made on the canonical pages.
 
 ## Recent itineraries and articles
+- [Exmouth and Ningaloo · 5-day family itinerary](https://www.alfredtravel.io/itineraries/exmouth-ningaloo-family-itinerary-5-days.html) (Itinerary, 2026-11-13): A five-day winter family trip to Exmouth and Ningaloo Reef in Western Australia, with a ten-year-old and a seven-year-old: a first snorkel off Turquoise Bay’s Bay Loop, Mandu Mandu Gorge early, Yardie Creek’s short walk, and every swim planned around the current and the way out.
+- [A drift snorkel starts at the exit](https://www.alfredtravel.io/blog/a-drift-snorkel-starts-at-the-exit.html) (Article, 2026-11-13): At Ningaloo’s Turquoise Bay, the current that makes the drift snorkel work is also its hazard, and rangers don’t regularly patrol the beach. Four checks for a family snorkel: the site, the current, the exit and the buddy.
 - [Great Smoky Mountains from Gatlinburg · 5-day family itinerary](https://www.alfredtravel.io/itineraries/great-smoky-mountains-gatlinburg-family-itinerary-5-days.html) (Itinerary, 2026-11-12): Five family days in the Great Smoky Mountains from Gatlinburg: Cades Cove, Kuwohi, Grotto Falls, and picnics planned around the park’s bear rules.
 - [The cooler is part of the bear plan](https://www.alfredtravel.io/blog/the-cooler-is-part-of-the-bear-plan.html) (Article, 2026-11-12): In the Smokies it is illegal to approach within 50 yards of a bear; leftover food can get a bear killed. Four checks: distance, picnic, car and pullout.
 - [Port Stephens from Nelson Bay · 5-day family itinerary](https://www.alfredtravel.io/itineraries/port-stephens-nelson-bay-family-itinerary-5-days.html) (Itinerary, 2026-11-11): Five family days at Port Stephens from Nelson Bay: a dolphin cruise, Fort Tomaree, Stockton dunes, koalas, fishing at Little Beach and patrolled swims.
@@ -61,5 +63,3 @@ The itinerary pages are destination examples, the blog contains planning guidanc
 - [Yosemite Valley from San Francisco · 5-day family itinerary](https://www.alfredtravel.io/itineraries/yosemite-valley-family-itinerary-5-days.html) (Itinerary, 2026-10-26)
 - [Chains go in the car before the snow does](https://www.alfredtravel.io/blog/chains-go-in-the-car-before-the-snow-does.html) (Article, 2026-10-26)
 - [Cinque Terre from La Spezia · 5-day family itinerary](https://www.alfredtravel.io/itineraries/cinque-terre-family-itinerary-5-days.html) (Itinerary, 2026-10-23)
-- [Check the section, not the path](https://www.alfredtravel.io/blog/check-the-section-not-the-path.html) (Article, 2026-10-23)
-- [Maui from Kīhei · 5-day family itinerary](https://www.alfredtravel.io/itineraries/maui-family-itinerary-5-days.html) (Itinerary, 2026-10-22)
